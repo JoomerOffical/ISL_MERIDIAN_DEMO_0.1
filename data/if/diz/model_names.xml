@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?><!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by scorp (targem) -->
 <ModelNames>
 	<Item
+		id="quest_letter_lamp"
+		locForm="0"
+		value="Извещение о посылке" />
+
+	<Item
+		id="quest_lamp"
+		locForm="0"
+		value="Лампа для маяка" />
+
+	<Item
+		id="quest_pack_joe"
+		locForm="0"
+		value="Посылка для Джо" />
+
+	<Item
+		id="ArlekinCar"
+		locForm="0"
+		value="Арлекин" />
+
+	<Item
+		id="EgoistCar"
+		locForm="0"
+		value="Эгоист" />
+
+	<Item
+		id="MolokovozBorn"
+		locForm="0"
+		value="Борн" />
+
+	<Item
+		id="BugJoe"
+		locForm="0"
+		value="Джо" />
+
+	<Item
+		id="BugKevin"
+		locForm="0"
+		value="Кевин" />
+
+	<Item
+		id="UralTreasure"
+		locForm="0"
+		value="Торговец" />
+
+	<Item
 		id="collectionbook1"
 		locForm="0"
 		value="''Туристический проспект''" />

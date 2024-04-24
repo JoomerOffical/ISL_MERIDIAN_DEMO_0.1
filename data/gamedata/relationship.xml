@@ -14,12 +14,7 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 
 		<set
 			forwhom="1105"
-			who="1100"
-			tolerance="enemy" />
-
-		<set
-			forwhom="1105"
-			who="1101"
+			who="1100 1101"
 			tolerance="enemy" />
 
 		<set
@@ -33,18 +28,18 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 			tolerance="neutral" />
 
 		<set
-			forwhom="1100"
-			who="1107"
-			tolerance="ally" />
-
-		<set
-			forwhom="1100"
+			forwhom="1103"
 			who="1104 1106"
 			tolerance="neutral" />
 
 		<set
+			forwhom="1104"
+			who="1106"
+			tolerance="neutral" />
+
+		<set
 			forwhom="1107"
-			who="1104 1106"
+			who="1103 1104 1106"
 			tolerance="neutral" />
 
 		<set
@@ -54,8 +49,18 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 
 		<set
 			forwhom="1105"
+			who="1103 1104 1106 1107"
+			tolerance="neutral" />
+
+		<set
+			forwhom="1105"
 			who="1108"
 			tolerance="enemy" />
+
+		<set
+			forwhom="1100"
+			who="1109"
+			tolerance="neutral" />
 
 		<set
 			forwhom="1103"
@@ -81,11 +86,6 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 			forwhom="1100"
 			who="1108"
 			tolerance="neutral" />
-
-		<set
-			forwhom="1100"
-			who="1109"
-			tolerance="enemy" />
 
 		<set
 			forwhom="1100"

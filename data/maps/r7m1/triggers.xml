@@ -27,6 +27,17 @@
 		</script>
 	</trigger>
 
+<!--Разговор с Лео в первый раз-->
+	<trigger Name="trDialogLeo1" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="MechanicLeo_loc" />
+		<script>
+			StartConversation("MechanicLeonel_NPC")
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+<!--Подбираем книги на складе-->
 	<trigger Name="trBooksBurn" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Books_loc" />
 		<script>
@@ -59,6 +70,50 @@
 		</script>
 	</trigger>
 
+<!--Возвращаемся к Лео после Иерихона-->
+	<trigger Name="trAfterIerihon" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="MechanicLeo_loc" />
+		<script>
+			trigger:Deactivate()
+	
+			if QuestStatus("sin_BackToLeo_Quest")==Q_TAKEN then
+				StartConversation("MechanicLeonel_NPC")
+ 
+			end
+	
+		</script>
+	</trigger>
+
+<!--Уничтожен грузовик-->
+	<trigger Name="trDieTruckTr" active="0">
+		<event	eventid="GE_OBJECT_DIE"	ObjName="Seller" />
+		<script>
+			trigger:Deactivate()
+	
+			AddQuestItem("collectionbook1")
+			CompleteQuest("r7m1_KillTruck_Quest")
+			TActivate("cinAfterTruckTre")
+	
+		</script>
+	</trigger>
+
+<!--Появляются бандиты из засады-->
+	<trigger Name="trZasadaBandits" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZasadaBnd_loc" />
+		<script>
+			trigger:Deactivate()
+	
+			if QuestStatus("r7m1_GoMont_Quest")==Q_TAKEN then
+				CreateTeam ("BehindBnd", 1105, CVector(701.825, 253.310, 1174.078), {"Scout01", "Sml401"}, nil, nil, nil)
+				CreateTeam ("Bnd1", 1105, CVector(796.655, 235.338, 1269.085), {"Scout03"}, nil, nil, nil)
+				CreateTeam ("Bnd2", 1105, CVector(718.007, 245.188, 1254.415), {"Bug01"}, nil, nil, nil)
+
+				CompleteQuest("r7m1_GoMont_Quest")
+			end
+	
+		</script>
+	</trigger>
+
 <!--Телепорт в Вексику-->
 	<trigger Name="triggerExitToMap73" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR7M3" />
@@ -72,21 +127,31 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			local b = SpawnMessageBox(197)
-			if b == 1 then
-				PassToMap("r7m3", "FromR7M1", -1 )
+			if QuestStatus("r7m1_SearchHermit_Quest")==Q_TAKEN then
+				local b = SpawnMessageBox(197)
+				if b == 1 then
+					PassToMap("r7m3", "FromR7M1", -1 )
 
-				GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+					GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap73")
+					TActivate ("RolikENDExitToMap73")
+				end
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
+				AddCinematicMessage( 198, 0.25 )
 
 				TActivate ("RolikExitToMap73")
 				TActivate ("RolikENDExitToMap73")
 			end
-
  		</script>
 	</trigger>
 	<trigger Name="RolikExitToMap73" active="0">
@@ -133,16 +198,27 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			local b = SpawnMessageBox(197)
-			if b == 1 then
-				PassToMap("sin", "FromR7M1", -1 )
+			if QuestStatus("r7m1_PosilkaForJoe_Quest")==Q_TAKEN then
+				local b = SpawnMessageBox(197)
+				if b == 1 then
+					PassToMap("sin", "FromR7M1", -1 )
 
-				GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+					GetPlayerVehicle():AddModifier( "fuel", "- "..random(0.5*GetPlayerFuel()) )
+				else
+					SaveAllToleranceStatus(RS_NEUTRAL)
+
+					FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+					StartCinematic()
+
+					TActivate ("RolikExitToMap72")
+					TActivate ("RolikENDExitToMap72")
+				end
 			else
 				SaveAllToleranceStatus(RS_NEUTRAL)
 
-				FlyAround(1, 0, 25, 2, PlfCoor, PlfID, 1, 1 )
+				FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
 				StartCinematic()
+				AddCinematicMessage( 198, 0.25 )
 
 				TActivate ("RolikExitToMap72")
 				TActivate ("RolikENDExitToMap72")

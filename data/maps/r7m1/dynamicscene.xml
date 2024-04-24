@@ -19,33 +19,8 @@
 			Prototype="Scout01"
 			Logo="16"
 			Pos="3401.975 344.366 284.842"
-			Rot="-0.049 0.206 -0.007 -0.977"
-			Skin="36">
-			<Parts>
-				<BASKET
-					present="1"
-					Belong="1100"
-					Prototype="scoutCargo01"
-					Logo="16" />
-
-				<CABIN
-					present="1"
-					Belong="1100"
-					Prototype="scoutCab01"
-					Logo="16" />
-
-				<CABIN_SMALL_GUN
-					present="1"
-					Belong="1100"
-					Prototype="hornet01"
-					Logo="16" />
-
-				<CHASSIS
-					present="1"
-					Belong="1100"
-					Prototype="scoutChassis"
-					Logo="16" />
-			</Parts>
+			Rot="-0.049 0.206 -0.007 -0.977">
+			<Parts />
 
 			<Repository />
 		</Object>
@@ -661,6 +636,7 @@
 				Prototype="NPC"
 				ModelName="mask_father"
 				skin="2"
+				helloReplyNames="Vincent_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -1803,6 +1779,36 @@
 				cfg="46"
 				NpcType="BARMAN"
 				SpokenCount="0" />
+
+			<Object
+				Name="MechanicLeonel_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				skin="4"
+				cfg="68"
+				helloReplyNames="Leonel_DLG Leonel2_DLG"
+				SpokenCount="0" />
+
+			<Object
+				Name="DrunkMateo_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="5"
+				cfg="38"
+				helloReplyNames="DrunkM_DLG DrunkM2_DLG"
+				SpokenCount="0" />
+
+			<Object
+				Name="BattleRevol_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="5"
+				cfg="318"
+				helloReplyNames="Optional2_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -1889,6 +1895,16 @@
 				ModelName="r1_woman"
 				cfg="240"
 				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="MomGato_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_woman"
+				skin="2"
+				cfg="13"
+				helloReplyNames="Mother1_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -3424,6 +3440,25 @@
 				skin="2"
 				cfg="28"
 				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="SellerTadeo_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="1"
+				cfg="198"
+				helloReplyNames="Tadeo_DLG"
+				SpokenCount="0" />
+
+			<Object
+				Name="TreasureNodin_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				cfg="58"
+				helloReplyNames="Optional1_DLG Optional1.2_DLG Optional1.3_DLG Optional1.4_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -6819,6 +6854,153 @@
 		Pos="308.962 331.078 2200.770" />
 
 	<Object
+		Name="Mayak"
+		Belong="1001"
+		Prototype="someDummyObject"
+		Pos="3446.832 341.000 329.264"
+		Rot="0.000 0.000 0.000 0.000"
+		NodeScale="1"
+		ModelName="mayak" />
+
+	<Object
 		Belong="1100"
 		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="MechanicLeo_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2494.293 231.967 2595.934"
+		Radius="30.000" />
+
+	<Object
+		Name="factory_box1081"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="2015.673 255.000 3227.861"
+		Rot="0.000 -0.309 0.000 0.951" />
+
+	<Object
+		Name="factory_box1082"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="2004.879 255.000 3227.202"
+		Rot="0.000 0.843 0.000 0.537" />
+
+	<Object
+		Name="factory_box1083"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="2012.819 255.104 3221.958"
+		Rot="0.000 0.777 0.000 0.629" />
+
+	<Object
+		Name="factory_box1084"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="2010.265 255.000 3228.825"
+		Rot="0.000 -0.629 0.000 0.777" />
+
+	<Object
+		Name="pack_breakable1085"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="1994.748 257.129 3205.260"
+		Rot="0.000 0.423 0.000 0.906" />
+
+	<Object
+		Name="pack_breakable1086"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="1998.196 256.720 3206.822"
+		Rot="0.000 0.044 0.000 0.999" />
+
+	<Object
+		Name="pack_breakable1087"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="1993.965 256.629 3209.101"
+		Rot="0.000 0.985 0.000 0.174" />
+
+	<Object
+		Name="poddon1088"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="2013.142 255.000 3231.787"
+		Rot="0.000 -0.566 0.000 0.824" />
+
+	<Object
+		Name="BrokenModel1089"
+		Belong="1001"
+		Prototype="BrokenModel" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive21091"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2007.234 257.009 3202.052"
+		Rot="0.000 0.954 0.000 -0.301" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive21092"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2009.004 256.693 3203.772"
+		Rot="0.000 -0.574 0.000 0.819" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive21093"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="2007.430 256.782 3203.437"
+		Rot="0.000 0.976 0.000 0.216" />
+
+	<Object
+		Name="Breakable_BrickWall11095"
+		Belong="1001"
+		Prototype="Breakable_BrickWall1"
+		Pos="2016.248 255.000 3245.892"
+		Rot="0.000 0.072 0.000 0.997" />
+
+	<Object
+		Name="Breakable_BrickWall21096"
+		Belong="1001"
+		Prototype="Breakable_BrickWall2"
+		Pos="2024.099 255.070 3243.963"
+		Rot="0.000 0.161 0.000 0.987" />
+
+	<Object
+		Name="Breakable_BrickWall21097"
+		Belong="1001"
+		Prototype="Breakable_BrickWall2"
+		Pos="1995.978 255.000 3258.622"
+		Rot="0.000 0.906 0.000 -0.423" />
+
+	<Object
+		Name="Breakable_BrickWall21098"
+		Belong="1001"
+		Prototype="Breakable_BrickWall2"
+		Pos="1990.142 254.907 3264.247"
+		Rot="0.000 0.338 0.000 0.941" />
+		
+	<Object
+		Name="PlayerHideTruck_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="702.865 255.000 776.563"
+		Radius="5.000" />
+
+	<Object
+		Name="ZasadaBnd_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="744.715 242.355 1240.551"
+		Radius="70.000" />
+
+	<Object
+		Name="Avanpost_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2072.867 263.645 3287.749"
+		Radius="100.000" />
 </DynamicScene>

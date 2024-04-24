@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes"?>
+<Paths>
+
+	<Path Name="StorageLook_cam0">
+		<Point  coord="327.561 580.968 2589.461" rotation="-0.003 0.504 -0.002 0.864"/>
+		<Point  coord="332.782 581.004 2586.504" rotation="-0.003 0.504 -0.002 0.864"/>
+	</Path>
+
+	<Path Name="StorageLook_cam1">
+		<Point  coord="377.628 605.482 2559.450" rotation="-0.076 0.530 -0.048 0.843"/>
+		<Point  coord="289.229 601.674 2513.530" rotation="-0.099 -0.003 0.000 0.995"/>
+	</Path>
+</Paths>

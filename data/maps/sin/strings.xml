@@ -80,16 +80,16 @@
 		modelSkin="1"
 		modelCfg="58"
 		modelSlot="1"
-		value="АРЛЕКИН|Счастливо оставаться, Райдер."
+		value="АРЛЕКИН|Счастливо оставаться, незнакомец."
 		sound="data\sounds\Speech\sin\sin_5106_arlekin.ogg"
-		time="1" />
+		time="" />
 
 	<string
 		id="5200"
 		modelName="NewHero_mask"
 		value="БРОДЯГА|Опять ты?"
 		sound="data\sounds\Speech\sin\sin_5200_nomad.ogg"
-		time="1" />
+		time="2" />
 
 	<string
 		id="5201"
@@ -97,9 +97,9 @@
 		modelSkin="1"
 		modelCfg="58"
 		modelSlot="1"
-		value="АРЛЕКИН|Ты??! Здесь?"
+		value="АРЛЕКИН|Пора поговорить с тобой по серьезному!"
 		sound="data\sounds\Speech\sin\sin_5201_arlekin.ogg"
-		time="1" />
+		time="3" />
 
 	<string
 		id="5202"
@@ -121,15 +121,49 @@
 	<string
 		id="5204"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Кто нибудь ещё хочет меня поприветствовать в вашем городе?.. Нет? Счастливо оставаться, Щенки."
+		value="БРОДЯГА|Кто нибудь ещё хочет меня поприветствовать в вашем городе? Нет? Счастливо оставаться, Щенки."
 		sound="data\sounds\Speech\sin\sin_5204_nomad.ogg"
-		time="7"		/>
+		time="7"/>
+
+	<string
+		id="5205"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Привет, красавчик. Теперь тебе в наших краях и заправиться-то не получится. Арелекин был правой рукой Бульдога, Босса Псов. Пока ты враг Псов - нет дураков, чтобы тебе помогать."
+		sound=""
+		time="10"/>		
+
+	<string
+		id="5206"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Остается воровать запчасти и сливать бензин по ночам."
+		sound=""
+		time="5"/>
+
+	<string
+		id="5207"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Как вариант. Вариант номер два - работать на Котов Гарфилда. Если ты будешь работать на Гарфилда, у тебя будут и деньги и бензин. Найти его можно на его Вилле. Скажи, что ты от Китти. Удачи, Красавчик."
+		sound=""
+		time="12"/>
+
+	<string
+		id="5208"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Спасибо."
+		sound=""
+		time="3"/>
 
 	<string
 		id="5300"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="168"
 		modelSlot="1"
 		value="ЭГОИСТ|Уйди с дороги, придурок."
 		sound="data\sounds\Speech\sin\sin_5300_egoist.ogg"
@@ -145,8 +179,8 @@
 	<string
 		id="5302"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="168"
 		modelSlot="1"
 		value="ЭГОИСТ|Это же ты тот приезжий, что пристрелил Арлекина! Теперь из-за тебя начнется война."
 		sound="data\sounds\Speech\sin\sin_5302_egoist.ogg"
@@ -162,8 +196,8 @@
 	<string
 		id="5304"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="168"
 		modelSlot="1"
 		value="ЭГОИСТ|Ты среди нас чужой. Лишний."
 		sound="data\sounds\Speech\sin\sin_5304_egoist.ogg"
@@ -179,8 +213,8 @@
 	<string
 		id="5306"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="168"
 		modelSlot="1"
 		value="ЭГОИСТ|Я слышу угрозу в твоем голосе?!"
 		sound="data\sounds\Speech\sin\sin_5306_egoist.ogg"
@@ -196,8 +230,8 @@
 	<string
 		id="5308"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="168"
 		modelSlot="1"
 		value="ЭГОИСТ|Я же тебя убью, наглец."
 		sound="data\sounds\Speech\sin\sin_5308_egoist.ogg"
@@ -213,8 +247,8 @@
 	<string
 		id="5313"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="168"
 		modelSlot="1"
 		value="ЭГОИСТ|Ты за это поплатишься..."
 		sound="data\sounds\Speech\sin\sin_5313_egoist.ogg"
@@ -228,31 +262,200 @@
 		time="4" />
 
 	<string
-		id="5400"
-		modelName="NewHero_mask"
-		value="БРОДЯГА|Помощь не требуется?"
-		sound="data\sounds\Speech\sin\sin_5400_nomad.ogg"
-		time="1" />
-
-	<string
-		id="5401"
+		id="5315"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="8"
+		modelSkin="0"
+		modelCfg="132"
 		modelSlot="1"
-		value="ВОДИТЕЛЬ|Помощи каждый будет рад. Не ты ли тот водила, что убил Арлекина?"
-		sound="data\sounds\Speech\sin\sin_5401_driver.ogg"
-		time="5" />
-
-	<string
-		id="5402"
-		modelName="NewHero_mask"
-		value="БРОДЯГА|Наверно, путаешь меня с кем-то..."
-		sound="data\sounds\Speech\sin\sin_5402_nomad.ogg"
+		value="ГАРФИЛД|Что происходит!?"
+		sound=""
 		time="2" />
 
 	<string
-		id="5403"
+		id="5316"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="1"
+		value="ЭГОИСТ|Он сам меня спровоцировал, босс. Не нравится мне этот бейсболист."
+		sound=""
+		time="6" />
+
+	<string
+		id="5317"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Как будто ты для меня эталон красоты, ядрен бензин."
+		sound=""
+		time="5" />
+
+	<string
+		id="5318"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="1"
+		value="ЭГОИСТ|Да я тебя сейчас...!!"
+		sound=""
+		time="2" />
+
+	<string
+		id="5319"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Успокойся, Эгоист! Не веди себя, как ребенок."
+		sound=""
+		time="4" />
+
+	<string
+		id="5320"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вот и правильно. Слушайся своего папочку. А я, пожалуй, поеду к Джо, выпью чего-нибудь."
+		sound=""
+		time="7" />
+
+	<string
+		id="5400"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Так... Караван едет по западному мосту. Надо бы осторожным быть, наверняка мое присутствие сорвет сделку."
+		sound=""
+		time="9" />
+
+	<string
+		id="5410"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну-ка, ну-ка..."
+		sound=""
+		time="3" />
+
+	<string
+		id="5411"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Приветствую вас, господа. Давайте сразу к делу, с товаром порядок?"
+		sound=""
+		time="5" />
+
+	<string
+		id="5412"
+		modelName="r2_man"
+		modelSkin="5"
+		modelCfg="198"
+		modelSlot="0"
+		value="КАРАВАНЩИК|Сами посмотрите. Оружие ''Максим'' - плазменные снаряды, урон внушающий, скорострельность правда медленная, но прочность этой пушки довольно хорошая."
+		sound=""
+		time="8" />
+
+	<string
+		id="5413"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value="ГАРФИЛД|Отлично, берем. Эгоист, вытаскивай коробку с деньгами."
+		sound=""
+		time="5" />
+
+	<string
+		id="5414"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="0"
+		value="ЭГОИСТ|Понял, босс."
+		sound=""
+		time="2" />
+
+	<string
+		id="5415"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="1"
+		value="ЭГОИСТ|Держите. Ну а теперь..."
+		sound=""
+		time="2" />
+
+	<string
+		id="5416"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="0"
+		value="ГАРФИЛД|В атаку!!"
+		sound=""
+		time="5" />
+
+	<string
+		id="5417"
+		modelName="r2_man"
+		modelSkin="5"
+		modelCfg="198"
+		modelSlot="1"
+		value="КАРАВАНЩИК|Черт! Ребята, бейте их!"
+		sound=""
+		time="4" />
+
+	<string
+		id="5418"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Мда, как я и предполагал. Если я об этом расскажу Псам, то это наверняка заставит их напрячься, если не хуже. Но сначала..."
+		sound=""
+		time="8" />
+
+	<string
+		id="5500"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Слушай внимательно. Сейчас я не смогу тебя вместе с мужем спасти, ибо наверняка у выезда нас будут поджидать дружки Гарфилда. А потому надо сделать так чтобы их влияние подпортилось."
+		sound=""
+		time="10" />
+
+	<string
+		id="5501"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|И что ты предлагаешь?"
+		sound=""
+		time="3" />
+
+	<string
+		id="5502"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я хочу тебя отдать Псам. Если Коты узнают, что ты у Псов, они по любому сделают все, чтобы тебя вернуть."
+		sound=""
+		time="7" />
+
+	<string
+		id="5503"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Ты с ума сошел? Они меня же точно так же в плен заберут, узнав про долг мужа!"
+		sound=""
+		time="5" />
+
+	<string
+		id="5504"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вряд ли, они наверняка захотят обменять тебя на оружие, что недавно получили Коты. А зная Котов, они наверняка, не захотят честного обмена, и возьмутся на оружие."
+		sound=""
+		time="12" />
+
+	<string
+		id="5505"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не бойся, я буду рядом."
+		sound=""
+		time="3" />
+
+	<string
+		id="54030"
 		modelName="r2_man"
 		modelSkin="1"
 		modelCfg="8"
@@ -262,7 +465,8 @@
 		time="2" />
 
 	<string
-		id="5500"
+		id="55001"
+		modelName="r2_man"
 		modelSkin="0"
 		modelCfg="332"
 		modelSlot="1"
@@ -271,14 +475,14 @@
 		time="1" />
 
 	<string
-		id="5501"
+		id="55011"
 		modelName="NewHero_mask"
 		value="БРОДЯГА|Меня послали Коты с сообщением..."
 		sound="data\sounds\Speech\sin\sin_5501_nomad.ogg"
 		time="2" />
 
 	<string
-		id="5502"
+		id="55021"
 		modelName="r2_man"
 		modelSkin="0"
 		modelCfg="332"
@@ -288,7 +492,7 @@
 		time="1" />
 
 	<string
-		id="5503"
+		id="55031"
 		modelName="NewHero_mask"
 		value="БРОДЯГА|Деньги за работу у меня с собой... Стреляйте, ребята..."
 		sound="data\sounds\Speech\sin\sin_5503_nomad.ogg"
@@ -297,7 +501,7 @@
 	<string
 		id="5600"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Черт. Туннель завалило. Чтобы вернуться, придётся искать другую дорогу..."
+		value="БРОДЯГА|Черт. Чтобы вернуться, придётся искать другую дорогу..."
 		sound="data\sounds\Speech\sin\sin_5600_nomad.ogg"
 		time="3" />
 
@@ -338,8 +542,8 @@
 	<string
 		id="5801"
 		modelName="r2_man"
-		modelSkin="3"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="314"
 		value="БОРН|Где наш груз?!"
 		sound="data\sounds\Speech\sin\sin_5801_born.ogg"
 		time="1" />
@@ -350,17 +554,17 @@
 		modelSkin="0"
 		modelCfg="132"
 		modelSlot="1"
-		value="ГАРФИЛД|Сначала покажите нам Эгоиста."
-		sound="data\sounds\Speech\sin\sin_5802_cat.ogg"
+		value="ГАРФИЛД|Сначала покажите нам Китти."
+		sound=""
 		time="2" />
 
 	<string
 		id="5803"
 		modelName="r2_man"
-		modelSkin="3"
-		modelCfg="132"
-		value="БОРН|С ним всё в порядке-забирайте."
-		sound="data\sounds\Speech\sin\sin_5803_born.ogg"
+		modelSkin="4"
+		modelCfg="314"
+		value="БОРН|С ней всё в порядке, забирайте."
+		sound=""
 		time="2" />
 
 	<string
@@ -369,15 +573,15 @@
 		modelSkin="0"
 		modelCfg="132"
 		modelSlot="1"
-		value="ГАРФИЛД|Это не та коробка!!!"
+		value="ГАРФИЛД|Это не та коробка!"
 		sound="data\sounds\Speech\sin\sin_5804_cat.ogg"
 		time="1" />
 
 	<string
 		id="5805"
 		modelName="r2_man"
-		modelSkin="3"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="314"
 		value="БОРН|Огонь!!!"
 		sound="data\sounds\Speech\sin\sin_5805_born.ogg"
 		time="1" />
@@ -388,9 +592,33 @@
 		modelSkin="0"
 		modelCfg="132"
 		modelSlot="1"
-		value="ГАРФИЛД|Смерть щенкам!!"
+		value="ГАРФИЛД|Смерть щенкам!!!"
 		sound="data\sounds\Speech\sin\sin_5806_cat.ogg"
-		time="1" />
+		time="5" />
+
+	<string
+		id="5807"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ха, видишь, Джо? Стоило отобрать у Котов источник дохода, и отдать Псам, как те сразу сцепились за источник дохода."
+		sound=""
+		time="6" />
+
+	<string
+		id="5808"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="294"
+		modelSlot="1"
+		value="ДЖО|Вижу, и мне не нравиться, что ты делаешь. Когда-нибудь сплывет правда, что ты виноват во всем этом, и они точно на тебя обозлятся."
+		sound=""
+		time="9" />
+
+	<string
+		id="5809"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Смотри-ка, Борн сбегает и бежит в свое логово, хочется его послушать."
+		sound=""
+		time="4" />
 
 	<string
 		id="5900"
@@ -400,10 +628,62 @@
 		time="2" />
 
 	<string
+		id="5910"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я же говорил, что мы справимся."
+		sound=""
+		time="2" />
+
+	<string
+		id="5911"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|Я бы на тебя обозлился за твои опасные идеи, но ты все-таки спас мою жену."
+		sound=""
+		time="5" />
+
+	<string
+		id="5912"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Обсуждать мои действия будете в другой раз. Езжайте отсюда, как можно быстрее, пока Псы не приехали."
+		sound=""
+		time="7" />
+
+	<string
+		id="5913"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|А как же ты? Что с тобой будет?"
+		sound=""
+		time="3" />
+
+	<string
+		id="5914"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|За меня не переживайте. Жить буду. Сейчас вам надо бежать отсюда."
+		sound=""
+		time="7" />
+
+	<string
+		id="5915"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|Тогда желаю удачи тебе, незнакомец."
+		sound=""
+		time="3" />
+
+	<string
 		id="6000"
 		modelName="r2_man"
-		modelSkin="3"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="314"
+		modelSlot="1"
 		value="БОРН|Что здесь случилось?"
 		sound="data\sounds\Speech\sin\sin_6000_born.ogg"
 		time="1" />
@@ -418,8 +698,8 @@
 	<string
 		id="6002"
 		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
+		modelSkin="5"
+		modelCfg="40"
 		modelSlot="1"
 		value="КЕВИН|А что с твоей машиной?"
 		sound="data\sounds\Speech\sin\sin_6002_kevin.ogg"
@@ -435,8 +715,8 @@
 	<string
 		id="6004"
 		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
+		modelSkin="5"
+		modelCfg="40"
 		modelSlot="1"
 		value="КЕВИН|Мы не видели по дороге ни одной."
 		sound="data\sounds\Speech\sin\sin_6004_kevin.ogg"
@@ -452,8 +732,8 @@
 	<string
 		id="6006"
 		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
+		modelSkin="5"
+		modelCfg="40"
 		modelSlot="1"
 		value="КЕВИН|Я так не думаю. Этот водитель не Кот и не Пес, он - поганая крыса. Снимите с его машины оружие."
 		sound="data\sounds\Speech\sin\sin_6006_kevin.ogg"
@@ -469,20 +749,20 @@
 	<string
 		id="6100"
 		modelName="r2_man"
-		modelSkin="0"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="314"
 		modelSlot="1"
-		value="ГАРФИЛД|Как вы могли его упустить?! Поймайте его немедленно!!!"
+		value="БОРН|Как вы могли его упустить?! Поймайте его немедленно!!!"
 		sound="data\sounds\Speech\sin\sin_6100_cat.ogg"
 		time="3" />
 
 	<string
 		id="6101"
 		modelName="r2_man"
-		modelSkin="0"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="314"
 		modelSlot="1"
-		value="ГАРФИЛД|Куда он подевался?! Макс, Флеминг - останьтесь здесь, остальные со мной."
+		value="БОРН|Куда он подевался?! Макс, Флеминг - останьтесь здесь, остальные со мной."
 		sound="data\sounds\Speech\sin\sin_6101_cat.ogg"
 		time="5" />
 
@@ -492,8 +772,8 @@
 		modelSkin="0"
 		modelCfg="58"
 		value="МАКС|Вон он!!!"
-		sound="data\sounds\Speech\sin\sin_6102_born.ogg"
-		time="1" />
+		sound="data\sounds\Speech\sin\sin_6102_max.ogg"
+		time="2" />
 
 	<string
 		id="6103"
@@ -502,15 +782,69 @@
 		modelCfg="58"
 		modelSlot="1"
 		value="ФЛЕМИНГ|Лови!!"
-		sound="data\sounds\Speech\sin\sin_6103_max.ogg"
-		time="1" />
+		sound="data\sounds\Speech\sin\sin_6103_fleming.ogg"
+		time="2" />
 
 	<string
 		id="6104"
+		modelName="r1_man"
+		modelSkin="3"
+		modelCfg="156"
+		modelSlot="1"
+		value="ЖИТЕЛЬ|Мы от Джо. Он рассказал про твою авантюру на ферме. Езжай быстрее, мы тебя прикроем."
+		sound=""
+		time="5" />
+
+	<string
+		id="6105"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Вроде, ушёл. Надо добраться до Церкви - там можно отсидеться."
+		value="БРОДЯГА|Спасибо."
+		sound=""
+		time="3"/>
+
+	<string
+		id="6106"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Вроде, ушёл. Надо добраться до Церкви. Там можно отсидеться."
 		sound="data\sounds\Speech\sin\sin_6104_nomad.ogg"
 		time="4" />
+
+	<string
+		id="6110"
+		modelName="r2_woman"
+		modelSkin="5"
+		modelCfg="40"
+		modelSlot="1"
+		value="КЕВИН|Где бейсболист!? Где он!!?"
+		sound=""
+		time="4" />
+
+	<string
+		id="6111"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="0"
+		value="ЭГОИСТ|Да нету его здесь, мы сами не знаем, где он!"
+		sound=""
+		time="4" />
+
+		<string
+		id="6112"
+		modelName="r2_woman"
+		modelSkin="5"
+		modelCfg="40"
+		modelSlot="1"
+		value="КЕВИН|Ложь! Он у вас прячется, выдайте его нам или вы все умрете!"
+		sound=""
+		time="5" />
+
+		<string
+		id="6113"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Хех, молодец Гарфилд, когда-нибудь я тебе верну должок. На твоей могиле. А я, пожалуй, дам по педали отсюда."
+		sound=""
+		time="8" />
 
 	<string
 		id="6200"
@@ -527,14 +861,14 @@
 		modelSkin="0"
 		modelCfg="58"
 		modelSlot="1"
-		value="МЭР|Ты сделал всё отлично - одной банды теперь нет. Что будешь делать дальше?"
+		value="МЭР|Ты сделал всё отлично, одной банды теперь нет. Чем планируешь заняться дальше?"
 		sound="data\sounds\Speech\sin\sin_6201_mer.ogg"
 		time="5" />
 
 	<string
 		id="6202"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Сначала нужно подлечить тачку и достать оружие."
+		value="БРОДЯГА|Сначала нужно отремонтировать тачку и достать оружие."
 		sound="data\sounds\Speech\sin\sin_6202_nomad.ogg"
 		time="3" />
 
@@ -544,7 +878,7 @@
 		modelSkin="0"
 		modelCfg="58"
 		modelSlot="1"
-		value="МЭР|Я бы ни за что не стал тебе помогать... И я не буду этого делать. Все, что я тебе дам, это оружие. Псы захватили Джо. Я не хочу, чтобы с ним что нибудь случилось."
+		value="МЭР|Я бы ни за что не стал тебе помогать... И я не буду этого делать. Я дам тебе только оружие. Псы захватили Джо, я не хочу, чтобы с ним что-нибудь случилось."
 		sound="data\sounds\Speech\sin\sin_6203_mer.ogg"
 		time="10" />
 
@@ -561,15 +895,15 @@
 		modelSkin="0"
 		modelCfg="58"
 		modelSlot="1"
-		value="МЭР|Да, в Восточной части. Борн с Кевином уехали на поиски Китти - остались только простые бойцы..."
+		value="МЭР|Да, в Восточной части. Борн с Кевином уехали на поиски Китти. Остались только простые бойцы."
 		sound="data\sounds\Speech\sin\sin_6205_mer.ogg"
 		time="6" />
 
 	<string
 		id="6300"
 		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
+		modelSkin="5"
+		modelCfg="40"
 		modelSlot="1"
 		value="КЕВИН|А ты хорош! Может, даже так же хорош, как я."
 		sound="data\sounds\Speech\sin\sin_6300_kevin.ogg"
@@ -585,8 +919,8 @@
 	<string
 		id="6302"
 		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
+		modelSkin="5"
+		modelCfg="40"
 		modelSlot="1"
 		value="КЕВИН|Слухи обычно преувеличены..."
 		sound="data\sounds\Speech\sin\sin_6302_kevin.ogg"
@@ -595,8 +929,8 @@
 	<string
 		id="6303"
 		modelName="r2_man"
-		modelSkin="3"
-		modelCfg="132"
+		modelSkin="4"
+		modelCfg="314"
 		modelSlot="1"
 		value="БОРН|Слушайте! Я не хочу войны. Нам не нужна война. Война окончена - мы победили. Зачем нам воевать? Нам нужно радоваться! Бродяга, присоединяйся ко мне. Вместе мы найдем Китти, у меня есть деньги. Всё будет ок! Мы победили!"
 		sound="data\sounds\Speech\sin\sin_6303_born.ogg"
@@ -612,12 +946,63 @@
 	<string
 		id="6305"
 		modelName="r2_man"
-		modelSkin="1"
-		modelCfg="326"
+		modelSkin="3"
+		modelCfg="294"
 		modelSlot="1"
 		value="ДЖО|На, получи!!"
 		sound="data\sounds\Speech\sin\sin_6305_jo.ogg"
 		time="1" />
+
+	<string
+		id="6310"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="294"
+		modelSlot="1"
+		value="ДЖО|Не могу поверить! Ты сделал это! Псы побеждены."
+		sound=""
+		time="4" />
+
+	<string
+		id="6311"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не я... Мы это сделали."
+		sound=""
+		time="3" />
+
+	<string
+		id="6312"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="294"
+		modelSlot="1"
+		value="ДЖО|Предлагаю это отметить, Бродяга. Погнали, выпьем. За счет заведения."
+		sound=""
+		time="5" />
+
+	<string
+		id="6313"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Нет, прости. Но мне надо ехать. Я вообще должен был приехать сюда тебе доставить посылку, а я и так достаточно подзадержался."
+		sound=""
+		time="8" />
+
+	<string
+		id="6314"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="294"
+		modelSlot="1"
+		value="ДЖО|Что ж, тогда возьми от меня награду за все, что ты для нас сделал. И передавай привет Леонелю. Чистого бензина, чужеземец."
+		sound=""
+		time="8" />
+
+		<string
+		id="6315"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Спасибо. Чистого бензина, Джо."
+		sound=""
+		time="3" />
 
 	<string
 		id="6400"
@@ -635,6 +1020,7 @@
 
 	<string
 		id="6500"
+		modelName="NewHero_mask"
 		value ="БРОДЯГА|Вряд ли я смогу здесь проехать. Должен быть другой путь."
 		sound="data\sounds\Speech\sin\sin_6500_nomad.ogg"
 		time="3" />

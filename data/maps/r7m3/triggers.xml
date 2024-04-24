@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<trigger Name="trtest" active="1">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			TakeQuest("r7m1_SearchHermit_Quest") 
+		</script>
+	</trigger>
+
+<!--КПП на Винодельню-->
+	<trigger Name="trGuardVino" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="VinoGuard_loc" />
+		<script>
+			StartConversation("GuardErmocinyo_NPC")
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+<!--В случае если мы без пропуска-->
+	<trigger Name="trGoBackKPP" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetPosition( CVector(1151.933, 569.900, 2362.984))
+				Plf:SetRotation(Quaternion(0.057, 0.937, 0.014, 0.345))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
 <!--Телепорт в Прибрежье-->
 	<trigger Name="triggerExitToMap71" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR7M1" />

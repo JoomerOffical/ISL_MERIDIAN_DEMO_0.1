@@ -33,6 +33,8 @@
 	<Object  	Name="Sin_BlackWood" 				FullName = "Блэквуд"/>
 	<Object   	Name="Sin_Egoist" 					FullName = "Эгоист"/>
 	<Object		Name="Sin_Kitty_Trapped" 			FullName = "Крошка Китти"/>
+	<Object		Name="Sin_JessDriver" 				FullName = "Водитель Джесс"/>
+	<Object		Name="Sin_Graveman" 				FullName = "Могильщик Ган"/>
 	<Object 	Name="Sin_Father" 					FullName = "Отец Патрик" />
 	<Object 	Name="Sin_Church" 					FullName = "Церковь Колеса" />
 	<Object 	Name="Sin_CatHouse" 				FullName = "Кошкин Дом"/>

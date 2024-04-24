@@ -9,6 +9,8 @@
 	<Object	Name = "r7m3_Saltilio_Bar_Barman"	FullName = "Повариха Корнелио" />
 	<Object	Name = "r7m3_Saltilio_Workshop"		FullName = "Мастерская" />
 	<Object	Name = "r7m3_Saltilio_Shop"			FullName = "Магазин" />
+	<Object	Name = "FarmerSamuel_NPC"			FullName = "Фермер Самуель" />
+	<Object	Name = "CaravanGarcia_NPC"			FullName = "Караванщик Гарсия" />
 
 	<Object	Name = "r7m3_OldStorage"			FullName = "Старые Склады" />
 	<Object	Name = "r7m3_OldStorage_enter"		FullName = "Старые Склады" />
@@ -19,6 +21,7 @@
 	<Object	Name = "r7m3_Huares_Workshop"		FullName = "Мастерская" />
 	<Object	Name = "r7m3_Huares_Bar"			FullName = "Бар 'Puente'" />
 	<Object	Name = "r7m3_Huares_Bar_Barman"		FullName = "Бармен Рамон" />
+	<Object	Name = "ProniraDylan_NPC"			FullName = "Проныра Дилан" />
 
 	<Object	Name = "PetrolStationTownr7m3_1"	FullName = "Заправка" />
 	<Object	Name = "PetrolStationTownr7m3_1_enter"	FullName = "Заправка" />
@@ -38,6 +41,7 @@
 	<Object	Name = "r7m3_Torreon_Workshop"		FullName = "Мастерская" />
 	<Object	Name = "r7m3_Torreon_Bar"			FullName = "Бар 'Montana'" />
 	<Object	Name = "r7m3_Torreon_Bar_Barman"	FullName = "Официантка Вилламона" />
+	<Object	Name = "SellerValdez_NPC"			FullName = "Торговец Вальдез" />
 
 	<Object	Name = "r7m3_ErmosinyoVine"			FullName = "Винодельня Эрмосиньо" />
 	<Object	Name = "r7m3_ErmosinyoVine_enter"	FullName = "Винодельня Эрмосиньо" />
@@ -46,7 +50,8 @@
 	<Object	Name = "r7m3_ErmosinyoVine_Bar"		FullName = "Винный Погреб" />
 	<Object	Name = "r7m3_ErmosinyoVine_Bar_Barman"	FullName = "Винодел Сансон" />
 	<Object	Name = "r7m3_ErmosinyoVine_House"		FullName = "Кабинет хефе" />
-	<Object	Name = "JefeReinardo_NPC"			FullName = "Хефе Рейнардо" />
+	<Object	Name = "JefeErmosinyo_NPC"			FullName = "Хефе Эрмосиньо" />
+	<Object	Name = "GuardErmocinyo_NPC"			FullName = "Охраник Эскаланте" />
 
 	<Object	Name = "DynQEnemy01"					FullName = "Вентуро Касадо" />
 	<Object	Name = "DynQEnemy02"					FullName = "Джеральд Баса" />	

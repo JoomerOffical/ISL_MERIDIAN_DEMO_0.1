@@ -7,6 +7,24 @@ $Id: QuestItems.xml,v 1.1 2005/12/08 08:58:05 anton Exp $
 <Prototypes>
 	<Prototype
 		Class			= "QuestItem"
+		Name			= "quest_letter_lamp"
+		ModelFile		= "quest_letter"
+		ResourceType	= "QUEST_LETTER_LAMP" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_lamp"
+		ModelFile		= "parsel"
+		ResourceType	= "QUEST_LAMP" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "quest_pack_joe"
+		ModelFile		= "parsel"
+		ResourceType	= "QUEST_PACK_JOE" />
+
+	<Prototype
+		Class			= "QuestItem"
 		Name			= "quest_baseball_bat"
 		ModelFile		= "quest_bita"
 		ResourceType	= "QUEST_BASEBALL_BAT" />

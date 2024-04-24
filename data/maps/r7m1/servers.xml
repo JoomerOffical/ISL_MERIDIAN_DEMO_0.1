@@ -6,6 +6,10 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
+			id="dweller_vincent"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="books"
 			file="data\models\AnimModels.xml" />
 

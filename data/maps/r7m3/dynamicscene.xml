@@ -6035,6 +6035,26 @@
 				cfg="108"
 				NpcType="BARMAN"
 				SpokenCount="0" />
+
+			<Object
+				Name="FarmerSamuel_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="0"
+				cfg="44"
+				helloReplyNames="Samuel1_DLG"
+				SpokenCount="0" />
+			
+			<Object
+				Name="CaravanGarcia_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r4_man"
+				skin="1"
+				cfg="174"
+				helloReplyNames="Caravan1_DLG Caravan2_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -6157,6 +6177,16 @@
 				cfg="150"
 				NpcType="BARMAN"
 				SpokenCount="0" />
+
+			<Object
+				Name="ProniraDylan_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="142"
+				helloReplyNames="Pronira1_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -6277,6 +6307,7 @@
 				ModelName="r4_man"
 				skin="1"
 				cfg="114"
+				helloReplyNames="Hermit1_DLG Hermit2_DLG Hermit3_DLG Hermit4_DLG Hermit5_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -6332,6 +6363,16 @@
 				skin="4"
 				cfg="156"
 				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="SellerValdez_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="0"
+				cfg="354"
+				helloReplyNames="TraderTorreon1_DLG TraderTorreon2_DLG TraderTorreon5_DLG TraderTorreon3_DLG TraderTorreon4_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -6573,6 +6614,16 @@
 				cfg="110"
 				NpcType="BARMAN"
 				SpokenCount="0" />
+
+			<Object
+				Name="GuardErmocinyo_NPC"
+				Belong="1108"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="5"
+				cfg="276"
+				helloReplyNames="GuardVino1_DLG GuardVino2_DLG GuardVino3_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -6580,11 +6631,13 @@
 			Belong="1108"
 			Prototype="barWithoutBarman">
 			<Object
-				Name="JefeReinardo_NPC"
+				Name="JefeErmosinyo_NPC"
 				Belong="1108"
 				Prototype="NPC"
 				ModelName="r2_man"
-				cfg="6"
+				skin="3"
+				cfg="168"
+				helloReplyNames="JefeErmosinyo1_DLG JefeErmosinyo5_DLG JefeErmosinyo2_DLG JefeErmosinyo3_DLG JefeErmosinyo4_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -7902,6 +7955,27 @@
 	</Object>
 
 	<Object
+		Name="VinoGuard_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1103.355 567.231 2419.776"
+		Radius="45.000" />
+
+	<Object
+		Name="cinLookStorage_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="322.188 576.687 2600.362"
+		Radius="20.000" />
+
+	<Object
 		Belong="1100"
 		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="ArmyVino_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="3186.974 556.806 2270.014"
+		Radius="50.000" />
 </DynamicScene>

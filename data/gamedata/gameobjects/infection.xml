@@ -9,12 +9,12 @@ $Id: Infection.xml,v 1.1 2005/12/08 08:58:04 anton Exp $
 	<Prototype
 		Class			= "InfectionZone"
 		Name			= "InfectionZone"
-		MinDistToPlayer	= "300"
-		CriticalTeamDist	= "500"
-		CriticalTeamTime	= "5" 
-		BlindTeamDist	= "200"
-		BlindTeamTime	= "20"
-		DropOutTimeOut	= "20.000"
+		MinDistToPlayer	= "500"
+		CriticalTeamDist	= "700"
+		CriticalTeamTime	= "10" 
+		BlindTeamDist	= "300"
+		BlindTeamTime	= "25"
+		DropOutTimeOut	= "30.000"
 		/>
 
 

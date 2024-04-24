@@ -1005,14 +1005,6 @@
 		passable="0" />
 
 	<Node
-		name="Object992744923"
-		class="SgAnimatedModelNode"
-		org="3446.832 0.000 329.264"
-		orgRel="1"
-		id="mayak"
-		ndmAction="0" />
-
-	<Node
 		name="Object992744925"
 		class="SgAnimatedModelNode"
 		org="3379.796 -2.000 279.554"

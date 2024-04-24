@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<triggers>
+
+<!--Смотрим хранилище-->
+	<trigger Name="cinLookStorage" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="cinLookStorage_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("StorageLook_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 0)
+			Fly	("StorageLook_cam1", CINEMATIC_NO_AIM, 0, 18, 0, 1)
+			StartCinematic()
+
+			TActivate("cinLookStorage_FadeIn")
+			TActivate("cinLookStorage_cam01")
+			TActivate("cinLookStorage_End")
+
+		</script>
+	</trigger>
+
+	<trigger Name="cinLookStorage_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewDummyObject( "dweller_new_hero", "humPlayer", -1, -1, CVector(311.130, 577.369, 2600.383), Quaternion(0.0000, -0.8757, 0.0000, 0.4829), 0)
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(312.727, 577.369, 2604.029))
+				Plf:SetRotation(Quaternion(0.030, 0.997, 0.038, 0.057))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 100, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="cinLookStorage_cam01" active="0">
+		<event flypath="StorageLook_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = GetEntityByName ("humPlayer")
+			if humPl 
+				then humPl:Remove() 
+			end
+
+			AddCinematicMessage( 101, 0.5 )
+			AddCinematicMessage( 102, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="cinLookStorage_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("cinLookStorage_FadeIn")
+			TDeactivate("cinLookStorage_cam01")
+
+			CompleteQuest("r7m3_ComeToStorage1_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+</triggers>
+

@@ -1,6 +1,225 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
+		Name="TruckTreasure">
+		<Point
+			coord="624.216 1202.320" />
+
+		<Point
+			coord="667.505 1175.890" />
+
+		<Point
+			coord="718.777 1121.981" />
+
+		<Point
+			coord="738.055 1062.357" />
+
+		<Point
+			coord="734.567 1004.907" />
+
+		<Point
+			coord="745.154 934.544" />
+
+		<Point
+			coord="757.902 856.837" />
+
+		<Point
+			coord="770.592 786.255" />
+
+		<Point
+			coord="791.455 709.453" />
+
+		<Point
+			coord="825.155 633.806" />
+
+		<Point
+			coord="850.444 589.806" />
+	</Path>
+
+	<Path
+		Name="RunBandit_path0">
+		<Point
+			coord="708.434 1170.050" />
+
+		<Point
+			coord="697.148 1141.094" />
+
+		<Point
+			coord="730.779 1096.710" />
+
+		<Point
+			coord="739.282 1028.597" />
+
+		<Point
+			coord="746.408 936.045" />
+
+		<Point
+			coord="765.529 822.495" />
+
+		<Point
+			coord="789.202 737.530" />
+
+		<Point
+			coord="829.881 637.529" />
+
+		<Point
+			coord="869.737 567.909" />
+
+		<Point
+			coord="950.247 515.999" />
+
+		<Point
+			coord="1007.198 496.149" />
+
+		<Point
+			coord="1069.600 489.814" />
+
+		<Point
+			coord="1171.242 505.987" />
+
+		<Point
+			coord="1270.929 537.870" />
+
+		<Point
+			coord="1346.465 554.573" />
+
+		<Point
+			coord="1393.493 555.986" />
+
+		<Point
+			coord="1451.840 557.001" />
+
+		<Point
+			coord="1614.217 531.992" />
+
+		<Point
+			coord="1696.911 518.408" />
+
+		<Point
+			coord="1790.379 489.182" />
+
+		<Point
+			coord="1839.346 540.967" />
+
+		<Point
+			coord="1872.818 611.628" />
+
+		<Point
+			coord="1865.500 681.869" />
+
+		<Point
+			coord="1893.531 774.602" />
+
+		<Point
+			coord="1921.022 848.825" />
+
+		<Point
+			coord="1975.347 862.802" />
+
+		<Point
+			coord="1995.801 907.206" />
+
+		<Point
+			coord="1964.464 962.763" />
+
+		<Point
+			coord="1916.771 1060.477" />
+
+		<Point
+			coord="1884.884 1113.138" />
+
+		<Point
+			coord="1883.430 1192.050" />
+
+		<Point
+			coord="1883.015 1331.399" />
+
+		<Point
+			coord="1905.655 1450.757" />
+
+		<Point
+			coord="1915.352 1527.491" />
+
+		<Point
+			coord="1924.976 1607.312" />
+
+		<Point
+			coord="1905.513 1727.385" />
+
+		<Point
+			coord="1851.927 1818.802" />
+
+		<Point
+			coord="1792.203 1902.350" />
+
+		<Point
+			coord="1756.239 1996.734" />
+
+		<Point
+			coord="1740.776 2096.281" />
+
+		<Point
+			coord="1743.169 2212.930" />
+
+		<Point
+			coord="1749.600 2297.593" />
+
+		<Point
+			coord="1726.615 2404.754" />
+
+		<Point
+			coord="1711.139 2531.089" />
+
+		<Point
+			coord="1708.698 2630.747" />
+
+		<Point
+			coord="1735.709 2739.916" />
+
+		<Point
+			coord="1754.306 2850.378" />
+
+		<Point
+			coord="1809.005 2916.422" />
+
+		<Point
+			coord="1888.792 2991.574" />
+
+		<Point
+			coord="1952.913 3046.221" />
+
+		<Point
+			coord="2008.390 3077.552" />
+
+		<Point
+			coord="2097.573 3093.628" />
+
+		<Point
+			coord="2169.860 3150.487" />
+
+		<Point
+			coord="2201.034 3228.835" />
+
+		<Point
+			coord="2209.789 3295.590" />
+
+		<Point
+			coord="2202.672 3355.111" />
+
+		<Point
+			coord="2161.832 3353.026" />
+
+		<Point
+			coord="2100.853 3349.787" />
+
+		<Point
+			coord="2027.977 3332.272" />
+
+		<Point
+			coord="2005.280 3255.257" />
+	</Path>
+
+	<Path
 		Name="DestroyBandits_path0">
 		<Point
 			coord="2180.974 2471.437" />

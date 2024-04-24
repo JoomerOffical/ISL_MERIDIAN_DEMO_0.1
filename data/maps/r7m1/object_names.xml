@@ -50,6 +50,14 @@
 		FullName="Селянин Игназио" />
 
 	<Object
+		Name="DrunkMateo_NPC"
+		FullName="Пьяница Матео" />
+
+	<Object
+		Name="BattleRevol_NPC"
+		FullName="Боец Раволь" />
+
+	<Object
 		Name="MaraMotos_Workshop"
 		FullName="Мастерская" />
 
@@ -68,6 +76,10 @@
 	<Object
 		Name="Kristy_Bar_Barman"
 		FullName="Смотрительница Цири" />
+
+	<Object
+		Name="MomGato_NPC"
+		FullName="Мама Гато" />
 
 	<Object
 		Name="PetrolStationr7m1_1"
@@ -102,6 +114,14 @@
 		FullName="Хозяйка Альварез" />
 
 	<Object
+		Name="SellerTadeo_NPC"
+		FullName="Продавец Тадэо" />
+
+	<Object
+		Name="TreasureNodin_NPC"
+		FullName="Авантюрист Нодин" />
+
+	<Object
 		Name="PetrolStationr7m1_2"
 		FullName="Заправка" />
 
@@ -112,6 +132,10 @@
 	<Object
 		Name="PetrolStationr7m1_2_enter"
 		FullName="Заправка" />
+
+	<Object
+		Name="MechanicLeonel_NPC"
+		FullName="Механик Леонель" />
 
 	<Object	
 		Name = "DynQEnemy01"					
