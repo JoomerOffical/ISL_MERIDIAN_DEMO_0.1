@@ -2344,6 +2344,8 @@
 			SetTolerance(1100, 1106, RS_ALLY)
 			SetTolerance(1100, 1107, RS_ALLY)
 
+			TakeQuest("sin_BackToLeo_Quest")
+
 			TDeactivate("Final_fctr")
 
 			SetCameraBehindPlayerVehicle()
