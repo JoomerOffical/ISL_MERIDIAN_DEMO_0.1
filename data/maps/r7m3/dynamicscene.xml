@@ -6187,6 +6187,16 @@
 				cfg="142"
 				helloReplyNames="Pronira1_DLG"
 				SpokenCount="0" />
+			
+			<Object
+				Name="SheriffMikel_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="0"
+				cfg="575"
+				helloReplyNames="SheriffHuares_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object

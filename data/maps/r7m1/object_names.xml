@@ -58,6 +58,10 @@
 		FullName="Боец Раволь" />
 
 	<Object
+		Name="BanditThiago_NPC"
+		FullName="Бандит Тьяго" />
+
+	<Object
 		Name="MaraMotos_Workshop"
 		FullName="Мастерская" />
 

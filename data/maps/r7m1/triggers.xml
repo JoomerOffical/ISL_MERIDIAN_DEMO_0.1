@@ -109,9 +109,92 @@
 				CreateTeam ("Bnd2", 1105, CVector(718.007, 245.188, 1254.415), {"Bug01"}, nil, nil, nil)
 
 				CompleteQuest("r7m1_GoMont_Quest")
+				TActivate("trZasadaDie")
 			end
 	
 		</script>
+	</trigger>
+
+<!--Бандиты подохли-->
+	<trigger Name="trZasadaDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="BehindBnd_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="BehindBnd_vehicle_1"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Bnd1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Bnd2_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 4>count then
+				return
+			end
+
+			CompleteQuest("r7m1_KillBandMont_Quest")
+			TActivate("cinRubBnd")
+	</script>
+	</trigger>
+
+<!--Преследуем бандита-->
+	<trigger Name="trNearBnd" active="0">
+		<event timeout="1" eventid="GE_TIME_PERIOD" />
+		<script>
+			local run = GetEntityByName("RunBnd_vehicle_0")
+			local pl = GetPlayerVehicle()
+			local len
+
+			if run and run:IsAlive() then
+				len = Dist(pl, run)
+				if (len > 300) or (20 > len) then
+					CinemaFiltersUse()
+					
+				    FailQuest("r7m1_FindRats_Quest")
+					TakeQuest("r7m1_FindRatsYS_Quest")
+
+					trigger:Deactivate()
+					TDeactivate("trBndDead")
+					TActivate("cinRubBndLose")
+				end
+			end
+		</script>
+	</trigger>
+
+<!--Преследуемый бандит подох-->
+	<trigger Name="trBndDead" active="0">
+		<event	eventid="GE_OBJECT_DIE"	ObjName="RunBnd_vehicle_0" />
+		<script>
+			FailQuest("r7m1_FindRats_Quest")
+			TakeQuest("r7m1_FindRatsYS_Quest")
+
+			SetTolerance(1100, 1190, RS_NEUTRAL)
+
+			TDeactivate("trNearBnd")
+			TActivate("cinRubBndLose")
+		</script>
+	</trigger>
+
+<!--Подъезжаем к аванпосту-->
+	<trigger Name="trAvaCome" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Avanpost_loc" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("r7m1_FindApost_Quest")
+			TActivate("cinAvaBnd")
+	</script>
+	</trigger>
+
+<!--Уничтожаем оставшихся и бандит начинает с нами диалог-->
+	<trigger Name="trAvaDead" active="0">
+		<event	eventid="GE_OBJECT_DIE"	ObjName="Boss_vehicle_0" />
+		<event	eventid="GE_OBJECT_DIE"	ObjName="AvaBnd1_vehicle_0" />
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 2>count then
+				return
+			end
+
+			StartConversation("BanditThiago_NPC")
+	</script>
 	</trigger>
 
 <!--Телепорт в Вексику-->

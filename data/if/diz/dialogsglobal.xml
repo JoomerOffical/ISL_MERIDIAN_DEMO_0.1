@@ -1233,6 +1233,31 @@
 		name="Dlg_pl_000777"
 		text="Да. Держи."
 		role="PLAYER" />
+<!--Root/r7m3/Шериф-->
+	<Reply
+		name="SheriffHuares_DLG"
+		text="Слушаю вас."
+		role="NPC"
+		scriptCondition="QuestStatus('r7m1_BanditReward_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_000858" />
+
+	<Reply
+		name="Dlg_pl_000858"
+		text="Сколько вы мне дадаите за этого шмоню?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000859" />
+
+	<Reply
+		name="Dlg_npc_000859"
+		text="О, какие люди. Мы его долго искали и ловили, а этот dibujo (чертила) умудрялся избегать правосудия. Держите, amigo. Заслужили."
+		role="NPC"
+		nextReplies="Dlg_pl_000860" />
+
+	<Reply
+		name="Dlg_pl_000860"
+		text="Отлично, ядрен бензин."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(2500); CompleteQuest('r7m1_BanditReward_Quest'); EndConversation()" />
 <!--Root/r7m1/Продавец-->
 	<Reply
 		name="Tadeo_DLG"
@@ -1821,6 +1846,109 @@
 		name="Dlg_pl_000546"
 		text="Спасибо. И берегите свою дочь."
 		role="PLAYER" />
+<!--Root/r7m1/Бандит-->
+	<Reply
+		name="VinoBandit_DLG"
+		text="Стой, не стреляй! Me rindo! Me rindo! (Я сдаюсь! Я сдаюсь!)"
+		role="NPC"
+		scriptCondition="IsQuestTaken('r7m1_FindRats_Quest')  or  IsQuestTaken('r7m1_FindRatsYS_Quest')"
+		nextReplies="Dlg_pl_000842" />
+
+	<Reply
+		name="Dlg_pl_000842"
+		text="Давай сюда руки, ноги! Поедем в Хуарес."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000843" />
+
+	<Reply
+		name="Dlg_npc_000843"
+		text="Черт, все таки не надо было соглашаться на условия того сhocho. (придурка)"
+		role="NPC"
+		nextReplies="Dlg_pl_000844" />
+
+	<Reply
+		name="Dlg_pl_000844"
+		text="Кого?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000845" />
+
+	<Reply
+		name="Dlg_npc_000845"
+		text="Придурка, с которым мы договорились о грабеже караванов. "
+		role="NPC"
+		nextReplies="Dlg_pl_000846" />
+
+	<Reply
+		name="Dlg_pl_000846"
+		text="Так, а ну-ка расскажи про него поподробнее."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000847" />
+
+	<Reply
+		name="Dlg_npc_000847"
+		text="Ну... заявился недавно в наших землях один desgraciado. (сукин сын) Говорит, у него личные какие-то счеты с Эрмосиньо, и предложил такую сделку. Мы грабим караваны и получаем товары, которые можно продать. Он занимается делами на западе. "
+		role="NPC"
+		nextReplies="Dlg_pl_000848" />
+
+	<Reply
+		name="Dlg_pl_000848"
+		text="Ого, а он не сказал какие счеты?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000849" />
+
+	<Reply
+		name="Dlg_npc_000849"
+		text="Ну он проронил слово, что Эрмосиньо что-то у него украл, а что именно, я так и не понял. И теперь хочет наказать Эрмосиньо путем разорения винодельни."
+		role="NPC"
+		nextReplies="Dlg_pl_000850" />
+
+	<Reply
+		name="Dlg_pl_000850"
+		text="Что ж... это многое объяснят. Он не представился, кем он является? И самое главное, не знаешь, где он сидит?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000851" />
+
+	<Reply
+		name="Dlg_npc_000851"
+		text="Ну он представился давним знакомым Эрмосиньо, походу его pariente. (родственник) Говорит, что засел на восточных складах, которые недавно захватили.  "
+		role="NPC"
+		nextReplies="Dlg_pl_000852" />
+
+	<Reply
+		name="Dlg_pl_000852"
+		text="Что ж, не густо, но хоть что-то я теперь знаю."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000853" />
+
+	<Reply
+		name="Dlg_npc_000853"
+		text="Слушай, amigo. Раз уж я раскрыл все мои карты тебе, то может отпустишь меня? И я пообщеаю, что больше никогда за бандитизм не возьмусь."
+		role="NPC"
+		nextReplies="Dlg_pl_000854 Dlg_pl_000835" />
+
+	<Reply
+		name="Dlg_pl_000835"
+		text="Ладно, отпущу. Но перед этим ты отдашь мне все, что вы тут нашили, избавишься от бадитского трепья, и пообещаешь сменить род деятельности."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000855" />
+
+	<Reply
+		name="Dlg_npc_000855"
+		text="Prometo. Honesto vexicano. (Обещаю. Честное вексиканское.)"
+		role="NPC"
+		nextReplies="Dlg_pl_000856" />
+
+	<Reply
+		name="Dlg_pl_000856"
+		text="Все, бывай."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m1_BeatBossBandMont_Quest'); CompleteQuest('r7m1_KillBossMont_Quest'); AddPlayerMoney(1500); TActivate('cinHerCon'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_000854"
+		text="Ну уж нет, бандиту верить, это как повернуться спиной перед врагом. Плюс за тебя объявляют неплохую награду. Так что садись."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m1_BeatBossBandMont_Quest'); CompleteQuest('r7m1_KillBossMont_Quest'); TakeQuest('r7m1_BanditReward_Quest'); EndConversation()" />
 <!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<Reply
 		name="r6m2_SearchRobot_1_N01"
@@ -4036,7 +4164,7 @@
 		name="Dlg_pl_000333"
 		text="Лучше рассчитывайте, сколько вы сможете мне заплатить. Бандит он или нет, а боеприпасы денег стоят."
 		role="PLAYER"
-		scriptResult=" TActivate ('trCreateKontr');  FailQuest('r5m1_K_TravelLetter');  FailQuest('r5m1_K_FindBtotherMan');  FailQuest('r5m1_Kontrabanda');  EndConversation()" />
+		scriptResult="TakeQuest('r5m1_KillKontrabondist'); TActivate ('trCreateKontr');  FailQuest('r5m1_K_TravelLetter');  FailQuest('r5m1_K_FindBtotherMan');  FailQuest('r5m1_Kontrabanda');  EndConversation()" />
 <!--Root/Sin/Джо-->
 	<Reply
 		name="Joe1_DLG"

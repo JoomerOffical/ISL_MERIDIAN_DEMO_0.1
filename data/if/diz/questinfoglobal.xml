@@ -1656,6 +1656,20 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_BackToHermit_Quest"
+		briefDiz="Вернуться к Отшельнику"
+		fullDiz="У Отшельника есть инфа, касаемая винограда. Надо бы навестить его, как буду свободен."
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="ToR7M3" />
+
+		<Map
+			name="r7m3"
+			targetObjName="r7m3_HermetHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m1_BackToMara_Quest"
 		briefDiz="Вернуться к пьянице"
 		isMainQuest="1">
@@ -1665,9 +1679,23 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_BanditReward_Quest"
+		briefDiz="Добраться до Хуареса и получить награду"
+		fullDiz="БАндит, за которого просили хорошую награду, сидит у меня и теперь я смогу еще немного обогатиться."
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="ToR7M3" />
+
+		<Map
+			name="r7m3"
+			targetObjName="r7m3_Huares" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m1_BeatBossBandMont_Quest"
-		briefDiz="Разобраться с остатками бандитов."
-		isMainQuest="0">
+		briefDiz="Разобраться с остатками бандитов"
+		isMainQuest="1">
 		<Map
 			name="r7m1" />
 	</QuestInfo>
@@ -1677,7 +1705,8 @@
 		briefDiz="Преследовать бандита"
 		isMainQuest="1">
 		<Map
-			name="r7m1" />
+			name="r7m1"
+			targetObjName="RunBnd_vehicle_0" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1707,6 +1736,23 @@
 		<Map
 			name="r7m1"
 			targetObjName="MaraMotos" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_FindApost_Quest"
+		briefDiz="Найти аванпост"
+		isMainQuest="1">
+		<Map
+			name="r7m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_FindRatsYS_Quest"
+		briefDiz="Найти бандитов самому"
+		fullDiz="Из-за моей ошибки мне теперь придется самому искать аванпост бандитов. Ладно, найдем."
+		isMainQuest="1">
+		<Map
+			name="r7m1" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1740,6 +1786,15 @@
 		isMainQuest="1">
 		<Map
 			name="r7m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_KillBossMont_Quest"
+		briefDiz="Разобраться с остатками бандитов"
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="Boss_vehicle_0" />
 	</QuestInfo>
 
 	<QuestInfo

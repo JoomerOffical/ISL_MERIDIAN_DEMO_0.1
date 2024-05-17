@@ -1809,6 +1809,16 @@
 				cfg="318"
 				helloReplyNames="Optional2_DLG"
 				SpokenCount="0" />
+			
+			<Object
+				Name="BanditThiago_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="132"
+				helloReplyNames="VinoBandit_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -7000,6 +7010,12 @@
 	<Object
 		Name="Avanpost_loc"
 		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2072.867 263.645 3287.749"
+		Radius="100.000" />
+	<Object
+		Name="Avanpost2_loc"
+		Belong="1190"
 		Prototype="genericLocation"
 		Pos="2072.867 263.645 3287.749"
 		Radius="100.000" />

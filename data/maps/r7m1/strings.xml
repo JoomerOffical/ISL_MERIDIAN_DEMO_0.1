@@ -116,6 +116,59 @@
 		time="12" />
 
 	<string
+		id="300"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да, как только я шухера навел, так он сразу сбегать. Хотя этот может меня привести к их аванпосту и тогда я пробью 2 покрышки разом."
+		sound=""
+		time="10" />
+
+	<string
+		id="301"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Черт. Теперь придется самому искать их аванпост."
+		sound=""
+		time="5" />
+
+	<string
+		id="302"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|А вот это наверное их аванпост. Мда, не густо. Ладно, пора их кончать."
+		sound=""
+		time="6" />
+
+	<string
+		id="400"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="ОТШЕЛЬНИК|Алло? Бродяга, прием. Это Эрмитано. Как слышно, прием?"
+		sound=""
+		time="5" />
+
+	<string
+		id="401"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Слышу хорошо. Что там с виноградом, прием?"
+		sound=""
+		time="5" />
+
+	<string
+		id="402"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="ОТШЕЛЬНИК|В общем я выяснил причину их отравления, но лучше тебе приехать ко мне, надо тебе самому посмотреть. Прием."
+		sound=""
+		time="8" />
+
+	<string
+		id="403"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Понял тебя, как освобожусь, приеду к тебе. Конец связи."
+		sound=""
+		time="5" />
+
+	<string
 		id="196"
 		value="ExMachina||Вы хотите воспользоваться|интерактивной системой помощи игры?"
 		numButtons="2" />

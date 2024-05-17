@@ -22,6 +22,7 @@
 	<Object	Name = "r7m3_Huares_Bar"			FullName = "Бар 'Puente'" />
 	<Object	Name = "r7m3_Huares_Bar_Barman"		FullName = "Бармен Рамон" />
 	<Object	Name = "ProniraDylan_NPC"			FullName = "Проныра Дилан" />
+	<Object	Name = "SheriffMikel_NPC"			FullName = "Шериф Микель" />
 
 	<Object	Name = "PetrolStationTownr7m3_1"	FullName = "Заправка" />
 	<Object	Name = "PetrolStationTownr7m3_1_enter"	FullName = "Заправка" />

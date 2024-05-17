@@ -100,29 +100,71 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken" />
+			ConditionToGive="all taken"
+			PrecedingQuests="r7m1_FindRats_Quest" />
 
 		<quest
 			Name="r7m1_KillBandMont_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_GoMont_Quest" />
 
 		<quest
 			Name="r7m1_ChaseBandMont_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_KillBandMont_Quest"
+			OnTake='ShowCircleOnMinimapByName("RunBnd_vehicle_0")' />
 
 		<quest
 			Name="r7m1_BeatBossBandMont_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_ChaseBandMont_Quest" />
 	</quest>
+
+	<quest
+		Name="r7m1_FindRatsYS_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="r7m1_FindApost_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r7m1_FindRatsYS_Quest" />
+
+		<quest
+			Name="r7m1_KillBossMont_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_FindApost_Quest" />
+	</quest>
+<!--Root/r7m3/Награда за бандита-->
+	<quest
+		Name="r7m1_BanditReward_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/Вернуться к Отшельнику-->
+	<quest
+		Name="r7m1_BackToHermit_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r7m1/Сюжетные--><!--Root/r7m1/Опциональные--><!--Root/r7m1/Сюжетные/Лампочка к маяку-->
 	<quest
 		Name="r7m1_LampToMayak_Quest"
@@ -1189,6 +1231,7 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnComplete='g_Player:ActivatePerk( "lawyer", 1);AddPlayerMoney(350)'
+		OnFail='TActivate("trKontrCancel")'
 		Levels="r5m1">
 		<quest
 			Name="r5m1_KK_Spy"
