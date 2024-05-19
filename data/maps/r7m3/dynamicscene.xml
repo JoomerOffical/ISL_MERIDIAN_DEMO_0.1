@@ -6194,7 +6194,7 @@
 				Prototype="NPC"
 				ModelName="r2_man"
 				skin="0"
-				cfg="575"
+				cfg="128"
 				helloReplyNames="SheriffHuares_DLG"
 				SpokenCount="0" />
 		</Object>
@@ -7988,4 +7988,74 @@
 		Prototype="genericLocation"
 		Pos="3186.974 556.806 2270.014"
 		Radius="50.000" />
+
+		<Object
+		Name="Scout01Bnd_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3491.912 542.153 3262.366"
+		Radius="10.000" />
+
+	<Object
+		Name="Sml03_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3540.454 545.041 3222.337"
+		Radius="10.000" />
+
+	<Object
+		Name="Molokovoz02Bnd_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3599.552 558.544 3335.546"
+		Radius="10.000" />
+
+	<Object
+		Name="Bug01Bnd_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3612.615 558.816 3306.579"
+		Radius="10.000" />
+
+	<Object
+		Name="Scout02Bnd_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3583.607 553.674 3306.332"
+		Radius="10.000" />
+
+	<Object
+		Name="Sml03Bnd_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3570.317 553.272 3335.539"
+		Radius="10.000" />
+
+	<Object
+		Name="Scout02Vino_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3492.050 537.044 3157.599"
+		Radius="10.000" />
+
+	<Object
+		Name="PlayerSet_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3461.453 535.468 3170.836"
+		Radius="10.000" />
+
+	<Object
+		Name="Bug02Vino_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3418.435 533.610 3205.067"
+		Radius="10.000" />
+
+	<Object
+		Name="Scout01Vino_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3484.158 540.959 3201.753"
+		Radius="10.000" />
 </DynamicScene>

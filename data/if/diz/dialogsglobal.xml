@@ -222,6 +222,7 @@
 		name="Hermit3_DLG"
 		text="Ты вернулся."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_BackToHermit_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000735" />
 
 	<Reply
@@ -263,7 +264,8 @@
 	<Reply
 		name="Dlg_pl_000741"
 		text="Спасибо за информацию."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m1_BackToHermit_Quest'); TakeQuest('r7m3_BackToJefe2_Quest'); EndConversation()" />
 
 	<Reply
 		name="Hermit4_DLG"
@@ -827,12 +829,14 @@
 	<Reply
 		name="Dlg_pl_000731"
 		text="Я тоже надеюсь."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_BackJefeSpec_Quest'); TakeQuest('r7m1_FindRats_Quest'); EndConversation()" />
 
 	<Reply
 		name="JefeErmosinyo3_DLG"
 		text="Надеюсь ты приехал с хорошими вестями."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_BackToJefe2_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000743" />
 
 	<Reply
@@ -922,7 +926,8 @@
 	<Reply
 		name="Dlg_pl_000757"
 		text="Спасибо, она мне пригодится."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_BackToJefe2_Quest'); TakeQuest('r7m3_AttackToStorage_Quest'); EndConversation()" />
 
 	<Reply
 		name="JefeErmosinyo4_DLG"
@@ -1257,7 +1262,7 @@
 		name="Dlg_pl_000860"
 		text="Отлично, ядрен бензин."
 		role="PLAYER"
-		scriptResult="AddPlayerMoney(2500); CompleteQuest('r7m1_BanditReward_Quest'); EndConversation()" />
+		scriptResult="AddPlayerMoney(2500); CompleteQuest('r7m1_BanditReward_Quest'); TActivate('cinHerCon'); EndConversation()" />
 <!--Root/r7m1/Продавец-->
 	<Reply
 		name="Tadeo_DLG"

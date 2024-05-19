@@ -40,4 +40,36 @@
 		value="БРОДЯГА|Ладно. Возьму один из этих экземпляров. И надо бы спросить у кого-нибудь, что послужило отравлением внограда." 
 		sound=""
 		time="9" />
+
+		<string
+		id="200"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="ОТШЕЛЬНИК|Алло? Бродяга, прием. Это Эрмитано. Как слышно, прием?"
+		sound=""
+		time="5" />
+
+	<string
+		id="201"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Слышу хорошо. Что там с виноградом, прием?"
+		sound=""
+		time="5" />
+
+	<string
+		id="202"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="ОТШЕЛЬНИК|В общем я выяснил причину их отравления, но лучше тебе приехать ко мне, надо тебе самому посмотреть. Прием."
+		sound=""
+		time="8" />
+
+	<string
+		id="203"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Понял тебя, как освобожусь, приеду к тебе. Конец связи."
+		sound=""
+		time="5" />
 </resource>

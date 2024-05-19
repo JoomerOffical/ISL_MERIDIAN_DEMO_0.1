@@ -100,9 +100,7 @@
 <!--Появляются бандиты из засады-->
 	<trigger Name="trZasadaBandits" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ZasadaBnd_loc" />
-		<script>
-			trigger:Deactivate()
-	
+		<script>	
 			if QuestStatus("r7m1_GoMont_Quest")==Q_TAKEN then
 				CreateTeam ("BehindBnd", 1105, CVector(701.825, 253.310, 1174.078), {"Scout01", "Sml401"}, nil, nil, nil)
 				CreateTeam ("Bnd1", 1105, CVector(796.655, 235.338, 1269.085), {"Scout03"}, nil, nil, nil)
@@ -110,6 +108,8 @@
 
 				CompleteQuest("r7m1_GoMont_Quest")
 				TActivate("trZasadaDie")
+
+				trigger:Deactivate()
 			end
 	
 		</script>

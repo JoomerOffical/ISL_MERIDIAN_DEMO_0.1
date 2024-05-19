@@ -1889,6 +1889,15 @@
 		isMainQuest="0" />
 
 	<QuestInfo
+		questName="r7m3_AttackToStorage_Quest"
+		briefDiz="Штурмовать восточный склад"
+		fullDiz="Все идет к завершению, осталось захватить склад и завершить эту эпопию."
+		isMainQuest="1">
+		<Map
+			name="r7m3" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m3_BackJefeSpec_Quest"
 		briefDiz="Вернуться к хефе"
 		fullDiz="Пока отшельник исследует образец винограда, я займусь другими проблемами винодельни. Пора возвращаться к начальнику."
@@ -1901,6 +1910,16 @@
 	<QuestInfo
 		questName="r7m3_BackJefeStorage_Quest"
 		briefDiz="Вернуться к хефе"
+		isMainQuest="1">
+		<Map
+			name="r7m3"
+			targetObjName="r7m3_ErmosinyoVine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m3_BackToJefe2_Quest"
+		briefDiz="Вернуться к хефе"
+		fullDiz="Теперь когда я разобрался с 2 из 3 проблем, настало время отчитаться хефе."
 		isMainQuest="1">
 		<Map
 			name="r7m3"
@@ -1989,6 +2008,14 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m3_FightToStBnd_Quest"
+		briefDiz="Уничтожить захватчиков"
+		isMainQuest="1">
+		<Map
+			name="r7m3" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m3_FindHermit_Quest"
 		briefDiz="Спросить отшельника"
 		isMainQuest="1">
@@ -2010,6 +2037,15 @@
 		<Map
 			name="r7m3"
 			targetObjName="r7m3_Torreon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m3_GoToStorage_Quest"
+		briefDiz="Отправиться к наёмникам"
+		isMainQuest="1">
+		<Map
+			name="r7m3"
+			targetObjName="ArmyVino_loc" />
 	</QuestInfo>
 
 	<QuestInfo
