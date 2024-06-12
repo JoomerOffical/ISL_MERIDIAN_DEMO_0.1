@@ -10,4 +10,15 @@
 		<Point  coord="377.628 605.482 2559.450" rotation="-0.076 0.530 -0.048 0.843"/>
 		<Point  coord="289.229 601.674 2513.530" rotation="-0.099 -0.003 0.000 0.995"/>
 	</Path>
+
+
+	<Path Name="CapStorage_cam0">
+		<Point  coord="3110.185 574.204 2234.551" rotation="-0.075 -0.523 0.046 0.848"/>
+		<Point  coord="3096.157 574.204 2272.863" rotation="-0.048 -0.734 0.052 0.675"/>
+	</Path>
+
+	<Path Name="CapStorage_cam1">
+		<Point  coord="3336.756 605.228 3159.646" rotation="-0.113 -0.471 0.061 0.873"/>
+		<Point  coord="3532.909 598.664 3065.279" rotation="-0.139 -0.019 0.003 0.990"/>
+	</Path>
 </Paths>

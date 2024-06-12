@@ -46,6 +46,16 @@
 		value="Торговец" />
 
 	<Item
+		id="Bug02"
+		locForm="0"
+		value="Вэн" />
+
+		<Item
+		id="bottles_of_wine"
+		locForm="0"
+		value="Бутылки вина" />
+
+	<Item
 		id="collectionbook1"
 		locForm="0"
 		value="''Туристический проспект''" />

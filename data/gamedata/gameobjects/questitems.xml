@@ -23,6 +23,12 @@ $Id: QuestItems.xml,v 1.1 2005/12/08 08:58:05 anton Exp $
 		ModelFile		= "parsel"
 		ResourceType	= "QUEST_PACK_JOE" />
 
+		<Prototype
+		Class			= "QuestItem"
+		Name			= "bottles_of_wine"
+		ModelFile		= "bottles"
+		ResourceType	= "BOTTLE" />
+
 	<Prototype
 		Class			= "QuestItem"
 		Name			= "quest_baseball_bat"

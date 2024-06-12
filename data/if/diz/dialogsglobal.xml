@@ -271,6 +271,7 @@
 		name="Hermit4_DLG"
 		text="Я надеюсь, ты приехал с тем, с чем я хочу."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_BackToHermit2_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000792" />
 
 	<Reply
@@ -281,7 +282,7 @@
 
 	<Reply
 		name="Dlg_npc_000793"
-		text="Во, вот это другое дело. Предлагаю отпраздновать это дело, хочешь выпить?"
+		text="Vaya, ese es otro asunto. (Во, вот это другое дело.) Предлагаю отпраздновать это дело, хочешь выпить?"
 		role="NPC"
 		nextReplies="Dlg_pl_000794" />
 
@@ -317,7 +318,7 @@
 
 	<Reply
 		name="Dlg_npc_000799"
-		text="Давай, за тебя дружище."
+		text="Давай. Brindo por ti, amigo! (За тебя, дружище!)"
 		role="NPC"
 		nextReplies="Dlg_pl_000800" />
 
@@ -384,7 +385,8 @@
 	<Reply
 		name="Dlg_pl_000810"
 		text="Ладно, спасибо за предупреждение. Пока."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_BackToHermit2_Quest'); EndConversation()" />
 <!--Root/r7m3/Продавец-->
 	<Reply
 		name="TraderTorreon1_DLG"
@@ -539,6 +541,7 @@
 		name="TraderTorreon4_DLG"
 		text="Я только что узнал, что проблемы винодельни решены, а первые ящики вина сейчас попадут на прилавки. Верно?"
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_BackToTorreon_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000789" />
 
 	<Reply
@@ -549,14 +552,15 @@
 
 	<Reply
 		name="Dlg_npc_000790"
-		text="Так.. ага... понял, держи."
+		text="Так.. ага... понял, держите."
 		role="NPC"
 		nextReplies="Dlg_pl_000791" />
 
 	<Reply
 		name="Dlg_pl_000791"
 		text="Отлично, а теперь к Отшельнику."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_BackToTorreon_Quest'); TakeQuest('r7m3_BackToHermit2_Quest'); RemoveQuestItem('bottles_of_wine'); EndConversation()" />
 
 	<Reply
 		name="TraderTorreon5_DLG"
@@ -624,7 +628,7 @@
 		name="GuardVino2_DLG"
 		text="Mierda, мы же вам четко сказали, без pase (пропуска) не пропускаем."
 		role="NPC"
-		scriptCondition="(QuestStatus('r7m3_ComeToVino_Quest')==Q_TAKEN) or (QuestStatus('r7m3_ComeBackKPP_Quest')==Q_TAKEN))"
+		scriptCondition="QuestStatus('r7m3_ComeBackKPP_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000703 Dlg_pl_000834" />
 
 	<Reply
@@ -651,41 +655,6 @@
 		text="Отлично."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m3_ComeBackKPP_Quest'); EndConversation()" />
-
-	<Reply
-		name="GuardVino3_DLG"
-		text="Чего тебе?"
-		role="NPC"
-		nextReplies="Dlg_pl_000732" />
-
-	<Reply
-		name="Dlg_pl_000732"
-		text="У вас на винодельне какие то парни ошиваются, а в руках у них что-то горщее. Других охраников я не нашел, поэтому прошу вас с ними разобраться."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000733" />
-
-	<Reply
-		name="Dlg_npc_000733"
-		text="И думаешь я поверю?"
-		role="NPC"
-		nextReplies="Dlg_pl_000771" />
-
-	<Reply
-		name="Dlg_pl_000771"
-		text="Глянь сам, поле горит."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000772" />
-
-	<Reply
-		name="Dlg_npc_000772"
-		text="А и вправду, Рамон, пошли быстрее."
-		role="NPC"
-		nextReplies="Dlg_pl_000773" />
-
-	<Reply
-		name="Dlg_pl_000773"
-		text="Ха, вот лохи. Так... а вот и документ владельца винодельней, берем."
-		role="PLAYER" />
 <!--Root/r7m3/Эрмосиньо-->
 	<Reply
 		name="JefeErmosinyo1_DLG"
@@ -752,6 +721,7 @@
 		name="JefeErmosinyo2_DLG"
 		text="Как успехи?"
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_BackJefeSpec_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000719" />
 
 	<Reply
@@ -927,12 +897,13 @@
 		name="Dlg_pl_000757"
 		text="Спасибо, она мне пригодится."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_BackToJefe2_Quest'); TakeQuest('r7m3_AttackToStorage_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_BackToJefe2_Quest'); TakeQuest('r7m3_AttackToStorage_Quest'); TActivate('cinMercEast'); EndConversation()" />
 
 	<Reply
 		name="JefeErmosinyo4_DLG"
-		text="Фух, наконец-то все закончилось. Мой брат теперь наказан, а я смогу наконец то восстановится и восстановить винодельню."
+		text="Фух, наконец-то все закончилось. Я смогу наконец то восстановится и восстановить винодельню."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_BackToJefe3_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000778" />
 
 	<Reply
@@ -943,7 +914,7 @@
 
 	<Reply
 		name="Dlg_npc_000779"
-		text="Конечно, после всего того, что ты для нас сделал, проси что хочешь."
+		text="Si, после всего того, что ты для нас сделал, проси что хочешь."
 		role="NPC"
 		nextReplies="Dlg_pl_000780" />
 
@@ -955,7 +926,7 @@
 
 	<Reply
 		name="Dlg_npc_000781"
-		text="ЧЕГО?"
+		text="QUE? (ЧЕГО?)"
 		role="NPC"
 		nextReplies="Dlg_pl_000782" />
 
@@ -967,7 +938,7 @@
 
 	<Reply
 		name="Dlg_npc_000783"
-		text="И всего то? Да легко. На старом складе, что вы отбили нашлось уцелевшее сырье, так что нет ничего проще. Но тебе придется подождать."
+		text="И всего то? Да легко. На старом складе, что вы отбили, нашлось уцелевшее сырье, так что nada es mas simple. (нет ничего проще) Но тебе придется подождать."
 		role="NPC"
 		nextReplies="Dlg_pl_000784" />
 
@@ -991,14 +962,15 @@
 
 	<Reply
 		name="Dlg_npc_000787"
-		text="И вот еще что, держи от меня хорошую сумму, за все, что ты для меня сделал. Удачи тебе в жизни, Бродяга."
+		text="И вот еще что, держи от меня хорошую сумму, за все, что ты для меня сделал. Buena suerte en la vida, Бродяга."
 		role="NPC"
 		nextReplies="Dlg_pl_000788" />
 
 	<Reply
 		name="Dlg_pl_000788"
 		text="Спасибо, и тебе не хворать."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_BackToJefe3_Quest'); TakeQuest('r7m3_BackToTorreon_Quest'); AddPlayerMoney(5000); AddQuestItem('bottles_of_wine'); EndConversation()" />
 
 	<Reply
 		name="JefeErmosinyo5_DLG"
@@ -1027,43 +999,44 @@
 <!--Root/r7m3/Вильгельм-->
 	<Reply
 		name="Wilgelm1_DLG"
-		text="Что ж, так и думал, что этим все кончится."
+		text="Кг-х... Mierda... Так и думал, что этим все кончится."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_FightToStBnd_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000734" />
 
 	<Reply
 		name="Dlg_pl_000734"
-		text="Ты брат Эрмосиньо?"
+		text="Так, кто таков и почему ты гадишь винодельне Эрмосиньо?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000742" />
 
 	<Reply
 		name="Dlg_npc_000742"
-		text="Да, а ты похоже Бродяга, что решаешь проблемы моего брата взамен на вино?"
+		text="Разве не очевидно? Я хочу забрать Винодельню себе, так как она по наследству должна была принадлежать мне."
 		role="NPC"
 		nextReplies="Dlg_pl_000758" />
 
 	<Reply
 		name="Dlg_pl_000758"
-		text="Верно. Но расскажи, почему ты гадишь своему родному брату? Что он тебе сделал?"
+		text="По наследству? Так, стоп, ты родственник Эрмосиньо?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000759" />
 
 	<Reply
 		name="Dlg_npc_000759"
-		text="Все просто - он украл мою винодельню, то что завещал мне отец, он забрал это и не оставил меня ни с чем."
+		text="Si, я его брат, позволь представится - Вильгельм Эрмосиньо."
 		role="NPC"
 		nextReplies="Dlg_pl_000760" />
 
 	<Reply
 		name="Dlg_pl_000760"
-		text="Чем докажешь?"
+		text="А с чего ты вообще решил, что винодельня должна быть твоей?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000761" />
 
 	<Reply
 		name="Dlg_npc_000761"
-		text="Вот письмо отца, в котором говорится, что мне должна была принадлежать винодельня. Почитай, я никуда не сбегу."
+		text="Вот письмо нашего padre (отца), в котором говорится, что мне должна была принадлежать винодельня. Почитай, я никуда не сбегу."
 		role="NPC"
 		nextReplies="Dlg_pl_000762" />
 
@@ -1093,32 +1066,63 @@
 
 	<Reply
 		name="Dlg_pl_000766"
-		text="Хмм? Есть идея, я попробую уладить ваш конфликт мирным путем."
+		text="Хмм? Погоди, а почему, раз у тебя такие доказательства, то винодельня досталась твоему брату?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000767" />
 
 	<Reply
 		name="Dlg_npc_000767"
-		text="И как?"
+		text="Все очень просто, в нашем современном мире существуюет такое понятие как corrupcion (коррупция), у брата моего было достаточно денег, чтобы признать письмо padre недействительным или фальшивым. Я пытался всячески это аппелировать, но всех брат успел проплатить. По итогу винодельня досталась ему вместе с тачкой отца, которая, кстати, как раз и должна была принадлежать моему брату."
 		role="NPC"
 		nextReplies="Dlg_pl_000768" />
 
 	<Reply
 		name="Dlg_pl_000768"
-		text="Я тебя кое-куда отвезу, и туда же позову твоего брата. Только мне придется связать тебя, ну так, на всякий случай."
+		text="Да уж, как все запущено."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000769" />
 
 	<Reply
 		name="Dlg_npc_000769"
-		text="Без веревок никак?"
+		text="Как-то так, и что ты со мной теперь делать будешь? Ты разбил все мои планы, ты захватил склад, что дальше? Прикончишь меня?"
 		role="NPC"
-		nextReplies="Dlg_pl_000770" />
+		nextReplies="Dlg_pl_000770 Dlg_pl_000857" />
+
+	<Reply
+		name="Dlg_pl_000857"
+		text="Я в ваши дебри лезть не хочу, так что даю тебе шанс уехать из этих земель и больше никогда не возвращаться."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000862" />
+
+	<Reply
+		name="Dlg_npc_000862"
+		text="Ты дашь мне просто уйти? После всего того, что я наделал?"
+		role="NPC"
+		nextReplies="Dlg_pl_000863" />
+
+	<Reply
+		name="Dlg_pl_000863"
+		text="Меня не интересует ваши семейные драмы, но и лишать тебя жизни не хочется, так что уходи, пока я не передумал."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000864" />
+
+	<Reply
+		name="Dlg_npc_000864"
+		text="Что ж, спасибо и на том."
+		role="NPC"
+		nextReplies="Dlg_pl_000865" />
+
+	<Reply
+		name="Dlg_pl_000865"
+		text="Так, склад захватили, пора рассказать об этом Эрмосиньо."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FightToStBnd_Quest'); TActivate('cinFreeSto'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000770"
-		text="Прости, никак. Не бойся, как приедем, развяжу."
-		role="PLAYER" />
+		text="Ну, убить тебя будет намного проще, чем куда-то доставлять, так что прости, ничего личного."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FightToStBnd_Quest'); TActivate('cinFreeSto'); EndConversation()" />
 <!--Root/r7m3/Выбор-->
 	<Reply
 		name="Сhoose1_DLG"

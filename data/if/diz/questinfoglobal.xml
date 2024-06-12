@@ -1917,6 +1917,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m3_BackToHermit2_Quest"
+		briefDiz="Вернуться к Отшельнику с вином"
+		fullDiz="Ну все, до цели меня отделяет всего ничего, осталось только доставить эту бутылочку отшельнику и..."
+		isMainQuest="1">
+		<Map
+			name="r7m3"
+			targetObjName="r7m3_HermetHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m3_BackToJefe2_Quest"
 		briefDiz="Вернуться к хефе"
 		fullDiz="Теперь когда я разобрался с 2 из 3 проблем, настало время отчитаться хефе."
@@ -1924,6 +1934,26 @@
 		<Map
 			name="r7m3"
 			targetObjName="r7m3_ErmosinyoVine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m3_BackToJefe3_Quest"
+		briefDiz="Вернуться к Хефе с хорошими новостями"
+		fullDiz="Теперь, когда склад освобожден, пора заканчивать эту эпопею."
+		isMainQuest="1">
+		<Map
+			name="r7m3"
+			targetObjName="r7m3_ErmosinyoVine" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m3_BackToTorreon_Quest"
+		briefDiz="Доставить первые бутылки в Торреон"
+		fullDiz="Теперь с поставками вина проблем не будет, пора доставить первую партию в Торреон."
+		isMainQuest="1">
+		<Map
+			name="r7m3"
+			targetObjName="r7m3_Torreon" />
 	</QuestInfo>
 
 	<QuestInfo

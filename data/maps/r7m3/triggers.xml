@@ -36,9 +36,27 @@
 				Plf:SetCustomControlEnabled( false )
 			end
 
-			trigger:Deactivate() 
 		</script>
 	</trigger>
+
+<!--Все бандиты подохли-->
+<trigger Name="trStorDie" active="0">
+	<event eventid="GE_OBJECT_DIE" ObjName="Bndit01_vehicle_0"/>
+	<event eventid="GE_OBJECT_DIE" ObjName="Bndit02_vehicle_0"/>
+	<event eventid="GE_OBJECT_DIE" ObjName="Bndit03_vehicle_0"/>
+	<event eventid="GE_OBJECT_DIE" ObjName="Bndit04_vehicle_0"/>
+	<event eventid="GE_OBJECT_DIE" ObjName="Bndit05_vehicle_0"/>
+	<event eventid="GE_OBJECT_DIE" ObjName="Bndit06_vehicle_0"/>
+	<script>
+		trigger:IncCount()
+		local count = trigger:GetCount()
+		if 6>count then
+			return
+		end
+
+		StartConversation("WilgelmErmo_NPC")
+	</script>
+</trigger>
 
 <!--Телепорт в Прибрежье-->
 	<trigger Name="triggerExitToMap71" active="1">

@@ -195,6 +195,27 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r7m3_GoToStorage_Quest" />
 	</quest>
+<!--Root/r7m3/Вернуться к Хефе 3-->
+	<quest
+		Name="r7m3_BackToJefe3_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/В торреон-->
+	<quest
+		Name="r7m3_BackToTorreon_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/Вернуться к Отшельнику 2-->
+	<quest
+		Name="r7m3_BackToHermit2_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r7m1/Сюжетные--><!--Root/r7m1/Опциональные--><!--Root/r7m1/Сюжетные/Лампочка к маяку-->
 	<quest
 		Name="r7m1_LampToMayak_Quest"

@@ -72,4 +72,54 @@
 		value="БРОДЯГА|Понял тебя, как освобожусь, приеду к тебе. Конец связи."
 		sound=""
 		time="5" />
+
+		<string
+		id="300"
+		modelName="r2_man"
+		modelSkin="5"
+		modelCfg="240"
+		modelSlot="1"
+		value="НАЕМНИК|А вот и ты. Мы провели небольшую разведку и вот, что мы имеем." 
+		sound=""
+		time="5" />
+
+	<string
+		id="301"
+		modelName="r2_man"
+		modelSkin="5"
+		modelCfg="240"
+		modelSlot="1"
+		value="НАЕМНИК|Бандитов всего шестеро, но они плохо вооружены. Мы высаживаемся, уничтожаем бандитов и захватываем склады. Все понятно?" 
+		sound=""
+		time="9" />
+
+	<string
+		id="302"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Понял. Вперед." 
+		sound=""
+		time="3" />
+
+	<string
+		id="400"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Хефе, прием. Это Бродяга, склад захвачен бандиты уничтожены."
+		sound=""
+		time="5" />
+
+	<string
+		id="401"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="ЭРМОСИНЬО|Отлично! Тогда забери со склада немного ресурсов и тащи их на Винодельню. А я объявлю о восстановлении винодельни. Прием?"
+		sound=""
+		time="9" />
+
+	<string
+		id="402"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Понял. Конец связи."
+		sound=""
+		time="3" />
 </resource>
