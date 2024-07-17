@@ -216,6 +216,41 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
+<!--Root/r7m3/Добраться до границы-->
+	<quest
+		Name="r7m3_NorthLine_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/Найти пропуск-->
+	<quest
+		Name="r7m3_FindPass_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/Караванщик в Сальтилио-->
+	<quest
+		Name="r7m3_CaravanmanSalt_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/Найти деньги-->
+	<quest
+		Name="r7m3_FindMonCar_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/r7m3/Бежать к границе-->
+	<quest
+		Name="r7m3_RunGra_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r7m1/Сюжетные--><!--Root/r7m1/Опциональные--><!--Root/r7m1/Сюжетные/Лампочка к маяку-->
 	<quest
 		Name="r7m1_LampToMayak_Quest"
@@ -309,7 +344,7 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken"
+			ConditionToGive="all complete"
 			PrecedingQuests="r7m1_SearchHermit_Quest"
 			OnTake='ShowCircleOnMinimapByName("r7m3_Saltilio")' />
 
@@ -321,6 +356,15 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r7m1_AskSalti_Quest"
 			OnTake='ShowCircleOnMinimapByName("r7m3_HermetHouse")' />
+
+		<quest
+			Name="r7m1_GoToVexico_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r7m1_SearchHermit_Quest"
+			OnTake='ShowCircleOnMinimapByName("ToR7M3")' />
 	</quest>
 <!--Root/sin/Сюжетные--><!--Root/sin/Опциональные--><!--Root/sin/Сюжетные/Проход-->
 	<quest

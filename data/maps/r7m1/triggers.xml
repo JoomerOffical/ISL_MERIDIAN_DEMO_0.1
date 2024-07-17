@@ -210,7 +210,7 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if QuestStatus("r7m1_SearchHermit_Quest")==Q_TAKEN or QuestStatus("r7m1_BanditReward_Quest")==Q_TAKEN or QuestStatus("r7m1_BackToHermit_Quest")==Q_TAKEN then
+			if QuestStatus("r7m1_TruckSell_Quest")==Q_COMPLETE then
 				local b = SpawnMessageBox(197)
 				if b == 1 then
 					PassToMap("r7m3", "FromR7M1", -1 )
@@ -281,7 +281,7 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if QuestStatus("r7m1_PosilkaForJoe_Quest")==Q_TAKEN or QuestStatus("sin_Final_Quest")==Q_COMPLETE then
+			if QuestStatus("r7m1_DolgForMechanic_Quest")==Q_COMPLETE then
 				local b = SpawnMessageBox(197)
 				if b == 1 then
 					PassToMap("sin", "FromR7M1", -1 )

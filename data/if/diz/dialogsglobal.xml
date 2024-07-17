@@ -27,7 +27,7 @@
 
 	<Reply
 		name="Dlg_npc_000650"
-		text="Вот. Здесь его хижина. Только будь аккуратнее, он не очень сильно любит гостей/. "
+		text="Вот. Здесь его хижина. Только будь аккуратнее, он не очень сильно любит гостей. "
 		role="NPC"
 		nextReplies="Dlg_pl_000651" />
 
@@ -386,7 +386,7 @@
 		name="Dlg_pl_000810"
 		text="Ладно, спасибо за предупреждение. Пока."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_BackToHermit2_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_BackToHermit2_Quest'); TakeQuest('r7m3_NorthLine_Quest'); TActivate('trNorthLine'); EndConversation()" />
 <!--Root/r7m3/Продавец-->
 	<Reply
 		name="TraderTorreon1_DLG"
@@ -1144,6 +1144,7 @@
 		name="Pronira1_DLG"
 		text="Вижу тебе надо за границу? "
 		role="NPC"
+		scriptCondition="QuestStatus('r7m3_FindPass_Quest')==Q_TAKEN and (not(QuestStatus('r7m3_CaravanmanSalt_Quest')==Q_TAKEN)) and (not(QuestStatus('r7m3_FindMonCar_Quest')==Q_TAKEN)) and (not(QuestStatus('r7m3_RunGra_Quest')==Q_TAKEN))"
 		nextReplies="Dlg_pl_000812" />
 
 	<Reply
@@ -1178,19 +1179,21 @@
 
 	<Reply
 		name="Dlg_npc_000817"
-		text="Зачем, караванщик сам потребует с тебя хорошую сумму."
+		text="Зачем, караванщик сам потребует с тебя хорошую сумму или возможно ты его как-то обхитришь."
 		role="NPC"
 		nextReplies="Dlg_pl_000818" />
 
 	<Reply
 		name="Dlg_pl_000818"
 		text="Понял, не дурак."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); TakeQuest('r7m3_CaravanmanSalt_Quest'); EndConversation()" />
 <!--Root/r7m3/Караванщик-->
 	<Reply
 		name="Caravan1_DLG"
 		text="Не мешай мне пить."
 		role="NPC"
+		scriptCondition="(QuestStatus('r7m3_FindPass_Quest')==Q_TAKEN) or (QuestStatus('r7m3_CaravanmanSalt_Quest')==Q_TAKEN)"
 		nextReplies="Dlg_pl_000820" />
 
 	<Reply
@@ -1215,33 +1218,124 @@
 		name="Dlg_npc_000823"
 		text="Сразу к делу, мне это нравится. В общем заплатишь мне 5000 и я провезу тебя через границу."
 		role="NPC"
-		nextReplies="Dlg_pl_000824 Dlg_pl_000825" />
+		nextReplies="Dlg_pl_000824 Dlg_pl_000825 Dlg_pl_000879" />
+
+	<Reply
+		name="Dlg_pl_000879"
+		text="Давай сначала выпьем, перед поездкой в зону военных действий надо подготовленным быть."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000880" />
+
+	<Reply
+		name="Dlg_npc_000880"
+		text="И то верно, amigo. Только чур ты угощаешь."
+		role="NPC"
+		nextReplies="Dlg_pl_000881" />
+
+	<Reply
+		name="Dlg_pl_000881"
+		text="Нет проблем. Бармен, по стаканчику нам."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000882" />
+
+	<Reply
+		name="Dlg_npc_000882"
+		text="*спустя примерно 15 минут* О, бл. Чо то плохавато мнэ. Нада бы проблеваться."
+		role="NPC"
+		nextReplies="Dlg_pl_000883" />
+
+	<Reply
+		name="Dlg_pl_000883"
+		text="Беги, друже. (Так, а вот и его пропуск, надо бы теперь бежать за границу, пока тот не опомнился)"
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); TakeQuest('r7m3_RunGra_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000825"
 		text="Пока денег нет, щас привезу."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); TakeQuest('r7m3_FindMonCar_Quest') EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000824"
 		text="Держи. Поехали."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()>=5000"
+		nextReplies="Dlg_npc_000889" />
+
+	<Reply
+		name="Dlg_npc_000889"
+		text="Отлично, прячься в мой грузовик, а мой асисстент сядет в твою машину. Веди себя тихо."
+		role="NPC"
+		nextReplies="Dlg_pl_000890" />
+
+	<Reply
+		name="Dlg_pl_000890"
+		text="Понял."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); EndConversation()" />
 
 	<Reply
 		name="Caravan2_DLG"
 		text="Привез деньги?"
 		role="NPC"
-		nextReplies="Dlg_pl_000777 Dlg_pl_000811" />
+		scriptCondition="QuestStatus('r7m3_FindMonCar_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_000777 Dlg_pl_000811 Dlg_pl_000884" />
+
+	<Reply
+		name="Dlg_pl_000884"
+		text="Давай сначала выпьем, перед поездкой в зону военных действий надо подготовленным быть."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000885" />
+
+	<Reply
+		name="Dlg_npc_000885"
+		text="И то верно, amigo. Только чур ты угощаешь."
+		role="NPC"
+		nextReplies="Dlg_pl_000886" />
+
+	<Reply
+		name="Dlg_pl_000886"
+		text="Нет проблем. Бармен, по стаканчику нам."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000887" />
+
+	<Reply
+		name="Dlg_npc_000887"
+		text="*спустя примерно 15 минут* О, бл. Чо то плохвавто мнэ. Нада бы проблеваться."
+		role="NPC"
+		nextReplies="Dlg_pl_000888" />
+
+	<Reply
+		name="Dlg_pl_000888"
+		text="Беги, друже. (Так, а вот его пропуск, надо бы теперь бежать за границу, пока тот не опомнился)"
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindMonCar_Quest'); TakeQuest('r7m3_RunGra_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000811"
 		text="Пока нет."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000777"
 		text="Да. Держи."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()>=5000"
+		nextReplies="Dlg_npc_000877" />
+
+	<Reply
+		name="Dlg_npc_000877"
+		text="Отлично, прячься в мой грузовик, а мой асисстент сядет в твою машину. Веди себя тихо."
+		role="NPC"
+		nextReplies="Dlg_pl_000878" />
+
+	<Reply
+		name="Dlg_pl_000878"
+		text="Понял."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindMonCar_Quest'); EndConversation()" />
 <!--Root/r7m3/Шериф-->
 	<Reply
 		name="SheriffHuares_DLG"
@@ -1267,6 +1361,101 @@
 		text="Отлично, ядрен бензин."
 		role="PLAYER"
 		scriptResult="AddPlayerMoney(2500); CompleteQuest('r7m1_BanditReward_Quest'); TActivate('cinHerCon'); EndConversation()" />
+<!--Root/r7m3/Охрана границы-->
+	<Reply
+		name="Lineguard1_DLG"
+		text="Ciudadano (Гражданин), согласно приказу №678 правительства Вексиканской Республики гражданам запрещается въезд на территории, на которых проходят военные действия. Проезд разрешается только тем лицам, имеющим пропуск через границу."
+		role="NPC"
+		scriptCondition="QuestStatus('r7m3_NorthLine_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_000866" />
+
+	<Reply
+		name="Dlg_pl_000866"
+		text="Так я же не гражданин вашей республики. И как этот ваш пропуск получить?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000867" />
+
+	<Reply
+		name="Dlg_npc_000867"
+		text="Цена за пропуск - 7000. Но если ты являешься по профессии караванщиком - 3000."
+		role="NPC"
+		nextReplies="Dlg_pl_000868 Dlg_pl_000869" />
+
+	<Reply
+		name="Dlg_pl_000869"
+		text="Нету денег, ладно, я еще вернусь."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_NorthLine_Quest'); TakeQuest('r7m3_FindPass_Quest'); TActivate('trNorthLine'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_000868"
+		text="Ладно, держите."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()>=7000"
+		scriptResult="CompleteQuest('r7m3_NorthLine_Quest'); EndConversation()" />
+
+	<Reply
+		name="Lineguard2_DLG"
+		text="Снова вы, нашли денюшку?"
+		role="NPC"
+		scriptCondition="(QuestStatus('r7m3_FindPass_Quest')==Q_TAKEN) or (QuestStatus('r7m3_CaravanmanSalt_Quest')==Q_TAKEN) or (QuestStatus('r7m3_FindMonCar_Quest')==Q_TAKEN) or (QuestStatus('r7m3_RunGra_Quest')==Q_TAKEN)"
+		nextReplies="Dlg_pl_000871 Dlg_pl_000874 Dlg_pl_000891" />
+
+	<Reply
+		name="Dlg_pl_000891"
+		text="У меня пропуск так то имеется."
+		role="PLAYER"
+		scriptCondition="QuestStatus('r7m3_RunGra_Quest')==Q_TAKEN"
+		nextReplies="Dlg_npc_000892" />
+
+	<Reply
+		name="Dlg_npc_000892"
+		text="А, да? Что ж, ладно, проходите."
+		role="NPC"
+		nextReplies="Dlg_pl_000893" />
+
+	<Reply
+		name="Dlg_pl_000893"
+		text="Отлично."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_RunGra_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_000874"
+		text="Нет пока что."
+		role="PLAYER"
+		scriptResult="TActivate('trNorthLine'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_000871"
+		text="Да, держите."
+		role="PLAYER"
+		scriptCondition="not(QuestStatus('r7m3_RunGra_Quest')==Q_TAKEN) and GetPlayerMoney()>=7000"
+		nextReplies="Dlg_npc_000872" />
+
+	<Reply
+		name="Dlg_npc_000872"
+		text="Ждите здесь, мы вам отдадим пропуск и откроем границу."
+		role="NPC"
+		nextReplies="Dlg_pl_000873" />
+
+	<Reply
+		name="Dlg_pl_000873"
+		text="<Ждать>"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000875" />
+
+	<Reply
+		name="Dlg_npc_000875"
+		text="Держите. Открыть ворота!"
+		role="NPC"
+		nextReplies="Dlg_pl_000876" />
+
+	<Reply
+		name="Dlg_pl_000876"
+		text="Наконец-то."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); CompleteQuest('r7m3_FindMonCar_Quest'); EndConversation()" />
 <!--Root/r7m1/Продавец-->
 	<Reply
 		name="Tadeo_DLG"

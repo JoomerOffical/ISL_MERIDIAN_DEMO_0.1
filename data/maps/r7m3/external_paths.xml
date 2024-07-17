@@ -1,6 +1,195 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
+		Name="AfterGranCarav2">
+		<Point
+			coord="2425.081 3087.380" />
+
+		<Point
+			coord="2430.295 3135.311" />
+
+		<Point
+			coord="2437.462 3189.515" />
+
+		<Point
+			coord="2433.545 3250.048" />
+
+		<Point
+			coord="2413.808 3320.933" />
+
+		<Point
+			coord="2380.855 3371.839" />
+
+		<Point
+			coord="2346.330 3430.426" />
+
+		<Point
+			coord="2307.270 3480.896" />
+
+		<Point
+			coord="2255.265 3515.955" />
+
+		<Point
+			coord="2197.789 3533.021" />
+
+		<Point
+			coord="2122.390 3548.291" />
+
+		<Point
+			coord="2061.836 3581.227" />
+
+		<Point
+			coord="2028.421 3631.942" />
+
+		<Point
+			coord="2026.942 3720.870" />
+	</Path>
+
+	<Path
+		Name="AfterGranCarav">
+		<Point
+			coord="2298.898 2766.911" />
+
+		<Point
+			coord="2303.260 2808.700" />
+
+		<Point
+			coord="2320.098 2843.445" />
+
+		<Point
+			coord="2339.144 2917.904" />
+
+		<Point
+			coord="2343.329 2949.331" />
+
+		<Point
+			coord="2346.376 2971.595" />
+
+		<Point
+			coord="2351.351 3006.225" />
+	</Path>
+
+	<Path
+		Name="AfterGranAssis">
+		<Point
+			coord="2327.878 2761.844" />
+
+		<Point
+			coord="2329.640 2800.667" />
+
+		<Point
+			coord="2344.526 2932.150" />
+
+		<Point
+			coord="2351.975 2946.561" />
+
+		<Point
+			coord="2356.367 2957.100" />
+
+		<Point
+			coord="2372.673 2994.761" />
+	</Path>
+
+	<Path
+		Name="AfterGran2">
+		<Point
+			coord="2409.542 3091.550" />
+
+		<Point
+			coord="2418.789 3144.672" />
+
+		<Point
+			coord="2423.255 3200.977" />
+
+		<Point
+			coord="2418.226 3250.891" />
+
+		<Point
+			coord="2397.498 3318.078" />
+
+		<Point
+			coord="2370.350 3367.068" />
+
+		<Point
+			coord="2336.924 3426.867" />
+
+		<Point
+			coord="2295.365 3473.296" />
+
+		<Point
+			coord="2236.378 3506.737" />
+
+		<Point
+			coord="2164.189 3522.876" />
+
+		<Point
+			coord="2094.558 3542.742" />
+
+		<Point
+			coord="2034.946 3586.066" />
+	</Path>
+
+	<Path
+		Name="AfterGran">
+		<Point
+			coord="2308.217 2763.688" />
+
+		<Point
+			coord="2316.369 2803.202" />
+
+		<Point
+			coord="2333.853 2900.266" />
+
+		<Point
+			coord="2344.141 2951.678" />
+
+		<Point
+			coord="2347.947 2982.233" />
+
+		<Point
+			coord="2366.205 3018.327" />
+
+		<Point
+			coord="2407.072 3074.103" />
+
+		<Point
+			coord="2423.858 3127.339" />
+
+		<Point
+			coord="2430.043 3192.272" />
+
+		<Point
+			coord="2422.656 3264.017" />
+
+		<Point
+			coord="2393.450 3339.519" />
+
+		<Point
+			coord="2354.850 3405.877" />
+
+		<Point
+			coord="2321.224 3457.208" />
+
+		<Point
+			coord="2282.216 3492.892" />
+
+		<Point
+			coord="2231.282 3518.260" />
+
+		<Point
+			coord="2158.283 3532.999" />
+
+		<Point
+			coord="2103.185 3551.458" />
+
+		<Point
+			coord="2063.178 3571.340" />
+
+		<Point
+			coord="2017.785 3664.702" />
+	</Path>
+
+	<Path
 		Name="Ermosinyo_Huares_DQC">
 		<Point
 			coord="470.667 2566.775" />

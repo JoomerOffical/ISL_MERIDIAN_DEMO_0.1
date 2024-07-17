@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <triggers>
 
+	<triggers>
+		<trigger	Name="GlobalVar"	active="1">
+			<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+			<script>
+				trigger:Deactivate()
+			</script>
+	</trigger>
+
 	<trigger Name="trtest" active="1">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate()
 
 			TakeQuest("r7m1_SearchHermit_Quest") 
+
+			if QuestStatus("r7m1_SearchHermit_Quest")==Q_TAKEN then
+				CompleteQuest("r7m1_GoToVexico_Quest")
+			end
 		</script>
 	</trigger>
 
@@ -55,6 +67,16 @@
 		end
 
 		StartConversation("WilgelmErmo_NPC")
+	</script>
+</trigger>
+
+<!--Граница к Землям Сэма-->
+<trigger Name="trNorthLine" active="0">
+	<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Granitca_loc" />
+	<script>
+		StartConversation("GuardLine_NPC")
+
+		trigger:Deactivate() 
 	</script>
 </trigger>
 

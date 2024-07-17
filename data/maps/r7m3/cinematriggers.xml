@@ -326,4 +326,87 @@
 		SetCameraBehindPlayerVehicle()
 	</script>
 </trigger>
+
+<!--Прошли границу одни-->
+<trigger Name="cinPassGranAl" active="0">
+	<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+	<script>
+		trigger:Deactivate()
+
+		SaveAllToleranceStatus(RS_NEUTRAL)
+
+		Fly	("GranitsaPass_cam0", CINEMATIC_NO_AIM, 0, 14, 1, 0)
+		Fly	("GranitsaPass_cam2", CINEMATIC_NO_AIM, 0, 65, 0, 1)
+		StartCinematic()
+
+		TActivate("cinPassGranAl_FadeIn")
+		TActivate("cinPassGranAl_cam02")
+		TActivate("cinPassGranAl_End")
+
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranAl_FadeIn" active="0">
+	<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		local Plf = GetPlayerVehicle()
+		if Plf then
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetPosition( CVector(2309.551, 544.840, 2747.727))
+			Plf:SetRotation(Quaternion(-0.074, 0.059, 0.000, 0.995))
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetExternalPathByName("AfterGran")
+			Plf:SetCustomControlEnabled( false )
+		end
+
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranAl_cam02" active="0">
+	<event flypath="GranitsaPass_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		AddCinematicMessage( 500, 1 )
+		AddCinematicMessage( 501, 0.25 )
+		AddCinematicMessage( 502, 0.25 )
+		AddCinematicMessage( 503, 0.25 )
+		AddCinematicMessage( 504, 0.25 )
+		AddCinematicMessage( 505, 0.25 )
+		AddCinematicMessage( 506, 0.25 )
+		AddCinematicMessage( 507, 0.25 )
+		AddCinematicMessage( 508, 0.25 )
+		AddCinematicMessage( 509, 0.25 )
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranAl_End" active="0">
+	<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+	<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		RestoreAllToleranceStatus()
+
+		local Plf = GetPlayerVehicle()
+		if Plf then
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:PlaceToEndOfPath()
+			Plf:SetCustomControlEnabled( false )
+		end
+
+		TDeactivate("cinPassGranAl_FadeIn")
+		TDeactivate("cinPassGranAl_cam02")
+
+		SpawnMessageBox(700)
+
+		ShowDeathMenu()
+
+	</script>
+</trigger>
 </triggers>

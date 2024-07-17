@@ -2,7 +2,7 @@
 <World
 	name="Object669"
 	class="SgNode"
-	LastId="992580083">
+	LastId="992580134">
 	<Node
 		name="Object992576705"
 		class="SgAnimatedModelNode"
@@ -24167,7 +24167,7 @@
 		id="civilhouse5"
 		ndmAction="0" />
 
-		<Node
+	<Node
 		name="Object992580066"
 		class="SgAnimatedModelNode"
 		org="1007.151 0.000 2351.582"
