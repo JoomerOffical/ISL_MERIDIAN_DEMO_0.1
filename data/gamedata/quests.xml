@@ -354,7 +354,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="r7m1_SearchHermit_Quest"
+			PrecedingQuests="r7m1_GoToVexico_Quest"
 			OnTake='ShowCircleOnMinimapByName("r7m3_Saltilio")' />
 
 		<quest

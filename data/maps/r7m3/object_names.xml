@@ -54,6 +54,7 @@
 	<Object	Name = "r7m3_ErmosinyoVine_House"		FullName = "Кабинет хефе" />
 	<Object	Name = "JefeErmosinyo_NPC"			FullName = "Хефе Эрмосиньо" />
 	<Object	Name = "GuardErmocinyo_NPC"			FullName = "Охраник Эскаланте" />
+	<Object	Name = "GuardLine_NPC"			FullName = "Пограничник Эдмундо" />
 
 	<Object	Name = "DynQEnemy01"					FullName = "Вентуро Касадо" />
 	<Object	Name = "DynQEnemy02"					FullName = "Джеральд Баса" />	

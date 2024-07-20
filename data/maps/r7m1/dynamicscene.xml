@@ -638,16 +638,6 @@
 				skin="2"
 				helloReplyNames="Vincent_DLG"
 				SpokenCount="0" />
-			
-			<Object
-				Name="MechanicLeonel_NPC"
-				Belong="1101"
-				Prototype="NPC"
-				ModelName="r2_woman"
-				skin="4"
-				cfg="68"
-				helloReplyNames="Leonel_DLG Leonel2_DLG"
-				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -1799,16 +1789,6 @@
 				cfg="38"
 				helloReplyNames="DrunkM_DLG DrunkM2_DLG"
 				SpokenCount="0" />
-			
-			<Object
-				Name="BanditThiago_NPC"
-				Belong="1101"
-				Prototype="NPC"
-				ModelName="r1_man"
-				skin="3"
-				cfg="132"
-				helloReplyNames="VinoBandit_DLG"
-				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -1896,6 +1876,16 @@
 				cfg="240"
 				NpcType="BARMAN"
 				SpokenCount="0" />
+
+			<Object
+				Name="BanditThiago_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="132"
+				helloReplyNames="VinoBandit_DLG"
+				SpokenCount="0" />				
 		</Object>
 
 		<Object
@@ -3441,6 +3431,16 @@
 				cfg="198"
 				helloReplyNames="Tadeo_DLG"
 				SpokenCount="0" />
+
+			<Object
+				Name="MechanicLeonel_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				skin="4"
+				cfg="68"
+				helloReplyNames="Leonel_DLG Leonel2_DLG"
+				SpokenCount="0" />				
 		</Object>
 
 		<Object

@@ -2135,7 +2135,8 @@
 		fullDiz="Пока караванщик блюется от алкоголя, я отправляюсь за границу."
 		isMainQuest="1">
 		<Map
-			name="r7m3" />
+			name="r7m3"
+			targetObjName="Granitca_loc" />
 	</QuestInfo>
 
 	<QuestInfo

@@ -6030,6 +6030,16 @@
 				cfg="174"
 				helloReplyNames="Caravan1_DLG Caravan2_DLG"
 				SpokenCount="0" />
+	
+			<Object
+				Name="WilgelmErmo_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r4_man"
+				skin="2"
+				cfg="12"
+				helloReplyNames="Caravan1_DLG Caravan2_DLG"
+				SpokenCount="0" />				
 		</Object>
 
 		<Object
@@ -6168,7 +6178,7 @@
 				Belong="1101"
 				Prototype="NPC"
 				ModelName="r2_man"
-				cfg="575"
+				cfg="128"
 				helloReplyNames="SheriffHuares_DLG"
 				SpokenCount="0" />
 		</Object>
