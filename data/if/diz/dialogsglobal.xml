@@ -1248,7 +1248,7 @@
 		name="Dlg_pl_000883"
 		text="Беги, друже. (Так, а вот и его пропуск, надо бы теперь бежать за границу, пока тот не опомнился)"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); TakeQuest('r7m3_RunGra_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); TakeQuest('r7m3_RunGra_Quest'); AddPlayerMoney(-100); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000825"
@@ -1273,7 +1273,7 @@
 		name="Dlg_pl_000890"
 		text="Понял."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); TActivate('cinPassGranCr'); EndConversation()" />
 
 	<Reply
 		name="Caravan2_DLG"
@@ -1310,7 +1310,7 @@
 		name="Dlg_pl_000888"
 		text="Беги, друже. (Так, а вот его пропуск, надо бы теперь бежать за границу, пока тот не опомнился)"
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_FindMonCar_Quest'); TakeQuest('r7m3_RunGra_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_FindMonCar_Quest'); TakeQuest('r7m3_RunGra_Quest'); AddPlayerMoney(-100); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000811"
@@ -1335,7 +1335,7 @@
 		name="Dlg_pl_000878"
 		text="Понял."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_FindMonCar_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_FindMonCar_Quest'); TActivate('cinPassGranCr'); EndConversation()" />
 <!--Root/r7m3/Шериф-->
 	<Reply
 		name="SheriffHuares_DLG"
@@ -1392,7 +1392,7 @@
 		text="Ладно, держите."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney()>=7000"
-		scriptResult="CompleteQuest('r7m3_NorthLine_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_NorthLine_Quest'); TActivate('cinPassGranAl'); EndConversation()" />
 
 	<Reply
 		name="Lineguard2_DLG"
@@ -1418,7 +1418,7 @@
 		name="Dlg_pl_000893"
 		text="Отлично."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_RunGra_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_RunGra_Quest'); TActivate('cinPassGranAl'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000874"
@@ -1455,7 +1455,7 @@
 		name="Dlg_pl_000876"
 		text="Наконец-то."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); CompleteQuest('r7m3_FindMonCar_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); CompleteQuest('r7m3_FindMonCar_Quest'); TActivate('cinPassGranAl'); EndConversation()" />
 <!--Root/r7m1/Продавец-->
 	<Reply
 		name="Tadeo_DLG"

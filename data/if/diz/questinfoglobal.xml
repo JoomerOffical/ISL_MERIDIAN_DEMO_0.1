@@ -1783,7 +1783,7 @@
 	<QuestInfo
 		questName="r7m1_GoToVexico_Quest"
 		briefDiz="Отправится в Вексику"
-		isMainQuest="0">
+		isMainQuest="1">
 		<Map
 			name="r7m1"
 			targetObjName="ToR7M3" />

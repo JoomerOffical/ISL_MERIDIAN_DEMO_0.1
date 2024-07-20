@@ -12,12 +12,12 @@
 	</Path>
 
 	<Path Name="StartGame_cam2">
-		<Point  coord="3388.915 344.573 293.670" rotation="-0.037 0.956 -0.139 0.255"/>
-		<Point  coord="3389.429 344.880 294.569" rotation="-0.037 0.956 -0.139 0.255"/>
+		<Point  coord="3388.915 344.773 293.670" rotation="-0.037 0.956 -0.139 0.255"/>
+		<Point  coord="3389.429 345.080 294.569" rotation="-0.037 0.956 -0.139 0.255"/>
 	</Path>
 
 	<Path Name="StartGame_cam3">
-		<Point  coord="3388.895 344.199 292.957" rotation="-0.001 0.484 -0.001 0.875"/>
+		<Point  coord="3388.895 344.399 292.957" rotation="-0.001 0.484 -0.001 0.875"/>
 	</Path>
 
 	<Path Name="StartGame_cam4">

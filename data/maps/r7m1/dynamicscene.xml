@@ -638,6 +638,16 @@
 				skin="2"
 				helloReplyNames="Vincent_DLG"
 				SpokenCount="0" />
+			
+			<Object
+				Name="MechanicLeonel_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				skin="4"
+				cfg="68"
+				helloReplyNames="Leonel_DLG Leonel2_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -1781,16 +1791,6 @@
 				SpokenCount="0" />
 
 			<Object
-				Name="MechanicLeonel_NPC"
-				Belong="1101"
-				Prototype="NPC"
-				ModelName="r2_woman"
-				skin="4"
-				cfg="68"
-				helloReplyNames="Leonel_DLG Leonel2_DLG"
-				SpokenCount="0" />
-
-			<Object
 				Name="DrunkMateo_NPC"
 				Belong="1101"
 				Prototype="NPC"
@@ -1798,16 +1798,6 @@
 				skin="5"
 				cfg="38"
 				helloReplyNames="DrunkM_DLG DrunkM2_DLG"
-				SpokenCount="0" />
-
-			<Object
-				Name="BattleRevol_NPC"
-				Belong="1101"
-				Prototype="NPC"
-				ModelName="r2_man"
-				skin="5"
-				cfg="318"
-				helloReplyNames="Optional2_DLG"
 				SpokenCount="0" />
 			
 			<Object
@@ -1905,16 +1895,6 @@
 				ModelName="r1_woman"
 				cfg="240"
 				NpcType="BARMAN"
-				SpokenCount="0" />
-
-			<Object
-				Name="MomGato_NPC"
-				Belong="1101"
-				Prototype="NPC"
-				ModelName="r1_woman"
-				skin="2"
-				cfg="13"
-				helloReplyNames="Mother1_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -3460,15 +3440,6 @@
 				skin="1"
 				cfg="198"
 				helloReplyNames="Tadeo_DLG"
-				SpokenCount="0" />
-
-			<Object
-				Name="TreasureNodin_NPC"
-				Belong="1101"
-				Prototype="NPC"
-				ModelName="r1_man"
-				cfg="58"
-				helloReplyNames="Optional1_DLG Optional1.2_DLG Optional1.3_DLG Optional1.4_DLG"
 				SpokenCount="0" />
 		</Object>
 

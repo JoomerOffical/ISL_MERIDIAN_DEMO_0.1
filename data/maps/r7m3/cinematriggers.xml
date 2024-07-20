@@ -336,7 +336,7 @@
 		SaveAllToleranceStatus(RS_NEUTRAL)
 
 		Fly	("GranitsaPass_cam0", CINEMATIC_NO_AIM, 0, 14, 1, 0)
-		Fly	("GranitsaPass_cam2", CINEMATIC_NO_AIM, 0, 65, 0, 1)
+		Fly	("GranitsaPass_cam2", CINEMATIC_NO_AIM, 0, 75, 0, 1)
 		StartCinematic()
 
 		TActivate("cinPassGranAl_FadeIn")
@@ -402,6 +402,153 @@
 
 		TDeactivate("cinPassGranAl_FadeIn")
 		TDeactivate("cinPassGranAl_cam02")
+
+		SpawnMessageBox(700)
+
+		ShowDeathMenu()
+
+	</script>
+</trigger>
+
+<!--Прошли границу с караванщиком-->
+<trigger Name="cinPassGranCr" active="0">
+	<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
+	<script>
+		trigger:Deactivate()
+
+		SaveAllToleranceStatus(RS_NEUTRAL)
+
+		Fly	("GranitsaPass_cam0", CINEMATIC_NO_AIM, 0, 14, 1, 0)
+		Fly	("GranitsaPass_cam1", CINEMATIC_NO_AIM, 0, 17, 0, 0)
+		Fly	("GranitsaPass_cam2", CINEMATIC_NO_AIM, 0, 75, 0, 1)
+		StartCinematic()
+
+		TActivate("cinPassGranCr_FadeIn")
+		TActivate("cinPassGranCr_cam01")
+		TActivate("cinPassGranCr_cam02")
+		TActivate("cinPassGranCr_End")
+
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranCr_FadeIn" active="0">
+	<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		CreateTeam("Caravanshik", 1101, CVector(2294.808, 545.669, 2750.123), {"Molokovoz01"}, nil, nil, {Quaternion(-0.078, 0.026, -0.018, 0.996)})
+
+		local Plf = GetPlayerVehicle()
+		if Plf then
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetPosition( CVector(2315.077, 544.792, 2747.168))
+			Plf:SetRotation(Quaternion(-0.070, -0.012, 0.002, 0.997))
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetExternalPathByName("AfterGranAssis")
+			Plf:SetCustomControlEnabled( false )
+		end
+
+		local CrV = getObj("Caravanshik_vehicle_0")
+		if CrV then
+			CrV:SetCustomControlEnabled( true )
+			CrV:SetCustomLinearVelocity( 0 )
+			CrV:SetThrottle( 0 )
+			CrV:SetExternalPathByName("AfterGranCarav")
+			CrV:SetCustomControlEnabled( false )
+		end		
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranCr_cam01" active="0">
+	<event flypath="GranitsaPass_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		local Plf = GetPlayerVehicle()
+		if Plf then
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetPosition( CVector(2390.141, 556.595, 3042.380))
+			Plf:SetRotation(Quaternion(-0.011, 0.256, -0.033, 0.966))
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:PlaceToEndOfPath()
+			Plf:SetCustomControlEnabled( false )
+		end
+
+		local CrV = getObj("Caravanshik_vehicle_0")
+		if CrV then
+			CrV:SetCustomControlEnabled( true )
+			CrV:SetPosition( CVector(2398.003, 555.830, 3038.518))
+			CrV:SetRotation(Quaternion(-0.015, 0.225, -0.046, 0.973))
+			CrV:SetCustomLinearVelocity( 0 )
+			CrV:SetThrottle( 0 )
+			CrV:PlaceToEndOfPath()
+			CrV:SetCustomControlEnabled( false )
+		end	
+		
+		AddCinematicMessage( 600, 0.5 )
+		AddCinematicMessage( 601, 0.25 )
+		AddCinematicMessage( 602, 0.25 )
+		AddCinematicMessage( 603, 0.25 )
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranCr_cam02" active="0">
+	<event flypath="GranitsaPass_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		local Plf = GetPlayerVehicle()
+		if Plf then
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:SetExternalPathByName("AfterGran2")
+			Plf:SetCustomControlEnabled( false )
+		end
+
+		local CrV = getObj("Caravanshik_vehicle_0")
+		if CrV then
+			CrV:SetCustomControlEnabled( true )
+			CrV:SetCustomLinearVelocity( 0 )
+			CrV:SetThrottle( 0 )
+			CrV:SetExternalPathByName("AfterGranCarav2")
+			CrV:SetCustomControlEnabled( false )
+		end	
+
+		AddCinematicMessage( 501, 1 )
+		AddCinematicMessage( 502, 0.25 )
+		AddCinematicMessage( 503, 0.25 )
+		AddCinematicMessage( 504, 0.25 )
+		AddCinematicMessage( 505, 0.25 )
+		AddCinematicMessage( 506, 0.25 )
+		AddCinematicMessage( 507, 0.25 )
+		AddCinematicMessage( 508, 0.25 )
+		AddCinematicMessage( 509, 0.25 )
+	</script>
+</trigger>
+
+<trigger Name="cinPassGranCr_End" active="0">
+	<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+	<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+	<script>
+		trigger:Deactivate()
+
+		RestoreAllToleranceStatus()
+
+		local Plf = GetPlayerVehicle()
+		if Plf then
+			Plf:SetCustomControlEnabled( true )
+			Plf:SetCustomLinearVelocity( 0 )
+			Plf:SetThrottle( 0 )
+			Plf:PlaceToEndOfPath()
+			Plf:SetCustomControlEnabled( false )
+		end
+
+		TDeactivate("cinPassGranCr_FadeIn")
+		TDeactivate("cinPassGranCr_cam01")
+		TDeactivate("cinPassGranCr_cam02")
 
 		SpawnMessageBox(700)
 

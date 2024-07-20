@@ -340,6 +340,15 @@
 		CheckAll="0"
 		ConditionToGive="all complete">
 		<quest
+			Name="r7m1_GoToVexico_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r7m1_SearchHermit_Quest"
+			OnTake='ShowCircleOnMinimapByName("ToR7M3")' />
+
+		<quest
 			Name="r7m1_AskSalti_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
@@ -356,15 +365,6 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r7m1_AskSalti_Quest"
 			OnTake='ShowCircleOnMinimapByName("r7m3_HermetHouse")' />
-
-		<quest
-			Name="r7m1_GoToVexico_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="r7m1_SearchHermit_Quest"
-			OnTake='ShowCircleOnMinimapByName("ToR7M3")' />
 	</quest>
 <!--Root/sin/Сюжетные--><!--Root/sin/Опциональные--><!--Root/sin/Сюжетные/Проход-->
 	<quest

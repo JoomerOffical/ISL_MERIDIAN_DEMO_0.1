@@ -210,7 +210,7 @@
 			PlfCoor.y = PlfCoor.y + 25*0.74
 			PlfCoor.z = PlfCoor.z + 25*0.74
 
-			if QuestStatus("r7m1_TruckSell_Quest")==Q_COMPLETE then
+			if QuestStatus("r7m1_TruckSell_Quest")==Q_COMPLETE or QuestStatus("r7m1_SearchHermit_Quest")==Q_TAKEN then
 				local b = SpawnMessageBox(197)
 				if b == 1 then
 					PassToMap("r7m3", "FromR7M1", -1 )

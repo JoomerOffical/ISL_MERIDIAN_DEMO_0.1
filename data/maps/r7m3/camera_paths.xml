@@ -28,8 +28,8 @@
 	</Path>
 
 	<Path Name="GranitsaPass_cam1">
-		<Point  coord="2374.977 584.607 3173.535" rotation="0.009 0.991 -0.103 -0.082"/>
-		<Point  coord="2383.302 574.001 3123.729" rotation="0.009 0.991 -0.103 -0.082"/>
+		<Point  coord="2439.021 566.727 3057.457" rotation="-0.026 0.897 -0.053 0.437"/>
+		<Point  coord="2418.053 563.599 3041.062" rotation="-0.026 0.897 -0.053 0.437"/>
 	</Path>
 
 	<Path Name="GranitsaPass_cam2">
