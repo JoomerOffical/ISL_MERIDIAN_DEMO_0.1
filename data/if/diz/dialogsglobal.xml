@@ -622,20 +622,20 @@
 		name="Dlg_pl_000684"
 		text="К сожалению нет. Черт, что же делать?"
 		role="PLAYER"
-		scriptResult="TakeQuest('r7m3_BuyAPass_Quest'); TActivate('trGuardVino'); TActivate('trGoBackKPP'); EndConversation()" />
+		scriptResult="TakeQuest('r7m3_BuyAPass_Quest'); TActivate('trGoBackKPP'); EndConversation()" />
 
 	<Reply
 		name="GuardVino2_DLG"
 		text="Mierda, мы же вам четко сказали, без pase (пропуска) не пропускаем."
 		role="NPC"
-		scriptCondition="QuestStatus('r7m3_ComeBackKPP_Quest')==Q_TAKEN"
+		scriptCondition="(QuestStatus('r7m3_BuyAPass_Quest')==Q_TAKEN) or (QuestStatus('r7m3_ComeBackKPP_Quest')==Q_TAKEN)"
 		nextReplies="Dlg_pl_000703 Dlg_pl_000834" />
 
 	<Reply
 		name="Dlg_pl_000834"
 		text="Знаю, просто мимо проезжал."
 		role="PLAYER"
-		scriptResult="TActivate('trGuardVino'); TActivate('trGoBackKPP'); EndConversation()" />
+		scriptResult="TActivate('trGoBackKPP'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000703"

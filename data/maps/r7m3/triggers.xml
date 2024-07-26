@@ -45,6 +45,7 @@
 				Plf:SetCustomControlEnabled( false )
 			end
 
+			TActivate("trGuardVino")
 		</script>
 	</trigger>
 

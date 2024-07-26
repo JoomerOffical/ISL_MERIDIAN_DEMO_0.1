@@ -321,6 +321,8 @@
 
 		TDeactivate("cinFreeSto_FadeIn")
 
+		SetTolerance(1100, 1108, RS_ALLY)
+
 		TakeQuest("r7m3_BackToJefe3_Quest")
 
 		SetCameraBehindPlayerVehicle()

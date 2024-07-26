@@ -6038,7 +6038,7 @@
 				ModelName="r4_man"
 				skin="2"
 				cfg="12"
-				helloReplyNames="Caravan1_DLG Caravan2_DLG"
+				helloReplyNames="Wilgelm1_DLG"
 				SpokenCount="0" />				
 		</Object>
 
@@ -6615,7 +6615,7 @@
 				ModelName="r2_man"
 				skin="5"
 				cfg="276"
-				helloReplyNames="GuardVino1_DLG GuardVino2_DLG GuardVino3_DLG"
+				helloReplyNames="GuardVino1_DLG GuardVino2_DLG"
 				SpokenCount="0" />
 		
 			<Object
