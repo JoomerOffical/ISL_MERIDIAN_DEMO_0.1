@@ -101,6 +101,10 @@
 		value="Дорога через мост." />
 
 	<string
+		id="r5m1_ToR7M3_diz"
+		value="Дорога в Вексику." />
+
+	<string
 		id="r5m2_r5m2_PetrolStation1_diz"
 		value="Заправка. Можно починиться и заправиться." />
 
