@@ -51,25 +51,25 @@ $Id: Wares.xml,v 1.1 2005/12/08 08:58:06 anton Exp $
 
 	<Prototype
 		Class			= "Ware"
-		Name			= "bottle"
-
-		Price			= "400"
-		Durability		= "10"
-		PriceDispersion	= "7"
-
-		ModelFile		= "bottles"
-		ResourceType	= "BOTTLE" />
-
-	<Prototype
-		Class			= "Ware"
 		Name			= "oil"
 
-		Price			= "600"
+		Price			= "400"
 		Durability		= "75"
 		PriceDispersion	= "5"
 
 		ModelFile		= "back_exp"
 		ResourceType	= "OIL" />
+
+	<Prototype
+		Class			= "Ware"
+		Name			= "bottle"
+
+		Price			= "600"
+		Durability		= "10"
+		PriceDispersion	= "7"
+
+		ModelFile		= "bottles"
+		ResourceType	= "BOTTLE" />
 
 	<Prototype
 		Class			= "Ware"

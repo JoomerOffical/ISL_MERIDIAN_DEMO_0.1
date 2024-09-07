@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="7829">
+	LastId="7865">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
 	<AllowedWaresForDrop
-		Prototypes="tobacco fuel scrap_metal machinery wine" />
+		Prototypes="fuel scrap_metal machinery wine potato" />
 
 	<Object
 		Name="Player1"
@@ -95,13 +95,6 @@
 		Prototype="genericLocation"
 		Pos="2036.013 445.452 997.110"
 		Radius="117.159" />
-
-	<Object
-		Name="StartGame_loc"
-		Belong="1100"
-		Prototype="genericLocation"
-		Pos="3541.274 352.593 985.895"
-		Radius="250.000" />
 
 	<Object
 		Name="WowNearBridge_loc"
@@ -618,26 +611,18 @@
 		</Object>
 
 		<Object
-			Name="TheApple_defend"
-			Belong="1110"
-			Prototype="location"
-			Pos="3678.537 377.436 938.897"
-			Radius="50.000"
-			Active="0" />
-
-		<Object
 			Name="TheApple_deploy"
 			Belong="1110"
 			Prototype="location"
-			Pos="3678.537 377.436 938.897"
-			Radius="50.000" />
+			Pos="3584.488 350.084 965.239"
+			Radius="10.000" />
 
 		<Object
 			Name="TheApple_enter"
 			Belong="1110"
 			Prototype="location"
-			Pos="3678.537 377.436 938.897"
-			Radius="96.112" />
+			Pos="3612.508 350.082 931.692"
+			Radius="30.000" />
 
 		<Parts>
 			<AttackTeam
@@ -6297,7 +6282,7 @@
 		Name="sosna_america6203"
 		Belong="-1"
 		Prototype="Breakable_sosna_america"
-		Pos="3735.611 417.988 148.201"
+		Pos="3735.611 418.005 148.201"
 		Rot="0.000 0.309 0.000 0.951"
 		Mass="532.787"
 		NodeScale="1.211" />
@@ -6306,7 +6291,7 @@
 		Name="sosna_america_26204"
 		Belong="-1"
 		Prototype="Breakable_sosna_america_2"
-		Pos="3731.498 412.567 172.621"
+		Pos="3731.498 412.585 172.621"
 		Rot="0.000 0.061 0.000 -0.998"
 		Mass="426.010"
 		NodeScale="1.124" />
@@ -6315,7 +6300,7 @@
 		Name="sosna_america6205"
 		Belong="-1"
 		Prototype="Breakable_sosna_america"
-		Pos="3717.469 412.694 176.704"
+		Pos="3717.469 413.394 176.704"
 		Rot="0.000 0.438 0.000 0.899"
 		Mass="239.754"
 		NodeScale="0.928" />
@@ -16642,7 +16627,7 @@
 		Name="desert_dtree_17400"
 		Belong="-1"
 		Prototype="desert_dtree_1_dyn"
-		Pos="3668.234 361.183 431.842"
+		Pos="3668.234 361.181 431.842"
 		Rot="0.000 0.309 0.000 -0.951"
 		Mass="492.910"
 		NodeScale="1.180" />
@@ -18971,7 +18956,7 @@
 		Name="listvenoe37729"
 		Belong="-1"
 		Prototype="Breakable_Listvenoe3"
-		Pos="3725.712 391.100 280.800"
+		Pos="3725.712 391.219 280.800"
 		Rot="0.000 0.772 0.000 -0.636" />
 
 	<Object
@@ -21453,15 +21438,11 @@
 		Radius="15.000" />
 
 	<Object
-		Belong="1100"
-		Prototype="vehicleRecollection" />
-
-	<Object
 		Name="FromR7M3"
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="3708.857 353.951 422.599"
-		Radius="10.000" 
+		Radius="10.000"
 		ExitLocation="ToR7M3" />
 
 	<Object
@@ -21469,7 +21450,254 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="3724.133 376.104 350.520"
-		Radius="60.000" 
+		Radius="60.000"
 		PassageAddress="r7m3 FromR5M1"
 		PassageActive="0" />
+
+	<Object
+		Name="staticAutoGun047831"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="2967.000 412.078 780.973"
+		Rot="0.000 -0.704 0.000 0.710">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047832"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="2961.518 402.255 725.594"
+		Rot="0.000 -0.676 0.000 0.737">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047833"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="2963.363 404.796 750.440"
+		Rot="0.000 -0.685 0.000 0.728">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047834"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="2958.024 410.694 630.100"
+		Rot="0.000 -0.672 0.000 0.740">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047836"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="2956.635 403.889 654.822"
+		Rot="0.000 -0.679 0.000 0.734">
+		<Parts />
+	</Object>
+
+	<Object
+		Belong="1110"
+		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="staticAutoGun047837"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="3266.008 470.928 396.928"
+		Rot="0.000 0.511 0.000 0.859">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047838"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="3284.077 475.273 365.159"
+		Rot="0.000 0.489 0.000 0.872">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047839"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="3248.594 474.366 445.738"
+		Rot="0.000 0.469 0.000 0.883">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun047840"
+		Belong="1110"
+		Prototype="staticAutoGun04"
+		Pos="3308.237 481.369 371.275"
+		Rot="0.000 -0.250 0.000 0.968">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="factory_box7842"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="3227.650 474.064 396.538" />
+
+	<Object
+		Name="factory_box7845"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="3080.544 487.048 329.697"
+		Rot="0.000 -0.165 0.000 0.986" />
+
+	<Object
+		Name="factory_box7846"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="3084.333 486.954 325.854"
+		Rot="0.000 -0.559 0.000 0.829" />
+
+	<Object
+		Name="factory_box7847"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="3084.341 486.639 330.339"
+		Rot="0.000 0.292 0.000 0.956" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive27848"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="3263.698 480.434 331.352"
+		Rot="0.000 -0.087 0.000 0.996" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive27849"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="3260.839 480.707 330.756"
+		Rot="0.000 0.974 0.000 -0.225" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive27850"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="3262.221 480.400 331.844"
+		Rot="0.000 -0.566 0.000 0.824" />
+
+	<Object
+		Name="poddon7851"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="3263.636 481.267 327.571"
+		Rot="0.000 -0.713 0.000 0.701" />
+
+	<Object
+		Name="poddon7852"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="3233.290 473.569 396.627"
+		Rot="0.000 -0.131 0.000 0.991" />
+
+	<Object
+		Name="Breakable_WoodFence17855"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="3236.454 473.498 389.639"
+		Rot="0.000 0.954 0.000 0.301" />
+
+	<Object
+		Name="Breakable_WoodFence17856"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="3225.688 474.625 382.620"
+		Rot="0.000 0.959 0.000 0.284" />
+
+	<Object
+		Name="r5m1_BigApple"
+		Belong="1110"
+		Prototype="r5m1_BigApple"
+		Pos="3203.365 476.175 371.325"
+		Rot="0.000 -0.423 0.000 0.906"
+		PointOfViewInInterface="5.000 20.000 5.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations=""
+		ReachLocations=""
+		DestroyLocations=""
+		IsSellingDrugs="1"
+		IsBuyingDrugs="1">
+		<Object
+			Name="r5m1_BigApple_Shop"
+			Belong="1110"
+			Prototype="shop">
+			<GunsAndGadgets />
+
+		</Object>
+
+		<Object
+			Name="r5m1_BigApple_Bar"
+			Belong="1110"
+			Prototype="bar">
+			<Object
+				Name="r5m1_BigApple_Bar_Barman"
+				Belong="1110"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="60"
+				NpcType="BARMAN"
+				SpokenCount="0" />			
+		</Object>
+
+		<Object
+			Name="r5m1_BigApple_Workshop"
+			Belong="1110"
+			Prototype="workshop">
+			<CabinsAndBaskets />
+		</Object>	
+
+		<Object
+			Name="r5m1_BigApple_deploy"
+			Belong="1110"
+			Prototype="location"
+			Pos="3204.982 475.902 382.167"
+			Rot="0.000 -0.423 0.000 0.906"
+			Radius="10.000" />
+
+		<Object
+			Name="r5m1_BigApple_enter"
+			Belong="1110"
+			Prototype="location"
+			Pos="3094.532 484.779 344.356"
+			Rot="0.000 -0.423 0.000 0.906"
+			Radius="30.000" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="r5m1_Apple7864_DefendTeam"
+				Belong="1110"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="-1"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
 </DynamicScene>
