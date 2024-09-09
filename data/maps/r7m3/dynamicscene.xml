@@ -6327,7 +6327,7 @@
 	<Object
 		Name="r7m3_Torreon"
 		Belong="1101"
-		Prototype="r7m3_Torreon"
+		Prototype="Torreon"
 		Pos="2240.789 573.894 894.694"
 		Rot="0.000 0.701 0.000 0.713"
 		PointOfViewInInterface="100.000 20.000 -40.000"

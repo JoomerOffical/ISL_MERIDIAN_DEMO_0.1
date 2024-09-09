@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="7865">
+	LastId="7867">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
@@ -21500,10 +21500,6 @@
 	</Object>
 
 	<Object
-		Belong="1110"
-		Prototype="vehicleRecollection" />
-
-	<Object
 		Name="staticAutoGun047837"
 		Belong="1110"
 		Prototype="staticAutoGun04"
@@ -21584,7 +21580,7 @@
 		Name="Breakable_Barrel_Explosive27850"
 		Belong="1001"
 		Prototype="Breakable_Barrel_Explosive2"
-		Pos="3262.221 480.400 331.844"
+		Pos="3262.221 480.399 331.844"
 		Rot="0.000 -0.566 0.000 0.824" />
 
 	<Object
@@ -21616,11 +21612,10 @@
 		Rot="0.000 0.959 0.000 0.284" />
 
 	<Object
-		Name="r5m1_BigApple"
+		Name="BigApple"
 		Belong="1110"
 		Prototype="r5m1_BigApple"
-		Pos="3203.365 476.175 371.325"
-		Rot="0.000 -0.423 0.000 0.906"
+		Pos="3108.597 483.123 335.637"
 		PointOfViewInInterface="5.000 20.000 5.000"
 		CaravanLocations=""
 		CaravanPaths=""
@@ -21630,50 +21625,62 @@
 		IsSellingDrugs="1"
 		IsBuyingDrugs="1">
 		<Object
-			Name="r5m1_BigApple_Shop"
+			Name="BigApple_Shop"
 			Belong="1110"
 			Prototype="shop">
 			<GunsAndGadgets />
-
 		</Object>
 
 		<Object
-			Name="r5m1_BigApple_Bar"
+			Name="BigApple_Bar"
 			Belong="1110"
 			Prototype="bar">
 			<Object
-				Name="r5m1_BigApple_Bar_Barman"
+				Name="BigApple_Bar_Barman"
 				Belong="1110"
 				Prototype="NPC"
 				ModelName="r1_man"
 				skin="3"
 				cfg="60"
 				NpcType="BARMAN"
-				SpokenCount="0" />			
+				SpokenCount="0" />
 		</Object>
 
 		<Object
-			Name="r5m1_BigApple_Workshop"
+			Name="BigApple_Workshop"
 			Belong="1110"
 			Prototype="workshop">
 			<CabinsAndBaskets />
-		</Object>	
+		</Object>
 
 		<Object
-			Name="r5m1_BigApple_deploy"
+			Name="BigApple_defend"
 			Belong="1110"
 			Prototype="location"
-			Pos="3204.982 475.902 382.167"
-			Rot="0.000 -0.423 0.000 0.906"
+			Pos="3250.280 481.764 328.110"
+			Radius="10.000"
+			Active="0" />
+
+		<Object
+			Name="BigApple_deploy"
+			Belong="1110"
+			Prototype="location"
+			Pos="3206.478 475.815 390.781"
 			Radius="10.000" />
 
 		<Object
-			Name="r5m1_BigApple_enter"
+			Name="BigApple_enter"
 			Belong="1110"
 			Prototype="location"
-			Pos="3094.532 484.779 344.356"
-			Rot="0.000 -0.423 0.000 0.906"
+			Pos="3081.431 486.402 343.164"
 			Radius="30.000" />
+
+		<Object
+			Name="BigApple_caravan"
+			Belong="1110"
+			Prototype="location"
+			Pos="3223.685 484.412 320.225"
+			Radius="10.000" />
 
 		<Parts>
 			<AttackTeam
@@ -21681,11 +21688,11 @@
 
 			<DefendTeam
 				present="yes"
-				Name="r5m1_Apple7864_DefendTeam"
+				Name="r5m1_Apple7865_DefendTeam"
 				Belong="1110"
 				Prototype="settlementTeam">
 				<Formation
-					Belong="-1"
+					Belong="1001"
 					Prototype="caravanFormation"
 					DistBetweenVehicles="30.000"
 					Pos="0.000 0.000 0.000"
@@ -21700,4 +21707,8 @@
 
 		<ExitPath />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="vehicleRecollection" />
 </DynamicScene>

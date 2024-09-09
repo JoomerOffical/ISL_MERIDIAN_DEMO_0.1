@@ -318,6 +318,7 @@
    <Item id="TownBigHead"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="TownMichikar"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="SinCity"							file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+   <Item id="r5m1_BigApple"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
 
    <Item id="r6m1_Onto_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="r6m1_Lodon_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
@@ -337,7 +338,7 @@
    <Item id="SinVillage1"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="sin_EastRaf"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="EastIerihon"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="ChurchIerihon"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+   <Item id="ChurchIerihon"					file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="sin_CatDog"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
 
    <Item id="r5m2_Pervomayka_prototype"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
@@ -350,7 +351,7 @@
    <Item id="r7m1_Monterrey"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
 
    <Item id="r7m3_Village"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="r7m3_Torreon"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+   <Item id="Torreon"		   file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="r7m3_Ermosinyo"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
 
    <Item id="PetrolStationTown"					file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>

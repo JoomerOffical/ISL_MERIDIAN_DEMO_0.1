@@ -2444,7 +2444,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 
 		<Prototype
 			Class		= "Town"
-			Name		= "r7m3_Torreon"
+			Name		= "Torreon"
 			ModelFile	= "minintown"
 			NodeScale	= "1 1 1"
 
@@ -2538,10 +2538,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			CabinsAndBasketsAffixesCount			= "2"
 
 			WeaponPriceMultiplier 				= "2.5"
-			WeaponPriceDispersion 				= "12"
-
-			MaxDefenders					= "0"
-			Vehicles						= "Scout" >
+			WeaponPriceDispersion 				= "12" >
 			<Article	Prototype				= "tobacco"				
 					Amount				= "10"
 					ExternalPriceCoefficient	= "4"
