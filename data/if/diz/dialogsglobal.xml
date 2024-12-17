@@ -36,6 +36,86 @@
 		text="Понял, учту."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m1_AskSalti_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_000942"
+		text="И вновь мы с тобой встретились. Hola. Я слышал о твомх подвигах в наших землях. Мы благодарны тебе. Благодаря тебе у нас появились работа."
+		role="NPC"
+		nextReplies="Dlg_pl_000943" />
+
+	<Reply
+		name="Dlg_pl_000943"
+		text="Что ж, приятно слышать похвалу. Но мне бы кое-что хотелось от тебя."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000944" />
+
+	<Reply
+		name="Dlg_npc_000944"
+		text="Проси все, что хочешь."
+		role="NPC"
+		nextReplies="Dlg_pl_000945" />
+
+	<Reply
+		name="Dlg_pl_000945"
+		text="Тьяго рассказал мне про то, что у тебя есть судно. Я бы хотел чтобы ты меня сопроводил на северную границу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000946" />
+
+	<Reply
+		name="Dlg_npc_000946"
+		text="Все, что хочешь, кроме этого. Ты понимаешь, на что ты меня подталкиваешь? На преступление, меня посадить могут."
+		role="NPC"
+		nextReplies="Dlg_pl_000947" />
+
+	<Reply
+		name="Dlg_pl_000947"
+		text="Я щедро отплачу тебе, я дам тебе хорошую сумму денег, если ты сопроводишь меня. Представь себе, тебе на ближайшие месяцы даже не придется работать на винодельне, пачкать руки и получать гроши. Я тебе дам это, только аккуратно доставь меня на север."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000948" />
+
+	<Reply
+		name="Dlg_npc_000948"
+		text="Эх, ладно, но деньги вперед."
+		role="NPC"
+		nextReplies="Dlg_pl_000949" />
+
+	<Reply
+		name="Dlg_pl_000949"
+		text="Я дам тебе 5000 долларов авансом, остальное получишь, когда сопроводишь меня на север."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000950" />
+
+	<Reply
+		name="Dlg_npc_000950"
+		text="Хорошо, где аванс?"
+		role="NPC"
+		nextReplies="Dlg_pl_000951 Dlg_pl_000952" />
+
+	<Reply
+		name="Dlg_pl_000952"
+		text="Сейчас пересчитаю и вернусь."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000951"
+		text="Держи, выдвигаемся."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000953"
+		text="Ну что?"
+		role="NPC"
+		nextReplies="Dlg_pl_000954 Dlg_pl_000955" />
+
+	<Reply
+		name="Dlg_pl_000955"
+		text="Погоди."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000954"
+		text="Держи, выдвигаемся."
+		role="PLAYER" />
 <!--Root/r7m3/Отшельник-->
 	<Reply
 		name="Hermit_DLG"
@@ -1456,6 +1536,89 @@
 		text="Наконец-то."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m3_FindPass_Quest'); CompleteQuest('r7m3_CaravanmanSalt_Quest'); CompleteQuest('r7m3_FindMonCar_Quest'); TActivate('cinPassGranAl'); EndConversation()" />
+<!--Root/r7m3/Бандит Тьяго-->
+	<Reply
+		name="Dlg_npc_000928"
+		text="Фух... Вот мы и на безопасном расстоянии..."
+		role="NPC"
+		nextReplies="Dlg_pl_000929" />
+
+	<Reply
+		name="Dlg_pl_000929"
+		text="Спасибо конечно за спасение, но не стоило этого делать."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000930" />
+
+	<Reply
+		name="Dlg_npc_000930"
+		text="Я решил отдать тебе должное за то, что помиловал меня. А что тебя посадили, amigo?"
+		role="NPC"
+		nextReplies="Dlg_pl_000931" />
+
+	<Reply
+		name="Dlg_pl_000931"
+		text="Да так, нелегально через северную границу прошел. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_000932" />
+
+	<Reply
+		name="Dlg_npc_000932"
+		text="Не буду спрашивть, как именно, но я так понимаю, ты хочешь на север?"
+		role="NPC"
+		nextReplies="Dlg_pl_000933" />
+
+	<Reply
+		name="Dlg_pl_000933"
+		text="Да, иначе я своей цели не достигну."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000934" />
+
+	<Reply
+		name="Dlg_npc_000934"
+		text="Ладно, есть у меня одна идея. В винодельне работает один мой старый знакомый, у него есть небольшая лодка, он бы помог тебе перебраться на север. Но вряд ли за бесплатно."
+		role="NPC"
+		nextReplies="Dlg_pl_000935" />
+
+	<Reply
+		name="Dlg_pl_000935"
+		text="Что за знакомый?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000936" />
+
+	<Reply
+		name="Dlg_npc_000936"
+		text="Да ничего особенного, просто дальний родтвенник, правда мы с ним расстались в не самых теплых отношениях. Хотя кто знает, может у тебя хватит красноречия, чтобы его уговорить."
+		role="NPC"
+		nextReplies="Dlg_pl_000937" />
+
+	<Reply
+		name="Dlg_pl_000937"
+		text="Итак, где его искать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000938" />
+
+	<Reply
+		name="Dlg_npc_000938"
+		text="Ищи его в Сальтилио. Скажи, что ты от Тьяго. Может он тебе поможет, но это вряд ли. Но в любом случае попытай счастье."
+		role="NPC"
+		nextReplies="Dlg_pl_000939" />
+
+	<Reply
+		name="Dlg_pl_000939"
+		text="А ты куда?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000940" />
+
+	<Reply
+		name="Dlg_npc_000940"
+		text="А я наверное уеду с этих земель, пока меня не нашли."
+		role="NPC"
+		nextReplies="Dlg_pl_000941" />
+
+	<Reply
+		name="Dlg_pl_000941"
+		text="Удачи тебе."
+		role="PLAYER" />
 <!--Root/r7m1/Продавец-->
 	<Reply
 		name="Tadeo_DLG"
@@ -3832,52 +3995,27 @@
 <!--Root/r5m1/Опциональные--><!--Root/r5m1/сюжетные--><!--Root/r5m1/сюжетные/Житель первой деревни-->
 	<Reply
 		name="r5m1_Aplle_Bar_Ralf_1_N01"
-		text="Луч солнца озаряет мое лицо, вот уже много лет я не слышал пения птиц. Что привело тебя к нам, незнакомец?"
+		text="Редко встретишь в наших краях тех, кто смог пройти через границу. Что тебя к нам привело, малец?"
 		role="NPC"
 		scriptCondition="QuestStatus('r5m1_WTBWTalkWithAborigens_Quest')==Q_TAKEN"
 		nextReplies="r5m1_Aplle_Bar_Ralf_1_N02" />
 
 	<Reply
 		name="r5m1_Aplle_Bar_Ralf_1_N02"
-		text="Привет, вождь! Скажи, ты не слышал ничего о городе Эдмонтон?"
+		text="Привет, вождь. Скажи, ты не знаешь, где может жить паренек по прозвищу Умник?"
 		role="PLAYER"
 		nextReplies="r5m1_Aplle_Bar_Ralf_1_N03" />
 
 	<Reply
 		name="r5m1_Aplle_Bar_Ralf_1_N03"
-		text="Умная птица не ищет счастья в чужих землях. Я не слышал о городе, про который ты говоришь."
+		text="Умник? А, это наш местный историк-специалист, правда его истории связаны с азартными играми. Он живет в нашем городе, поищи его. У него густые усы, козлинная бородка, монокль на правом глазу и белый шарф."
 		role="NPC"
 		nextReplies="r5m1_Aplle_Bar_Ralf_1_N04" />
 
 	<Reply
 		name="r5m1_Aplle_Bar_Ralf_1_N04"
-		text="А не подскажешь, кто бы мог знать что-нибудь про этот город? Про карту я уже и не спрашиваю."
-		role="PLAYER"
-		nextReplies="r5m1_Aplle_Bar_Ralf_1_N05" />
-
-	<Reply
-		name="r5m1_Aplle_Bar_Ralf_1_N05"
-		text="Не всякая карта ведет к заданной цели. Тут неподалеку живет человек по прозвищу Умник. Он, по слухам, здорово в картах разбирается, но тоже никому ничего про них не говорит."
-		role="NPC"
-		nextReplies="r5m1_Aplle_Bar_Ralf_1_N06" />
-
-	<Reply
-		name="r5m1_Aplle_Bar_Ralf_1_N06"
-		text="Что за Умник? Где его найти?"
-		role="PLAYER"
-		nextReplies="r5m1_Aplle_Bar_Ralf_1_N07" />
-
-	<Reply
-		name="r5m1_Aplle_Bar_Ralf_1_N07"
-		text="В знаниях предков скрыта огромная сила. Он живет неподалеку, в заброшенном доме. По-настоящему его зовут Джек Новал."
-		role="NPC"
-		nextReplies="r5m1_Aplle_Bar_Ralf_1_N08" />
-
-	<Reply
-		name="r5m1_Aplle_Bar_Ralf_1_N08"
-		text="Спасибо, приятель."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r5m1_WTBWTalkWithAborigens_Quest') EndConversation()" />
+		text="Спасибо, вождь."
+		role="PLAYER" />
 <!--Root/r5m1/сюжетные/Гонщик в деревне-->
 	<Reply
 		name="r5m1_Konneks_Gonchik_1_N01"
@@ -3927,6 +4065,380 @@
 		text="Э, как скажешь."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r5m1_FirstQofSam_Quest');  EndConversation ()" />
+<!--Root/r5m1/сюжетные/Охрана аванпоста-->
+	<Reply
+		name="Dlg_npc_000861"
+		text="Куда собрался?"
+		role="NPC"
+		nextReplies="Dlg_pl_000870" />
+
+	<Reply
+		name="Dlg_pl_000870"
+		text="Э... Мне бы проехать..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000894" />
+
+	<Reply
+		name="Dlg_npc_000894"
+		text="Ха-ха-ха-ха! Насмешил. Мы конечно, можем тебя пропустить, но тогда не жалуйся, если твою машину придется по кусочкам собирать. "
+		role="NPC"
+		nextReplies="Dlg_pl_000895" />
+
+	<Reply
+		name="Dlg_pl_000895"
+		text="Все слишком смертельно?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000896" />
+
+	<Reply
+		name="Dlg_npc_000896"
+		text="Не то слово. Артилерия работает круглосуточно. Несколько наших рекрутов так и умерли. Спасибо хоть заброшенный комплекс очень прочный."
+		role="NPC"
+		nextReplies="Dlg_pl_000897" />
+
+	<Reply
+		name="Dlg_pl_000897"
+		text="Комплекс?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000902" />
+
+	<Reply
+		name="Dlg_npc_000902"
+		text="Да. Сеть водосточных труб, мы часто используем его в качестве укрытия, но комплекс является нейтральной территорией."
+		role="NPC"
+		nextReplies="Dlg_pl_000903" />
+
+	<Reply
+		name="Dlg_pl_000903"
+		text="Что ж... запомним."
+		role="PLAYER" />
+<!--Root/r5m1/сюжетные/Умник-->
+	<Reply
+		name="Dlg_npc_000898"
+		text="И вновь я вас вижу, уважаемый."
+		role="NPC"
+		nextReplies="Dlg_pl_000899" />
+
+	<Reply
+		name="Dlg_pl_000899"
+		text="Привет еще раз. Не подскажешь, как можно добраться до комплекса водосточных труб?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000900" />
+
+	<Reply
+		name="Dlg_npc_000900"
+		text="Ох, только через наш приграничный КПП. По другому никак."
+		role="NPC"
+		nextReplies="Dlg_pl_000901" />
+
+	<Reply
+		name="Dlg_pl_000901"
+		text="Странно, а на КПП мне рассказали про комплекс, в котором ваши бойцы ведут разведку. Не подскажешь ли, как добраться до этого комплекса, если КПП закрыт?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000904" />
+
+	<Reply
+		name="Dlg_npc_000904"
+		text="*шепотом* Я конечно не хотел рассказывать, но есть небольшой объезд за Большим Яблоком, что находится за холмами. На карте я вам отметил."
+		role="NPC"
+		nextReplies="Dlg_pl_000905" />
+
+	<Reply
+		name="Dlg_pl_000905"
+		text="Но есть нюанс?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000906" />
+
+	<Reply
+		name="Dlg_npc_000906"
+		text="Да, вас вряд ли пропустят через базу просто так, вам наверняка придется выполнить какое-то поручение командования базы. Я уверен, вы что-то придумаете."
+		role="NPC"
+		nextReplies="Dlg_pl_000907" />
+
+	<Reply
+		name="Dlg_pl_000907"
+		text="Что ж, спасибо за совет."
+		role="PLAYER" />
+<!--Root/r5m1/сюжетные/Командор Бит-->
+	<Reply
+		name="Dlg_npc_000908"
+		text="Я тебя тут раньше не видел. Кто таков будешь?"
+		role="NPC"
+		nextReplies="Dlg_pl_000909" />
+
+	<Reply
+		name="Dlg_pl_000909"
+		text="Меня зовут Бродяга. Я бы хотел добраться до комплекса водосточных труб. У вас вроде есть способ добраться туда, не проходя ваш КПП."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000910" />
+
+	<Reply
+		name="Dlg_npc_000910"
+		text="Да, у нас есть способ. Но не за бесплатно."
+		role="NPC"
+		nextReplies="Dlg_pl_000911" />
+
+	<Reply
+		name="Dlg_pl_000911"
+		text="Что нужно?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000912" />
+
+	<Reply
+		name="Dlg_npc_000912"
+		text="Ну... Если хочешь побыстрее, то заплати денюшкой и тогда откроем проезд.5000 думаю будет достаточно."
+		role="NPC"
+		nextReplies="Dlg_pl_000913" />
+
+	<Reply
+		name="Dlg_pl_000913"
+		text="А если денег нет?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000914" />
+
+	<Reply
+		name="Dlg_npc_000914"
+		text="Тогда дам тебе задание небольшое."
+		role="NPC"
+		nextReplies="Dlg_pl_000915" />
+
+	<Reply
+		name="Dlg_pl_000915"
+		text="Это задание, надеюсь, не будет связано с вашей сепаратисткой войной? Я не хочу быть ее участником."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000916" />
+
+	<Reply
+		name="Dlg_npc_000916"
+		text="Не переживай, на фронт не отправишься. Просто отправишь нескольких беглецов с територий нашего врага в Вексику. Твоя машина как раз способна уместить нескольких ребят."
+		role="NPC"
+		nextReplies="Dlg_pl_000917 Dlg_pl_000918 Dlg_pl_000919" />
+
+	<Reply
+		name="Dlg_pl_000919"
+		text="Сейчас вернусь."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000918"
+		text="Ладно, перевезу я вам имигрантов. Куда их доставить?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000920" />
+
+	<Reply
+		name="Dlg_npc_000920"
+		text="Довези их до Хуареса. А там их заберут и отправят подальше от Земель Сэма."
+		role="NPC"
+		nextReplies="Dlg_pl_000921" />
+
+	<Reply
+		name="Dlg_pl_000921"
+		text="Понял, пусть садятся."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000917"
+		text="Держите денги, слишком утомительно."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000922"
+		text="Что решил?"
+		role="NPC"
+		nextReplies="Dlg_pl_000923 Dlg_pl_000924 Dlg_pl_000925" />
+
+	<Reply
+		name="Dlg_pl_000925"
+		text="Сейчас вернусь."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000924"
+		text="Ладно, перевезу я вам имигрантов. Куда их доставить?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000926" />
+
+	<Reply
+		name="Dlg_npc_000926"
+		text="Довези их до Хуареса.  А там их заберут и отпраят подальше от Земель Сэма. "
+		role="NPC"
+		nextReplies="Dlg_pl_000927" />
+
+	<Reply
+		name="Dlg_pl_000927"
+		text="Понял, пусть садятся."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000923"
+		text="Держите деньги, слишком утомительно."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000956"
+		text="Мне только что передали, что имигранты переданы в надежные руки. Ты молодец."
+		role="NPC"
+		nextReplies="Dlg_pl_000957" />
+
+	<Reply
+		name="Dlg_pl_000957"
+		text="Ну так что? Мне открыт доступ к комплексу?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000958" />
+
+	<Reply
+		name="Dlg_npc_000958"
+		text="Да, проходи."
+		role="NPC"
+		nextReplies="Dlg_pl_000959" />
+
+	<Reply
+		name="Dlg_pl_000959"
+		text="Отлично."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000960"
+		text="Долго ты. Не хочешь объяснить подробности?"
+		role="NPC"
+		nextReplies="Dlg_pl_000961" />
+
+	<Reply
+		name="Dlg_pl_000961"
+		text="Да что объяснять, когда пограничники слишком жестокие люди? Чуть что не так, сразу в тюрьму."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000962" />
+
+	<Reply
+		name="Dlg_npc_000962"
+		text="И за что посадили?"
+		role="NPC"
+		nextReplies="Dlg_pl_000963" />
+
+	<Reply
+		name="Dlg_pl_000963"
+		text="За то, что нелегально прошел через границу до того, как с вами встретиться в первый раз."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000964" />
+
+	<Reply
+		name="Dlg_npc_000964"
+		text="Понятно. В любом случае имигранты попали в надежные руки после твоего заключения. Так что задание выполнено. Можешь проходить."
+		role="NPC"
+		nextReplies="Dlg_pl_000965" />
+
+	<Reply
+		name="Dlg_pl_000965"
+		text="Я думал, вы меня не пропустите."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000966" />
+
+	<Reply
+		name="Dlg_npc_000966"
+		text="Нам так-то все равно, кем ты был до нашей встречи. Важно, что задние выполнено, хоть и не так, как планировалось. А теперь проходи, пока я не передумал."
+		role="NPC"
+		nextReplies="Dlg_pl_000967" />
+
+	<Reply
+		name="Dlg_pl_000967"
+		text="Спасибо."
+		role="PLAYER" />
+<!--Root/r5m1/сюжетные/Оратор Биркинс-->
+	<Reply
+		name="Dlg_npc_000968"
+		text="Привет, в общем правила такие, ты будешь сражаться в три этапа. На первом уровне будешь сражться на Вэне, на втором на Молоковозе, ну и на третьем на Урале. Победишь, получишь хорошую долю от выйгрыша. Готов?"
+		role="NPC"
+		nextReplies="Dlg_pl_000969" />
+
+	<Reply
+		name="Dlg_pl_000969"
+		text="Готов, куда уж деваться."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000970"
+		text="Это было нечто, ты молодец. Неплохая битва была."
+		role="NPC"
+		nextReplies="Dlg_pl_000971" />
+
+	<Reply
+		name="Dlg_pl_000971"
+		text="Что теперь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000972" />
+
+	<Reply
+		name="Dlg_npc_000972"
+		text="Теперь тебе доступны гладиаторские бои, так что если вдруг захочешь опять сразиться, буду рад тебя видеть."
+		role="NPC"
+		nextReplies="Dlg_pl_000973" />
+
+	<Reply
+		name="Dlg_pl_000973"
+		text="Что ж, неплохо."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000974"
+		text="И снова привет. Хочешь поучаствовать в гладиторских боях?"
+		role="NPC"
+		nextReplies="Dlg_pl_000975 Dlg_pl_000978" />
+
+	<Reply
+		name="Dlg_pl_000978"
+		text="Нет, в другой раз."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_000975"
+		text="Да."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000976" />
+
+	<Reply
+		name="Dlg_npc_000976"
+		text="Ну значит слушай. Сейчас мы выкинем жребий, и посмотрим, на чем будет проходить битва на арене."
+		role="NPC"
+		nextReplies="Dlg_pl_000977" />
+
+	<Reply
+		name="Dlg_pl_000977"
+		text="Ладно."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000979 Dlg_npc_000981 Dlg_npc_000982" />
+
+	<Reply
+		name="Dlg_npc_000982"
+		text="Битва будет проходить на Уралах. Приз - 5000 долларов. Готов?"
+		role="NPC"
+		nextReplies="Dlg_pl_000984" />
+
+	<Reply
+		name="Dlg_pl_000984"
+		text="Готов."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000981"
+		text="Битва будет проходить на Молоковозах. Приз - 2500 долларов. Готов?"
+		role="NPC"
+		nextReplies="Dlg_pl_000983" />
+
+	<Reply
+		name="Dlg_pl_000983"
+		text="Готов."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_000979"
+		text="Битва будет проходить на Вэнах. Приз - 1000 долларов. Готов?"
+		role="NPC"
+		nextReplies="Dlg_pl_000980" />
+
+	<Reply
+		name="Dlg_pl_000980"
+		text="Готов."
+		role="PLAYER" />
 <!--Root/r5m1/Опциональные/Лотерея-->
 	<Reply
 		name="r5m1_LotteryMan_1_N01"

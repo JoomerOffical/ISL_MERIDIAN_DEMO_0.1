@@ -4,6 +4,10 @@
 		<Item
 			id="helvecia"
 			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="bridge_stone"
+			file="data\models\AnimModels.xml" />
 			
 		<Item
 			id="deadtree2"

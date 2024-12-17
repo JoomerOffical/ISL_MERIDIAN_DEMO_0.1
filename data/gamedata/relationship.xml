@@ -68,6 +68,11 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 			tolerance="neutral" />
 
 		<set
+			forwhom="1105"
+			who="1109 1110 1111"
+			tolerance="enemy" />
+
+		<set
 			forwhom="1103"
 			who="1104 1106"
 			tolerance="neutral" />

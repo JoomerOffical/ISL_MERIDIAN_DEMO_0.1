@@ -412,14 +412,15 @@
    <Item id="Belong_1190"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
    <Item id="Belong_1191"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
    <Item id="Belong_1108"	file="data\if\ico\clans\winemakers03.dds" 			file1="data\if\ico\clans\winemakers02.dds"/>
+   <Item id="Belong_1109"	file="data\if\ico\clans\beer03.dds" 			file1="data\if\ico\clans\beer02.dds"/>
+   <Item id="Belong_1110"	file="data\if\ico\clans\bure_32.dds" 			file1="data\if\ico\clans\bure_128.dds"/>
+   <Item id="Belong_1111"	file="data\if\ico\clans\free_traders_alliance03.dds" 	file1="data\if\ico\clans\free_traders_alliance02.dds"/>
 
-   <Item id="Belong_1109"	file="data\if\ico\clans\bure_32.dds" 			file1="data\if\ico\clans\bure_128.dds"/>
+   
    <Item id="Belong_1192"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
    <Item id="Belong_1193"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
 
-   <Item id="Belong_1110"	file="data\if\ico\clans\beer03.dds" 			file1="data\if\ico\clans\beer02.dds"/>
    <Item id="Belong_1196"	file="data\if\ico\clans\beer03.dds" 			file1="data\if\ico\clans\beer02.dds"/>
-   <Item id="Belong_1111"	file="data\if\ico\clans\free_traders_alliance03.dds" 	file1="data\if\ico\clans\free_traders_alliance02.dds"/>
    <Item id="Belong_1112"	file="data\if\ico\clans\go_32.dds" 				file1="data\if\ico\clans\go_128.dds"/>
    <Item id="Belong_1194"	file="data\if\ico\clans\go_32.dds" 				file1="data\if\ico\clans\go_128.dds"/>
    <Item id="Belong_1195"	file="data\if\ico\clans\go_32.dds" 				file1="data\if\ico\clans\go_128.dds"/>

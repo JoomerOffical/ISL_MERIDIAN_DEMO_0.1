@@ -500,6 +500,22 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			<Object PrototypeName="specter01" />
 			<Object PrototypeName="storm01" />
 			<Object PrototypeName="vector01" />
+			<Object PrototypeName="flag01" />
+			<Object PrototypeName="thorn2"/>
+		</Prototype>
+
+		<Prototype
+			Class="RepositoryObjectsGenerator"
+			Name="gun_BigHead_Generator">
+
+			<Object PrototypeName="hornet01" />
+			<Object PrototypeName="maxim01" />
+			<Object PrototypeName="kord01" />
+			<Object PrototypeName="kpvt01" />
+			<Object PrototypeName="bumblebee01" />
+			<Object PrototypeName="rainmetal01" />
+			<Object PrototypeName="thorn1"/>
+			<Object PrototypeName="someTurboAccelerationPusher"/>
 			<Object PrototypeName="thorn2"/>
 		</Prototype>
 
@@ -663,7 +679,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			NodeScale	= "1 1 1"
 			LogosAndCosts	= "fetish_skull_01.dds 1900; fetish_punk_01.dds 2100"
 
-			MusicName						= "techno_town1"
+			MusicName						= "military_town1"
 
 			NumCollisionLayersBelowVehicle 		= "1"
 
@@ -671,7 +687,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			LookRadius						= "200"
 			IntersectionRadius				= "30" 
 
-			GunGenerator					= "gun_r5m1_Generator_good"
+			GunGenerator					= "gun_BigHead_Generator"
 			DesiredGunsInWorkshop				= "33"
 
 			GunAffixGenerator					= "gun_affix_Generator_good"
@@ -743,7 +759,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			LookRadius		= "200"
 			IntersectionRadius	= "50" 
 
-			GunGenerator				= "gun_r5m1_Generator_bad"
+			GunGenerator				= "gun_r5m1_Generator"
 			DesiredGunsInWorkshop			= "26"
 
 			GunAffixGenerator				= "gun_affix_Generator_bad"
@@ -1970,7 +1986,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 
 			MusicName		= "agriculruar_town1"
 			
-			GunGenerator				= "gun_r5m1_Generator_bad"
+			GunGenerator				= "gun_r5m1_Generator"
 			DesiredGunsInWorkshop			= "17"
 
 			GunAffixGenerator				= "gun_affix_Generator_bad"
@@ -2036,7 +2052,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 
 			MusicName		= "agriculruar_town1"
 			
-			GunGenerator				= "gun_r5m1_Generator_bad"
+			GunGenerator				= "gun_r5m1_Generator"
 			DesiredGunsInWorkshop			= "20"
 
 			GunAffixGenerator				= "gun_affix_Generator_good"
@@ -2102,7 +2118,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 
 			MusicName		= "agriculruar_town1"
 			
-			GunGenerator				= "gun_r5m1_Generator_good"
+			GunGenerator				= "gun_r5m1_Generator"
 			DesiredGunsInWorkshop			= "17"
 
 			GunAffixGenerator				= "gun_affix_Generator_bad"

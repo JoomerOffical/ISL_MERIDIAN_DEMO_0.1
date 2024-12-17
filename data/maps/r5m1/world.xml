@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="996505397">
+	LastId="996505978">
 	<Node
 		name="Object76477546"
 		class="SgAnimatedModelNode"
@@ -161,15 +161,6 @@
 		orgRel="1"
 		rot="0.0000 -0.5825 0.0000 0.8129"
 		id="tribune1"
-		ndmAction="0" />
-
-	<Node
-		name="Object76479529"
-		class="SgAnimatedModelNode"
-		org="2298.981 78.188 1061.419"
-		orgRel="1"
-		rot="0.0000 -0.5913 0.0000 0.8064"
-		id="Bridge05_unbreak"
 		ndmAction="0" />
 
 	<Node
@@ -9803,7 +9794,7 @@
 	<Node
 		name="Object76485391"
 		class="SgAnimatedModelNode"
-		org="679.234 -0.227 911.630"
+		org="679.234 -3.227 911.630"
 		orgRel="1"
 		rot="-0.0035 0.9598 -0.0078 0.2805"
 		scale="1.918 1.918 1.918"
@@ -9927,7 +9918,7 @@
 	<Node
 		name="Object76485406"
 		class="SgAnimatedModelNode"
-		org="674.234 0.000 903.400"
+		org="674.234 -3.000 903.400"
 		orgRel="1"
 		scale="1.516 1.516 1.516"
 		id="elast_wall_1"
@@ -59114,24 +59105,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object76497476"
-		class="SgAnimatedModelNode"
-		org="2520.822 0.000 2281.202"
-		orgRel="1"
-		rot="0.0000 0.3827 0.0000 0.9239"
-		id="rusty_car_4"
-		ndmAction="0" />
-
-	<Node
-		name="Object76497477"
-		class="SgAnimatedModelNode"
-		org="2513.389 0.000 2259.157"
-		orgRel="1"
-		rot="0.0000 0.1736 0.0000 -0.9848"
-		id="rusty_car_3"
-		ndmAction="0" />
-
-	<Node
 		name="Object76497478"
 		class="SgAnimatedModelNode"
 		org="2425.726 0.000 2130.958"
@@ -60826,26 +60799,6 @@
 		passable="0" />
 
 	<Node
-		name="Object996497650"
-		class="SgAnimatedModelNode"
-		org="3299.430 -1.579 1418.064"
-		orgRel="1"
-		rot="-0.1279 -0.1977 -0.0260 0.9715"
-		id="bridge_span2"
-		ndmAction="0"
-		skin="1" />
-
-	<Node
-		name="Object996497651"
-		class="SgAnimatedModelNode"
-		org="3333.929 -11.323 1448.924"
-		orgRel="1"
-		rot="0.1170 0.6380 -0.2819 0.7069"
-		id="bridge_span3"
-		ndmAction="0"
-		skin="1" />
-
-	<Node
 		name="Object996497652"
 		class="SgAnimatedModelNode"
 		org="3357.594 -4.633 1459.148"
@@ -60862,16 +60815,6 @@
 		orgRel="1"
 		rot="0.0338 0.7784 0.1467 0.6094"
 		id="bridge_span2"
-		ndmAction="0"
-		skin="1" />
-
-	<Node
-		name="Object996497654"
-		class="SgAnimatedModelNode"
-		org="3306.423 -2.607 1426.202"
-		orgRel="1"
-		rot="0.3991 0.2385 0.2947 -0.8348"
-		id="bridge_span3"
 		ndmAction="0"
 		skin="1" />
 
@@ -67927,17 +67870,6 @@
 		skin="1" />
 
 	<Node
-		name="Object996503948"
-		class="SgAnimatedModelNode"
-		org="3296.151 -2.071 1386.606"
-		orgRel="1"
-		rot="0.1268 0.0532 -0.1134 0.9840"
-		id="bridge_span2"
-		ndmAction="0"
-		passable="0"
-		skin="1" />
-
-	<Node
 		name="Object996503949"
 		class="SgAnimatedModelNode"
 		org="3384.849 1.880 1458.655"
@@ -67987,15 +67919,6 @@
 		rot="-0.0596 -0.9408 -0.0211 0.3331"
 		scale="2.856 2.856 2.856"
 		id="iron_wall"
-		ndmAction="0" />
-
-	<Node
-		name="Object996503955"
-		class="SgAnimatedModelNode"
-		org="3315.387 0.802 1406.050"
-		orgRel="1"
-		scale="2.343 2.343 2.343"
-		id="elast_2"
 		ndmAction="0" />
 
 	<Node
@@ -72999,16 +72922,6 @@
 		passable="0" />
 
 	<Node
-		name="Object996504886"
-		class="SgAnimatedModelNode"
-		org="2962.717 0.000 699.852"
-		orgRel="1"
-		rot="0.0000 0.7254 0.0000 0.6884"
-		id="agro_gate"
-		ndmAction="0"
-		passable="0" />
-
-	<Node
 		name="Object996504888"
 		class="SgAnimatedModelNode"
 		org="2963.774 0.000 729.815"
@@ -73242,4 +73155,138 @@
 		rot="0.0000 0.8572 0.0000 0.5150"
 		id="brick_house1"
 		ndmAction="0" />
+
+	<Node
+		name="Object996505578"
+		class="SgAnimatedModelNode"
+		org="2289.696 46.012 1050.599"
+		orgRel="1"
+		rot="0.0000 0.1305 0.0000 0.9914"
+		scale="2.000 2.000 2.000"
+		id="bridge_stone"
+		ndmAction="0"
+		passable="0" />
+
+	<Node
+		name="Object996505673"
+		class="SgAnimatedModelNode"
+		org="2475.826 0.000 2281.849"
+		orgRel="1"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505674"
+		class="SgAnimatedModelNode"
+		org="2486.575 0.000 2281.831"
+		orgRel="1"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505675"
+		class="SgAnimatedModelNode"
+		org="2504.779 0.000 2274.439"
+		orgRel="1"
+		rot="0.0000 0.7193 0.0000 0.6947"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505676"
+		class="SgAnimatedModelNode"
+		org="2497.190 0.000 2281.801"
+		orgRel="1"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505677"
+		class="SgAnimatedModelNode"
+		org="2475.434 0.000 2227.787"
+		orgRel="1"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505678"
+		class="SgAnimatedModelNode"
+		org="2485.423 0.000 2227.874"
+		orgRel="1"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505679"
+		class="SgAnimatedModelNode"
+		org="2504.486 0.000 2263.637"
+		orgRel="1"
+		rot="0.0000 0.7224 0.0000 0.6915"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505680"
+		class="SgAnimatedModelNode"
+		org="2504.112 0.000 2252.743"
+		orgRel="1"
+		rot="0.0000 0.7148 0.0000 0.6994"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505681"
+		class="SgAnimatedModelNode"
+		org="2472.366 0.000 2254.516"
+		orgRel="1"
+		rot="0.0000 -0.7071 0.0000 0.7071"
+		id="agro_post"
+		ndmAction="0"
+		passable="0" />
+
+	<Node
+		name="Object996505682"
+		class="SgAnimatedModelNode"
+		org="2472.664 0.000 2254.855"
+		orgRel="1"
+		rot="0.0000 -0.7056 0.0000 0.7086"
+		id="agro_gate"
+		ndmAction="0"
+		passable="0" />
+
+	<Node
+		name="Object996505684"
+		class="SgAnimatedModelNode"
+		org="2493.086 0.000 2266.820"
+		orgRel="1"
+		rot="0.0000 0.6994 0.0000 0.7148"
+		id="r2_substation_barrel"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505685"
+		class="SgAnimatedModelNode"
+		org="2480.605 0.000 2274.453"
+		orgRel="1"
+		id="petrolhouse1"
+		ndmAction="0" />
+
+	<Node
+		name="Object996505686"
+		class="SgAnimatedModelNode"
+		org="2477.316 0.000 2235.078"
+		orgRel="1"
+		id="transformator2"
+		ndmAction="0" />
+
+	<Node
+		name="ET_S_RAIN"
+		class="SgNode"
+		org="2871.014 460.539 741.609"
+		orgRel="0">
+		<Node
+			name="noise"
+			class="SgSoundSourceNode"
+			id="Fake_Sound_Do_Not_Use_It" />
+	</Node>
 </World>
