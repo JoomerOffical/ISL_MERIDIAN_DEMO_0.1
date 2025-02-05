@@ -1656,6 +1656,25 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_AuntGato_Quest"
+		briefDiz="Заехать к тете Гато"
+		fullDiz="В Кристи живет одна женщина, у которой дочь пропала в Иерихоне. Леонель просил навестить ее перед поездкой в Иерихон."
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="Kristy" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_BackBook_Quest"
+		briefDiz="Вернуть книги"
+		isMainQuest="0">
+		<Map
+			name="r7m1"
+			targetObjName="Monterrey" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m1_BackToHermit_Quest"
 		briefDiz="Вернуться к Отшельнику"
 		fullDiz="У Отшельника есть инфа, касаемая винограда. Надо бы навестить его, как буду свободен."
@@ -1693,9 +1712,28 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_BattleBandits_Quest"
+		briefDiz="Разобраться с шайкой"
+		fullDiz="Мне тут предложили пострелушки с бандитами за приличные деньги. Почему бы собственно и нет?"
+		isMainQuest="0">
+		<Map
+			name="r7m1"
+			targetObjName="MestEd_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m1_BeatBossBandMont_Quest"
 		briefDiz="Разобраться с остатками бандитов"
 		isMainQuest="1">
+		<Map
+			name="r7m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_BookForNodin_Quest"
+		briefDiz="Найти книги для Нодина"
+		fullDiz="Один коллекционер попросил за хорошую плату найти для него книги на сгоревшем складе. Работа не пыльная, но стоит ли оно того?"
+		isMainQuest="0">
 		<Map
 			name="r7m1" />
 	</QuestInfo>
@@ -1739,11 +1777,42 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_FKIerihon_Quest"
+		briefDiz="Искать Китти в Иерихоне"
+		isMainQuest="1">
+		<Map
+			name="r7m1" />
+
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m1_FindApost_Quest"
 		briefDiz="Найти аванпост"
 		isMainQuest="1">
 		<Map
 			name="r7m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_FindBook_Quest"
+		briefDiz="Найти книги"
+		isMainQuest="0">
+		<Map
+			name="r7m1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_FindKitty_Quest"
+		briefDiz="Найти Китти"
+		fullDiz="Одна женщина просила найти ее дочку в Иерихоне. Что ж... постараемся ее найти."
+		isMainQuest="1">
+		<Map
+			name="r7m1" />
+
+		<Map
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1848,6 +1917,17 @@
 		<Map
 			name="sin"
 			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_SaveKitty_Quest"
+		briefDiz="Спасти Китти каким-то способом"
+		isMainQuest="0">
+		<Map
+			name="r7m1" />
+
+		<Map
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2248,6 +2328,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_ComeToCats2_Quest"
+		briefDiz="Поехать к Котам"
+		fullDiz="Коты менее агрессивные, по словам Джо. Но грешков у них ничуть не меньше, чем у Псов. Может к ним присоединиться?"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_ComeToCats_Quest"
 		briefDiz="Поехать к Котам"
 		fullDiz="Прикончив Арлекина, я понял, что с псами мне делать нечего. Так что пойду-ка я к Котам, может у них что-нибудь да заработаю."
@@ -2264,6 +2354,16 @@
 		<Map
 			name="sin"
 			targetObjName="Sin_Church" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_ComeToDogs2_Quest"
+		briefDiz="Поехать к псам"
+		fullDiz="Псы более открыты и честны, чем коты. Но они слишком непредсказуемы. Может к ним присоединиться?"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2406,6 +2506,20 @@
 		<Map
 			name="sin"
 			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_LeaveSin_Quest"
+		briefDiz="Вернуться к Леонелю"
+		fullDiz="Посылку я отправил. Теперь меня тут ничего не держит. Можно валить."
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="MechanicLeo_loc" />
+
+		<Map
+			name="sin"
+			targetObjName="ToR7M1" />
 	</QuestInfo>
 
 	<QuestInfo

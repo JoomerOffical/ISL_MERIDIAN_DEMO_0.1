@@ -6,6 +6,8 @@
 		<script>
 			trigger:Deactivate()
 
+			TakeQuest("r7m1_PosilkaForJoe_Quest")
+
 			if QuestStatus("r7m1_PosilkaForJoe_Quest")==Q_TAKEN then
 				ShowCircleOnMinimapByName("Sin_WestIerihon")
 				TActivate("trArlekinGang")
@@ -18,7 +20,6 @@
 		<script>
 			trigger:Deactivate()
 			TActivate("sinArlekinGang")
-			TakeQuest("sin_KillArlekinGang_Quest")
 		</script>
 	</trigger>
 
@@ -27,6 +28,21 @@
 		<script>
 			trigger:Deactivate()
 			CompleteQuest("sin_KillArlekinGang_Quest")
+		</script>
+	</trigger>
+
+	<trigger Name="trArlekinChose" active="0">
+		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_WestIerihon"/>
+		<script>
+			trigger:Deactivate()
+			if QuestStatus("sin_KillArlekinGang_Quest")==Q_COMPLETED then
+				TakeQuest("sin_KillArlekin_Quest")
+				TActivate("sinArlekinMeet")
+			else
+				TakeQuest("sin_LeaveSin_Quest")
+				TakeQuest("sin_ComeToCats2_Quest")
+				TakeQuest("sin_ComeToDogs2_Quest")
+			end
 		</script>
 	</trigger>
 

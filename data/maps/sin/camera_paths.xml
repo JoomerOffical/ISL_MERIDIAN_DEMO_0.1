@@ -38,6 +38,19 @@
 	<Point  coord="2655.994 200.428 1499.667" rotation="-0.017 0.714 -0.017 0.699"/>
 </Path>
 
+<Path Name = "KittyTrap_cam0">
+	<Point  coord="1549.395 341.668 2102.133" rotation="-0.023 0.709 -0.023 0.704"/>
+	<Point  coord="1456.401 335.521 2101.521" rotation="-0.023 0.709 -0.023 0.704"/>
+</Path>
+<Path Name = "KittyTrap_cam1">
+	<Point  coord="1532.499 317.245 2014.025" rotation="-0.127 0.417 -0.059 0.898"/>
+	<Point  coord="1554.805 325.705 1995.183" rotation="-0.127 0.417 -0.059 0.898"/>
+</Path>
+<Path Name = "KittyTrap_cam2">
+	<Point  coord="1558.723 283.071 2098.833" rotation="-0.064 -0.735 0.070 0.672"/>
+	<Point  coord="1562.637 282.320 2098.485" rotation="-0.064 -0.735 0.070 0.672"/>
+</Path>
+
 <Path Name = "Kitty_cam0">
 	<Point  coord="2604.790 194.366 1534.177" rotation="-0.012 0.987 -0.088 0.131"/>
 	<Point  coord="2604.790 194.366 1534.177" rotation="0.005 0.419 0.003 0.908"/>

@@ -41,11 +41,13 @@
 	<trigger Name="trBooksBurn" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Books_loc" />
 		<script>
-			AddFadingMsgByStrIdFormatted( "fm_player_add_thing", "forb_books")
-
 			local rrr = GetEntityByName ("forb_books")
 			if rrr then rrr:Remove() end
 	
+			if QuestStatus("r7m1_BookForNodin_Quest") == Q_TAKEN then
+				CompleteQuest("r7m1_FindBook_Quest")
+			end
+
 			AddQuestItem("forb_books")
 
 			trigger:Deactivate() 
@@ -54,19 +56,37 @@
 
 <!--Правосудие над бандитами-->
 	<trigger Name="trSpawnMestEd" active="0">
-		<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
+			trigger:Deactivate() 
+
 			CreateTeam ("MestEd", 1101, CVector(getPos("MestEd_loc")), {"Scout01", "Scout02"}, nil, nil, nil)
 			CreateTeam ("MestBandits", 1105, CVector(getPos("MestBandits_loc")), {"r1m1_sml03", "r1m1_sml03", "r1m1_sml02", "r1m1_sml04"}, nil, nil, nil)
 
-			local edteam = GetEntityByName ("MestEd")
-			if edteam then
-				edteam:SetDestination(CVector(getPos("MestBandits_loc")))
-				edteam:SetCruisingSpeed(100)
-				edteam:SetReactingOnDisturbingVehicles(false)
+			local edteam1 = GetEntityByName("MestEd")
+			if edteam1 then
+				edteam1:SetDestination(CVector(getPos("MestBandits_loc")))
+				edteam1:SetCruisingSpeed(100)
+				edteam1:SetReactingOnDisturbingVehicles(false)
+			end
+		</script>
+	</trigger>
+
+<!--Разобрались с бандитами-->
+	<trigger Name="trDieMestEd" active="0">
+		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_0" />
+		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_1" />
+		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_2" />
+		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_3" />
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 4>count then
+				return
 			end
 
-			trigger:Deactivate() 
+			CompleteQuest("r7m1_BattleBandits_Quest")
+
 		</script>
 	</trigger>
 
@@ -74,8 +94,19 @@
 <trigger Name="trAfterIerihon" active="1">
 	<event 	timeout="1" eventid="GE_TIME_PERIOD" />
 	<script>	
-		if QuestStatus("sin_BackToLeo_Quest")==Q_TAKEN then
+		if (QuestStatus("sin_BackToLeo_Quest")==Q_TAKEN) or (QuestStatus("sin_LeaveSin_Quest")==Q_TAKEN) then
 			TActivate("trAfterIerihon2")
+			trigger:Deactivate()
+		end
+
+	</script>
+</trigger>
+
+<trigger Name="trAfterIerihonFast" active="1">
+	<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+	<script>	
+		if QuestStatus("sin_LeaveSin_Quest")==Q_TAKEN then
+			FailQuest("r7m1_FindKitty_Quest")
 			trigger:Deactivate()
 		end
 

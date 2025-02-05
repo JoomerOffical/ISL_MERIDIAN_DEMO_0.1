@@ -1793,7 +1793,7 @@
 
 	<Reply
 		name="Dlg_npc_000465"
-		text="Стой, amigo. Держи немного dinero (денег) сверху, подготовься перед поездкой. Buena suerte. (Удачи)"
+		text="Стой, amigo. Держи немного dinero (денег) сверху, подготовься перед поездкой. А, и еще кое-что. Заедь к тетушке Гато. У нее дочь уехала в Иерихон и пропала. Помоги ей. Buena suerte. (Удачи)"
 		role="NPC"
 		nextReplies="Dlg_pl_000466" />
 
@@ -1801,7 +1801,7 @@
 		name="Dlg_pl_000466"
 		text="Бывай."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m1_DolgForMechanic_Quest'); TakeQuest('r7m1_PosilkaForJoe_Quest'); AddQuestItem('quest_pack_joe'); AddPlayerMoney('400'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m1_DolgForMechanic_Quest'); TakeQuest('r7m1_AuntGato_Quest'); AddQuestItem('quest_pack_joe'); AddPlayerMoney('400'); EndConversation()" />
 
 	<Reply
 		name="Leonel2_DLG"
@@ -1836,7 +1836,7 @@
 
 	<Reply
 		name="Dlg_pl_000476"
-		text="Джо просил тебе передать привет, и я бы тебе реукомендовал поехать в Иерихон, раз уж земли теперь свободны."
+		text="Джо просил тебе передать привет, и я бы тебе рекомендовал поехать в Иерихон, раз уж земли теперь свободны."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000479" />
 
@@ -1851,6 +1851,43 @@
 		text="Бывай."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_BackToLeo_Quest'); TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
+
+	<Reply
+		name="Leonel3_DLG"
+		text="Быстро ты."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_LeaveSin_Quest')==Q_TAKEN "
+		nextReplies="Dlg_pl_000988" />
+
+	<Reply
+		name="Dlg_pl_000988"
+		text="Ну... я не стал долго там задерживаться, так что сразу, как посылку доставил, ретировался."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000985" />
+
+	<Reply
+		name="Dlg_npc_000985"
+		text="Что ж... в таком случае могу похвалить тебя за пунктуальность. Bien hecho, amigo. (Молодец, друг.)"
+		role="NPC"
+		nextReplies="Dlg_pl_000989" />
+
+	<Reply
+		name="Dlg_pl_000989"
+		text="Пожалуйста, это значит, с долгом покончено?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000990" />
+
+	<Reply
+		name="Dlg_npc_000990"
+		text="Si. Можешь быть свободен. Ладно, gracias, amigo mio за посылку, но мне надо возвращаться к своей старушке. Adios."
+		role="NPC"
+		nextReplies="Dlg_pl_000991" />
+
+	<Reply
+		name="Dlg_pl_000991"
+		text="Бывай."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_LeaveSin_Quest'); TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
 <!--Root/r7m1/Пьяница-->
 	<Reply
 		name="DrunkM_DLG"
@@ -1978,6 +2015,7 @@
 		name="Optional1_DLG"
 		text="Недавно у нас сгорел старый склад, больше половины вещей нам удалось сохранить, но не все мы вытащили."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_BookForNodin_Quest')==Q_CANBEGIVEN"
 		nextReplies="Dlg_pl_000509" />
 
 	<Reply
@@ -2002,44 +2040,63 @@
 		name="Dlg_npc_000508"
 		text="Я коллекционер реликвий, не боец. Боюсь возвращаться. А по тебе и твоей тачке видно, что ты сможешь прибить пятерку бандитов. Ну что, по рукам?"
 		role="NPC"
-		nextReplies="Dlg_pl_000512 Dlg_pl_000513" />
+		nextReplies="Dlg_pl_000512 Dlg_pl_000513 Dlg_pl_000994" />
+
+	<Reply
+		name="Dlg_pl_000994"
+		text="Я нашел какие-то книги на складе. Возьмешь?"
+		role="PLAYER"
+		scriptCondition="IsQuestItemPresent( 'forb_books' )"
+		nextReplies="Dlg_npc_000995" />
+
+	<Reply
+		name="Dlg_npc_000995"
+		text="Боже мой, это те самые запретные книги старго мира. Ты молодец. Давай сюда их, а я тебе в обмен отдам не только деньги, но и одну из этих книг и вот этот прибор."
+		role="NPC"
+		nextReplies="Dlg_pl_000996" />
+
+	<Reply
+		name="Dlg_pl_000996"
+		text="А что это?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_000997" />
+
+	<Reply
+		name="Dlg_npc_000997"
+		text="Это кладоискатель. С помощью него ты сможешь искать различные ценности и металлы под землей."
+		role="NPC"
+		nextReplies="Dlg_pl_000998" />
+
+	<Reply
+		name="Dlg_pl_000998"
+		text="Отлично, ядрен бензин!"
+		role="PLAYER"
+		scriptResult="TakeQuest('r7m1_BookForNodin_Quest'); CompleteQuest('r7m1_FindBook_Quest'); CompleteQuest('r7m1_BackBook_Quest'); RemoveQuestItem('forb_books'); AddQuestItem('quest_goldsellector'); AddPlayerMoney(500); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000513"
 		text="Пустая трата времени. Не поеду."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptCondition="not(IsQuestItemPresent('forb_books'))"
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000512"
 		text="Ладно, по рукам."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptCondition="not(IsQuestItemPresent('forb_books' ))"
+		scriptResult="TakeQuest('r7m1_BookForNodin_Quest'); EndConversation()" />
 
 	<Reply
 		name="Optional1.2_DLG"
 		text="Ну, что? Нашел что-нибудь?"
 		role="NPC"
-		nextReplies="Dlg_pl_000515 Dlg_pl_000520" />
-
-	<Reply
-		name="Dlg_pl_000520"
-		text="<Солгать> Прости, ничего не нашел."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000521" />
-
-	<Reply
-		name="Dlg_npc_000521"
-		text="Какая жалость, ладно спасибо хотя бы за попытку, держи свою награду. А также держи кладоискатель."
-		role="NPC"
-		nextReplies="Dlg_pl_000522" />
-
-	<Reply
-		name="Dlg_pl_000522"
-		text="Спасибо."
-		role="PLAYER" />
+		scriptCondition="IsQuestItemPresent( 'forb_books' )"
+		nextReplies="Dlg_pl_000515" />
 
 	<Reply
 		name="Dlg_pl_000515"
-		text="Нашел, какие-то книги."
+		text="Нашел, наверное ты про эти книги говорил."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000516" />
 
@@ -2064,63 +2121,14 @@
 	<Reply
 		name="Dlg_pl_000519"
 		text="Отлично, ядрен бензин!"
-		role="PLAYER" />
-
-	<Reply
-		name="Optional1.3_DLG"
-		text="Я нашел какие-то книги. С виду еще целые, хоть и некоторые сгорели. Может стоит почитать их?"
-		role="NPC"
-		nextReplies="Dlg_pl_000524 Dlg_pl_000525" />
-
-	<Reply
-		name="Dlg_pl_000525"
-		text="<Положить их в багажник>"
-		role="PLAYER" />
-
-	<Reply
-		name="Dlg_pl_000524"
-		text="<Прочитать>"
-		role="PLAYER" />
-
-	<Reply
-		name="Optional1.4_DLG"
-		text="Ты понимаешь, что ты сейчас делаешь?"
-		role="NPC"
-		nextReplies="Dlg_pl_000527" />
-
-	<Reply
-		name="Dlg_pl_000527"
-		text="И что я делаю?"
 		role="PLAYER"
-		nextReplies="Dlg_npc_000528" />
-
-	<Reply
-		name="Dlg_npc_000528"
-		text="Ты прямо сейчас читаешь запретные книги, которые нельзя читать каким-то невеждам, вроде тебя."
-		role="NPC"
-		nextReplies="Dlg_pl_000529" />
-
-	<Reply
-		name="Dlg_pl_000529"
-		text="И что с того?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000530" />
-
-	<Reply
-		name="Dlg_npc_000530"
-		text="Я не могу отпустить человека с подобными знаниями, так что моим охранникам придется тебя прикончить."
-		role="NPC"
-		nextReplies="Dlg_pl_000531" />
-
-	<Reply
-		name="Dlg_pl_000531"
-		text="Ни дня без битв."
-		role="PLAYER" />
+		scriptResult="CompleteQuest('r7m1_BackBook_Quest'); RemoveQuestItem('forb_books'); AddQuestItem('quest_goldsellector'); AddPlayerMoney(500); EndConversation()" />
 <!--Root/r7m1/Борцы (оптимально)-->
 	<Reply
 		name="Optional2_DLG"
 		text="Эй, amigo, не хочешь свою пушку разогреть?"
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_BattleBandits_Quest')==Q_CANBEGIVEN"
 		nextReplies="Dlg_pl_000533" />
 
 	<Reply
@@ -2138,17 +2146,20 @@
 	<Reply
 		name="Dlg_pl_000536"
 		text="Не хочу. Слишком рискованно."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000535"
 		text="А почему нет? Погнали."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="TActivate('trSpawnMestEd'); TActivate('trDieMestEd'); TakeQuest('r7m1_BattleBandits_Quest'); EndConversation()" />
 <!--Root/r7m1/Матушка-->
 	<Reply
 		name="Mother1_DLG"
 		text="Ay de mi, ay de mi! (О горе мне, горе!)"
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_AuntGato_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000537" />
 
 	<Reply
@@ -2159,7 +2170,7 @@
 
 	<Reply
 		name="Dlg_npc_000538"
-		text="Дочь моя пропала, вот что стряслось. Уехала со своим marido (мужем) в Иерихон и пропала. Письма не пишет, не возвращается, волнуюсь за нее. Помогите мне добрый человек, найдите мою дочь, я вам хорошо заплачу за поиски."
+		text="Моя дочь, Китти, пропала, вот что стряслось. Уехала со своим marido (мужем) в Иерихон и пропала. Письма не пишет, не возвращается, волнуюсь за нее. Помогите мне добрый человек, найдите мою дочь, я вам хорошо заплачу за поиски."
 		role="NPC"
 		nextReplies="Dlg_pl_000539" />
 
@@ -2173,12 +2184,7 @@
 		name="Dlg_npc_000540"
 		text="Не дай бог, но даже если так, то хотя бы верните ее тело мне. Я похороню ее, но я не верю, что это так."
 		role="NPC"
-		nextReplies="Dlg_pl_000541 Dlg_pl_000544" />
-
-	<Reply
-		name="Dlg_pl_000544"
-		text="Прости, нет времени."
-		role="PLAYER" />
+		nextReplies="Dlg_pl_000541" />
 
 	<Reply
 		name="Dlg_pl_000541"
@@ -2195,7 +2201,8 @@
 	<Reply
 		name="Dlg_pl_000543"
 		text="Пока не за что, не обещаю что найду, но постараюсь."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m1_AuntGato_Quest'); TakeQuest('r7m1_PosilkaForJoe_Quest'); TakeQuest('r7m1_FindKitty_Quest'); EndConversation()" />
 
 	<Reply
 		name="Mother2_DLG"
@@ -4550,80 +4557,6 @@
 		text="Спасибо! Я счастливчик."
 		role="PLAYER"
 		scriptResult="EndConversation()" />
-<!--Root/r5m1/Опциональные/Кладоискатель-->
-	<Reply
-		name="r5m1_TreasureMan_1_N01"
-		text="Приветствую тебя, путник. Я вижу, ты довольно силен и находчив. Не мог бы ты помочь мне с раскопками?"
-		role="NPC"
-		scriptCondition="QuestStatus('r5m1_FindTreasure') == Q_CANBEGIVEN"
-		nextReplies="r5m1_TreasureMan_1_N02 Dlg_pl_000422" />
-
-	<Reply
-		name="Dlg_pl_000422"
-		text="Нет, ядрен бензин. У меня и своих дел хватает."
-		role="PLAYER"
-		scriptResult=" EndConversation()" />
-
-	<Reply
-		name="r5m1_TreasureMan_1_N02"
-		text="Посмотрим, расскажи поподробнее."
-		role="PLAYER"
-		nextReplies="r5m1_TreasureMan_1_N03" />
-
-	<Reply
-		name="r5m1_TreasureMan_1_N03"
-		text="В здешних землях зарыто много древних сокровищ. Одно из них - Запретные книги.  Если тебе повезет и ты сможешь их найти, я щедро тебя вознагражу."
-		role="NPC"
-		nextReplies="r5m1_TreasureMan_1_N05 Dlg_pl_000423" />
-
-	<Reply
-		name="Dlg_pl_000423"
-		text="Это как-то подозрительно выглядит. Ищи другого дурака."
-		role="PLAYER"
-		scriptResult=" EndConversation()" />
-
-	<Reply
-		name="r5m1_TreasureMan_1_N05"
-		text="Не вижу здесь ничего сложного."
-		role="PLAYER"
-		nextReplies="r5m1_TreasureMan_1_N06" />
-
-	<Reply
-		name="r5m1_TreasureMan_1_N06"
-		text="Этот клад уже лет сто ищут. А про то, что он зарыт где-то недалеко от переплетения труб, тебе любой местный житель расскажет.  Эти трубы уже все на сто раз обнюхали, без всякого толку."
-		role="NPC"
-		nextReplies="r5m1_TreasureMan_1_N07" />
-
-	<Reply
-		name="r5m1_TreasureMan_1_N07"
-		text="Посмотрим, может быть, мне больше повезет."
-		role="PLAYER"
-		scriptResult="TakeQuest('r5m1_FindTreasure');  EndConversation()" />
-
-	<Reply
-		name="r5m1_TreasureMan_2_N01"
-		text="Отлично! Это те самые книги! Надеюсь, ты их не читал, иначе... Хотя что это я - вот, держи. Ты честно заслужил право владеть этой вещью."
-		role="NPC"
-		scriptCondition="QuestStatus('r5m1_FT_Return') == Q_TAKEN"
-		nextReplies="r5m1_TreasureMan_2_N02" />
-
-	<Reply
-		name="r5m1_TreasureMan_2_N02"
-		text="Спасибо, конечно, но что это?"
-		role="PLAYER"
-		nextReplies="r5m1_TreasureMan_2_N03" />
-
-	<Reply
-		name="r5m1_TreasureMan_2_N03"
-		text="Это - Кладоискатель! В руках обычного человека он не более чем игрушка, зато для охотника за древними сокровищами - просто незаменимая вещь."
-		role="NPC"
-		nextReplies="r5m1_TreasureMan_2_N04" />
-
-	<Reply
-		name="r5m1_TreasureMan_2_N04"
-		text="Отлично, лопни твои покрышки."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r5m1_FT_Return');  EndConversation()" />
 <!--Root/r5m1/Опциональные/Посылка-->
 	<Reply
 		name="TheKonneks_Bar_Posilka_NPC_N01"
@@ -4983,7 +4916,7 @@
 		name="Dlg_pl_000569"
 		text="Буду, буду. А я поехал, спасибо за выпивку."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m1_PosilkaForJoe_Quest'); TakeQuest('sin_KillArlekin_Quest'); RemoveQuestItem('quest_pack_joe'); TActivate('sinArlekinMeet'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m1_PosilkaForJoe_Quest'); RemoveQuestItem('quest_pack_joe'); TActivate('trArlekinChose'); EndConversation()" />
 
 	<Reply
 		name="Joe2_DLG"
@@ -5165,7 +5098,7 @@
 
 	<Reply
 		name="Dlg_pl_000833"
-		text="Спасибо."
+		text="Спасибо. "
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_ComeToCats_Quest'); TActivate('sinEgoistMeet'); AddPlayerMoney(500); EndConversation()" />
 
@@ -5646,4 +5579,22 @@
 		text="Это единственный вариант."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_Husband_Quest'); TActivate('OldFarm_tr'); EndConversation()" />
-<!--Root/Sin/Опциональные--></DialogsResource>
+<!--Root/Sin/Опциональные--><!--Root/Sin/Выборы-->
+	<Reply
+		name="Vibor_DLG"
+		text="Хм... может им заплатить, чтобы они до меня не докапывались?"
+		role="NPC"
+		nextReplies="Dlg_pl_000986 Dlg_pl_000987" />
+
+	<Reply
+		name="Dlg_pl_000987"
+		text="У меня есть дела в городе."
+		role="PLAYER"
+		scriptResult="TActivate('sinArlekinGangFight'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_000986"
+		text="*Заплатить 1000 долларов*"
+		role="PLAYER"
+		scriptResult="TActivate('sinArlekinGangPay'); EndConversation()" />
+</DialogsResource>

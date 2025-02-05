@@ -11977,4 +11977,26 @@
 		Prototype="genericLocation"
 		Pos="1664.057 268.526 2200.043"
 		Radius="5.000" />
+
+	<Object
+		Name="sin_HerolookKitty_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1577.969 276.186 2097.240"
+		Radius="5.000" />
+
+	<Object
+		Name="sin_KittyTrap_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1485.347 289.907 2047.123"
+		Radius="5.000" />
+
+	<Object
+		Name="Vibor_NPC"
+		Belong="1100"
+		Prototype="NPC"
+		ModelName="NewHero_mask"
+		helloReplyNames="Vibor_DLG"
+		SpokenCount="0" />
 </DynamicScene>

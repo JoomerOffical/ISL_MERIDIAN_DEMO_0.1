@@ -55,6 +55,7 @@
 	<Object 	Name="SinDogHouse_Bar"     			FullName = "Кальянная" />
 	<Object 	Name="SinDogHouse_Bar_Barman"     	FullName = "Табачник Пью" />
 	<Object 	Name="SinDogHouse_House"     		FullName = "Штаб" />
+	<Object 	Name="Vibor_NPC"     				FullName = "Бродяга" />
 
 	<Object 	Name="DynQEnemy01"     		FullName = "Мартин Кокс" />
 	<Object 	Name="DynQEnemy02"     		FullName = "Джефри Родригез" />

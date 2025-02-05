@@ -13,6 +13,36 @@
 	</Path>
 
 	<Path
+		Name="KittyTrap">
+		<Point
+			coord="1473.865 2054.597" />
+
+		<Point
+			coord="1487.385 2069.432" />
+
+		<Point
+			coord="1484.934 2091.093" />
+
+		<Point
+			coord="1456.021 2101.843" />
+
+		<Point
+			coord="1423.785 2100.779" />
+
+		<Point
+			coord="1397.990 2098.957" />
+
+		<Point
+			coord="1364.409 2100.750" />
+
+		<Point
+			coord="1335.231 2116.221" />
+
+		<Point
+			coord="1310.869 2144.575" />
+	</Path>
+
+	<Path
 		Name="FinalBorn">
 		<Point
 			coord="3540.703 664.519" />

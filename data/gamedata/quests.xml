@@ -251,7 +251,39 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
-<!--Root/r7m1/Сюжетные--><!--Root/r7m1/Опциональные--><!--Root/r7m1/Сюжетные/Лампочка к маяку-->
+<!--Root/r7m1/Сюжетные--><!--Root/r7m1/Опциональные-->
+	<quest
+		Name="r7m1_BookForNodin_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="r7m1">
+		<quest
+			Name="r7m1_FindBook_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r7m1_BookForNodin_Quest" />
+
+		<quest
+			Name="r7m1_BackBook_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_FindBook_Quest" />
+	</quest>
+
+	<quest
+		Name="r7m1_BattleBandits_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="r7m1" />
+<!--Root/r7m1/Сюжетные/Лампочка к маяку-->
 	<quest
 		Name="r7m1_LampToMayak_Quest"
 		Automatic="0"
@@ -365,6 +397,37 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r7m1_AskSalti_Quest"
 			OnTake='ShowCircleOnMinimapByName("r7m3_HermetHouse")' />
+	</quest>
+<!--Root/r7m1/Сюжетные/Тетя Гато-->
+	<quest
+		Name="r7m1_AuntGato_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		OnTake='ShowCircleOnMinimapByName("Kristy")' />
+<!--Root/r7m1/Сюжетные/Поиски Китти-->
+	<quest
+		Name="r7m1_FindKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="r7m1_FKIerihon_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="r7m1_FindKitty_Quest" />
+
+		<quest
+			Name="r7m1_SaveKitty_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_FKIerihon_Quest" />
 	</quest>
 <!--Root/sin/Сюжетные--><!--Root/sin/Опциональные--><!--Root/sin/Сюжетные/Проход-->
 	<quest
@@ -587,6 +650,29 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/После посылки Джо-->
+	<quest
+		Name="sin_LeaveSin_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_ComeToCats2_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin" />
+
+	<quest
+		Name="sin_ComeToDogs2_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin" />
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"

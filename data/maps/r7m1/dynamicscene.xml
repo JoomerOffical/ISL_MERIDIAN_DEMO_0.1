@@ -1878,6 +1878,16 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="MomGato_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_woman"
+				skin="2"
+				cfg="88"
+				helloReplyNames="Mother1_DLG"
+				SpokenCount="0" />	
+
+			<Object
 				Name="BanditThiago_NPC"
 				Belong="1101"
 				Prototype="NPC"
@@ -3433,13 +3443,22 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="TreasureNodin_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				cfg="58"
+				helloReplyNames="Optional1_DLG Optional1.2_DLG"
+				SpokenCount="0" />
+
+			<Object
 				Name="MechanicLeonel_NPC"
 				Belong="1101"
 				Prototype="NPC"
 				ModelName="r2_woman"
 				skin="4"
 				cfg="68"
-				helloReplyNames="Leonel_DLG Leonel2_DLG"
+				helloReplyNames="Leonel_DLG Leonel2_DLG Leonel3_DLG"
 				SpokenCount="0" />				
 		</Object>
 
