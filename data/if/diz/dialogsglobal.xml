@@ -4922,12 +4922,11 @@
 		name="Joe2_DLG"
 		text="Вижу решил с Котами брататься?"
 		role="NPC"
-		scriptCondition="QuestStatus('sin_ComeBackJoe_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000514" />
 
 	<Reply
 		name="Dlg_pl_000514"
-		text="Ну а что еще делать? Не к псам же ехать, учитывая, что я их парней прикончил."
+		text="Ну а что еще делать? Не к псам же, учитывая, что я их парней прикончил."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000564" />
 
@@ -4939,7 +4938,7 @@
 
 	<Reply
 		name="Dlg_pl_000565"
-		text="Жители наверняка видели, как я с шайкой Арлекина быстро расправился, а значит для того, чтобы меня прикончить, псам явно нужно больше 3-х машин."
+		text="С шайкой и самим Арлекином я быстро расправился. Жители города этому свидетели. А значит для того, чтобы меня прикончить, псам явно нужно больше 3-х машин."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000566" />
 
@@ -4964,8 +4963,7 @@
 	<Reply
 		name="Dlg_pl_000571"
 		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
-		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); TakeQuest('sin_Caravan_Quest'); TActivate('trCaravan'); EndConversation()" />
+		role="PLAYER" />
 
 	<Reply
 		name="Joe3_DLG"
@@ -5052,17 +5050,54 @@
 		text="Спасибо."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_CarvBackToJoe_Quest'); CompleteQuest('sin_Caravan_Quest'); TakeQuest('sin_ComeToGrave_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_000992"
+		text="Вижу ты решил с котами брататься?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_ComeBackJoe_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_000993" />
+
+	<Reply
+		name="Dlg_pl_000993"
+		text="Пока нет, я еще не до конца решил, нужно ли мне встревать в этот конфликт. Но спасибо Гарфилду, что пытался меня подкупить небольшим гонораром."
+		role="PLAYER"
+		nextReplies="Dlg_npc_000999" />
+
+	<Reply
+		name="Dlg_npc_000999"
+		text="Очень настоятельно рекомендую тебе уезжать из этих земель. Бед с Котами ты наберешь немало. Да и не факт, что они не ударят тебе в спину, когда ты им перестанешь нужным."
+		role="NPC"
+		nextReplies="Dlg_pl_001000" />
+
+	<Reply
+		name="Dlg_pl_001000"
+		text="Не переживай, ухо буду держать в остро, а пушку на готове. Опа, а это еще кто?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001001" />
+
+	<Reply
+		name="Dlg_npc_001001"
+		text="А, торгогвый караван. И, судя по всему, он едет в сторону Кошкиного Дома. А ты куда?"
+		role="NPC"
+		nextReplies="Dlg_pl_001002" />
+
+	<Reply
+		name="Dlg_pl_001002"
+		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); TakeQuest('sin_Caravan_Quest'); TActivate('trCaravan'); EndConversation()" />
 <!--Root/Sin/Гарфилд-->
 	<Reply
 		name="Garfield1_DLG"
-		text="Ну привет, чужеземец. Я видел, как ты расправился с Арлекином. Опасный ты парень, распологайся."
+		text="Ну привет, чужеземец. Кто таков будешь? "
 		role="NPC"
 		scriptCondition="QuestStatus('sin_ComeToCats_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000559" />
 
 	<Reply
 		name="Dlg_pl_000559"
-		text="Спасибо, не думал, что меня будут встречать так тепло."
+		text="Я? Я простой наемник, кто ищет возможность заработать лишний цент."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000560" />
 
@@ -5074,44 +5109,44 @@
 
 	<Reply
 		name="Dlg_pl_000561"
-		text="Откуда, откуда... с юга. Для Джо доставлял посылку, да вот только псы, вместе с Арлекином, налетели на меня за то, что я не повернул назад."
+		text="С юга. Для Джо доставлял посылку, да вот только псы, вместе с Арлекином, налетели на меня за то, что я не повернул назад."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000562" />
 
 	<Reply
 		name="Dlg_npc_000562"
-		text="Понимаю, они не особо любят чужеземцев, ибо как они сами думают, чужеземцы могут доставить проблем."
+		text="В наши края редко, кто приезжает. А если и приезжает, то это либо кто-то из наемников, либо торговец, либо еще кто. И из-за этого к незнакомцам формируются подозрительные отношения. У псов они выражены более явно и агрессивно."
 		role="NPC"
 		nextReplies="Dlg_pl_000563" />
 
 	<Reply
 		name="Dlg_pl_000563"
-		text="Ну похоже, что они сами себе проблем доставили."
+		text="Понял. И у вас ко мне тоже подозрения имеются?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000832" />
 
 	<Reply
 		name="Dlg_npc_000832"
-		text="Это да, ладно, иди пока отдохни, а там мы тебе работенку какую подкинем чуть позже. Вот, возьми немного на выпить."
+		text="Ну, есть такое. Но если хочешь, чтобы наше отношение стало к тебе положительным, тебе нужно проявить себя в небольших операциях. Ладно, иди пока отдохни, а там мы тебе работенку какую подкинем чуть позже. Вот, возьми немного на выпить."
 		role="NPC"
 		nextReplies="Dlg_pl_000833" />
 
 	<Reply
 		name="Dlg_pl_000833"
-		text="Спасибо. "
+		text="Спасибо. Не подведу."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_ComeToCats_Quest'); TActivate('sinEgoistMeet'); AddPlayerMoney(500); EndConversation()" />
 
 	<Reply
 		name="Garfield2_DLG"
-		text="Вот ты где, ты куда пропал? Не уж то на Эгоиста готовил покушение, ха-ха-ха?"
+		text="Вот ты где, ты куда пропал? Уже думали, ты уехал."
 		role="NPC"
-		scriptCondition="QuestStatus('sin_BackToCats_Quest')==Q_TAKEN"
+		scriptCondition="(QuestStatus('sin_BackToCats_Quest')==Q_TAKEN) or (QuestStatus('sin_BackToCats1_Quest')==Q_TAKEN)"
 		nextReplies="Dlg_pl_000583" />
 
 	<Reply
 		name="Dlg_pl_000583"
-		text="Да не, я не на столько злопамятный человек, чтобы обращать внимание на каких-то придурков. А сам я исследовал ваш земли, довольно красиво у вас тут."
+		text="Да не, не хотелось бы уезжать . А сам я исследовал ваш земли, довольно красиво у вас тут."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000584" />
 
@@ -5119,7 +5154,50 @@
 		name="Dlg_npc_000584"
 		text="А то. Кстати, мы тут тебе работенку хорошую нашли. "
 		role="NPC"
-		nextReplies="Dlg_pl_000585" />
+		nextReplies="Dlg_pl_000585 Dlg_pl_001004" />
+
+	<Reply
+		name="Dlg_pl_001004"
+		text="Я слушаю."
+		role="PLAYER"
+		scriptCondition="QuestStatus('sin_BackToCats1_Quest')==Q_TAKEN"
+		nextReplies="Dlg_npc_001005" />
+
+	<Reply
+		name="Dlg_npc_001005"
+		text='В общем "небольшие спонсоры" нам предоставили неплохое оружие, которое может помочь нам в конфронтации с псами.  '
+		role="NPC"
+		nextReplies="Dlg_pl_001006" />
+
+	<Reply
+		name="Dlg_pl_001006"
+		text="И что вы с этим оружием будете делать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001007" />
+
+	<Reply
+		name="Dlg_npc_001007"
+		text="Мы бы могли этим воспользоваться, чтобы забрать вторую половину Иерихона. Но для начала надо ослабить влияние Псов на западе."
+		role="NPC"
+		nextReplies="Dlg_pl_001008" />
+
+	<Reply
+		name="Dlg_pl_001008"
+		text="Что мне надо сделать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001009" />
+
+	<Reply
+		name="Dlg_npc_001009"
+		text="Так как у тебя репутация в нашей банде маленькая, мы тебе поручим небольшое задание. В Западном Иерихоне есть некоторые бизнесы, которые мы крышуем. И нам нужно, чтобы ты собрал дань с их любителей заработать легкие деньги. И да, не пытайся прикарманить себе хоть цент. Мои ребята в городе следят за тобой."
+		role="NPC"
+		nextReplies="Dlg_pl_001010" />
+
+	<Reply
+		name="Dlg_pl_001010"
+		text="Понял, не подведу."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_BackToCats1_Quest');" />
 
 	<Reply
 		name="Dlg_pl_000585"
@@ -5135,7 +5213,7 @@
 
 	<Reply
 		name="Dlg_pl_000587"
-		text=" Псы идут по мою душу и мне бы не хотелось накалять и далее обстановку своим присутствием. Вот, держи, я потратил примерно 10 долларов. Не люблю получать деньги, не заработав их."
+		text="Я понял, что мне ловить тут нечего. Да и мне не хочется напрягать псов своим присутствием. Вот, держи, я потратил примерно 10 долларов. Не люблю получать деньги, не заработав их."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000588" />
 
@@ -5211,6 +5289,163 @@
 		text="Ну тогда увидимся позже."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_BackToCats2_Quest'); EndConversation()" />
+
+	<Reply
+		name="Garfield4_DLG"
+		text="Как успехи?"
+		role="NPC"
+		nextReplies="Dlg_pl_001035 Dlg_pl_001040" />
+
+	<Reply
+		name="Dlg_pl_001040"
+		text="Со всех трех долг собран. А в машине сидит мужик, который пытался меня прибить и сбежать из этих земель с деньгами."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001043" />
+
+	<Reply
+		name="Dlg_npc_001043"
+		text="А что он сделал?"
+		role="NPC"
+		nextReplies="Dlg_pl_001044" />
+
+	<Reply
+		name="Dlg_pl_001044"
+		text="Я к нему пришел долг забрать, а он на меня псов натравил, и сбежать пытался. К счастью, я успел его перехватить у выезда."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001045" />
+
+	<Reply
+		name="Dlg_npc_001045"
+		text="Что ж, а ты молодец. Давай его сюда, уж мы его научим долги платить. А тебе, как человеку, что не оставляет людей безнаказанными, держи хороший процент с этих долгов."
+		role="NPC"
+		nextReplies="Dlg_pl_001046" />
+
+	<Reply
+		name="Dlg_pl_001046"
+		text="Благодарю."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001047" />
+
+	<Reply
+		name="Dlg_npc_001047"
+		text="Что ж, с этим ты хорошо справился. Следующее задание будет также небольшим. Среди нас есть предатель, который тайно скидывает информацию по нашим операциям. Мы уже выяснили, кто он. Твоя задача просто прикончить его."
+		role="NPC"
+		nextReplies="Dlg_pl_001048" />
+
+	<Reply
+		name="Dlg_pl_001048"
+		text="Так и... где он находится?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001049" />
+
+	<Reply
+		name="Dlg_npc_001049"
+		text="Он пьет в Сан-Рафаэле. Будь аккуратнее, у него охрана там."
+		role="NPC"
+		nextReplies="Dlg_pl_001050" />
+
+	<Reply
+		name="Dlg_pl_001050"
+		text="Понял."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_001035"
+		text="Со всех трех долг собран, вот деньги, ни цента ни прячу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001036" />
+
+	<Reply
+		name="Dlg_npc_001036"
+		text="Хмм... Отлично, держи процент за хорошую работу."
+		role="NPC"
+		nextReplies="Dlg_pl_001037" />
+
+	<Reply
+		name="Dlg_pl_001037"
+		text="Благодарю."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001038" />
+
+	<Reply
+		name="Dlg_npc_001038"
+		text="Что ж, с этим ты хорошо справился. Следующее задание будет также небольшим. Среди нас есть предатель, который тайно скидывает информацию по нашим операциям. Мы уже выяснили, кто он. Твоя задача просто прикончить его."
+		role="NPC"
+		nextReplies="Dlg_pl_001039" />
+
+	<Reply
+		name="Dlg_pl_001039"
+		text="Так и... где он находится?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001041" />
+
+	<Reply
+		name="Dlg_npc_001041"
+		text="Он пьет в Сан-Рафаэле. Будь аккуратнее, у него охрана там."
+		role="NPC"
+		nextReplies="Dlg_pl_001042" />
+
+	<Reply
+		name="Dlg_pl_001042"
+		text="Понял."
+		role="PLAYER" />
+
+	<Reply
+		name="Garfield5_DLG"
+		text="Мне доложили, что ты порешал того предателя. Держи еще вечнозеленые, браток."
+		role="NPC"
+		nextReplies="Dlg_pl_001034" />
+
+	<Reply
+		name="Dlg_pl_001034"
+		text="Я конечно рад заработать по мелочам, но мне бы хотелось намного повеселее задание."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001051 Dlg_npc_001023" />
+
+	<Reply
+		name="Dlg_npc_001023"
+		text="Ладно. Слушай внимательно. Когда ты прикончил Арлекина, у Псов началась сильное беспокойство. Они решили отправить другой отряд к проезду. Прикончи их до того, как они доедут."
+		role="NPC"
+		nextReplies="Dlg_pl_001053" />
+
+	<Reply
+		name="Dlg_pl_001053"
+		text="Понял. Отправляюсь."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_001051"
+		text="Что ж, даю тебе финальное задание для проверки твоей лояльности. Прикончи блокаду у въезда в Иерихон. Ты должен прикончить Арлекина и его ребят. Так мы освободим проход и сами сможем на него претендовать. Отправляйся."
+		role="NPC"
+		nextReplies="Dlg_pl_001052" />
+
+	<Reply
+		name="Dlg_pl_001052"
+		text="Отправляюсь."
+		role="PLAYER" />
+
+	<Reply
+		name="Garfield6_DLG"
+		text="Как дела?"
+		role="NPC"
+		nextReplies="Dlg_pl_001055" />
+
+	<Reply
+		name="Dlg_pl_001055"
+		text="Все прошло отлично, все мертвы."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001056" />
+
+	<Reply
+		name="Dlg_npc_001056"
+		text="Ты прекрасно показал, что готов сражаться против псов. Прими от меня этот подарок и иди отдохни пока."
+		role="NPC"
+		nextReplies="Dlg_pl_001057" />
+
+	<Reply
+		name="Dlg_pl_001057"
+		text="Спасибо."
+		role="PLAYER" />
 <!--Root/Sin/Могильщик-->
 	<Reply
 		name="Graveman1_DLG"
@@ -5245,7 +5480,7 @@
 
 	<Reply
 		name="Dlg_pl_000577"
-		text="Караванщиков. Их тела лежат на дне реки неподалеку у западного моста. "
+		text="Караванщиков. Их тела лежат неподалеку у западного моста. "
 		role="PLAYER"
 		nextReplies="Dlg_npc_000578" />
 
@@ -5253,7 +5488,13 @@
 		name="Dlg_npc_000578"
 		text="Эх, никак не угомонятся. Ладно, похороню, как следует."
 		role="NPC"
-		nextReplies="Dlg_pl_000579" />
+		nextReplies="Dlg_pl_000579 Dlg_pl_001003" />
+
+	<Reply
+		name="Dlg_pl_001003"
+		text="Благодарю."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_ComeToGrave_Quest'); TakeQuest('sin_BackToCats1_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000579"
@@ -5597,4 +5838,160 @@
 		text="*Заплатить 1000 долларов*"
 		role="PLAYER"
 		scriptResult="TActivate('sinArlekinGangPay'); EndConversation()" />
-</DialogsResource>
+<!--Root/Sin/Должники-->
+	<Reply
+		name="Dolzhnik_DLG"
+		text="Здравствуйте, чего-то хотите купить?"
+		role="NPC"
+		nextReplies="Dlg_pl_001012" />
+
+	<Reply
+		name="Dlg_pl_001012"
+		text="Я здесь не за этим, друже. Гарфилд требует денег за крышу. Пора платить."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001013" />
+
+	<Reply
+		name="Dlg_npc_001013"
+		text="А, да. Держите, мистер."
+		role="NPC"
+		nextReplies="Dlg_pl_001014" />
+
+	<Reply
+		name="Dlg_pl_001014"
+		text="Хм... молодец, все на месте. Я думал, ты будешь плакаться, что денег нет или чтобы дать еще несколько дней на оплату."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001015" />
+
+	<Reply
+		name="Dlg_npc_001015"
+		text="Мистер, я адекватный человек и осознаю, на какие риски и траты я иду ради спокойного бизнеса. От того я своевременно плачу деньги за крышу."
+		role="NPC"
+		nextReplies="Dlg_pl_001016" />
+
+	<Reply
+		name="Dlg_pl_001016"
+		text="Побольше бы таких, как ты. Ладно, удачи с бизнесом."
+		role="PLAYER" />
+
+	<Reply
+		name="Dolzhnik2_DLG"
+		text="Приветствую, господин, хотите снять комнату?"
+		role="NPC"
+		nextReplies="Dlg_pl_001018" />
+
+	<Reply
+		name="Dlg_pl_001018"
+		text=" Нет, Гарфилд требует денег за крышу. Пора платить, хозяйка."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001011" />
+
+	<Reply
+		name="Dlg_npc_001011"
+		text="Господин, прошу. У меня бизнес идет плохо, дайте пожалуйста неделю."
+		role="NPC"
+		nextReplies="Dlg_pl_001019" />
+
+	<Reply
+		name="Dlg_pl_001019"
+		text="Время пришло. Ты знала, что сегодня пора платить за крышу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001017" />
+
+	<Reply
+		name="Dlg_npc_001017"
+		text="Пожалуйста, я все верну через неделю, обещаю."
+		role="NPC"
+		nextReplies="Dlg_pl_001020" />
+
+	<Reply
+		name="Dlg_pl_001020"
+		text="Нет! Либо плати сейчас, либо будут последствия. Отдай что-то из своих вещей, чтобы оплатить долг."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001021" />
+
+	<Reply
+		name="Dlg_npc_001021"
+		text="Ладно, ладно, держите. Это мое семейное ожерелье. Думаю, это покроет долг."
+		role="NPC"
+		nextReplies="Dlg_pl_001022" />
+
+	<Reply
+		name="Dlg_pl_001022"
+		text="Хм... Смотри мне. В следующий раз плати вовремя. Или закрывай бизнес, если он не удался с самого начала."
+		role="PLAYER" />
+
+	<Reply
+		name="Dolzhnik3_DLG"
+		text="Привестствую, мистер. Чем могу помочь?"
+		role="NPC"
+		nextReplies="Dlg_pl_001024" />
+
+	<Reply
+		name="Dlg_pl_001024"
+		text="Гарфилд собирает деньги за крышу. Время платить."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001025" />
+
+	<Reply
+		name="Dlg_npc_001025"
+		text="Так, хорошо... Парни, бейте его."
+		role="NPC"
+		nextReplies="Dlg_pl_001026" />
+
+	<Reply
+		name="Dlg_pl_001026"
+		text="Ах ты су..."
+		role="PLAYER" />
+
+	<Reply
+		name="Dolzhnik3.1_DLG"
+		text="Ладно, стой, не убивай меня."
+		role="NPC"
+		nextReplies="Dlg_pl_001027" />
+
+	<Reply
+		name="Dlg_pl_001027"
+		text="Куда этот пес уехал?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001028" />
+
+	<Reply
+		name="Dlg_npc_001028"
+		text="Он сказал, что уезжает из города. Он уже уезжает из этих земель."
+		role="NPC"
+		nextReplies="Dlg_pl_001029" />
+
+	<Reply
+		name="Dlg_pl_001029"
+		text="Вот чертила, ядрен бензин."
+		role="PLAYER" />
+
+	<Reply
+		name="Dolzhnik3.2_DLG"
+		text="Аргх! Стой! Не надо."
+		role="NPC"
+		nextReplies="Dlg_pl_001030" />
+
+	<Reply
+		name="Dlg_pl_001030"
+		text="Думал, натравить на меня наеников и сбежать с деньгами из города? Как видишь, не вышло."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001031" />
+
+	<Reply
+		name="Dlg_npc_001031"
+		text="Ладно, я все тебе отдам, только не сдавай меня котам."
+		role="NPC"
+		nextReplies="Dlg_pl_001032 Dlg_pl_001033" />
+
+	<Reply
+		name="Dlg_pl_001033"
+		text="Ну уж нет, таких, как ты, надо учить уму разуму, поедешь со мной к Гарфилду."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_001032"
+		text="Ладно, давай сюда все и вали отсюда, пока я не передумал."
+		role="PLAYER" />
+<!--Root/Sin/Арлекин--></DialogsResource>

@@ -2230,6 +2230,51 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_BDWI1_Quest"
+		briefDiz="Выбить долг с первого бизнесмена"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BDWI2_Quest"
+		briefDiz="Выбить долг со второго бизнесмена"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BDWI3_Quest"
+		briefDiz="Выбить долг со третьего бизнесмена"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BackCatTraitor_Quest"
+		briefDiz="Вернуться к Котам"
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BackToCats1_Quest"
+		briefDiz="Вернуться к котам"
+		fullDiz="Небольшое наблюдение за котами прошла и я сделал небольшие выводы. Так стоит ли к ним присоединиться?"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_BackToCats2_Quest"
 		briefDiz="Рассказать про караванщиков"
 		fullDiz='Теперь пора столкнуть Котов и Псов. Надо рассказать им про "живых" караванщиков.'
@@ -2261,6 +2306,15 @@
 		<Map
 			name="sin"
 			targetObjName="ToR7M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BeatDealWI_Quest"
+		briefDiz="Выбить долг с должников"
+		fullDiz="Первое задание от Котов - выбить долг с ребят, чей бизнес они крышуют."
+		isMainQuest="1">
+		<Map
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2315,6 +2369,19 @@
 		<Map
 			name="sin"
 			targetObjName="Final_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_ComeBackDealWith_Quest"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="sin_ComeBackDeal_Quest"
+		briefDiz="Вернуться к Котам"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2396,6 +2463,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_DealCapForCats_Quest"
+		briefDiz="Доставить должника Котам"
+		fullDiz="Этот сукин сын должен пожалеть о том, что вообще решился на подобную авантюру."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_DealKitty_Quest"
 		briefDiz="Побывать на сделке"
 		fullDiz="Коты и Псы скоро вцепяться друг в друга в глотки. Надо бы глянуть к ним на сделку."
@@ -2431,6 +2508,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_FightGu3_Quest"
+		briefDiz="Прибить ребят должника"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_Final_Quest"
 		briefDiz="Начать войну с бандами"
 		fullDiz="Псы прознали, что это я создаю проблемы, но если я скроюсь, Псы возможно подумают, что я у Котов. Надо закончить, что я начал."
@@ -2452,12 +2538,28 @@
 		isMainQuest="1" />
 
 	<QuestInfo
+		questName="sin_GoToSR_Quest"
+		briefDiz="Добраться до Сан-Рафаэля"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_SanRafael" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_Husband_Quest"
 		briefDiz="Найти мужа в Сан-Рафаэле"
 		isMainQuest="1">
 		<Map
 			name="sin"
 			targetObjName="Sin_SanRafael" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_KillArlekinBlock_Quest"
+		isMainQuest="1">
+		<Map
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2486,6 +2588,24 @@
 		<Map
 			name="sin"
 			targetObjName="Born_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_KillCatTra_Quest"
+		briefDiz="Убить предателя и его охрану"
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_KillCatTraitor_Quest"
+		briefDiz="Прикончить предателя"
+		fullDiz="Среди Котов оказался предатель, который сейчас пьет в Сан-Рафаэле. И теперь мне придется его прикончить."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_SanRafael" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2545,6 +2665,11 @@
 			name="sin"
 			targetObjName="Sin_WestIerihon" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_RunDeal3_Quest"
+		briefDiz="Догнать должника"
+		isMainQuest="0" />
 
 	<QuestInfo
 		questName="sin_ToIerihon_Quest"

@@ -11,13 +11,11 @@
 		Name="Player1"
 		Belong="1100"
 		Prototype="player"
-		Logo="16"
 		Money="100">
 		<Object
 			Name="MyCar"
 			Belong="1100"
 			Prototype="Scout01"
-			Logo="16"
 			Pos="3401.975 344.366 284.842"
 			Rot="-0.049 0.206 -0.007 -0.977">
 			<Parts />
@@ -27,8 +25,7 @@
 
 		<Object
 			Belong="1100"
-			Prototype="radioManager"
-			Logo="16" />
+			Prototype="radioManager" />
 	</Object>
 
 	<Object

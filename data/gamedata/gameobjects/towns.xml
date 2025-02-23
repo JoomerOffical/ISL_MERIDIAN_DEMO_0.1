@@ -2427,6 +2427,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r7m3_Village"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
+			LogosAndCosts	= "fetish_skull_01.dds 1900; fetish_punk_01.dds 2100"
 
 			MusicName						= "bar"
 

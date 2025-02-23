@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 	<triggers>
 
+<!--Проверка, взят ли квест с посылкой-->
 	<trigger Name="trPosilkaJoe" active="1">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -15,6 +16,7 @@
 		</script>
 	</trigger>
 
+<!--Банда Арлекина-->
 	<trigger Name="trArlekinGang" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_FF_loc"/>
 		<script>
@@ -23,6 +25,7 @@
 		</script>
 	</trigger>
 
+<!--Банда померла-->
 	<trigger Name="trAGangDead" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="ABand"/>
 		<script>
@@ -31,6 +34,7 @@
 		</script>
 	</trigger>
 
+<!--Проверка, умерла ли банда Арлекина-->
 	<trigger Name="trArlekinChose" active="0">
 		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_WestIerihon"/>
 		<script>
@@ -46,6 +50,7 @@
 		</script>
 	</trigger>
 
+<!--Арлекин мертв-->
 	<trigger Name="trArlekinDead" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Arlekin"/>
 		<script>
@@ -55,6 +60,7 @@
 		</script>
 	</trigger>
 
+<!--Эгоист проиграл-->
 	<trigger Name="trEgoistKill" active="0">
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="Egoist1_vehicle_0"/>
 		<script>
@@ -64,6 +70,7 @@
 		</script>
 	</trigger>
 
+<!--Преследуем караван-->
 	<trigger Name="trCaravan" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_PlayerCaravan_loc"/>
 		<script>
@@ -73,6 +80,7 @@
 		</script>
 	</trigger>
 
+<!--Наблюдаем за караваном и котами-->
 	<trigger Name="trCaravanSpec" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="sin_PlayerHide_loc"/>
 		<script>
@@ -82,6 +90,7 @@
 		</script>
 	</trigger>
 
+<!--С псами делаем нейтралитет-->
 	<trigger Name="trPDship" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -91,6 +100,7 @@
 		</script>
 	</trigger>
 
+<!--Катсцена в Сан-рафаэле (выключено)-->
 	<trigger Name="SanRafael_tr" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_SanRafael_loc"/>
 		<script>
@@ -100,6 +110,7 @@
 		</script>
 	</trigger>
 
+<!--Диалог с Эгоистом после Сан-рафаэля (выключено)-->
 	<trigger Name="SanRafael_Kill_tr" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="EgoistGuard"/>
 		<script>
@@ -110,6 +121,7 @@
 		</script>
 	</trigger>
 
+<!--Катсцена на перекрестке мз ванилы (выключено)-->
 	<trigger Name="Cat_Talk_tr" active="0">
 		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
 		<script>
@@ -123,6 +135,7 @@
 		</script>
 	</trigger>
 
+<!--Победили котов на перекрестке (выключено)-->
 	<trigger Name="Cat_Kill_tr" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Cat"/>
 		<script>
@@ -134,6 +147,7 @@
 		</script>
 	</trigger>
 
+<!--Удаление псов на перекрестке (выключено)-->
 	<trigger Name="CrossRemove_tr" active="0">
 		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="Cross_Out"/>
 		<script>
@@ -149,6 +163,7 @@
 		</script>
 	</trigger>
 
+<!--Приезжаем на ферму-->
 	<trigger Name="OldFarm_tr" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_OldFarm_loc"/>
 		<script>
@@ -160,6 +175,7 @@
 		</script>
 	</trigger>
 
+<!--Убиваем псов на ферме-->
 	<trigger Name="OldFarm_Kill_tr" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="KittyGuard"/>
 		<script>
@@ -168,6 +184,7 @@
 		</script>
 	</trigger>
 
+<!--Приехали псы на ферму-->
 	<trigger Name="OldFarm_Leave_tr" active="0">
 		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_DogHouse"/>
 		<script>
@@ -180,6 +197,7 @@
 		</script>
 	</trigger>
 
+<!--Сбегаем от псов-->
 	<trigger Name="trEscapeDog" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_Jump_loc" />
 		<script>
@@ -190,6 +208,7 @@
 		</script>
 	</trigger>
 
+<!--Псы в Иерихоне, кто держат Джо в заложниках-->
 	<trigger Name="trGraverWeapon" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -208,6 +227,7 @@
 		</script>
 	</trigger>
 
+<!--Город открыт-->
 	<trigger Name="trAfterJoe" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -220,6 +240,7 @@
 		</script>
 	</trigger>
 
+<!--Катсцена прыжка (выключено)-->
 	<trigger Name="Jump_tr" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_Jump_loc" />
 		<script>
@@ -282,6 +303,7 @@
 		</script>
 	</trigger>
 
+<!--Освободили Джо-->
 	<trigger Name="JoeSave_tr" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="JoeGuard"/>
 		<script>
@@ -290,6 +312,7 @@
 	</script>
 	</trigger>
 
+<!--Не знаю, что это-->
 	<trigger Name="triggerCustom" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToCustom" />
 		<script>
@@ -346,8 +369,8 @@
 		</script>
 	</trigger>
 
-
-<trigger Name="triggerTunnel" active="0">
+<!--Катсцена с туннелью (выключено)-->
+	<trigger Name="triggerTunnel" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToTunnel" />
 		<script>
 			local Plf = GetPlayerVehicle()
@@ -436,6 +459,7 @@
 		</script>
 	</trigger>
 
+<!--Выезд в Нефтяные леса (выключено)-->
 	<trigger Name="triggerExitToMap52" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR5M2" />
 		<script>
@@ -484,6 +508,7 @@
 		</script>
 	</trigger>
 
+<!--Убили Борна-->
 	<trigger Name="BornKill" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="Born"/>
 		<event eventid="GE_OBJECT_DIE" ObjName="Kevin"/>

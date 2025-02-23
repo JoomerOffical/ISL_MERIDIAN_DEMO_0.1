@@ -429,7 +429,7 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="r7m1_FKIerihon_Quest" />
 	</quest>
-<!--Root/sin/Сюжетные--><!--Root/sin/Опциональные--><!--Root/sin/Сюжетные/Проход-->
+<!--Root/sin/Сюжетные--><!--Root/sin/Сюжетные/Проход-->
 	<quest
 		Name="sin_KillArlekinGang_Quest"
 		Automatic="0"
@@ -507,6 +507,13 @@
 <!--Root/sin/Сюжетные/Вернуться к котам-->
 	<quest
 		Name="sin_BackToCats_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_BackToCats1_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
@@ -664,6 +671,7 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		OnTake='ShowCircleOnMinimapByName("Sin_CatHouse")'
 		Levels="sin" />
 
 	<quest
@@ -672,7 +680,153 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
+		OnTake='ShowCircleOnMinimapByName("SinDogHouse")'
 		Levels="sin" />
+<!--Root/sin/Сюжетные/Выбить долг в зап. Иерихоне-->
+	<quest
+		Name="sin_BeatDealWI_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_BDWI1_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_BeatDealWI_Quest" />
+
+		<quest
+			Name="sin_BDWI2_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_BDWI1_Quest" />
+
+		<quest
+			Name="sin_BDWI3_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_BDWI2_Quest" />
+
+		<quest
+			Name="sin_FightGu3_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_BDWI3_Quest" />
+
+		<quest
+			Name="sin_RunDeal3_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_FightGu3_Quest" />
+
+		<quest
+			Name="sin_ComeBackDeal_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+	</quest>
+
+	<quest
+		Name="sin_DealCapForCats_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Прикончить предателя-->
+	<quest
+		Name="sin_KillCatTraitor_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToSR_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+
+		<quest
+			Name="sin_KillCatTra_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+
+		<quest
+			Name="sin_BackCatTraitor_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+	</quest>
+<!--Root/sin/Сюжетные/Снять блокаду (Арлекин)-->
+	<quest
+		Name="sin_KillArlekinBlock_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToBlock_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+
+		<quest
+			Name="sin_KillArlekinAndBlock_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+
+		<quest
+			Name="sin_BackCatsBlock_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+	</quest>
+<!--Root/sin/Сюжетные/Снять блокаду-->
+	<quest
+		Name="sin_BlockNoArl_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToBlockNA_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+
+		<quest
+			Name="sin_KillBlock_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+
+		<quest
+			Name="sin_BackCatBlockNA_Quest"
+			Automatic="0"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete" />
+	</quest>
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"

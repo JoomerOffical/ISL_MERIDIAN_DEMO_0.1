@@ -11,13 +11,11 @@
 		Name="Player1"
 		Belong="1100"
 		Prototype="player"
-		Logo="16"
 		Money="100">
 		<Object
 			Name="MyCar"
 			Belong="1100"
 			Prototype="Scout01"
-			Logo="16"
 			Pos="3730.213 274.770 429.625"
 			Rot="-0.011 -0.198 -0.029 0.980"
 			Skin="36">
@@ -25,26 +23,22 @@
 				<BASKET
 					present="1"
 					Belong="1100"
-					Prototype="scoutCargo01"
-					Logo="16" />
+					Prototype="scoutCargo01" />
 
 				<CABIN
 					present="1"
 					Belong="1100"
-					Prototype="scoutCab01"
-					Logo="16" />
+					Prototype="scoutCab01" />
 
 				<CABIN_SMALL_GUN
 					present="1"
 					Belong="1100"
-					Prototype="hornet01"
-					Logo="16" />
+					Prototype="hornet01" />
 
 				<CHASSIS
 					present="1"
 					Belong="1100"
-					Prototype="scoutChassis"
-					Logo="16" />
+					Prototype="scoutChassis" />
 			</Parts>
 
 			<Repository />
@@ -52,8 +46,7 @@
 
 		<Object
 			Belong="1100"
-			Prototype="radioManager"
-			Logo="16" />
+			Prototype="radioManager" />
 	</Object>
 
 	<Object
