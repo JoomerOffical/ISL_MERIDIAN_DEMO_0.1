@@ -317,6 +317,7 @@
 		</script>
 	</trigger>
 
+<!--Встречаем Арлекина-->
 	<trigger Name="sinArlekinMeet" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -412,6 +413,7 @@
 		</script>
 	</trigger>
 
+<!--Арлекин Умер-->
 	<trigger Name="sinAfterArlekin" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -461,14 +463,16 @@
 			RestoreAllToleranceStatus()
 
 			TDeactivate("sinAfterArlekin_FadeIn")
+			TActivate("sinKittyinTrap")
 
 			TakeQuest("sin_ComeToCats_Quest")
-			TActtivate("sinKittyinTrap")
+			TakeQuest("sin_LeaveSin_Quest")
 
-			SetCameraBehindPlayerVehicle()
+			SetCameraBehindPlayerVehicle() 
 		</script>
 	</trigger>
 
+<!--Видим Китти в беде-->
 	<trigger Name="sinKittyinTrap" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="CatHouse_Out"/>
 		<script>
@@ -570,8 +574,9 @@
 		</script>
 	</trigger>
 
+<!--Встречаем Эгоиста-->
 	<trigger Name="sinEgoistMeet" active="0">
-		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
+		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate()
 
@@ -618,7 +623,6 @@
 
 		</script>
 	</trigger>
-
 
 	<trigger Name="sinEgoistMeet_cam1" active="0">
 		<event flypath="Egoist_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
@@ -674,12 +678,11 @@
 			TDeactivate("sinEgoistMeet_cam1")
 			TDeactivate("sinEgoistMeet_cam2")
 
-			TakeQuest("sin_KillEgoist_Quest")
-
 			SetCameraBehindPlayerVehicle()
 		</script>
 	</trigger>
 
+<!--После битвы с Эгоистом-->
 	<trigger Name="sinEgoistAfter" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -800,6 +803,7 @@
 		</script>
 	</trigger>
 
+<!--Преследуем караван-->
 	<trigger Name="sinCaravan" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -929,6 +933,7 @@
 		</script>
 	</trigger>
 
+<!--Следим за караваном из кустов-->
 	<trigger Name="sinCaravanChase" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1181,6 +1186,64 @@
 		</script>
 	</trigger>
 
+<!--Убили предателя-->
+	<trigger Name="sinAfterTraitorCat" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="EgoistGuard"/>
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinAfterTraitorCat_FadeIn")
+			TActivate("sinAfterTraitorCat_End")
+		</script>
+	</trigger>
+
+	<trigger Name="sinAfterTraitorCat_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(5420, 2.0)
+		</script>
+	</trigger>
+
+	<trigger Name="sinAfterTraitorCat_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("sinAfterTraitorCat_FadeIn")
+
+			CompleteQuest("sin_BackCatTraitor_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Освобождаем из дома котов Китти-->
 	<trigger Name="sinKittyLeave" active="0">
 		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
 		<script>
@@ -1247,6 +1310,7 @@
 		</script>
 	</trigger>
 
+<!--Сделка между двумя Иерихонами-->
 	<trigger Name="sinDealKitty" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="cinDealKitty_loc"/>
 		<script>
@@ -1447,6 +1511,7 @@
 		</script>
 	</trigger>
 
+<!--Катсцена в Сан-Рафаэле-->
 	<trigger Name="SanRafael_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -1480,7 +1545,7 @@
 				Plf:SetCustomControlEnabled( false )
 			end
 			RotationPlayerByPoints(CVector(getPos("Sin_SanRafael")), CVector(getPos("Sin_P_SR_loc")))
-			CreateTeam("EgoistGuard", 1196, { CVector(getPos("Sin_EG1_SR_loc")),CVector(getPos("Sin_EG2_SR_loc")),CVector(getPos("Sin_EG3_SR_loc"))}, {"Scout01","Scout01","Scout01"}, nil, nil, {Quaternion(0.034, -0.997, 0.058, 0.028),Quaternion(0.014, -0.823, 0.060, 0.565),Quaternion(0.001, 0.482, 0.012, 0.876)})
+			CreateTeam("EgoistGuard", 1104, { CVector(getPos("Sin_EG1_SR_loc")),CVector(getPos("Sin_EG2_SR_loc")),CVector(getPos("Sin_EG3_SR_loc"))}, {"Sml201","Scout01","Bug01"}, nil, nil, {Quaternion(0.034, -0.997, 0.058, 0.028),Quaternion(0.014, -0.823, 0.060, 0.565),Quaternion(0.001, 0.482, 0.012, 0.876)})
 			TActivate("SanRafael_Kill_tr")
 		</script>
 	</trigger>

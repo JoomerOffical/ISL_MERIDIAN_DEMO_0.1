@@ -4920,14 +4920,16 @@
 
 	<Reply
 		name="Joe2_DLG"
-		text="Вижу решил с Котами брататься?"
+		text="Вижу, решил с Котами брататься?"
 		role="NPC"
-		nextReplies="Dlg_pl_000514" />
+		scriptCondition="QuestStatus('sin_ComeBackJoe_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_000514 Dlg_pl_000993" />
 
 	<Reply
 		name="Dlg_pl_000514"
 		text="Ну а что еще делать? Не к псам же, учитывая, что я их парней прикончил."
 		role="PLAYER"
+		scriptCondition="QuestStatus('sin_KillArlekin_Quest')==Q_TAKEN"
 		nextReplies="Dlg_npc_000564" />
 
 	<Reply
@@ -4963,7 +4965,8 @@
 	<Reply
 		name="Dlg_pl_000571"
 		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); TakeQuest('sin_Caravan_Quest'); TActivate('trCaravan'); EndConversation()" />
 
 	<Reply
 		name="Joe3_DLG"
@@ -5052,13 +5055,6 @@
 		scriptResult="CompleteQuest('sin_CarvBackToJoe_Quest'); CompleteQuest('sin_Caravan_Quest'); TakeQuest('sin_ComeToGrave_Quest'); EndConversation()" />
 
 	<Reply
-		name="Dlg_npc_000992"
-		text="Вижу ты решил с котами брататься?"
-		role="NPC"
-		scriptCondition="QuestStatus('sin_ComeBackJoe_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_000993" />
-
-	<Reply
 		name="Dlg_pl_000993"
 		text="Пока нет, я еще не до конца решил, нужно ли мне встревать в этот конфликт. Но спасибо Гарфилду, что пытался меня подкупить небольшим гонораром."
 		role="PLAYER"
@@ -5135,7 +5131,7 @@
 		name="Dlg_pl_000833"
 		text="Спасибо. Не подведу."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeToCats_Quest'); TActivate('sinEgoistMeet'); AddPlayerMoney(500); EndConversation()" />
+		scriptResult="FailQuest('sin_ComeToDogs2_Quest'); CompleteQuest('sin_ComeToCats_Quest'); TActivate('trEgoistChose'); AddPlayerMoney(500); EndConversation()" />
 
 	<Reply
 		name="Garfield2_DLG"
@@ -5197,7 +5193,7 @@
 		name="Dlg_pl_001010"
 		text="Понял, не подведу."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToCats1_Quest');" />
+		scriptResult="CompleteQuest('sin_BackToCats1_Quest'); SetTolerance(1100, 1104, RS_ENEMY); FailQuest('sin_LeaveSin_Quest'); TakeQuest('sin_BeatDealWI_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000585"
@@ -5294,12 +5290,14 @@
 		name="Garfield4_DLG"
 		text="Как успехи?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_ComeBackDeal_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001035 Dlg_pl_001040" />
 
 	<Reply
 		name="Dlg_pl_001040"
 		text="Со всех трех долг собран. А в машине сидит мужик, который пытался меня прибить и сбежать из этих земель с деньгами."
 		role="PLAYER"
+		scriptCondition="QuestStatus('sin_DealCapForCats_Quest')==Q_TAKEN"
 		nextReplies="Dlg_npc_001043" />
 
 	<Reply
@@ -5347,12 +5345,14 @@
 	<Reply
 		name="Dlg_pl_001050"
 		text="Понял."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_ComeBackDeal_Quest'); CompleteQuest('sin_DealCapForCats_Quest'); TakeQuest('sin_KillCatTraitor_Quest'); TActivate('SanRafael_tr'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001035"
 		text="Со всех трех долг собран, вот деньги, ни цента ни прячу."
 		role="PLAYER"
+		scriptCondition="not(QuestStatus('sin_DealCapForCats_Quest')==Q_TAKEN) "
 		nextReplies="Dlg_npc_001036" />
 
 	<Reply
@@ -5388,12 +5388,14 @@
 	<Reply
 		name="Dlg_pl_001042"
 		text="Понял."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_ComeBackDeal_Quest'); TakeQuest('sin_KillCatTraitor_Quest'); TActivate('SanRafael_tr'); EndConversation()" />
 
 	<Reply
 		name="Garfield5_DLG"
 		text="Мне доложили, что ты порешал того предателя. Держи еще вечнозеленые, браток."
 		role="NPC"
+		scriptCondition="QuestStatus('sin_BackCatTraitor_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001034" />
 
 	<Reply
@@ -5406,6 +5408,7 @@
 		name="Dlg_npc_001023"
 		text="Ладно. Слушай внимательно. Когда ты прикончил Арлекина, у Псов началась сильное беспокойство. Они решили отправить другой отряд к проезду. Прикончи их до того, как они доедут."
 		role="NPC"
+		scriptCondition="QuestStatus('sin_KillArlekin_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_pl_001053" />
 
 	<Reply
@@ -5417,6 +5420,7 @@
 		name="Dlg_npc_001051"
 		text="Что ж, даю тебе финальное задание для проверки твоей лояльности. Прикончи блокаду у въезда в Иерихон. Ты должен прикончить Арлекина и его ребят. Так мы освободим проход и сами сможем на него претендовать. Отправляйся."
 		role="NPC"
+		scriptCondition="not(QuestStatus('sin_KillArlekin_Quest')==Q_COMPLETED)"
 		nextReplies="Dlg_pl_001052" />
 
 	<Reply
@@ -5428,6 +5432,7 @@
 		name="Garfield6_DLG"
 		text="Как дела?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_BackCatsBlock_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001055" />
 
 	<Reply
@@ -5843,6 +5848,7 @@
 		name="Dolzhnik_DLG"
 		text="Здравствуйте, чего-то хотите купить?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_BDWI1_Quest')==Q_TAKEN "
 		nextReplies="Dlg_pl_001012" />
 
 	<Reply
@@ -5872,12 +5878,14 @@
 	<Reply
 		name="Dlg_pl_001016"
 		text="Побольше бы таких, как ты. Ладно, удачи с бизнесом."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(500); CompleteQuest('sin_BDWI1_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dolzhnik2_DLG"
 		text="Приветствую, господин, хотите снять комнату?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_BDWI2_Quest')==Q_TAKEN "
 		nextReplies="Dlg_pl_001018" />
 
 	<Reply
@@ -5919,12 +5927,14 @@
 	<Reply
 		name="Dlg_pl_001022"
 		text="Хм... Смотри мне. В следующий раз плати вовремя. Или закрывай бизнес, если он не удался с самого начала."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(500); CompleteQuest('sin_BDWI2_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dolzhnik3_DLG"
 		text="Привестствую, мистер. Чем могу помочь?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_BDWI3_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001024" />
 
 	<Reply
@@ -5942,12 +5952,14 @@
 	<Reply
 		name="Dlg_pl_001026"
 		text="Ах ты су..."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_BDWI3_Quest'); LeaveTown()" />
 
 	<Reply
 		name="Dolzhnik3.1_DLG"
 		text="Ладно, стой, не убивай меня."
 		role="NPC"
+		scriptCondition="QuestStatus('sin_FightGu3_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001027" />
 
 	<Reply
@@ -5965,12 +5977,14 @@
 	<Reply
 		name="Dlg_pl_001029"
 		text="Вот чертила, ядрен бензин."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_FightGu3_Quest'); TActivate('trSpawnDebt'); EndConversation()" />
 
 	<Reply
 		name="Dolzhnik3.2_DLG"
 		text="Аргх! Стой! Не надо."
 		role="NPC"
+		scriptCondition="QuestStatus('sin_RunDeal3_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001030" />
 
 	<Reply
@@ -5988,10 +6002,12 @@
 	<Reply
 		name="Dlg_pl_001033"
 		text="Ну уж нет, таких, как ты, надо учить уму разуму, поедешь со мной к Гарфилду."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_RunDeal3_Quest'); TakeQuest('sin_DealCapForCats_Quest'); AddPlayerMoney(500); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001032"
 		text="Ладно, давай сюда все и вали отсюда, пока я не передумал."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_RunDeal3_Quest'); AddPlayerMoney(500); EndConversation()" />
 <!--Root/Sin/Арлекин--></DialogsResource>

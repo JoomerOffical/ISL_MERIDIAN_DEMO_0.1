@@ -60,6 +60,20 @@
 		</script>
 	</trigger>
 
+<!--Проверка, умер ли Арлекин и надо ли стыковать с Эгоистом-->
+	<trigger Name="trEgoistChose" active="0">
+		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
+		<script>
+			trigger:Deactivate()
+			if QuestStatus("sin_KillArlekin_Quest")==Q_COMPLETED then
+				TakeQuest("sin_KillEgoist_Quest")
+				TActivate("sinEgoistMeet")
+			else
+				TakeQuest("sin_ComeBackJoeWEg_Quest")
+			end
+		</script>
+	</trigger>
+
 <!--Эгоист проиграл-->
 	<trigger Name="trEgoistKill" active="0">
 		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="Egoist1_vehicle_0"/>
@@ -90,6 +104,69 @@
 		</script>
 	</trigger>
 
+<!--Спавним охрану должника-->
+	<trigger Name="trSpawnDebtGuard" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_EastIerihon")
+			if town then
+				town:SetOpenGateToPlayer(false)
+			end
+
+			CreateTeam("GuardDebt1", 1104, {CVector(getPos("GuardDebt_loc"))}, {"Sml301"}, nil, nil, {})
+			CreateTeam("GuardDebt2", 1104, {CVector(getPos("GuardDebt2_loc"))}, {"Sml201"}, nil, nil, {})
+			CreateTeam("GuardDebt3", 1104, {CVector(getPos("GuardDebt3_loc"))}, {"Scout02"}, nil, nil, {})
+
+			TActivate("trDieDebtGuard")
+		</script>
+	</trigger>
+
+<!--Охрана должника мертва-->
+	<trigger Name="trDieDebtGuard" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="GuardDebt1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="GuardDebt2_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="GuardDebt3_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 3>count then
+				return
+			end
+
+			StartConversation("Sin_GuardDebt")
+		</script>
+	</trigger>	
+
+<!--Спавн Должника бегунка-->
+	<trigger Name="trSpawnDebt" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("Debt3", 1104, {CVector(getPos("Debt3_loc"))}, {"Sml301"}, nil, nil, {})
+
+			TActivate("trDieDebt")
+		</script>
+	</trigger>
+
+<!--Умер Должник бегунок-->
+	<trigger Name="trDieDebt" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Debt3_vehicle_0"/>
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_EastIerihon")
+			if town then
+				town:SetOpenGateToPlayer(true)
+			end
+
+			StartConversation("Sin_Debt3")
+
+		</script>
+	</trigger>
+
 <!--С псами делаем нейтралитет-->
 	<trigger Name="trPDship" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
@@ -100,12 +177,13 @@
 		</script>
 	</trigger>
 
-<!--Катсцена в Сан-рафаэле (выключено)-->
+<!--Катсцена в Сан-рафаэле-->
 	<trigger Name="SanRafael_tr" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_SanRafael_loc"/>
 		<script>
 			trigger:Deactivate()
 
+			CompleteQuest("sin_GoToSR_Quest")
 			TActivate("SanRafael_ctr")
 		</script>
 	</trigger>

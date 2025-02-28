@@ -731,7 +731,7 @@
 
 		<quest
 			Name="sin_ComeBackDeal_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete" />
@@ -752,24 +752,27 @@
 		ConditionToGive="all complete">
 		<quest
 			Name="sin_GoToSR_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_KillCatTraitor_Quest" />
 
 		<quest
 			Name="sin_KillCatTra_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToSR_Quest" />
 
 		<quest
 			Name="sin_BackCatTraitor_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_KillCatTra_Quest" />
 	</quest>
 <!--Root/sin/Сюжетные/Снять блокаду (Арлекин)-->
 	<quest

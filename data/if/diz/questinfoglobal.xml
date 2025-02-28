@@ -2261,8 +2261,14 @@
 		briefDiz="Вернуться к Котам"
 		isMainQuest="1">
 		<Map
-			name="sin" />
+			name="sin"
+			targetObjName="Sin_CatHouse" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BackCatsBlock_Quest"
+		briefDiz="Вернуться с докладом"
+		isMainQuest="0" />
 
 	<QuestInfo
 		questName="sin_BackToCats1_Quest"
@@ -2385,9 +2391,19 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_ComeBackJoeWEg_Quest"
+		briefDiz="Поехать к Джо"
+		fullDiz="Гарфилд дал мне немного денег на выпить. Пора это потратить у Джо."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_ComeBackJoe_Quest"
 		briefDiz="Вернуться к Джо"
-		fullDiz="Пока Гарфилд разбирается с Эгоистом, я побуду у Джо ненадолго."
+		fullDiz="Гарфилд дал мне немного денег на выпить. Пора это потратить у Джо."
 		isMainQuest="1">
 		<Map
 			name="sin"
@@ -2407,7 +2423,7 @@
 	<QuestInfo
 		questName="sin_ComeToCats_Quest"
 		briefDiz="Поехать к Котам"
-		fullDiz="Прикончив Арлекина, я понял, что с псами мне делать нечего. Так что пойду-ка я к Котам, может у них что-нибудь да заработаю."
+		fullDiz="Коты менее агрессивные, по словам Джо. Но грешков у них ничуть не меньше, чем у Псов. Может к ним присоединиться?"
 		isMainQuest="1">
 		<Map
 			name="sin"
@@ -2538,6 +2554,11 @@
 		isMainQuest="1" />
 
 	<QuestInfo
+		questName="sin_GoToBlock_Quest"
+		briefDiz="Добраться до блока"
+		isMainQuest="0" />
+
+	<QuestInfo
 		questName="sin_GoToSR_Quest"
 		briefDiz="Добраться до Сан-Рафаэля"
 		isMainQuest="1">
@@ -2556,7 +2577,14 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_KillArlekinAndBlock_Quest"
+		briefDiz="Прикончить Арлекина и его банду"
+		isMainQuest="0" />
+
+	<QuestInfo
 		questName="sin_KillArlekinBlock_Quest"
+		briefDiz="Уничтожить блокаду"
+		fullDiz="Пока Арлекин жив, его блокада продолжит существовать. Пора с ним разобраться."
 		isMainQuest="1">
 		<Map
 			name="sin" />
@@ -2595,7 +2623,8 @@
 		briefDiz="Убить предателя и его охрану"
 		isMainQuest="1">
 		<Map
-			name="sin" />
+			name="sin"
+			targetObjName="Sin_SanRafael" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2669,7 +2698,11 @@
 	<QuestInfo
 		questName="sin_RunDeal3_Quest"
 		briefDiz="Догнать должника"
-		isMainQuest="0" />
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Debt3_vehicle_0" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_ToIerihon_Quest"

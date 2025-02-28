@@ -2248,6 +2248,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r7m1_Monterrey"
 			ModelFile	= "minin"
 			NodeScale	= "1 1 1"
+			LogosAndCosts	= "logo_farmers_union 100"
 
 			MusicName		= "trade_town1"
 			GateModelFile 	= "big_gate01"
@@ -2362,6 +2363,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "ChurchIerihon"
 			ModelFile	= "monastery"
 			NodeScale	= "1 1 1"
+			LogosAndCosts	= "church_of_enlightenment 100"
 
 			MusicName						= "agriculruar_town1"
 			GateModelFile 					= "gate_monastyr"
