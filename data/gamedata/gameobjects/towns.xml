@@ -677,7 +677,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "TownBigHead"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_skull_01.dds 1900; fetish_punk_01.dds 2100"
+			LogosAndCosts	= ""
 
 			MusicName						= "military_town1"
 
@@ -748,7 +748,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "TownMichikar"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_skull_01.dds 2200"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			GateModelFile 	= ""
@@ -820,7 +820,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "TownOneEye_prototype"
 			ModelFile	= "Midgard"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_devil_01.dds 8100;fetish_punk_01.dds 2500"
+			LogosAndCosts	= ""
 
 			MusicName		= "trade_town1"
 			GateModelFile 	= ""
@@ -892,7 +892,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "TownMapleSheet"
 			ModelFile	= "r3_set-fest"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_punk_01.dds 2700;fetish_devil_01.dds 9000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			GateModelFile 	= "druid_gate"
@@ -1041,7 +1041,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			ModelFile	= "house1"
 			NodeScale	= "1 1 1" 
 
-			LogosAndCosts	= "fetish_qqqr_01.dds 1500"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1107,7 +1107,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m2_Sagevsal_prototype"
 			ModelFile	= "house1"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_devil_01.dds 8000; fetish_ninja_01.dds 10000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1173,7 +1173,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m2_Cvetograd_prototype"
 			ModelFile	= "house1"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_military_01.dds 1400; fetish_qqqr_01.dds 1600"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1239,7 +1239,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m2_Mexico_prototype"
 			ModelFile	= "house1"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_punk_01.dds 2500; fetish_ninja_01.dds 11000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1305,7 +1305,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m2_Vraska_prototype"
 			ModelFile	= "house1"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_ninja_01.dds 10500; fetish_qqqr_01.dds 1500"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1371,7 +1371,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m1_Onto_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_ninja_01.dds 12000; fetish_military_01.dds 1500; fetish_moouse_01.dds 11000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1437,7 +1437,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m1_Lodon_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_military_01.dds 1500; fetish_moouse_01.dds 12000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1505,7 +1505,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m1_Real_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_military_01.dds 1500; fetish_devil_01.dds 8500"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1572,7 +1572,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m1_Lost_prototype"
 			ModelFile	= "Lost_Airplane"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_ninja_01.dds 11000; fetish_moouse_01.dds 12000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1639,7 +1639,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m2_Vaypeg_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_devil_01.dds 8000; fetish_peace_01.dds 9500"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 
@@ -1709,7 +1709,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m2_Gradofaks_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_peace_01.dds 9000; fetish_military_01.dds 1500"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 			
@@ -1775,7 +1775,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m2_Tander_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_peace_01.dds 9500; fetish_punk_01.dds 2500; fetish_devil_01.dds 9000"
+			LogosAndCosts	= ""
  
 			MusicName		= "bar"
 			
@@ -1841,7 +1841,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m2_Bey_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_ninja_01.dds 11000; fetish_punk_01.dds 2500"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 
@@ -1910,7 +1910,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r6m2_Kanata_prototype"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1" 
-			LogosAndCosts	= "fetish_devil_01.dds 8000; fetish_ninja_01.dds 1000; fetish_punk_01.dds 2000; fetish_military_01.dds 1000"
+			LogosAndCosts	= ""
 
 			MusicName		= "bar"
 
@@ -1982,7 +1982,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m1_Apple"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_military_01.dds 1000"
+			LogosAndCosts	= ""
 
 			MusicName		= "agriculruar_town1"
 			
@@ -2048,7 +2048,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m1_Konneks"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_devil_01.dds 8500"
+			LogosAndCosts	= ""
 
 			MusicName		= "agriculruar_town1"
 			
@@ -2114,7 +2114,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r5m1_Pensilvansk"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_skull_01.dds 2000; fetish_ninja_01.dds 10000"
+			LogosAndCosts	= ""
 
 			MusicName		= "agriculruar_town1"
 			
@@ -2248,7 +2248,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r7m1_Monterrey"
 			ModelFile	= "minin"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "logo_farmers_union 100"
+			LogosAndCosts	= ""
 
 			MusicName		= "trade_town1"
 			GateModelFile 	= "big_gate01"
@@ -2363,7 +2363,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "ChurchIerihon"
 			ModelFile	= "monastery"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "church_of_enlightenment 100"
+			LogosAndCosts	= ""
 
 			MusicName						= "agriculruar_town1"
 			GateModelFile 					= "gate_monastyr"
@@ -2429,7 +2429,7 @@ $Id: Towns.xml,v 1.3 2006/01/13 13:49:30 anton Exp $
 			Name		= "r7m3_Village"
 			ModelFile	= "shell_sml_pulemet01"
 			NodeScale	= "1 1 1"
-			LogosAndCosts	= "fetish_skull_01.dds 1900; fetish_punk_01.dds 2100"
+			LogosAndCosts	= ""
 
 			MusicName						= "bar"
 

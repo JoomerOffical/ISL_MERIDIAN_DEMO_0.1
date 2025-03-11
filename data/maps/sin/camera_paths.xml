@@ -105,6 +105,23 @@
 	<Point  coord="1783.788 212.285 1476.676" rotation="-0.019 -0.755 0.022 0.655"/>
 </Path>
 
+<Path Name = "SanRafael_cam0">
+	<Point  coord="1247.334 312.521 3591.222" rotation="-0.162 0.794 -0.240 0.535"/>
+</Path>
+<Path Name = "SanRafael_cam1">
+	<Point  coord="1082.705 268.555 3476.103" rotation="-0.135 -0.343 0.050 0.928"/>
+</Path>
+<Path Name = "SanRafael_cam2">
+	<Point  coord="1082.705 268.555 3476.103" rotation="-0.135 -0.343 0.050 0.928"/>
+</Path>
+
+
+<Path Name = "KillBlock_cam0">
+	<Point  coord="3398.822 303.984 805.631" rotation="0.015 0.920 -0.036 -0.389"/>
+	<Point  coord="3469.264 299.146 748.808" rotation="0.021 0.922 -0.050 -0.383"/>
+</Path>
+
+
 <Path Name = "KittyPlayer_cam0">
 	<Point  coord="1491.350 313.831 2121.493" rotation="-0.015 0.755 -0.017 0.656"/>
 	<Point  coord="1608.741 291.398 2122.307" rotation="0.008 0.767 0.009 0.642"/>

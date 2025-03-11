@@ -13,234 +13,6 @@
 	</Path>
 
 	<Path
-		Name="KittyTrap">
-		<Point
-			coord="1473.865 2054.597" />
-
-		<Point
-			coord="1487.385 2069.432" />
-
-		<Point
-			coord="1484.934 2091.093" />
-
-		<Point
-			coord="1456.021 2101.843" />
-
-		<Point
-			coord="1423.785 2100.779" />
-
-		<Point
-			coord="1397.990 2098.957" />
-
-		<Point
-			coord="1364.409 2100.750" />
-
-		<Point
-			coord="1335.231 2116.221" />
-
-		<Point
-			coord="1310.869 2144.575" />
-	</Path>
-
-	<Path
-		Name="FinalBorn">
-		<Point
-			coord="3540.703 664.519" />
-
-		<Point
-			coord="3614.601 566.924" />
-	</Path>
-
-	<Path
-		Name="FinalBorn1">
-		<Point
-			coord="3549.892 634.622" />
-
-		<Point
-			coord="3597.607 565.134" />
-	</Path>
-
-	<Path
-		Name="OldFarmHero">
-		<Point
-			coord="2186.583 801.741" />
-
-		<Point
-			coord="2173.746 767.235" />
-		
-		<Point
-			coord="2168.374 720.874" />
-		
-		<Point
-			coord="2095.024 633.075" />
-	</Path>
-
-	<Path
-		Name="KittyPlayerLeave">
-		<Point
-			coord="1322.404 2101.765" />
-
-		<Point
-			coord="1366.487 2103.406" />
-
-		<Point
-			coord="1412.901 2103.224" />
-
-		<Point
-			coord="1470.573 2103.990" />
-
-		<Point
-			coord="1543.002 2099.936" />
-
-		<Point
-			coord="1615.501 2093.280" />
-
-		<Point
-			coord="1687.682 2083.590" />
-
-		<Point
-			coord="1758.231 2076.906" />
-
-		<Point
-			coord="1836.193 2064.167" />
-
-		<Point
-			coord="1934.435 2052.897" />
-
-		<Point
-			coord="1991.881 2034.082" />
-
-		<Point
-			coord="2091.018 2010.031" />
-
-		<Point
-			coord="2165.306 1982.441" />
-
-		<Point
-			coord="2246.584 1959.564" />
-
-		<Point
-			coord="2287.779 1935.805" />
-
-		<Point
-			coord="2348.465 1888.758" />
-			
-		<Point
-			coord="2412.536 1796.747" />
-
-		<Point
-			coord="2466.562 1719.767" />
-	</Path>
-
-	<Path
-		Name="PlayerEscapeDogs">
-		<Point
-			coord="1358.387 1038.555" />
-
-		<Point
-			coord="1352.538 1091.422" />
-
-		<Point
-			coord="1362.813 1147.814" />
-
-		<Point
-			coord="1352.689 1194.702" />
-
-		<Point
-			coord="1359.481 1255.026" />
-
-		<Point
-			coord="1379.967 1302.345" />
-
-		<Point
-			coord="1381.362 1361.269" />
-
-		<Point
-			coord="1379.091 1426.036" />
-
-		<Point
-			coord="1368.991 1473.299" />
-
-		<Point
-			coord="1356.034 1520.039" />
-	</Path>
-
-	<Path
-		Name="WithGraver">
-		<Point
-			coord="1388.353 1555.620" />
-
-		<Point
-			coord="1429.226 1608.297" />
-
-		<Point
-			coord="1470.275 1663.166" />
-
-		<Point
-			coord="1501.624 1719.879" />
-
-		<Point
-			coord="1531.888 1789.753" />
-
-		<Point
-			coord="1562.638 1867.542" />
-
-		<Point
-			coord="1580.445 1933.540" />
-
-		<Point
-			coord="1614.102 1976.175" />
-
-		<Point
-			coord="1656.148 2009.932" />
-
-		<Point
-			coord="1671.632 2045.967" />
-
-		<Point
-			coord="1685.180 2096.171" />
-
-		<Point
-			coord="1659.601 2140.725" />
-	</Path>
-
-	<Path
-		Name="WithGraver2">
-		<Point
-			coord="1653.722 2149.478" />
-
-		<Point
-			coord="1621.144 2193.821" />
-
-		<Point
-			coord="1613.830 2241.991" />
-
-		<Point
-			coord="1621.914 2276.392" />
-
-		<Point
-			coord="1647.619 2325.143" />
-
-		<Point
-			coord="1684.831 2375.058" />
-
-		<Point
-			coord="1717.426 2439.013" />
-	</Path>
-
-	<Path
-		Name="PlayerGoCross">
-		<Point
-			coord="2695.286 1619.067" />
-
-		<Point
-			coord="2671.337 1609.252" />
-
-		<Point
-			coord="2653.217 1595.706" />
-	</Path>
-
-	<Path
 		Name="Bulldog_Tube">
 		<Point
 			coord="1947.963 650.626" />
@@ -250,33 +22,6 @@
 
 		<Point
 			coord="1855.431 628.409" />
-	</Path>
-
-	<Path
-		Name="PlayerLeaveCaravan">
-		<Point
-			coord="1665.740 1409.899" />
-
-		<Point
-			coord="1706.780 1414.515" />
-
-		<Point
-			coord="1718.570 1438.666" />
-
-		<Point
-			coord="1753.590 1470.712" />
-
-		<Point
-			coord="1799.842 1478.594" />
-
-		<Point
-			coord="1854.945 1481.495" />
-
-		<Point
-			coord="1897.112 1471.589" />
-
-		<Point
-			coord="2646.831 1521.865" />
 	</Path>
 
 	<Path
@@ -1225,6 +970,24 @@
 	</Path>
 
 	<Path
+		Name="FinalBorn">
+		<Point
+			coord="3540.703 664.519" />
+
+		<Point
+			coord="3614.601 566.924" />
+	</Path>
+
+	<Path
+		Name="FinalBorn1">
+		<Point
+			coord="3549.892 634.622" />
+
+		<Point
+			coord="3597.607 565.134" />
+	</Path>
+
+	<Path
 		Name="Finish">
 		<Point
 			coord="2078.586 2915.311" />
@@ -1306,6 +1069,108 @@
 	</Path>
 
 	<Path
+		Name="KillBlock">
+		<Point
+			coord="3406.829 806.077" />
+
+		<Point
+			coord="3431.320 783.298" />
+
+		<Point
+			coord="3455.678 761.535" />
+
+		<Point
+			coord="3483.420 734.420" />
+	</Path>
+
+	<Path
+		Name="KittyPlayerLeave">
+		<Point
+			coord="1322.404 2101.765" />
+
+		<Point
+			coord="1366.487 2103.406" />
+
+		<Point
+			coord="1412.901 2103.224" />
+
+		<Point
+			coord="1470.573 2103.990" />
+
+		<Point
+			coord="1543.002 2099.936" />
+
+		<Point
+			coord="1615.501 2093.280" />
+
+		<Point
+			coord="1687.682 2083.590" />
+
+		<Point
+			coord="1758.231 2076.906" />
+
+		<Point
+			coord="1836.193 2064.167" />
+
+		<Point
+			coord="1934.435 2052.897" />
+
+		<Point
+			coord="1991.881 2034.082" />
+
+		<Point
+			coord="2091.018 2010.031" />
+
+		<Point
+			coord="2165.306 1982.441" />
+
+		<Point
+			coord="2246.584 1959.564" />
+
+		<Point
+			coord="2287.779 1935.805" />
+
+		<Point
+			coord="2348.465 1888.758" />
+
+		<Point
+			coord="2412.536 1796.747" />
+
+		<Point
+			coord="2466.562 1719.767" />
+	</Path>
+
+	<Path
+		Name="KittyTrap">
+		<Point
+			coord="1473.865 2054.597" />
+
+		<Point
+			coord="1487.385 2069.432" />
+
+		<Point
+			coord="1484.934 2091.093" />
+
+		<Point
+			coord="1456.021 2101.843" />
+
+		<Point
+			coord="1423.785 2100.779" />
+
+		<Point
+			coord="1397.990 2098.957" />
+
+		<Point
+			coord="1364.409 2100.750" />
+
+		<Point
+			coord="1335.231 2116.221" />
+
+		<Point
+			coord="1310.869 2144.575" />
+	</Path>
+
+	<Path
 		Name="Kitty_Exsh">
 		<Point
 			coord="3029.867 2028.071" />
@@ -1327,6 +1192,93 @@
 
 		<Point
 			coord="2331.531 1911.162" />
+	</Path>
+
+	<Path
+		Name="OldFarmHero">
+		<Point
+			coord="2186.583 801.741" />
+
+		<Point
+			coord="2173.746 767.235" />
+
+		<Point
+			coord="2168.374 720.874" />
+
+		<Point
+			coord="2095.024 633.075" />
+	</Path>
+
+	<Path
+		Name="PlayerEscapeDogs">
+		<Point
+			coord="1358.387 1038.555" />
+
+		<Point
+			coord="1352.538 1091.422" />
+
+		<Point
+			coord="1362.813 1147.814" />
+
+		<Point
+			coord="1352.689 1194.702" />
+
+		<Point
+			coord="1359.481 1255.026" />
+
+		<Point
+			coord="1379.967 1302.345" />
+
+		<Point
+			coord="1381.362 1361.269" />
+
+		<Point
+			coord="1379.091 1426.036" />
+
+		<Point
+			coord="1368.991 1473.299" />
+
+		<Point
+			coord="1356.034 1520.039" />
+	</Path>
+
+	<Path
+		Name="PlayerGoCross">
+		<Point
+			coord="2695.286 1619.067" />
+
+		<Point
+			coord="2671.337 1609.252" />
+
+		<Point
+			coord="2653.217 1595.706" />
+	</Path>
+
+	<Path
+		Name="PlayerLeaveCaravan">
+		<Point
+			coord="1665.740 1409.899" />
+
+		<Point
+			coord="1706.780 1414.515" />
+
+		<Point
+			coord="1718.570 1438.666" />
+
+		<Point
+			coord="1753.590 1470.712" />
+
+		<Point
+			coord="1799.842 1478.594" />
+
+		<Point
+			coord="1854.945 1481.495" />
+
+		<Point
+			coord="1897.112 1471.589" />
+
+		<Point
+			coord="2646.831 1521.865" />
 	</Path>
 
 	<Path
@@ -2017,6 +1969,69 @@
 
 		<Point
 			coord="1299.000 2141.461" />
+	</Path>
+
+	<Path
+		Name="WithGraver">
+		<Point
+			coord="1388.353 1555.620" />
+
+		<Point
+			coord="1429.226 1608.297" />
+
+		<Point
+			coord="1470.275 1663.166" />
+
+		<Point
+			coord="1501.624 1719.879" />
+
+		<Point
+			coord="1531.888 1789.753" />
+
+		<Point
+			coord="1562.638 1867.542" />
+
+		<Point
+			coord="1580.445 1933.540" />
+
+		<Point
+			coord="1614.102 1976.175" />
+
+		<Point
+			coord="1656.148 2009.932" />
+
+		<Point
+			coord="1671.632 2045.967" />
+
+		<Point
+			coord="1685.180 2096.171" />
+
+		<Point
+			coord="1659.601 2140.725" />
+	</Path>
+
+	<Path
+		Name="WithGraver2">
+		<Point
+			coord="1653.722 2149.478" />
+
+		<Point
+			coord="1621.144 2193.821" />
+
+		<Point
+			coord="1613.830 2241.991" />
+
+		<Point
+			coord="1621.914 2276.392" />
+
+		<Point
+			coord="1647.619 2325.143" />
+
+		<Point
+			coord="1684.831 2375.058" />
+
+		<Point
+			coord="1717.426 2439.013" />
 	</Path>
 
 	<Path

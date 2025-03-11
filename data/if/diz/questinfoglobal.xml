@@ -1922,7 +1922,7 @@
 	<QuestInfo
 		questName="r7m1_SaveKitty_Quest"
 		briefDiz="Спасти Китти каким-то способом"
-		isMainQuest="0">
+		isMainQuest="1">
 		<Map
 			name="r7m1" />
 
@@ -2257,6 +2257,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_BackCatBlockNA_Quest"
+		briefDiz="Вернуться с докладом"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_BackCatTraitor_Quest"
 		briefDiz="Вернуться к Котам"
 		isMainQuest="1">
@@ -2268,7 +2277,11 @@
 	<QuestInfo
 		questName="sin_BackCatsBlock_Quest"
 		briefDiz="Вернуться с докладом"
-		isMainQuest="0" />
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_BackToCats1_Quest"
@@ -2318,6 +2331,15 @@
 		questName="sin_BeatDealWI_Quest"
 		briefDiz="Выбить долг с должников"
 		fullDiz="Первое задание от Котов - выбить долг с ребят, чей бизнес они крышуют."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BlockNoArl_Quest"
+		briefDiz="Уничтожить блокаду"
+		fullDiz="После смерти Арлекина и его ребят псы решили подсуетиться, чтобы вернуть контроль над проездом. Надо добить остатки."
 		isMainQuest="1">
 		<Map
 			name="sin" />
@@ -2554,9 +2576,22 @@
 		isMainQuest="1" />
 
 	<QuestInfo
+		questName="sin_GoToBlockNA_Quest"
+		briefDiz="Добраться до блока"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="KillBlockEnter_loc" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_GoToBlock_Quest"
 		briefDiz="Добраться до блока"
-		isMainQuest="0" />
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="KillBlockEnter_loc" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_GoToSR_Quest"
@@ -2579,7 +2614,11 @@
 	<QuestInfo
 		questName="sin_KillArlekinAndBlock_Quest"
 		briefDiz="Прикончить Арлекина и его банду"
-		isMainQuest="0" />
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Arlekin_vehicle_0" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_KillArlekinBlock_Quest"
@@ -2610,6 +2649,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_KillBlock_Quest"
+		briefDiz="Уничтожить оставшихся"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="NotArlekin_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_KillBorn_Quest"
 		briefDiz="Убить Борна"
 		isMainQuest="1">
@@ -2633,8 +2681,7 @@
 		fullDiz="Среди Котов оказался предатель, который сейчас пьет в Сан-Рафаэле. И теперь мне придется его прикончить."
 		isMainQuest="1">
 		<Map
-			name="sin"
-			targetObjName="Sin_SanRafael" />
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo

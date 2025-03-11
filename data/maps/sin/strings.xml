@@ -114,7 +114,7 @@
 		modelSkin="1"
 		modelCfg="58"
 		modelSlot="1"
-		value="АРЛЕКИН|Пора поговорить с тобой по серьезному!"
+		value="АРЛЕКИН|Пора поговорить с тобой по-серьезному!"
 		sound="data\sounds\Speech\sin\sin_5201_arlekin.ogg"
 		time="3" />
 
@@ -490,11 +490,11 @@
 
 	<string
 		id="55001"
-		modelName="r2_man"
+		modelName="r1_man"
 		modelSkin="0"
-		modelCfg="332"
+		modelCfg="164"
 		modelSlot="1"
-		value="ОХРАНА|Эй, парень, вали с дороги."
+		value="БОЕЦ ПСОВ|Эй, парень, вали с дороги."
 		sound="data\sounds\Speech\sin\sin_5500_guard.ogg"
 		time="1" />
 
@@ -507,11 +507,11 @@
 
 	<string
 		id="55021"
-		modelName="r2_man"
+		modelName="r1_man"
 		modelSkin="0"
-		modelCfg="332"
+		modelCfg="164"
 		modelSlot="1"
-		value="OXPAHA|Какое сообщение?"
+		value="БОЕЦ ПСОВ|Какое сообщение?"
 		sound="data\sounds\Speech\sin\sin_5502_guard.ogg"
 		time="1" />
 

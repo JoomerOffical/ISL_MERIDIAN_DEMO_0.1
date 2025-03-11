@@ -450,35 +450,40 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Sin_CatHouse")' />
+		OnTake='ShowCircleOnMinimapByName("Sin_CatHouse")'
+		Levels="sin" />
 <!--Root/sin/Сюжетные/Эгоист-->
 	<quest
 		Name="sin_KillEgoist_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		Levels="sin" />
 <!--Root/sin/Сюжетные/Добраться до Джо-->
 	<quest
 		Name="sin_ComeBackJoe_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		Levels="sin" />
 <!--Root/sin/Сюжетные/Караван-->
 	<quest
 		Name="sin_Caravan_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete">
+		ConditionToGive="all complete"
+		Levels="sin">
 		<quest
 			Name="sin_CaravanChase_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all taken"
-			PrecedingQuests="sin_Caravan_Quest" />
+			PrecedingQuests="sin_Caravan_Quest"
+			Levels="sin" />
 
 		<quest
 			Name="sin_CaravanSpectate_Quest"
@@ -486,7 +491,8 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="sin_CaravanChase_Quest" />
+			PrecedingQuests="sin_CaravanChase_Quest"
+			Levels="sin" />
 
 		<quest
 			Name="sin_CarvBackToJoe_Quest"
@@ -494,7 +500,8 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all complete"
-			PrecedingQuests="sin_CaravanSpectate_Quest" />
+			PrecedingQuests="sin_CaravanSpectate_Quest"
+			Levels="sin" />
 	</quest>
 <!--Root/sin/Сюжетные/Могильщик-->
 	<quest
@@ -503,21 +510,24 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Sin_Church")' />
+		OnTake='ShowCircleOnMinimapByName("Sin_Church")'
+		Levels="sin" />
 <!--Root/sin/Сюжетные/Вернуться к котам-->
 	<quest
 		Name="sin_BackToCats_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		Levels="sin" />
 
 	<quest
 		Name="sin_BackToCats1_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		Levels="sin" />
 <!--Root/sin/Сюжетные/Поехать к псам-->
 	<quest
 		Name="sin_ComeToDogs_Quest"
@@ -608,7 +618,8 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all taken" />
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_Final_Quest" />
 
 		<quest
 			Name="sin_BurnCat_Quest"
@@ -664,15 +675,6 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
-
-	<quest
-		Name="sin_ComeToCats2_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete"
-		OnTake='ShowCircleOnMinimapByName("Sin_CatHouse")'
-		Levels="sin" />
 
 	<quest
 		Name="sin_ComeToDogs2_Quest"
@@ -734,7 +736,8 @@
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_RunDeal3_Quest" />
 	</quest>
 
 	<quest
@@ -749,7 +752,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete">
+		ConditionToGive="all complete"
+		OnTake='ShowCircleOnMinimapByName("Sin_SanRafael")'>
 		<quest
 			Name="sin_GoToSR_Quest"
 			Automatic="1"
@@ -783,24 +787,27 @@
 		ConditionToGive="all complete">
 		<quest
 			Name="sin_GoToBlock_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_KillArlekinBlock_Quest" />
 
 		<quest
 			Name="sin_KillArlekinAndBlock_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToBlock_Quest" />
 
 		<quest
 			Name="sin_BackCatsBlock_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_KillArlekinAndBlock_Quest" />
 	</quest>
 <!--Root/sin/Сюжетные/Снять блокаду-->
 	<quest
@@ -811,24 +818,27 @@
 		ConditionToGive="all complete">
 		<quest
 			Name="sin_GoToBlockNA_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_BlockNoArl_Quest" />
 
 		<quest
 			Name="sin_KillBlock_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToBlockNA_Quest" />
 
 		<quest
 			Name="sin_BackCatBlockNA_Quest"
-			Automatic="0"
+			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
-			ConditionToGive="all complete" />
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_KillBlock_Quest" />
 	</quest>
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest

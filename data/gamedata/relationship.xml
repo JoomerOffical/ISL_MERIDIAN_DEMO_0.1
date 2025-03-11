@@ -33,8 +33,13 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 			tolerance="neutral" />
 
 		<set
-			forwhom="1104"
+			forwhom="1104 1195"
 			who="1106"
+			tolerance="enemy" />
+
+		<set
+			forwhom="1100"
+			who="1195"
 			tolerance="neutral" />
 
 		<set
@@ -226,40 +231,4 @@ $Id: Relationship.xml,v 1.5 2006/01/24 07:41:33 anton Exp $
 			forwhom="1117"
 			who="1107 1108 1109 1110 1112 1111 1113 1114 1115 1116"
 			tolerance="neutral" />
-
-		<set
-			forwhom="1100"
-			who="1190"
-			tolerance="neutral" />
-
-		<set
-			forwhom="1100"
-			who="1191"
-			tolerance="ally" />
-		<set
-			forwhom="1100"
-			who="1192"
-			tolerance="neutral" />
-		<set
-			forwhom="1100"
-			who="1193"
-			tolerance="neutral" />
-		<set
-			forwhom="1100"
-			who="1194"
-			tolerance="enemy" />
-		<set
-			forwhom="1100"
-			who="1195"
-			tolerance="enemy" />
-		<set
-			forwhom="1100"
-			who="1196"
-			tolerance="enemy" />
-
-		<set
-			forwhom="1190"
-			who="1191 1192 1193 1194 1195 1196"
-			tolerance="neutral" />
-			
 </relationship>

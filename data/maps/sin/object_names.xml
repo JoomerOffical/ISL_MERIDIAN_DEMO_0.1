@@ -23,10 +23,15 @@
 	<Object	    Name="Sin_Church_House" 			FullName = "Дом Отца"/>
 	<Object	    Name="PetrolStation_Workshop" 		FullName = "Мастерская"/>
 	<Object	    Name="Sin_EastIerihon_Bar_Barman" 	FullName = "Бармен Денниель"/>
+	<Object	    Name="Sin_Debt1" 					FullName = "Продавец Ли"/>
+	<Object	    Name="Sin_Debt2" 					FullName = "Консьержка Кел"/>
+	<Object	    Name="Sin_Debt3" 					FullName = "Бизнесмен Рудольф"/>
+	<Object	    Name="Sin_GuardDebt" 				FullName = "Наемник"/>
 	<Object	    Name="Sin_EastIerihon" 				FullName = "Западный Иерихон"/>
 	<Object	    Name="Sin_EastIerihon_enter" 		FullName = "Западный Иерихон"/>
 	<Object 	Name="Sin_IerihonEast_MayorPlace"	FullName = "Мэрия"/>
 	<Object 	Name="Sin_Joe" 						FullName = "Джо"/>
+	<Object 	Name="Sin_TraitorDog" 				FullName = "Подкупленный Пол"/>
 	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
 	<Object   	Name="Sin_Bulldog" 					FullName = "Борн"/>
 	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд"/>

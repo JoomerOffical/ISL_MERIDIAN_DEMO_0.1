@@ -4929,7 +4929,7 @@
 		name="Dlg_pl_000514"
 		text="Ну а что еще делать? Не к псам же, учитывая, что я их парней прикончил."
 		role="PLAYER"
-		scriptCondition="QuestStatus('sin_KillArlekin_Quest')==Q_TAKEN"
+		scriptCondition="QuestStatus('sin_KillArlekin_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_npc_000564" />
 
 	<Reply
@@ -5058,11 +5058,12 @@
 		name="Dlg_pl_000993"
 		text="Пока нет, я еще не до конца решил, нужно ли мне встревать в этот конфликт. Но спасибо Гарфилду, что пытался меня подкупить небольшим гонораром."
 		role="PLAYER"
+		scriptCondition="not(QuestStatus('sin_KillArlekin_Quest')==Q_COMPLETED)"
 		nextReplies="Dlg_npc_000999" />
 
 	<Reply
 		name="Dlg_npc_000999"
-		text="Очень настоятельно рекомендую тебе уезжать из этих земель. Бед с Котами ты наберешь немало. Да и не факт, что они не ударят тебе в спину, когда ты им перестанешь нужным."
+		text="Очень настоятельно рекомендую тебе уезжать из этих земель. Бед с Котами ты наберешь немало. Да и не факт, что они не ударят тебе в спину, когда ты им перестанешь быть нужным."
 		role="NPC"
 		nextReplies="Dlg_pl_001000" />
 
@@ -5131,7 +5132,7 @@
 		name="Dlg_pl_000833"
 		text="Спасибо. Не подведу."
 		role="PLAYER"
-		scriptResult="FailQuest('sin_ComeToDogs2_Quest'); CompleteQuest('sin_ComeToCats_Quest'); TActivate('trEgoistChose'); AddPlayerMoney(500); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeToCats_Quest'); TActivate('trEgoistChose'); AddPlayerMoney(500); EndConversation()" />
 
 	<Reply
 		name="Garfield2_DLG"
@@ -5173,7 +5174,7 @@
 
 	<Reply
 		name="Dlg_npc_001007"
-		text="Мы бы могли этим воспользоваться, чтобы забрать вторую половину Иерихона. Но для начала надо ослабить влияние Псов на западе."
+		text="Мы бы могли этим воспользоваться, чтобы забрать вторую половину Иерихона. Но для начала надо ослабить влияние Псов на востоке."
 		role="NPC"
 		nextReplies="Dlg_pl_001008" />
 
@@ -5185,7 +5186,7 @@
 
 	<Reply
 		name="Dlg_npc_001009"
-		text="Так как у тебя репутация в нашей банде маленькая, мы тебе поручим небольшое задание. В Западном Иерихоне есть некоторые бизнесы, которые мы крышуем. И нам нужно, чтобы ты собрал дань с их любителей заработать легкие деньги. И да, не пытайся прикарманить себе хоть цент. Мои ребята в городе следят за тобой."
+		text="Так как у тебя репутация в нашей банде маленькая, мы тебе поручим небольшое задание. В Западном Иерихоне есть некоторые бизнесы, которые мы крышуем. И нам нужно, чтобы ты собрал дань с их любителей заработать легкие деньги. И да, не пытайся прикарманить себе хоть цент. Мои ребята в городе следят за тобой. В кармане у тебя должно быть не меньше 1500 долларов."
 		role="NPC"
 		nextReplies="Dlg_pl_001010" />
 
@@ -5193,7 +5194,7 @@
 		name="Dlg_pl_001010"
 		text="Понял, не подведу."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToCats1_Quest'); SetTolerance(1100, 1104, RS_ENEMY); FailQuest('sin_LeaveSin_Quest'); TakeQuest('sin_BeatDealWI_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_BackToCats1_Quest'); TActivate('trChangeLogoCat'); FailQuest('sin_LeaveSin_Quest'); FailQuest('sin_ComeToDogs2_Quest'); TakeQuest('sin_BeatDealWI_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000585"
@@ -5217,13 +5218,21 @@
 		name="Dlg_npc_000588"
 		text="Надо же, честна твоя душа, незнакомец. Вот бы у всех наемников такая же честность была. "
 		role="NPC"
-		nextReplies="Dlg_pl_000589" />
+		nextReplies="Dlg_pl_000589 Dlg_pl_000992" />
+
+	<Reply
+		name="Dlg_pl_000992"
+		text="Спасибо за то, что приняли тепло. Удачи вам в войне с Псами."
+		role="PLAYER"
+		scriptCondition="QuestStatus('sin_BackToCats1_Quest')==Q_TAKEN"
+		scriptResult="CompleteQuest('sin_BackToCats1_Quest'); FailQuest('r7m1_FindKitty_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000589"
 		text="Спасибо за то, что приняли тепло. Удачи вам в войне с Псами."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToCats_Quest'); TakeQuest('sin_ComeToDogs_Quest'); TActivate('trPDship'); EndConversation()" />
+		scriptCondition="QuestStatus('sin_BackToCats_Quest')==Q_TAKEN"
+		scriptResult="CompleteQuest('sin_BackToCats_Quest'); TakeQuest('sin_ComeToDogs_Quest'); FailQuest('sin_ComeToDogs2_Quest'); SetTolerance(1100, 1104, RS_NEUTRAL); EndConversation()" />
 
 	<Reply
 		name="Garfield3_DLG"
@@ -5291,13 +5300,44 @@
 		text="Как успехи?"
 		role="NPC"
 		scriptCondition="QuestStatus('sin_ComeBackDeal_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_001035 Dlg_pl_001040" />
+		nextReplies="Dlg_pl_001035 Dlg_pl_001040 Dlg_pl_001054" />
+
+	<Reply
+		name="Dlg_pl_001054"
+		text="Со всех трех долг собран, вот... э... черт, денег не хватает..."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()<1500"
+		nextReplies="Dlg_npc_001058" />
+
+	<Reply
+		name="Dlg_npc_001058"
+		text="Так и... где деньги?"
+		role="NPC"
+		nextReplies="Dlg_pl_001059" />
+
+	<Reply
+		name="Dlg_pl_001059"
+		text="Э... понимаешь, тут такое дело..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001060" />
+
+	<Reply
+		name="Dlg_npc_001060"
+		text="Тебе дали самое простое задние - выбить долг и при этом не потратить денег. А ты взял и почти все растратил. Ты за это получишь. Бейте его, ребята."
+		role="NPC"
+		nextReplies="Dlg_pl_001061" />
+
+	<Reply
+		name="Dlg_pl_001061"
+		text="Нет, стой!"
+		role="PLAYER"
+		scriptResult="LeaveTown(); suicide()" />
 
 	<Reply
 		name="Dlg_pl_001040"
 		text="Со всех трех долг собран. А в машине сидит мужик, который пытался меня прибить и сбежать из этих земель с деньгами."
 		role="PLAYER"
-		scriptCondition="QuestStatus('sin_DealCapForCats_Quest')==Q_TAKEN"
+		scriptCondition="(QuestStatus('sin_DealCapForCats_Quest')==Q_TAKEN) and (GetPlayerMoney()>=1500)"
 		nextReplies="Dlg_npc_001043" />
 
 	<Reply
@@ -5326,7 +5366,7 @@
 
 	<Reply
 		name="Dlg_npc_001047"
-		text="Что ж, с этим ты хорошо справился. Следующее задание будет также небольшим. Среди нас есть предатель, который тайно скидывает информацию по нашим операциям. Мы уже выяснили, кто он. Твоя задача просто прикончить его."
+		text="Что ж, с этим ты хорошо справился. Следующее задание будет также небольшим. Среди нас есть предатель, который тайно скидывает псам информацию по нашим операциям. Мы уже выяснили, кто он. Твоя задача просто прикончить его."
 		role="NPC"
 		nextReplies="Dlg_pl_001048" />
 
@@ -5346,13 +5386,13 @@
 		name="Dlg_pl_001050"
 		text="Понял."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeBackDeal_Quest'); CompleteQuest('sin_DealCapForCats_Quest'); TakeQuest('sin_KillCatTraitor_Quest'); TActivate('SanRafael_tr'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeBackDeal_Quest'); CompleteQuest('sin_DealCapForCats_Quest'); AddPlayerMoney(-800); TakeQuest('sin_KillCatTraitor_Quest'); TActivate('SanRafael_tr'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001035"
 		text="Со всех трех долг собран, вот деньги, ни цента ни прячу."
 		role="PLAYER"
-		scriptCondition="not(QuestStatus('sin_DealCapForCats_Quest')==Q_TAKEN) "
+		scriptCondition="not(QuestStatus('sin_DealCapForCats_Quest')==Q_TAKEN) and (GetPlayerMoney()>=1500) "
 		nextReplies="Dlg_npc_001036" />
 
 	<Reply
@@ -5369,7 +5409,7 @@
 
 	<Reply
 		name="Dlg_npc_001038"
-		text="Что ж, с этим ты хорошо справился. Следующее задание будет также небольшим. Среди нас есть предатель, который тайно скидывает информацию по нашим операциям. Мы уже выяснили, кто он. Твоя задача просто прикончить его."
+		text="Что ж, с этим ты хорошо справился. Следующее задание будет также небольшим. Среди нас есть предатель, который тайно скидывает псам информацию по нашим операциям. Мы уже выяснили, кто он. Твоя задача просто прикончить его."
 		role="NPC"
 		nextReplies="Dlg_pl_001039" />
 
@@ -5389,7 +5429,7 @@
 		name="Dlg_pl_001042"
 		text="Понял."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeBackDeal_Quest'); TakeQuest('sin_KillCatTraitor_Quest'); TActivate('SanRafael_tr'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeBackDeal_Quest'); AddPlayerMoney(-1000); TakeQuest('sin_KillCatTraitor_Quest'); TActivate('SanRafael_tr'); EndConversation()" />
 
 	<Reply
 		name="Garfield5_DLG"
@@ -5406,7 +5446,7 @@
 
 	<Reply
 		name="Dlg_npc_001023"
-		text="Ладно. Слушай внимательно. Когда ты прикончил Арлекина, у Псов началась сильное беспокойство. Они решили отправить другой отряд к проезду. Прикончи их до того, как они доедут."
+		text="Ладно. Слушай внимательно. Когда ты прикончил Арлекина, у Псов началась сильное беспокойство. Они решили отправить другой отряд к проезду. К счастью некоторых из этого отряда мы подкупили. Возьми эти деньги и как убьете останки, ты им отдашь эти деньги."
 		role="NPC"
 		scriptCondition="QuestStatus('sin_KillArlekin_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_pl_001053" />
@@ -5414,7 +5454,8 @@
 	<Reply
 		name="Dlg_pl_001053"
 		text="Понял. Отправляюсь."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_BackCatTraitor_Quest'); AddPlayerMoney(1000); TActivate('sinExitBlock'); TakeQuest('sin_BlockNoArl_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_npc_001051"
@@ -5426,13 +5467,14 @@
 	<Reply
 		name="Dlg_pl_001052"
 		text="Отправляюсь."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_BackCatTraitor_Quest'); TActivate('sinArlekinBlock'); TakeQuest('sin_KillArlekinBlock_Quest'); EndConversation()" />
 
 	<Reply
 		name="Garfield6_DLG"
 		text="Как дела?"
 		role="NPC"
-		scriptCondition="QuestStatus('sin_BackCatsBlock_Quest')==Q_TAKEN"
+		scriptCondition="(QuestStatus('sin_BackCatsBlock_Quest')==Q_TAKEN) or (QuestStatus('sin_BackCatBlockNA_Quest')==Q_TAKEN) "
 		nextReplies="Dlg_pl_001055" />
 
 	<Reply
@@ -5450,7 +5492,8 @@
 	<Reply
 		name="Dlg_pl_001057"
 		text="Спасибо."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_BackCatsBlock_Quest'); CompleteQuest('sin_BackCatBlockNA_Quest'); EndConversation()" />
 <!--Root/Sin/Могильщик-->
 	<Reply
 		name="Graveman1_DLG"
@@ -5467,7 +5510,7 @@
 
 	<Reply
 		name="Dlg_npc_000574"
-		text="Это еще мягко сказано. Видишь кладбище? Это все Коты и Псы, и немного невиновыных жителей."
+		text="Это еще мягко сказано. Видишь кладбище? Это все Коты и Псы, и немного невиновных жителей."
 		role="NPC"
 		nextReplies="Dlg_pl_000575" />
 
@@ -5517,7 +5560,7 @@
 		name="Dlg_pl_000581"
 		text="Вот и ладненько."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeToGrave_Quest'); TakeQuest('sin_BackToCats_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeToGrave_Quest'); FailQuest('sin_ComeToDogs2_Quest'); TakeQuest('sin_BackToCats_Quest'); FailQuest('sin_LeaveSin_Quest'); EndConversation()" />
 
 	<Reply
 		name="Graveman2_DLG"
@@ -5953,7 +5996,7 @@
 		name="Dlg_pl_001026"
 		text="Ах ты су..."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BDWI3_Quest'); LeaveTown()" />
+		scriptResult="CompleteQuest('sin_BDWI3_Quest'); TActivate('trSpawnDebtGuard'); LeaveTown()" />
 
 	<Reply
 		name="Dolzhnik3.1_DLG"
@@ -6010,4 +6053,90 @@
 		text="Ладно, давай сюда все и вали отсюда, пока я не передумал."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_RunDeal3_Quest'); AddPlayerMoney(500); EndConversation()" />
-<!--Root/Sin/Арлекин--></DialogsResource>
+<!--Root/Sin/Подкупленные-->
+	<Reply
+		name="DogTraitor_DLG"
+		text="Гарфилд доложил, что нам дадут денег за данную операцию. Где они?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_BackCatBlockNA_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001063 Dlg_pl_001062" />
+
+	<Reply
+		name="Dlg_pl_001062"
+		text="Прости, денег нет. Гарфилд обманул."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001066" />
+
+	<Reply
+		name="Dlg_npc_001066"
+		text="Вот сукин сын. Я ему сахар в бензобак засыплю когда-нибудь."
+		role="NPC"
+		nextReplies="Dlg_pl_001067 Dlg_pl_001070" />
+
+	<Reply
+		name="Dlg_pl_001070"
+		text="Боюсь, у тебя не получится. Потому что я не позволю."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001071" />
+
+	<Reply
+		name="Dlg_npc_001071"
+		text="Это что? Типа угроза?"
+		role="NPC"
+		nextReplies="Dlg_pl_001072" />
+
+	<Reply
+		name="Dlg_pl_001072"
+		text="Можно и так сказать."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001073" />
+
+	<Reply
+		name="Dlg_npc_001073"
+		text="Ну все! Тебе конец."
+		role="NPC"
+		nextReplies="Dlg_pl_001074" />
+
+	<Reply
+		name="Dlg_pl_001074"
+		text="Язык пушек мне знаком с самой молодости."
+		role="PLAYER"
+		scriptResult="SetTolerance(1100, 1195, RS_ENEMY); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001067"
+		text="Боюсь, у тебя не получится. Так как вы предали псов, вам делать здесь нечего. Рекомендую сваливать с этих земель."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001068" />
+
+	<Reply
+		name="Dlg_npc_001068"
+		text="Эх, ладно. Мы уходим. Но мы еще вернемся."
+		role="NPC"
+		nextReplies="Dlg_pl_001069" />
+
+	<Reply
+		name="Dlg_pl_001069"
+		text="Ага-ага..."
+		role="PLAYER"
+		scriptResult="TActivate('trfterBlockDis'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001063"
+		text="Вот, держите. "
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()>=1000"
+		nextReplies="Dlg_npc_001064" />
+
+	<Reply
+		name="Dlg_npc_001064"
+		text="Хм... отлично, спасибо."
+		role="NPC"
+		nextReplies="Dlg_pl_001065" />
+
+	<Reply
+		name="Dlg_pl_001065"
+		text="Удачи вам."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(-1000); TActivate('trfterBlockDis'); EndConversation()" />
+</DialogsResource>
