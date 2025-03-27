@@ -100,12 +100,12 @@
 		MaxWaresToDrop						= "5"
 
 		WarePriceCoeffForDrop				= "1.5"
-		GunPriceCoeffForDrop				= "1.5"
-		GadgetPriceCoeffForDrop				= "1.5"
+		GunPriceCoeffForDrop				= "0.8"
+		GadgetPriceCoeffForDrop				= "0.1"
 		
-		ProbToDropMoney					= "0.05"
-		ProbToDropWares					= "0.05"	
-		ProbToDropGuns					= "0.90"
+		ProbToDropMoney					= "0.00"
+		ProbToDropWares					= "0.05"
+		ProbToDropGuns					= "0.95"
 		ProbToDropGadgetWeapon				= "0.0"
 		ProbToDropGadgetVehicle				= "0.0"
 

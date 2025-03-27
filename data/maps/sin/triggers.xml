@@ -118,8 +118,7 @@
 
 			SetTolerance(1100, 1104, RS_ENEMY)	
 			SetTolerance(1100, 1106, RS_ALLY)
-
-			TActivate("trDieDebtGuard")
+			
 		</script>
 	</trigger>
 

@@ -5494,6 +5494,76 @@
 		text="Спасибо."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_BackCatsBlock_Quest'); CompleteQuest('sin_BackCatBlockNA_Quest'); EndConversation()" />
+
+	<Reply
+		name="Garfield7_DLG"
+		text="Благодаря тебе мы хорошо закрепились. Сан-Рафаель теперь под нашим контролем, мы захватили блокаду у въезда. Пора завставить всех отвернуться от псов и Борна."
+		role="NPC"
+		nextReplies="Dlg_pl_001087" />
+
+	<Reply
+		name="Dlg_pl_001087"
+		text="И каким образом мы это сделаем?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001088" />
+
+	<Reply
+		name="Dlg_npc_001088"
+		text="Обернем против них Церковь Колеса."
+		role="NPC"
+		nextReplies="Dlg_pl_001089" />
+
+	<Reply
+		name="Dlg_pl_001089"
+		text="Церковь? Серьезно? И как мы это сделаем?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001090 Dlg_npc_001106" />
+
+	<Reply
+		name="Dlg_npc_001106"
+		text="Все очень просто, к нам обратилась одна из монашек церкви, которую пытались псы уничтожить. Она ненароком подслушала разговор Борна о планах вторжения на церковь."
+		role="NPC"
+		nextReplies="Dlg_pl_001107" />
+
+	<Reply
+		name="Dlg_pl_001107"
+		text="Похоже из-за наших успехов Псы решились на безумные решения."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001108" />
+
+	<Reply
+		name="Dlg_npc_001108"
+		text="Именно. В общем отправляйся к Церкви Колеса, и убеди Отца Патрика в правдивости этой информации."
+		role="NPC"
+		nextReplies="Dlg_pl_001109" />
+
+	<Reply
+		name="Dlg_pl_001109"
+		text="Понял, босс."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_001090"
+		text="Все очень просто. Парни, которых, мы подкупили, доложили о том, что Псы готовят нападение на Церковь, хотя у нас был уговор, что Церковь будет в нейтралитете в наших отношениях."
+		role="NPC"
+		nextReplies="Dlg_pl_001091" />
+
+	<Reply
+		name="Dlg_pl_001091"
+		text="Похоже из-за наших успехов Псы решились на безумные решения."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001092" />
+
+	<Reply
+		name="Dlg_npc_001092"
+		text="Именно. В общем отправляйся к Церкви Колеса, и убеди Отца Патрика в правдивости этой информации."
+		role="NPC"
+		nextReplies="Dlg_pl_001093" />
+
+	<Reply
+		name="Dlg_pl_001093"
+		text="Понял, босс."
+		role="PLAYER" />
 <!--Root/Sin/Могильщик-->
 	<Reply
 		name="Graveman1_DLG"
@@ -5819,6 +5889,113 @@
 		text="Если что-то пойдет не так, я буду рядом."
 		role="PLAYER"
 		scriptResult="TakeQuest('sin_DealKitty_Quest'); TActivate('sinDealKitty'); EndConversation()" />
+
+	<Reply
+		name="Kitty3_DLG"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_001079" />
+
+	<Reply
+		name="Dlg_pl_001079"
+		text="Привет, не тебя ли кличут Китти?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001080" />
+
+	<Reply
+		name="Dlg_npc_001080"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_001081" />
+
+	<Reply
+		name="Dlg_pl_001081"
+		text="Мне о тебе твоя мама из Кристи рассказывала."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001082" />
+
+	<Reply
+		name="Dlg_npc_001082"
+		text="Подожди. Моя мама? Она жива?"
+		role="NPC"
+		nextReplies="Dlg_pl_001083" />
+
+	<Reply
+		name="Dlg_pl_001083"
+		text="Она жива, и надеется, что ты вернешься домой."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001084" />
+
+	<Reply
+		name="Dlg_npc_001084"
+		text="Откуда мне знать, что ты говоришь правду, блохастый? Думаешь, я не видела, как ты сюсюкаешься с Гарфилдом?"
+		role="NPC"
+		nextReplies="Dlg_pl_001085" />
+
+	<Reply
+		name="Dlg_pl_001085"
+		text="Остынь, подруга. Не всякий кот будет болтать с пленницей. К тому же мне Гарфилд мало платит за то, что я подставляю свою шею. Да и пули с бензином не казенные."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001078" />
+
+	<Reply
+		name="Dlg_npc_001078"
+		text="Ну... ладно. И что мне с этого? Меня все равно не выпустят."
+		role="NPC"
+		nextReplies="Dlg_pl_001097" />
+
+	<Reply
+		name="Dlg_pl_001097"
+		text="Не переживай, расскажи лучше, как ты к Котам в лапы попала?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001098" />
+
+	<Reply
+		name="Dlg_npc_001098"
+		text="В первый месяц нашего с мужем бизнеса, который мы открыли здесь, коты потребовали невообразимую сумму денег за крышу нашего бизнеса. Мы, естественно, не смогли оплатить и выбили себе дополнительную неделю."
+		role="NPC"
+		nextReplies="Dlg_pl_001099" />
+
+	<Reply
+		name="Dlg_pl_001099"
+		text="Дай-ка угадаю, долг через неделю вырос?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001100" />
+
+	<Reply
+		name="Dlg_npc_001100"
+		text="Именно так. Долг стал слишком невыносим для нас, и потому коты забрали меня в качестве залога. Муж, естественно пытался сопротивляться, но все оружие мы продали, чтобы погасить часть долга. И теперь муж бегает по всему Иерихону, тщась заработать лишний цент на мой выкуп."
+		role="NPC"
+		nextReplies="Dlg_pl_001101" />
+
+	<Reply
+		name="Dlg_pl_001101"
+		text="Да уж, ядрен бензин. Нелегкая ситуация. И сколько с тебя Гарфилд требует?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001102" />
+
+	<Reply
+		name="Dlg_npc_001102"
+		text="5000 долларов. Сам понимаешь, цена не маленькая."
+		role="NPC"
+		nextReplies="Dlg_pl_001103" />
+
+	<Reply
+		name="Dlg_pl_001103"
+		text="Рессору мою пополам! Да за эти деньги можно приобрести хороший тарантас.  "
+		role="PLAYER"
+		nextReplies="Dlg_npc_001104" />
+
+	<Reply
+		name="Dlg_npc_001104"
+		text="Ну и... похоже я тут надолго."
+		role="NPC"
+		nextReplies="Dlg_pl_001105" />
+
+	<Reply
+		name="Dlg_pl_001105"
+		text="Не переживай, что-нибудь придумаю. А пока сидим тихо и притворяемся, что мы не болтали. Увидимся."
+		role="PLAYER" />
 <!--Root/Sin/Муж Джес-->
 	<Reply
 		name="Jess1_DLG"
@@ -5886,6 +6063,22 @@
 		text="*Заплатить 1000 долларов*"
 		role="PLAYER"
 		scriptResult="TActivate('sinArlekinGangPay'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001075"
+		text="Во время отдыха я заметил ту самую девушку, которую я видел перед кошкином домом. По слухам ее зовут Китти, которая и является дочерью матушки из Кристи. Может подойти к ней и разузнать как она оказалась у Котов в заложниках?"
+		role="NPC"
+		nextReplies="Dlg_pl_001076 Dlg_pl_001077" />
+
+	<Reply
+		name="Dlg_pl_001077"
+		text="*Не подходить*"
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_pl_001076"
+		text="*Подойти*"
+		role="PLAYER" />
 <!--Root/Sin/Должники-->
 	<Reply
 		name="Dolzhnik_DLG"
@@ -5914,7 +6107,7 @@
 
 	<Reply
 		name="Dlg_npc_001015"
-		text="Мистер, я адекватный человек и осознаю, на какие риски и траты я иду ради спокойного бизнеса. От того я своевременно плачу деньги за крышу."
+		text="Мистер, я адекватный человек и осознаю, на какие риски и траты я иду ради спокойного бизнеса. Оттого я своевременно плачу деньги за крышу."
 		role="NPC"
 		nextReplies="Dlg_pl_001016" />
 
@@ -6139,4 +6332,27 @@
 		text="Удачи вам."
 		role="PLAYER"
 		scriptResult="AddPlayerMoney(-1000); TActivate('trfterBlockDis'); EndConversation()" />
+<!--Root/Sin/Отец Патрик-->
+	<Reply
+		name="Dlg_npc_001086"
+		text="Что тебя привело в мою обитель, сын мой?"
+		role="NPC"
+		nextReplies="Dlg_pl_001094" />
+
+	<Reply
+		name="Dlg_pl_001094"
+		text="Отец, мне доложили, что Псы решили нарушить нейтралитет в сторону Церкви, и захватить ее. Вы должны где-то укрыться или эвакуироваться."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001095" />
+
+	<Reply
+		name="Dlg_npc_001095"
+		text="Да не может быть такого. Псы всегда придерживались своих слов."
+		role="NPC"
+		nextReplies="Dlg_pl_001096" />
+
+	<Reply
+		name="Dlg_pl_001096"
+		text="Как раз таки может, а вот кстати и они."
+		role="PLAYER" />
 </DialogsResource>

@@ -840,7 +840,7 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="sin_KillBlock_Quest" />
 	</quest>
-<!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
+<!--Root/sin/Сюжетные/Оборона церкви--><!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"
 		Automatic="0"
