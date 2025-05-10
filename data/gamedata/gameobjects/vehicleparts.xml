@@ -222,10 +222,10 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 			NodeScale		= "1 1 1"
 			Mass			= "100.0"
 
-			MaxHealth		= "350" 
+			MaxHealth		= "250" 
 			MaxFuel		= "25"
 
-			Price			= "400"
+			Price			= "500"
 			RepairCoef		= "1.0"
 
 			BrakingSound	="ET_S_BRAKE01"
@@ -300,7 +300,7 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 			NodeScale	= "1 1 1"
 			Mass		= "130.0"
 
-			MaxHealth	= "550" 
+			MaxHealth	= "500" 
 			MaxFuel	= "40.0"
 
 			Price				= "4000"
@@ -324,10 +324,10 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 			NodeScale	= "1 1 1"
 			Mass		= "120.0"
 
-			MaxHealth	= "600" 
+			MaxHealth	= "450" 
 			MaxFuel	= "65.0" 
 
-			Price				= "40000"
+			Price				= "2000"
 			RepairCoef			= "14"
 
 			BrakingSound="ET_S_BRAKE01"
@@ -409,7 +409,7 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 			RepairCoef			= "1.0"
 
 			Mass		= "150.0" 
-			MaxHealth	= "400" 
+			MaxHealth	= "1000" 
 			MaxFuel	= "22"
 
 			BrakingSound="ET_S_BRAKE01"

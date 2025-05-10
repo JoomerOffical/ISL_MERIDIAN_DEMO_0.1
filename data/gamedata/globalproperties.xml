@@ -169,7 +169,7 @@
 		EnergyBlowDeltaTime			= "1.2"
 		EnergyVpBlowProbability		= "5"
 		EnergyWheelBlowProbability	= "2"
-		CriticalSpotForce			= "2"
+		CriticalSpotForce			= "5"
 
 	   	UnitsToThrow = "DeathHuman, DeathHumanFire"
 		UnitThrowForce  = "50"

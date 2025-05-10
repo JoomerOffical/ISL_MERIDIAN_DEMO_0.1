@@ -428,6 +428,22 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="r7m1_FKIerihon_Quest" />
+
+		<quest
+			Name="r7m1_GoToJess_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_SaveKitty_Quest" />
+
+		<quest
+			Name="r7m1_ComeToGato_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_GoToJess_Quest" />
 	</quest>
 <!--Root/sin/Сюжетные--><!--Root/sin/Сюжетные/Проход-->
 	<quest
@@ -840,7 +856,128 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="sin_KillBlock_Quest" />
 	</quest>
-<!--Root/sin/Сюжетные/Оборона церкви--><!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
+<!--Root/sin/Сюжетные/Оборона церкви-->
+	<quest
+		Name="sin_DefendChurch_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToChurchDef_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_DefendChurch_Quest" />
+
+		<quest
+			Name="sin_DefendChirchNow_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToChurchDef_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Отправиться в пекло-->
+	<quest
+		Name="sin_GoToHellIerihon_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToIerihonBattle_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_GoToHellIerihon_Quest" />
+
+		<quest
+			Name="sin_ShootToHellIerihon_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToIerihonBattle_Quest" />
+
+		<quest
+			Name="sin_IerihonGarfield_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_ShootToHellIerihon_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Штурм Будки-->
+	<quest
+		Name="sin_WarforPort_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToCatsPort_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_WarforPort_Quest" />
+
+		<quest
+			Name="sin_AttackToPort_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToCatsPort_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Прибить или выдворить подкупщиков-->
+	<quest
+		Name="sin_LieBuyersKill_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Заехать к Джо (финал)-->
+	<quest
+		Name="sin_FinalJoe_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Заплатить за Китти-->
+	<quest
+		Name="sin_PayforKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Освободить Китти во время битвы-->
+	<quest
+		Name="sin_FreeKittyCat_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToKittyCat_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_FreeKittyCat_Quest" />
+
+		<quest
+			Name="sin_HideKittyCat_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToKittyCat_Quest" />
+	</quest>
+<!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"
 		Automatic="0"

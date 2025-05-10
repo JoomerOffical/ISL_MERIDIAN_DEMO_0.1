@@ -1820,12 +1820,44 @@
 		name="Leonel3_2_DLG"
 		text="*через некоторое время* Вот это да. Коты, псы, интриги. Ты уверен, что войны в Иерихоне прекратятся на этом?"
 		role="NPC"
-		nextReplies="Dlg_pl_000474" />
+		nextReplies="Dlg_pl_000474 Dlg_pl_001160" />
+
+	<Reply
+		name="Dlg_pl_001160"
+		text="Я не уверен, если честно. "
+		role="PLAYER"
+		scriptCondition="QuestStatus('sin_WarforPort_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_npc_001161" />
+
+	<Reply
+		name="Dlg_npc_001161"
+		text="Как бы это ни было, ты доставил посылку? Хотя не отвечай, верю."
+		role="NPC"
+		nextReplies="Dlg_pl_001162" />
+
+	<Reply
+		name="Dlg_pl_001162"
+		text="Джо просил тебе передать привет. Ну и лучше тебе не осваться в Иерихон для бизнеса, ибо закрышуют и в долги влезешь."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001163" />
+
+	<Reply
+		name="Dlg_npc_001163"
+		text="Оу, понятно. Ладно, gracias, amigo mio за посылку, но мне надо возвращаться к своей старушке. Adios."
+		role="NPC"
+		nextReplies="Dlg_pl_001164" />
+
+	<Reply
+		name="Dlg_pl_001164"
+		text="Бывай."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_BackToLeo_Quest'); TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000474"
 		text="Я уверен. Коты и Псы слишком долго мучали народ Иерихона. И единственным способом избавиться от них - это спровоцировать их на мордобои. А потом самому прикончить выживших. Иерихон свободен теперь."
 		role="PLAYER"
+		scriptCondition="QuestStatus('sin_Final_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_npc_000475" />
 
 	<Reply
@@ -2153,7 +2185,7 @@
 		name="Dlg_pl_000535"
 		text="А почему нет? Погнали."
 		role="PLAYER"
-		scriptResult="TActivate('trSpawnMestEd'); TActivate('trDieMestEd'); TakeQuest('r7m1_BattleBandits_Quest'); EndConversation()" />
+		scriptResult="TActivate('trSpawnMestEd'); TakeQuest('r7m1_BattleBandits_Quest'); EndConversation()" />
 <!--Root/r7m1/Матушка-->
 	<Reply
 		name="Mother1_DLG"
@@ -2208,12 +2240,51 @@
 		name="Mother2_DLG"
 		text="О, gracias. Моя дочка вернулась. Благодаря вам, добрый человек. А это вам награда."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_ComeToGato_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000546" />
 
 	<Reply
 		name="Dlg_pl_000546"
 		text="Спасибо. И берегите свою дочь."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(700); CompleteQuest('r7m1_ComeToGato_Quest'); EndConversation()" />
+
+	<Reply
+		name="Mother3_DLG"
+		text="Это вы. А где моя hija? (дочка)"
+		role="NPC"
+		scriptCondition="QuestStatus('r7m1_FindKitty_Quest')==Q_FAILED and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_001145" />
+
+	<Reply
+		name="Dlg_pl_001145"
+		text="Она в плену у одной банды. Я не смог ничего сделать."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001156" />
+
+	<Reply
+		name="Dlg_npc_001156"
+		text="О, Dios mio! (Боже мой!) Что же она наделала?"
+		role="NPC"
+		nextReplies="Dlg_pl_001157" />
+
+	<Reply
+		name="Dlg_pl_001157"
+		text="Бизнес пошел не по плану, в итоге муж в долгах, а Китти в плену. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_001158" />
+
+	<Reply
+		name="Dlg_npc_001158"
+		text="Что ж, спасибо и на том. Держите, мне это больше не понадобиться."
+		role="NPC"
+		nextReplies="Dlg_pl_001159" />
+
+	<Reply
+		name="Dlg_pl_001159"
+		text="Вы уж простите, я реально не мог ничего сделать."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(1000); GetCurNpc():SetSpokenCount(1); EndConversation()" />
 <!--Root/r7m1/Бандит-->
 	<Reply
 		name="VinoBandit_DLG"
@@ -5084,6 +5155,55 @@
 		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); TakeQuest('sin_Caravan_Quest'); TActivate('trCaravan'); EndConversation()" />
+
+	<Reply
+		name="Joe5_DLG"
+		text="Снова ты. Пришел еще помучить меня?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_FinalJoe_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001150" />
+
+	<Reply
+		name="Dlg_pl_001150"
+		text="Тише-тише, что случилось?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001149" />
+
+	<Reply
+		name="Dlg_npc_001149"
+		text="Что случилось? Ты еще спрашиваешь! Коты теперь будут якобы крышевать мой бизнес, а на деле просто собирать дань. Псы при их диктатуре хотя бы зазря денег не брали с меня. А теперь из-за тебя я буду тратить больше, чем зарабатывать."
+		role="NPC"
+		nextReplies="Dlg_pl_001151" />
+
+	<Reply
+		name="Dlg_pl_001151"
+		text="Ну может все не так уж и плохо. Будет потом наплыв посетителей..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001152" />
+
+	<Reply
+		name="Dlg_npc_001152"
+		text="Когда он будет? Через день? Через неделю? Месяц? "
+		role="NPC"
+		nextReplies="Dlg_pl_001153" />
+
+	<Reply
+		name="Dlg_pl_001153"
+		text="Ну... Я..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001154" />
+
+	<Reply
+		name="Dlg_npc_001154"
+		text="Правильно, по настроению Гарфилда. Аж противно на тебя смотреть. Уйди вон от меня."
+		role="NPC"
+		nextReplies="Dlg_pl_001155" />
+
+	<Reply
+		name="Dlg_pl_001155"
+		text="Ну и пожалуйста, тоже мне, бармен."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_FinalJoe_Quest'); TakeQuest('sin_BackToLeo_Quest'); EndConversation()" />
 <!--Root/Sin/Гарфилд-->
 	<Reply
 		name="Garfield1_DLG"
@@ -5493,12 +5613,13 @@
 		name="Dlg_pl_001057"
 		text="Спасибо."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackCatsBlock_Quest'); CompleteQuest('sin_BackCatBlockNA_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_BackCatsBlock_Quest'); CompleteQuest('sin_BackCatBlockNA_Quest'); TActivate('sinAfterSomeTime'); LeaveTown()" />
 
 	<Reply
 		name="Garfield7_DLG"
 		text="Благодаря тебе мы хорошо закрепились. Сан-Рафаель теперь под нашим контролем, мы захватили блокаду у въезда. Пора завставить всех отвернуться от псов и Борна."
 		role="NPC"
+		scriptCondition="(QuestStatus('sin_KillArlekinBlock_Quest')==Q_COMPLETED or QuestStatus('sin_BlockNoArl_Quest')==Q_COMPLETED) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_001087" />
 
 	<Reply
@@ -5517,7 +5638,7 @@
 		name="Dlg_pl_001089"
 		text="Церковь? Серьезно? И как мы это сделаем?"
 		role="PLAYER"
-		nextReplies="Dlg_npc_001090 Dlg_npc_001106" />
+		nextReplies="Dlg_npc_001106" />
 
 	<Reply
 		name="Dlg_npc_001106"
@@ -5540,30 +5661,278 @@
 	<Reply
 		name="Dlg_pl_001109"
 		text="Понял, босс."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_DefendChurch_Quest'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
 
 	<Reply
-		name="Dlg_npc_001090"
-		text="Все очень просто. Парни, которых, мы подкупили, доложили о том, что Псы готовят нападение на Церковь, хотя у нас был уговор, что Церковь будет в нейтралитете в наших отношениях."
+		name="Garfield8_DLG"
+		text="Вот это я понимаю, битва, Иерихон теперь полностью под нашим контролем. "
 		role="NPC"
+		scriptCondition="QuestStatus('sin_IerihonGarfield_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001086" />
+
+	<Reply
+		name="Dlg_pl_001086"
+		text="Что теперь? Штурм порта?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001110" />
+
+	<Reply
+		name="Dlg_npc_001110"
+		text="Да, но мы должны подготовиться. Отдохни немного. "
+		role="NPC"
+		nextReplies="Dlg_pl_001111" />
+
+	<Reply
+		name="Dlg_pl_001111"
+		text="Ладно."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(2000); CompleteQuest('sin_IerihonGarfield_Quest'); TActivate('sinAfterSomeTimeIerihon'); LeaveTown()" />
+
+	<Reply
+		name="Garfield9_DLG"
+		text="Просыпайся, солдат. Пора закончить начатое."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_IerihonGarfield_Quest')==Q_COMPLETED and not(QuestStatus('sin_GoToCatsPort_Quest')==Q_TAKEN) and GetCurNpc():GetSpokenCount() == 0 "
+		nextReplies="Dlg_pl_001112" />
+
+	<Reply
+		name="Dlg_pl_001112"
+		text="Что, идем на штурм?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001113" />
+
+	<Reply
+		name="Dlg_npc_001113"
+		text="Да, но мы не одни. С нами будет еще и рекруты из Церкви Колеса и Жителей Иерихона. Так что у Псов нет шансов."
+		role="NPC"
+		nextReplies="Dlg_pl_001114" />
+
+	<Reply
+		name="Dlg_pl_001114"
+		text="Отлично, тогда отправляемся."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001075" />
+
+	<Reply
+		name="Dlg_npc_001075"
+		text='Стой, возьми это оружие. Мы его "выторговали" у кое-кого. Я думаю это оружие даст нам преимущество.'
+		role="NPC"
+		nextReplies="Dlg_pl_001115" />
+
+	<Reply
+		name="Dlg_pl_001115"
+		text="Спасибо."
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_WarforPort_Quest'); TActivate('trGiveMaxim'); TActivate('sinAttackPort'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
+
+	<Reply
+		name="Garfield10_DLG"
+		text="Эх, славные времена для нас настают, Бродяга. Если бы не ты, мы бы вряд ли стали такими, как сейчас."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_AttackToPort_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001091" />
 
 	<Reply
 		name="Dlg_pl_001091"
-		text="Похоже из-за наших успехов Псы решились на безумные решения."
+		text="Что теперь будете делать?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_001092" />
 
 	<Reply
 		name="Dlg_npc_001092"
-		text="Именно. В общем отправляйся к Церкви Колеса, и убеди Отца Патрика в правдивости этой информации."
+		text="Ну... раз уж весь Иерихон, да и в принципе весь регион под нашим контролем, то будем новой фигурой на этом поле апокалиптичного мира. Наладим торговлю, восстановим порт, будем промышлять контрабандой и наркоторговлей. Короче, планов много."
 		role="NPC"
 		nextReplies="Dlg_pl_001093" />
 
 	<Reply
 		name="Dlg_pl_001093"
-		text="Понял, босс."
-		role="PLAYER" />
+		text="Понятно. Кстати, спасибо за такие щедрые награды - вино, Максим, денюшки."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001116" />
+
+	<Reply
+		name="Dlg_npc_001116"
+		text="А то. Кстати, не хочешь остаться с нами? Ты бы был моим идеальным преемником, заимел бы своих ребят, да промышлял бы на наше благо всякие делишки темные."
+		role="NPC"
+		nextReplies="Dlg_pl_001117" />
+
+	<Reply
+		name="Dlg_pl_001117"
+		text="Спасибо, конечно. Но мне нравится быть больше независимым наемником. Да и у меня самого дел не так мало."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001090" />
+
+	<Reply
+		name="Dlg_npc_001090"
+		text="Что ж... в таком случае могу лишь пожелать удачи. Мы тебе всегда будем рады.  "
+		role="NPC"
+		nextReplies="Dlg_pl_001118 Dlg_pl_001119" />
+
+	<Reply
+		name="Dlg_pl_001119"
+		text="Спасибо, босс. Но прежде, чем я уеду. Могу я тебя кое о чем попросить?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001120" />
+
+	<Reply
+		name="Dlg_npc_001120"
+		text="Слушаю."
+		role="NPC"
+		nextReplies="Dlg_pl_001121" />
+
+	<Reply
+		name="Dlg_pl_001121"
+		text="Я бы хотел выкупить у тебя Китти."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001122" />
+
+	<Reply
+		name="Dlg_npc_001122"
+		text="О, как. И зачем она тебе?"
+		role="NPC"
+		nextReplies="Dlg_pl_001123" />
+
+	<Reply
+		name="Dlg_pl_001123"
+		text="Хочу вернуть ее домой. Мама за нее переживает."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001124" />
+
+	<Reply
+		name="Dlg_npc_001124"
+		text="Я бы отдал тебе Китти, но сам понимаешь, это залог за неудавшийся бизнес Китти и ее мужа-неудачника."
+		role="NPC"
+		nextReplies="Dlg_pl_001125" />
+
+	<Reply
+		name="Dlg_pl_001125"
+		text="Сколько стоит этот залог в деньгах?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001126" />
+
+	<Reply
+		name="Dlg_npc_001126"
+		text="Вообще недавно 5000 долларов, но теперь он возвысился до 10000. Но учитывая твои деяния, я понижу ее до 7500. Такие деньги есть?"
+		role="NPC"
+		nextReplies="Dlg_pl_001127 Dlg_pl_001132" />
+
+	<Reply
+		name="Dlg_pl_001132"
+		text="Оу, таких денег нет."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001133" />
+
+	<Reply
+		name="Dlg_npc_001133"
+		text="Ну вот и все, значит. Китти не отдадим."
+		role="NPC"
+		nextReplies="Dlg_pl_001134 Dlg_pl_001135" />
+
+	<Reply
+		name="Dlg_pl_001135"
+		text="Ай, черт с ней тогда. Времени и так много потратил."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001136" />
+
+	<Reply
+		name="Dlg_npc_001136"
+		text="Вот и правильно. Ладно, Бродяга, удачи тебе на дороге."
+		role="NPC"
+		nextReplies="Dlg_pl_001137" />
+
+	<Reply
+		name="Dlg_pl_001137"
+		text="Бывай. Надо бы заехать к Джо, проведать его."
+		role="PLAYER"
+		scriptResult="FailedQuest('r7m1_SaveKitty_Quest'); CompleteQuest('sin_AttackToPort_Quest'); TakeQuest('sin_FinalJoe_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001134"
+		text="Жди здесь, я приеду с деньгами."
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_PayforKitty_Quest'); CompleteQuest('sin_AttackToPort_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001127"
+		text="Да, держи. "
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()>7500"
+		nextReplies="Dlg_npc_001128" />
+
+	<Reply
+		name="Dlg_npc_001128"
+		text="Хм... ладно. Так уж и быть, отпущу я ее. И ее мужу передай, что долг погашен."
+		role="NPC"
+		nextReplies="Dlg_pl_001129" />
+
+	<Reply
+		name="Dlg_pl_001129"
+		text="Спасибо, Гарфилд. Я запомню твою доброту."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001130" />
+
+	<Reply
+		name="Dlg_npc_001130"
+		text="Удачной дороги, Бродяга."
+		role="NPC"
+		nextReplies="Dlg_pl_001131" />
+
+	<Reply
+		name="Dlg_pl_001131"
+		text="Пока."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(5000); AddPlayerMoney(-7500); TActivate('trChangeLogoPlayer'); CompleteQuest('sin_AttackToPort_Quest'); CompleteQuest('r7m1_SaveKitty_Quest'); StartConversation('Sin_Kitty')" />
+
+	<Reply
+		name="Dlg_pl_001118"
+		text="Спасибо, босс. Удачной вам жизни. Надо бы заехать к Джо, навестить его."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_AttackToPort_Quest'); TakeQuest('sin_FinalJoe_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
+
+	<Reply
+		name="Garfield11_DLG"
+		text="Деньги достал?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_PayforKitty_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001139 Dlg_pl_001140" />
+
+	<Reply
+		name="Dlg_pl_001140"
+		text="Пока нет."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001139"
+		text="Да, держи."
+		role="PLAYER"
+		scriptCondition="GetPlayerMoney()>7500"
+		nextReplies="Dlg_npc_001141" />
+
+	<Reply
+		name="Dlg_npc_001141"
+		text="Хм... ладно. Так уж и быть, отпущу я ее. И ее мужу передай, что долг погашен."
+		role="NPC"
+		nextReplies="Dlg_pl_001142" />
+
+	<Reply
+		name="Dlg_pl_001142"
+		text="Спасибо, Гарфилд. Я запомню твою доброту."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001143" />
+
+	<Reply
+		name="Dlg_npc_001143"
+		text="Удачной дороги, Бродяга."
+		role="NPC"
+		nextReplies="Dlg_pl_001144" />
+
+	<Reply
+		name="Dlg_pl_001144"
+		text="Пока."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(-7500); CompleteQuest('r7m1_SaveKitty_Quest'); CompleteQuest('sin_PayforKitty_Quest'); StartConversation('Sin_Kitty')" />
 <!--Root/Sin/Могильщик-->
 	<Reply
 		name="Graveman1_DLG"
@@ -5894,6 +6263,7 @@
 		name="Kitty3_DLG"
 		text="..."
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_SaveKitty_Quest')==Q_TAKEN and QuestStatus('sin_BackCatsBlock_Quest')==Q_COMPLETED and not(QuestStatus('sin_DefendChurch_Quest')==Q_TAKEN) and GetCurNpc():GetSpokenCount() == 0"
 		nextReplies="Dlg_pl_001079" />
 
 	<Reply
@@ -5995,6 +6365,67 @@
 	<Reply
 		name="Dlg_pl_001105"
 		text="Не переживай, что-нибудь придумаю. А пока сидим тихо и притворяемся, что мы не болтали. Увидимся."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount(1); StartConversation('Sin_Garfield')" />
+
+	<Reply
+		name="Kitty4_DLG"
+		text="Ты спас меня. Почему?"
+		role="NPC"
+		scriptCondition="QuestStatus('r7m1_SaveKitty_Quest')==Q_COMPLETED and getObj('sinJessIerihon'):IsActivated() == 0"
+		nextReplies="Dlg_pl_001146" />
+
+	<Reply
+		name="Dlg_pl_001146"
+		text="Почему? Знал я одну, вроде тебя, да вот ей помочь никто не смог. Поехали, я отвезу тебя к твоему мужу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001147" />
+
+	<Reply
+		name="Dlg_npc_001147"
+		text="Он в Западном Иерихоне живет. Поехали туда."
+		role="NPC"
+		nextReplies="Dlg_pl_001148" />
+
+	<Reply
+		name="Dlg_pl_001148"
+		text="Понял."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_PayforKitty_Quest'); TActivate('sinJessIerihon'); EndConversation()" />
+
+	<Reply
+		name="Kitty5_DLG"
+		text="Это ты?"
+		role="NPC"
+		scriptCondition="QuestStatus('r7m1_SaveKitty_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001165" />
+
+	<Reply
+		name="Dlg_pl_001165"
+		text="Да. Поехали отсюда, пока никого нет. Я отвезу тебя на старую ферму, там спрячься."
+		role="PLAYER" />
+
+	<Reply
+		name="Dlg_npc_001138"
+		text="Мы на месте. В чем твой план?"
+		role="NPC"
+		nextReplies="Dlg_pl_001166" />
+
+	<Reply
+		name="Dlg_pl_001166"
+		text="Все очень просто. Я пока спрячу тебя здесь, чтобы коты не заподозрили меня в чем-то. Если Коты начнут тебя искать, я приеду сюда вместе с твоим мужем. Кстати, где он живет?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001169" />
+
+	<Reply
+		name="Dlg_npc_001169"
+		text="Наш дом в Западном Иерихоне. Там пойщи мужа."
+		role="NPC"
+		nextReplies="Dlg_pl_001170" />
+
+	<Reply
+		name="Dlg_pl_001170"
+		text="Понял. Жди меня здесь."
 		role="PLAYER" />
 <!--Root/Sin/Муж Джес-->
 	<Reply
@@ -6045,11 +6476,23 @@
 		text="Это единственный вариант."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_Husband_Quest'); TActivate('OldFarm_tr'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001167"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_001168" />
+
+	<Reply
+		name="Dlg_pl_001168"
+		text="Ты муж Китти?"
+		role="PLAYER" />
 <!--Root/Sin/Опциональные--><!--Root/Sin/Выборы-->
 	<Reply
 		name="Vibor_DLG"
 		text="Хм... может им заплатить, чтобы они до меня не докапывались?"
 		role="NPC"
+		scriptCondition="QuestStatus('r7m1_PosilkaForJoe_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000986 Dlg_pl_000987" />
 
 	<Reply
@@ -6065,20 +6508,23 @@
 		scriptResult="TActivate('sinArlekinGangPay'); EndConversation()" />
 
 	<Reply
-		name="Dlg_npc_001075"
+		name="Vibor2_DLG"
 		text="Во время отдыха я заметил ту самую девушку, которую я видел перед кошкином домом. По слухам ее зовут Китти, которая и является дочерью матушки из Кристи. Может подойти к ней и разузнать как она оказалась у Котов в заложниках?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_KillArlekinBlock_Quest')==Q_COMPLETED or QuestStatus('sin_BlockNoArl_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_pl_001076 Dlg_pl_001077" />
 
 	<Reply
 		name="Dlg_pl_001077"
 		text="*Не подходить*"
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="StartConversation('Sin_Garfield')" />
 
 	<Reply
 		name="Dlg_pl_001076"
 		text="*Подойти*"
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="StartConversation('Sin_Kitty')" />
 <!--Root/Sin/Должники-->
 	<Reply
 		name="Dolzhnik_DLG"
@@ -6294,7 +6740,7 @@
 		name="Dlg_pl_001074"
 		text="Язык пушек мне знаком с самой молодости."
 		role="PLAYER"
-		scriptResult="SetTolerance(1100, 1195, RS_ENEMY); EndConversation()" />
+		scriptResult="SetTolerance(1100, 1195, RS_ENEMY); TakeQuest('sin_LieBuyersKill_Quest'); TActivate('trDieBlockDis'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001067"
@@ -6312,7 +6758,7 @@
 		name="Dlg_pl_001069"
 		text="Ага-ага..."
 		role="PLAYER"
-		scriptResult="TActivate('trfterBlockDis'); EndConversation()" />
+		scriptResult="TakeQuest('sin_LieBuyersKill_Quest'); TActivate('trfterBlockDis'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001063"
@@ -6334,9 +6780,10 @@
 		scriptResult="AddPlayerMoney(-1000); TActivate('trfterBlockDis'); EndConversation()" />
 <!--Root/Sin/Отец Патрик-->
 	<Reply
-		name="Dlg_npc_001086"
+		name="PatrickDad_DLG"
 		text="Что тебя привело в мою обитель, сын мой?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_GoToChurchDef_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001094" />
 
 	<Reply
@@ -6354,5 +6801,6 @@
 	<Reply
 		name="Dlg_pl_001096"
 		text="Как раз таки может, а вот кстати и они."
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_GoToChurchDef_Quest'); TActivate('trSpawnDogsChurch'); LeaveTown()" />
 </DialogsResource>

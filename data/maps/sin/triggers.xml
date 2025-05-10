@@ -50,6 +50,7 @@
 				TActivate("sinKittyinTrap")
 				TakeQuest("sin_ComeToCats_Quest")
 				TakeQuest("sin_ComeToDogs2_Quest")
+				AddImportantFadingMsg("Вы получили несколько заданий.")
 			end
 		</script>
 	</trigger>
@@ -61,6 +62,7 @@
 			trigger:Deactivate()
 			CompleteQuest("sin_KillArlekin_Quest")
 			TActivate("sinAfterArlekin")
+			AddImportantFadingMsg("Вы получили несколько заданий.")
 		</script>
 	</trigger>
 
@@ -118,6 +120,19 @@
 
 			SetTolerance(1100, 1104, RS_ENEMY)	
 			SetTolerance(1100, 1106, RS_ALLY)
+			
+		</script>
+	</trigger>
+
+<!--Меняем лого котов на игрока-->
+	<trigger Name="trChangeLogoPlayer" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			getObj("Player1"):SetProperty("Logo","16")
+
+			SetTolerance(1100, 1103, RS_ALLY)
 			
 		</script>
 	</trigger>
@@ -229,9 +244,19 @@
 				return
 			end
 
+			local Arg = getObj("ArGuy_vehicle_0")
+			if Arg then
+				Arg:setGodMode(0)
+			end
+
+			local Arg1 = getObj("ArGuy1_vehicle_0")
+			if Arg1 then
+				Arg1:setGodMode(0)
+			end
+
 			CompleteQuest("sin_KillBlock_Quest")
 
-			TActivate("sinAfterBlock")
+			StartConversation("Sin_TraitorDog")
 		</script>
 	</trigger>		
 
@@ -251,8 +276,216 @@
 				DTr1:Remove()
 			end
 
+			CompleteQuest("sin_LieBuyersKill_Quest")
+
 		</script>
 	</trigger>
+
+<!--Умерли подкупленные-->
+	<trigger Name="trDieBlockDis" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ArGuy_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="ArGuy1_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 2>count then
+				return
+			end
+			trigger:Deactivate()
+
+			CompleteQuest("sin_LieBuyersKill_Quest")
+
+		</script>
+	</trigger>
+
+<!--Спавн Псов у Церкви-->
+	<trigger Name="trSpawnDogsChurch" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_Church")
+			if town then
+				town:SetOpenGateToPlayer(false)
+			end
+
+			CreateTeam("DogChirch1", 1104, {CVector(getPos("sin_Scout02Church_loc"))}, {"Sml301"}, nil, nil, {})
+			CreateTeam("DogChirch2", 1104, {CVector(getPos("sin_Bug02Church_loc"))}, {"Sml201"}, nil, nil, {})
+			CreateTeam("DogChirch3", 1104, {CVector(getPos("sin_Sml03Church_loc"))}, {"Scout02"}, nil, nil, {})
+
+			TActivate("trDieDogsChirch")
+		</script>
+	</trigger>
+
+<!--Псы у церкви умерли-->
+	<trigger Name="trDieDogsChirch" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="DogChirch1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogChirch2_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogChirch3_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 3>count then
+				return
+			end
+
+			local town = GetEntityByName ("Sin_Church")
+			if town then
+				town:SetOpenGateToPlayer(true)
+			end
+
+			CompleteQuest("sin_DefendChirchNow_Quest")
+
+			AddImportantFadingMsg("Вы получили несколько заданий.")
+
+			TActivate("sinDogsChurch")
+		</script>
+	</trigger>	
+
+<!--Спавн псов и котов у Иерихона-->
+	<trigger Name="trSpawnBattleIerihon" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="cinDealKitty_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("Dog1", 1104, { CVector(getPos("sin_BornCar_loc"))}, {"r1m1_bug03"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+			CreateTeam("Dog2", 1104, { CVector(getPos("sin_Scout02_1_loc"))}, {"Scout02"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+			CreateTeam("Dog3", 1104, { CVector(getPos("sin_sml2_1_loc"))}, {"Scout01"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+			CreateTeam("Dog4", 1104, { CVector(getPos("sin_sml3_loc"))}, {"r1m3_hunter02"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+
+			CreateTeam("Egoist", 1106, { CVector(getPos("sin_EgoistCar_loc"))}, {"EgoistCar"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+			CreateTeam("Cat3", 1106, { CVector(getPos("sin_GarfieldCar_loc"))}, {"Fighter02"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+			CreateTeam("Cat1", 1106, { CVector(getPos("sin_sml2_loc"))}, {"Bug01"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+			CreateTeam("Cat2", 1106, { CVector(getPos("sin_sml1_loc"))}, {"Scout03"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})	
+
+			local Egoc = GetEntityByName("Egoist_vehicle_0")
+			if Egoc then
+				Egoc:setGodMode(1)
+			end
+
+			CompleteQuest("sin_GoToIerihonBattle_Quest")
+
+			TActivate("trDieDogsIerihon")		
+		</script>
+	</trigger>
+
+<!--Псы умерли в Иерихоне-->
+	<trigger Name="trDieDogsIerihon" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Dog1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Dog2_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Dog3_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Dog4_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 4>count then
+				return
+			end
+
+			TActivate("sinFreeEastIerihon")
+
+			CompleteQuest("sin_ShootToHellIerihon_Quest")
+		</script>
+	</trigger>	
+
+<!--Максим в инвентарь-->
+	<trigger Name="trGiveMaxim" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddPlayerGunsWithRandomAffix ("maxim01",1,10,"maxim01")
+		</script>
+	</trigger>
+
+<!--Едем к Псам шутрмовать-->
+	<trigger Name="trSpawnCatsFinal" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("Garfield", 1106, {CVector(getPos("Sin_C1_C_loc"))}, {"GarfieldCar"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+			CreateTeam("EgoistC", 1106, {CVector(getPos("Sin_K_C_loc"))}, {"EgoistCar"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+
+			CreateTeam("ChCar1", 1107, {CVector(getPos("Sin_D2_C_loc"))}, {"Sml201"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+			CreateTeam("ChCar2", 1107, {CVector(getPos("Sin_C3_C_loc"))}, {"Scout01"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+
+			CreateTeam("IeCar1", 1103, {CVector(getPos("Sin_C2_C_loc"))}, {"Sml101"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+			CreateTeam("IeCar2", 1103, {CVector(getPos("Sin_P_C_loc"))}, {"Sml301"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+			CreateTeam("IeCar3", 1103, {CVector(getPos("Sin_D1_C_loc"))}, {"Sml301"}, CVector(getPos("SinDogHouse_enter")), nil, {Quaternion(0.027, -0.953, 0.014, 0.301)})
+
+			local Egoc = GetEntityByName("EgoistC_vehicle_0")
+			if Egoc then
+				Egoc:setGodMode(1)
+			end
+
+			local Garc = GetEntityByName("Garfield_vehicle_0")
+			if Garc then
+				Garc:setGodMode(1)
+			end
+
+
+		</script>
+	</trigger>
+
+<!--Псы умерли в Порту-->
+	<trigger Name="trDieDogsPort" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar2_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar3_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar4_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar5_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar6_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar7_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar8_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="DogCar9_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 9>count then
+				return
+			end
+
+			local Egoc = GetEntityByName("EgoistC_vehicle_0")
+			if Egoc then
+				Egoc:Remove()
+			end
+
+			local Garc = GetEntityByName("Garfield_vehicle_0")
+			if Garc then
+				Garc:Remove()
+			end
+
+			local Chc1 = GetEntityByName("ChCar1_vehicle_0")
+			if Chc1 then
+				Chc1:Remove()
+			end
+
+			local Chc2 = GetEntityByName("ChCar2_vehicle_0")
+			if Chc2 then
+				Chc2:Remove()
+			end
+
+			local Iec1 = GetEntityByName("IeCar1_vehicle_0")
+			if Iec1 then
+				Iec1:Remove()
+			end
+
+			local Iec2 = GetEntityByName("IeCar2_vehicle_0")
+			if Iec2 then
+				Iec2:Remove()
+			end
+
+			local Iec3 = GetEntityByName("IeCar3_vehicle_0")
+			if Iec3 then
+				Iec3:Remove()
+			end
+
+			TActivate("sinCatVictory")
+
+			SetTolerance(1100, 1104, RS_ALLY)
+		</script>
+	</trigger>	
 
 <!--Диалог с Эгоистом после Сан-рафаэля (выключено)-->
 	<trigger Name="SanRafael_Kill_tr" active="0">

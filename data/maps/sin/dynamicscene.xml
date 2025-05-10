@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="5299">
+	LastId="5311">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
@@ -75,7 +75,7 @@
 		Name="Sin_Cross_loc"
 		Belong="1100"
 		Prototype="location"
-		Pos="3033.563 219.680 2026.593"
+		Pos="3015.489 218.407 2002.276"
 		Radius="50.000" />
 
 	<Object
@@ -157,7 +157,16 @@
 				ModelName="r2_man"
 				skin="3"
 				cfg="294"
-				helloReplyNames="Joe1_DLG Joe2_DLG Joe4_DLG Joe3_DLG"
+				helloReplyNames="Joe1_DLG Joe2_DLG Joe4_DLG Joe3_DLG Joe5_DLG"
+				SpokenCount="0" />
+
+			<Object
+				Name="Sin_Garfield1"
+				Belong="1103"
+				Prototype="NPC"
+				ModelName="r2_man"
+				cfg="132"
+				helloReplyNames="Garfield8_DLG Garfield9_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -384,6 +393,15 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="Sin_JessDriver"
+				Belong="1103"
+				Prototype="NPC"
+				ModelName="r2_man"
+				cfg="200"
+				helloReplyNames="Jess1_DLG"
+				SpokenCount="0" />
+
+			<Object
 				Name="Sin_Debt1"
 				Belong="1103"
 				Prototype="NPC"
@@ -556,15 +574,6 @@
 				skin="2"
 				cfg="40"
 				helloReplyNames="DogTraitor_DLG"
-				SpokenCount="0" />				
-
-			<Object
-				Name="Sin_JessDriver"
-				Belong="1103"
-				Prototype="NPC"
-				ModelName="r2_man"
-				cfg="200"
-				helloReplyNames="Jess1_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -772,7 +781,7 @@
 				Prototype="NPC"
 				ModelName="r2_man"
 				cfg="132"
-				helloReplyNames="Garfield1_DLG Garfield2_DLG Garfield3_DLG Garfield4_DLG Garfield5_DLG Garfield6_DLG"
+				helloReplyNames="Garfield1_DLG Garfield2_DLG Garfield3_DLG Garfield4_DLG Garfield5_DLG Garfield6_DLG Garfield7_DLG Garfield10_DLG Garfield11_DLG"
 				SpokenCount="0" />
 
 			<Object
@@ -782,7 +791,7 @@
 				ModelName="r2_woman"
 				skin="1"
 				cfg="125"
-				helloReplyNames="Kitty1_DLG"
+				helloReplyNames="Kitty1_DLG Kitty3_DLG Kitty4_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -836,7 +845,7 @@
 
 	<Object
 		Name="Sin_DogHouse"
-		Belong="1104"
+		Belong="1103"
 		Prototype="SinVillage1"
 		Pos="2039.712 259.763 608.693"
 		PointOfViewInInterface="5.000 20.000 5.000"
@@ -849,11 +858,11 @@
 		IsBuyingDrugs="0">
 		<Object
 			Name="Sin_DogHouse_Bar"
-			Belong="1104"
+			Belong="1103"
 			Prototype="barWithoutBarman">
 			<Object
 				Name="Sin_Kitty_Trapped"
-				Belong="1104"
+				Belong="1103"
 				Prototype="NPC"
 				ModelName="r2_woman"
 				skin="1"
@@ -864,7 +873,7 @@
 
 		<Object
 			Name="Sin_DogHouse_enter"
-			Belong="1104"
+			Belong="1103"
 			Prototype="location"
 			Pos="2065.241 247.683 594.454"
 			Radius="40.000" />
@@ -942,6 +951,15 @@
 				skin="3"
 				cfg="77"
 				helloReplyNames="Graveman1_DLG Graveman2_DLG"
+				SpokenCount="0" />
+			
+			<Object
+				Name="Sin_Father"
+				Belong="1107"
+				Prototype="NPC"
+				ModelName="r2_man"
+				cfg="326"
+				helloReplyNames="PatrickDad_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -1243,21 +1261,21 @@
 		Name="Sin_P_C_loc"
 		Belong="1100"
 		Prototype="location"
-		Pos="2851.267 202.159 1852.180"
+		Pos="3064.787 222.658 2010.545"
 		Radius="5.000" />
 
 	<Object
 		Name="Sin_C1_C_loc"
 		Belong="1100"
 		Prototype="location"
-		Pos="3033.391 219.656 2059.925"
+		Pos="3039.312 219.825 2051.309"
 		Radius="5.000" />
 
 	<Object
 		Name="Sin_C2_C_loc"
 		Belong="1100"
 		Prototype="location"
-		Pos="3079.500 223.596 2032.853"
+		Pos="3071.721 222.838 2027.311"
 		Radius="5.000" />
 
 	<Object
@@ -1271,14 +1289,14 @@
 		Name="Sin_D1_C_loc"
 		Belong="1100"
 		Prototype="location"
-		Pos="2826.470 202.793 1877.672"
+		Pos="3082.176 224.683 2008.566"
 		Radius="5.000" />
 
 	<Object
 		Name="Sin_D2_C_loc"
 		Belong="1100"
 		Prototype="location"
-		Pos="2878.918 199.562 1832.777"
+		Pos="3007.946 216.382 2080.414"
 		Radius="5.000" />
 
 	<Object
@@ -1390,7 +1408,7 @@
 		Name="Sin_K_C_loc"
 		Belong="1001"
 		Prototype="genericLocation"
-		Pos="3049.776 220.427 2043.135"
+		Pos="3053.331 220.706 2041.094"
 		Radius="5.000" />
 
 	<Object
@@ -1475,13 +1493,6 @@
 		Belong="1100"
 		Prototype="location"
 		Pos="1543.641 213.568 1533.368"
-		Radius="300.000" />
-
-	<Object
-		Name="Cross_Out"
-		Belong="1100"
-		Prototype="location"
-		Pos="3026.693 219.340 2019.502"
 		Radius="300.000" />
 
 	<Object
@@ -11900,8 +11911,8 @@
 		Name="cinDealKitty_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="2663.565 187.851 1511.008"
-		Radius="130.000" />
+		Pos="2592.372 193.033 1519.189"
+		Radius="180.000" />
 
 	<Object
 		Name="sin_Scout01Ch_loc"
@@ -12013,7 +12024,7 @@
 		Belong="1100"
 		Prototype="NPC"
 		ModelName="NewHero_mask"
-		helloReplyNames="Vibor_DLG"
+		helloReplyNames="Vibor_DLG Vibor2_DLG"
 		SpokenCount="0" />
 
 	<Object
@@ -12080,13 +12091,97 @@
 		Radius="50.000" />
 
 	<Object
-		Belong="1100"
-		Prototype="vehicleRecollection" />
-
-	<Object
 		Name="KillBlockPlayer_loc"
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="3391.329 289.234 818.730"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Sml03Church_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2573.029 251.240 2884.459"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Bug02Church_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2541.345 249.675 2874.927"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Scout02Church_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2503.918 247.718 2882.555"
+		Radius="10.000" />
+
+	<Object
+		Belong="1100"
+		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="sin_sml02Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3534.955 215.176 2113.586"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Scout02Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3561.732 210.583 2142.522"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_sml03Fin2_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3538.924 214.522 2171.806"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_sml03Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3518.506 215.434 2146.021"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Bug02Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3663.355 204.316 2131.823"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Scout03Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3625.643 203.893 2147.244"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Molokovoz01Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3702.276 200.260 2196.558"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Bug03Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3675.577 199.907 2200.836"
+		Radius="10.000" />
+
+	<Object
+		Name="sin_Hunter01Fin_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="3661.061 202.617 2160.576"
 		Radius="10.000" />
 </DynamicScene>

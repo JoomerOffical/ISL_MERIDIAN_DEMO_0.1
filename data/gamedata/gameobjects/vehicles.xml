@@ -2059,6 +2059,19 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 
 	<Prototype
 		Class			= "Vehicle"
+		Name			= "GarfieldCar"
+		VisibleInEncyclopedia	= "false"
+		ParentPrototype 	= "Fighter">
+		<Parts>
+			<Part id = "CABIN"			Prototype = "fighterCab02" />
+			<Part id = "CABIN_SMALL_GUN"		Prototype = "kord01" />  
+			<Part id = "CABIN_BIG_GUN_2"		Prototype = "flag01" /> 
+			<Part id = "BASKET"			Prototype = "fighterCargo01" />
+		</Parts>
+	</Prototype>
+
+	<Prototype
+		Class			= "Vehicle"
 		Name			= "Fighter03"
 		VisibleInEncyclopedia	= "false"
 		ParentPrototype 	= "Fighter">

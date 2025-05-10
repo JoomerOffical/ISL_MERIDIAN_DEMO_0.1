@@ -1748,6 +1748,19 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_ComeToGato_Quest"
+		briefDiz="Вернуться к Тете Гато"
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="Kristy" />
+
+		<Map
+			name="sin"
+			targetObjName="ToR7M1" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="r7m1_ComeToMayak_Quest"
 		briefDiz="Вернуться на Маяк"
 		isMainQuest="1">
@@ -1781,7 +1794,8 @@
 		briefDiz="Искать Китти в Иерихоне"
 		isMainQuest="1">
 		<Map
-			name="r7m1" />
+			name="r7m1"
+			targetObjName="ToR7M2" />
 
 		<Map
 			name="sin" />
@@ -1847,6 +1861,19 @@
 		<Map
 			name="r7m3"
 			targetObjName="ToR7M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_GoToJess_Quest"
+		briefDiz="Отвезти Китти мужу"
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="ToR7M2" />
+
+		<Map
+			name="sin"
+			targetObjName="Sin_EastIerihon" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -1924,7 +1951,8 @@
 		briefDiz="Спасти Китти каким-то способом"
 		isMainQuest="1">
 		<Map
-			name="r7m1" />
+			name="r7m1"
+			targetObjName="ToR7M2" />
 
 		<Map
 			name="sin" />
@@ -2230,6 +2258,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_AttackToPort_Quest"
+		briefDiz="Уничтожить оставшихся Псов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_BDWI1_Quest"
 		briefDiz="Выбить долг с первого бизнесмена"
 		isMainQuest="1">
@@ -2521,6 +2558,21 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_DefendChirchNow_Quest"
+		briefDiz="Защитить церковь"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_Church" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_DefendChurch_Quest"
+		briefDiz="Оборонять церковь"
+		fullDiz="По словам Гарфилда псы хотят атаковать Церковь Колеса. Что ж, защитим святых людей."
+		isMainQuest="1" />
+
+	<QuestInfo
 		questName="sin_DestroyEnter_Quest"
 		briefDiz="Перебить псов у въезда"
 		isMainQuest="1">
@@ -2555,10 +2607,30 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_FinalJoe_Quest"
+		briefDiz="Заехать к Джо"
+		fullDiz="После всего того, что произошло в Иерихоне, надо бы навестить Джо."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_Final_Quest"
 		briefDiz="Начать войну с бандами"
 		fullDiz="Псы прознали, что это я создаю проблемы, но если я скроюсь, Псы возможно подумают, что я у Котов. Надо закончить, что я начал."
 		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_FreeKittyCat_Quest"
+		briefDiz="Спрятать Китти"
+		fullDiz="Надо спрятать Китти на старой ферме, чтобы коты не заподозрили мое долгое отсутствие."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_DogHouse" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_FreedomJoe_Quest"
@@ -2594,6 +2666,48 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_GoToCatsPort_Quest"
+		briefDiz="Добраться до Котов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_Cross_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToChurchDef_Quest"
+		briefDiz="Добраться до Церкви"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_Church" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToHellIerihon_Quest"
+		briefDiz="Битва за Иерихон"
+		fullDiz="Псы начали штурмовать Иерихон. Это будет великая битва."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_GoToIerihonBattle_Quest"
+		briefDiz="Добраться до Иерихона"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToKittyCat_Quest"
+		briefDiz="Вернуться в Кошкин Дом"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_GoToSR_Quest"
 		briefDiz="Добраться до Сан-Рафаэля"
 		isMainQuest="1">
@@ -2603,12 +2717,30 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_HideKittyCat_Quest"
+		briefDiz="Спрятать Китти на Ферме"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_DogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_Husband_Quest"
 		briefDiz="Найти мужа в Сан-Рафаэле"
 		isMainQuest="1">
 		<Map
 			name="sin"
-			targetObjName="Sin_SanRafael" />
+			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_IerihonGarfield_Quest"
+		briefDiz="Пообщаться с Гарфилдом"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2719,6 +2851,25 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_LieBuyersKill_Quest"
+		briefDiz="Прибить подкупленных"
+		fullDiz="Я решил прикарманить себе денюшку, а их прибить, чтобы не было проблем."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_PayforKitty_Quest"
+		briefDiz="Накопить денег для выкупа"
+		fullDiz="Гарфилд готов отдать Китти за 7500. Накоплю деньжат и выкуплю сразу."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_PosilkaForJoe_Quest"
 		briefDiz="Доставить посылку для друга Леонеля"
 		fullDiz="Леонель попросил в качестве отдачи долга за спасение моей тачки"
@@ -2752,6 +2903,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_ShootToHellIerihon_Quest"
+		briefDiz="Уничтожить псов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_ToIerihon_Quest"
 		briefDiz="Отправится на Свободные Земли"
 		isMainQuest="1">
@@ -2771,4 +2931,10 @@
 			name="sin"
 			targetObjName="Sin_DogHouse" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_WarforPort_Quest"
+		briefDiz="Штурм логова Псов"
+		fullDiz="Церковь Колеса отвернулся от Псов. Псы потеряли Восточный Иерихон. Теперь они загнаны в угол, точнее в порт. Пора добить их."
+		isMainQuest="1" />
 </QuestInfoResource>

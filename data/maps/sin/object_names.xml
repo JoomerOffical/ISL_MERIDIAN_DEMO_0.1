@@ -35,6 +35,7 @@
 	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
 	<Object   	Name="Sin_Bulldog" 					FullName = "Борн"/>
 	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд"/>
+	<Object	    Name="Sin_Garfield1" 				FullName = "Гарфилд"/>
 	<Object  	Name="Sin_BlackWood" 				FullName = "Блэквуд"/>
 	<Object   	Name="Sin_Egoist" 					FullName = "Эгоист"/>
 	<Object		Name="Sin_Kitty_Trapped" 			FullName = "Крошка Китти"/>

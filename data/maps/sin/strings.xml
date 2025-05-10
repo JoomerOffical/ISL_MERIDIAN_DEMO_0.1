@@ -1045,9 +1045,140 @@
 	<string
 		id="6500"
 		modelName="NewHero_mask"
-		value ="БРОДЯГА|Вряд ли я смогу здесь проехать. Должен быть другой путь."
-		sound="data\sounds\Speech\sin\sin_6500_nomad.ogg"
+		value ="БРОДЯГА|Гарфилд, церковь защищена, псы побеждены."
+		sound=""
 		time="3" />
+
+	<string
+		id="6501"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value ="ГАРФИЛД|Молодец, но нам нужна помощь. Псы приближаются к Западному Иерихону. Они хотят взять под контроль весь Иерихон, отпраавляйся в пекло. Все наши там. Отбой."
+		sound=""
+		time="10" />
+
+	<string
+		id="6502"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Хмм... Раз он говорит, что все на поле битвы, то это мой шанс спасти Китти, хотя может забить на нее?"
+		sound=""
+		time="7" />
+
+	<string
+		id="6510"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="1"
+		value="ЭГОИСТ|Получилось! Теперь весь Иерихон наш. Все получилось."
+		sound=""
+		time="4" />
+
+	<string
+		id="6511"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Да, похоже все идет к завершению. Ладно, зайду-ка я в город."
+		sound=""
+		time="3" />
+
+	<string
+		id="6520"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value ="ГАРФИЛД|Все в сборе? Слушаем план."
+		sound=""
+		time="3" />
+
+	<string
+		id="6521"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value ="ГАРФИЛД|Псов осталось девятеро, и они хорошо вооружены. Будьте аккуратны. Возможно у нас будут потери, но мы должны до конца избавиться от псов. Все готовы?"
+		sound=""
+		time="12" />
+
+	<string
+		id="6522"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Я лично готов, вперед."
+		sound=""
+		time="3" />
+
+	<string
+		id="6530"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value ="ГАРФИЛД|Победа! Это победа, ребята. Вы все молодцы. Давайте же отпразднуем это дело."
+		sound=""
+		time="6" />
+
+	<string
+		id="6531"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="1"
+		value="ЭГОИСТ|Согласен. Я уже давно не пил."
+		sound=""
+		time="4" />
+
+	<string
+		id="6540"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Это твой муж?"
+		sound=""
+		time="3" />
+
+	<string
+		id="6541"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Да, это он. Джесс! Джесси."
+		sound=""
+		time="4" />
+
+	<string
+		id="6542"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|Китти. Любовь моя! Ты в порядке. А это кто?"
+		sound=""
+		time="5" />
+
+	<string
+		id="6543"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Тот, кто освободил твою жену из заточения. Вам пора уезжать. В Кристи Китти ждет ее мама."
+		sound=""
+		time="7" />
+
+	<string
+		id="6544"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|А ты?"
+		sound=""
+		time="2" />
+
+	<string
+		id="6545"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|У меня осталась пара дел. Одна из них - навестить Джо. До встречи в Кристи."
+		sound=""
+		time="7" />
 
 	<string
 		id="8801"
@@ -1066,5 +1197,12 @@
 		modelName="NewHero_mask"
 		value="БРОДЯГА|Какое-то странное место. Лучше держаться отсюда подальше."
 		sound="data\sounds\Speech\r5m1\r5m1_8803_nomad.ogg"
+		time="5" />
+
+	<string
+		id="8804"
+		modelName=""
+		value="СПУCТЯ КАКОЕ-ТО ВРЕМЯ..."
+		sound=""
 		time="5" />
 </resource>

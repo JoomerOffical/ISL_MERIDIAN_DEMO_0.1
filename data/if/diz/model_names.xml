@@ -41,6 +41,11 @@
 		value="Кевин" />
 
 	<Item
+		id="GarfieldCar"
+		locForm="0"
+		value="Гарфилд" />
+
+	<Item
 		id="UralTreasure"
 		locForm="0"
 		value="Торговец" />
@@ -50,7 +55,7 @@
 		locForm="0"
 		value="Вэн" />
 
-		<Item
+	<Item
 		id="bottles_of_wine"
 		locForm="0"
 		value="Бутылки вина" />

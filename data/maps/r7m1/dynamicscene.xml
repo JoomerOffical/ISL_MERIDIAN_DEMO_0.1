@@ -1786,6 +1786,16 @@
 				cfg="38"
 				helloReplyNames="DrunkM_DLG DrunkM2_DLG"
 				SpokenCount="0" />
+			
+			<Object
+				Name="BattleRevol_NPC"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="3"
+				cfg="86"
+				helloReplyNames="Optional2_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -1881,7 +1891,7 @@
 				ModelName="r1_woman"
 				skin="2"
 				cfg="88"
-				helloReplyNames="Mother1_DLG"
+				helloReplyNames="Mother1_DLG Mother2_DLG Mother3_DLG"
 				SpokenCount="0" />	
 
 			<Object

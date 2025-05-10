@@ -3,255 +3,342 @@
 <Perks>
 	<Perk name	= "adventurer">
 		<Counter 	name = "None" value = "1" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "MoneyToWaresRatio"			value = "50" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "MoneyToWaresRatio"			value = "50" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "MoneyToWaresRatio"			value = "50" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "MoneyToWaresRatio"			value = "200" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "MoneyToWaresRatio"			value = "200" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "MoneyToWaresRatio"			value = "200" />
 		</Charisma>
 	</Perk>
+
 	<Perk name	= "lawyer">
 		<Counter 	name = "None" value = "1" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "LootChance" 				value = "110" />
 			<Stat name = "FreeCarGadgetChance" 	value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "LootChance" 				value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "LootChance" 				value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "LootChance" 				value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "LootChance" 				value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "LootChance" 				value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "LootChance" 				value = "110" />
 			<Stat name = "FreeWeaponGadgetChance"	value = "10" />
 		</Charisma>
 	</Perk>
+
 	<Perk	name	= "lucky">
-		<Counter 	name = "CriticalHitsInRow" value = "2" />
+		<Counter 	name = "CriticalHitsInRow" value = "10" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "WeaponToCarGadgetsRatio"	value = "50" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "WeaponToCarGadgetsRatio"	value = "50" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "WeaponToCarGadgetsRatio"	value = "200" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "WeaponToCarGadgetsRatio"	value = "200" />
 		</Charisma>
 	</Perk>
+	
 	<Perk name	= "millionaire">
-		<Counter 	name = "Money" value = "100000" />
+		<Counter 	name = "Money" value = "1000000" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "FreeGoodsChance"		value = "20" />
 		</Charisma>
 	</Perk>
+
 	<Perk	name	= "professional">
 		<Counter 	name = "DQCompleteInRow" value = "5" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 			<Stat name = "GunsReloadingCost"		value = "110" />
 			<Stat name = "FuelReloadingCost"		value = "90" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "DynamicQuestReward"		value = "110" />
 			<Stat name = "GunsReloadingCost"		value = "90" />
 			<Stat name = "FuelReloadingCost"		value = "110" />
 		</Charisma>
 	</Perk>
+
 	<Perk	name	= "butcher">
 		<Counter 	name = "MenKilled" value = "10" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "DecreaseGoods"			value = "1" />
 		</Charisma>
 	</Perk>
+
 	<Perk	name	= "aggressor">
 		<Counter 	name = "NeutralsQuarrelled" value = "5" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 			<Stat name = "MoneyForKilling"		value = "113" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "NeutralsDoNotHail"		value = "1" />
 			<Stat name = "MoneyForKilling"		value = "113" />
 		</Charisma>
 	</Perk>
+
 	<Perk	name	= "rogue">
 		<Counter 	name = "DQFailedInRow" value = "5" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "LoseProfitChance"		value = "20" />
 			<Stat name = "OnlyTradeDQ"				value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "LoseProfitChance"		value = "20" />
 			<Stat name = "OnlyTradeDQ"				value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "LoseProfitChance"		value = "20" />
 			<Stat name = "OnlyTradeDQ"				value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "LoseProfitChance"		value = "20" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "LoseProfitChance"		value = "20" />
 			<Stat name = "OnlyCombatDQ"				value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "LoseProfitChance"		value = "20" />
 			<Stat name = "OnlyCombatDQ"				value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "LoseProfitChance"		value = "20" />
 			<Stat name = "OnlyCombatDQ"				value = "1" />
 		</Charisma>
 	</Perk>
+
 	<Perk name	= "smuggler">
 		<Counter 	name = "None" value = "1" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 			<Stat name = "WeaponCost"				value = "90" />
 		</Charisma>
+		
 		<Charisma 	value	= "-3"	>
 			<Stat name = "PreferDrugsDQ"			value = "1" />
 			<Stat name = "WeaponCost"				value = "90" />
 		</Charisma>
 	</Perk>
+
 	<Perk	name	= "maniac">
-		<Counter name = "VehiclesKilled" value = "100" />
+		<Counter name = "VehiclesKilled" value = "1000" />
+
 		<Charisma 	value	= "3"	>
 			<Stat name = "RepairCost"				value = "90" />
 			<Stat name = "FreeRepairChance"			value = "10" />
 		</Charisma>
+
 		<Charisma 	value	= "2"	>
 			<Stat name = "RepairCost"				value = "90" />
 		</Charisma>
+
 		<Charisma 	value	= "1"	>
 			<Stat name = "RepairCost"				value = "90" />
 		</Charisma>
+
 		<Charisma 	value	= "0"		>
 			<Stat name = "RepairCost"				value = "90" />
 		</Charisma>
+
 		<Charisma 	value	= "-1"	>
 			<Stat name = "RepairCost"				value = "90" />
 		</Charisma>
+
 		<Charisma 	value	= "-2"	>
 			<Stat name = "RepairCost"				value = "90" />
 		</Charisma>
+
 		<Charisma 	value	= "-3"	>
 			<Stat name = "RepairCost"				value = "90" />
 		</Charisma>
+	</Perk>
+
+	<Perk name	= "ierihon_heroes">
+		<Counter 	name = "None" value = "1" />
+	</Perk>
+
+	<Perk name	= "cat_heroes">
+		<Counter 	name = "None" value = "1" />
 	</Perk>
 </Perks>

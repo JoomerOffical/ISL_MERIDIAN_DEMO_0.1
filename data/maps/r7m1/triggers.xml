@@ -54,36 +54,24 @@
 		</script>
 	</trigger>
 
-<!--Правосудие над бандитами-->
+<!--Правосудие над бандитами. Спавн-->
 	<trigger Name="trSpawnMestEd" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate() 
 
-			CreateTeam ("MestEd", 1101, CVector(getPos("MestEd_loc")), {"Scout01", "Scout02"}, nil, nil, nil)
 			CreateTeam ("MestBandits", 1105, CVector(getPos("MestBandits_loc")), {"r1m1_sml03", "r1m1_sml03", "r1m1_sml02", "r1m1_sml04"}, nil, nil, nil)
+			CreateTeam ("MestEd", 1101, CVector(getPos("MestEd_loc")), {"Scout01", "Scout02"}, CVector(getPos("MestBandits_loc")), nil, nil)
 
-			local edteam1 = GetEntityByName("MestEd")
-			if edteam1 then
-				edteam1:SetDestination(CVector(getPos("MestBandits_loc")))
-				edteam1:SetCruisingSpeed(100)
-				edteam1:SetReactingOnDisturbingVehicles(false)
-			end
+			TActivate("trDieMestEd")
 		</script>
 	</trigger>
 
 <!--Разобрались с бандитами-->
 	<trigger Name="trDieMestEd" active="0">
-		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_0" />
-		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_1" />
-		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_2" />
-		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits_vehicle_3" />
+		<event	eventid="GE_OBJECT_DIE"	ObjName="MestBandits" />
 		<script>
-			trigger:IncCount()
-			local count = trigger:GetCount()
-			if 4>count then
-				return
-			end
+			trigger:Deactivate()
 
 			CompleteQuest("r7m1_BattleBandits_Quest")
 
