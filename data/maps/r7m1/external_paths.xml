@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <Paths>
 	<Path
+		Name="EscapedDogs">
+		<Point
+			coord="3240.614 3611.873" />
+
+		<Point
+			coord="3191.507 3587.027" />
+	</Path>
+
+	<Path
 		Name="TruckTreasure">
 		<Point
 			coord="624.216 1202.320" />

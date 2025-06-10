@@ -406,45 +406,50 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnTake='ShowCircleOnMinimapByName("Kristy")' />
+
+	<quest
+		Name="r7m1_ReturnGatoGood_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r7m1/Сюжетные/Поиски Китти-->
+	<quest
+		Name="r7m1_SaveKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin" />
+
+	<quest
+		Name="r7m1_GoToJess_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin" />
+
+	<quest
+		Name="r7m1_ComeToGato_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
 	<quest
 		Name="r7m1_FindKitty_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete">
-		<quest
-			Name="r7m1_FKIerihon_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all taken"
-			PrecedingQuests="r7m1_FindKitty_Quest" />
-
-		<quest
-			Name="r7m1_SaveKitty_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="r7m1_FKIerihon_Quest" />
-
-		<quest
-			Name="r7m1_GoToJess_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="r7m1_SaveKitty_Quest" />
-
-		<quest
-			Name="r7m1_ComeToGato_Quest"
-			Automatic="1"
-			SubQuestsCondition="and"
-			CheckAll="0"
-			ConditionToGive="all complete"
-			PrecedingQuests="r7m1_GoToJess_Quest" />
-	</quest>
+		ConditionToGive="all complete" />
+<!--Root/r7m1/Сюжетные/Сбежали от Котов-->
+	<quest
+		Name="sin_BackToGato_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/sin/Сюжетные--><!--Root/sin/Сюжетные/Проход-->
 	<quest
 		Name="sin_KillArlekinGang_Quest"
@@ -953,7 +958,8 @@
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
-		ConditionToGive="all complete" />
+		ConditionToGive="all complete"
+		Levels="sin" />
 <!--Root/sin/Сюжетные/Освободить Китти во время битвы-->
 	<quest
 		Name="sin_FreeKittyCat_Quest"
@@ -977,6 +983,172 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="sin_GoToKittyCat_Quest" />
 	</quest>
+<!--Root/sin/Сюжетные/Найти мужа 2-->
+	<quest
+		Name="sin_FindJess_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/"Найти" Китти-->
+	<quest
+		Name="sin_NotFindKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Отправиться в пекло 2-->
+	<quest
+		Name="sin_GoToHellIerihon2_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToIerihonBattle2_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_GoToHellIerihon2_Quest" />
+
+		<quest
+			Name="sin_ShootToHellIerihon2_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToIerihonBattle2_Quest" />
+
+		<quest
+			Name="sin_IerihonGarfield2_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_ShootToHellIerihon2_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Бежать от Котов-->
+	<quest
+		Name="sin_RunToCats_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Вернуться к псам-->
+	<quest
+		Name="sin_ComeToDogs3_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin" />
+<!--Root/sin/Сюжетные/Доставить товар-->
+	<quest
+		Name="sin_DeliverDog_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToDeliverDog_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_DeliverDog_Quest" />
+
+		<quest
+			Name="sin_ComeBackDeliveryDogs_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToDeliverDog_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Спасти предателя-->
+	<quest
+		Name="sin_SaveTraitor_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToRafaelTraitor_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_SaveTraitor_Quest"
+			OnTake='ShowCircleOnMinimapByName("Sin_SanRafael")' />
+
+		<quest
+			Name="sin_KillCatsTraitor_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToRafaelTraitor_Quest" />
+	</quest>
+
+	<quest
+		Name="sin_DeliveryTraitor_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_AfterTraitorDog_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/С Арлекином-->
+	<quest
+		Name="sin_BattleForBlock_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToBlockDog_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_BattleForBlock_Quest" />
+
+		<quest
+			Name="sin_BattleBlock_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToBlockDog_Quest" />
+
+		<quest
+			Name="sin_BackToDogsBlock_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_BattleBlock_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Поиски Китти-->
+	<quest
+		Name="sin_FindKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_KnowFindKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"

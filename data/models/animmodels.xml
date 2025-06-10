@@ -1431,6 +1431,12 @@
 		windwavy="0"
 		file="data\models\guns\cub.sam" />
 
+	<model
+		id="CumbineCargo01"
+		shadow="0"
+		windwavy="0"
+		file="data\models\guns\cub.sam" />
+
 <!--mortar end--><!--side guns start-->
 	<model
 		id="hunter01L"
@@ -3112,6 +3118,382 @@
 		windwavy="0"
 		trans="0" />
 <!-- vehicles -->
+
+<model
+		id="CumbineChassis"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\vehicles\cumbine\frame.sam">
+		<action
+			name="DEATH1"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="DEATH2"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL1_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+	</model>
+
+	<model
+		id="CumbineSusp01l"
+		shadow="1"
+		windwavy="0"
+		file="data\models\guns\cub.sam">
+		<action
+			name="DEATH1"
+			skin="8" />
+
+		<action
+			name="DEATH2"
+			skin="8" />
+	</model>
+
+	<model
+		id="CumbineSusp01r"
+		shadow="1"
+		windwavy="0"
+		file="data\models\guns\cub.sam">
+		<action
+			name="DEATH1"
+			skin="8" />
+
+		<action
+			name="DEATH2"
+			skin="8" />
+	</model>
+
+	<model
+		id="CumbineSusp02"
+		shadow="1"
+		windwavy="0"
+		file="data\models\guns\cub.sam">
+		<action
+			name="DEATH1"
+			skin="8" />
+
+		<action
+			name="DEATH2"
+			skin="8" />
+	</model>
+
+	<model
+		id="CumbineWheelFL"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\vehicles\cumbine\wheel_fl.sam">
+		<action
+			name="DEATH1"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="DEATH2"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL1_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+	</model>
+	
+	<model
+		id="CumbineWheelFR"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\vehicles\cumbine\wheel_fr.sam">
+		<action
+			name="DEATH1"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="DEATH2"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL1_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+	</model>
+	
+	<model
+		id="CumbineWheelRL"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\vehicles\cumbine\wheel_rl.sam">
+		<action
+			name="DEATH1"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="DEATH2"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL1_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+	</model>
+
+	<model
+		id="CumbineWheelRR"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\vehicles\cumbine\wheel_rr.sam">
+		<action
+			name="DEATH1"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="DEATH2"
+			skin="8">
+			<lp
+				id="8"
+				effect_id="ET_PS_VEH_EXP_WHEEL1_MED"
+				restartOnAnimationChange="1"
+				ImmediateRemove="0" />
+		</action>
+	</model>
+
+
+	<model
+		id="CumbineCab01"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\vehicles\cumbine\cab01.sam">
+		<action
+			name="DEATH1"
+			skin="8" />
+
+		<action
+			name="DEATH2"
+			skin="8" />
+
+		<action
+			name="STAND1">
+			<lp
+				id="LP_EXH01"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH02"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH03"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH04"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH05"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH06"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH07"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="MOVE1">
+						<lp
+				id="LP_EXH01"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH02"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH03"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH04"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH05"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH06"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH07"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="MOVE2">
+			<lp
+				id="LP_GLOW01"
+				effect_id="ET_PS_GLOW"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_GLOW02"
+				effect_id="ET_PS_GLOW"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_GLOW03"
+				effect_id="ET_PS_GLOW"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_GLOW04"
+				effect_id="ET_PS_GLOW"
+				restartOnAnimationChange="0" />
+			<lp
+				id="LP_GLOW05"
+				effect_id="ET_PS_GLOW"
+				restartOnAnimationChange="0" />
+			<lp
+				id="LP_GLOW06"
+				effect_id="ET_PS_GLOW"
+				restartOnAnimationChange="0" />
+			<lp
+				id="LP_EXH01"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH02"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH03"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH04"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH05"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH06"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+			<lp
+				id="LP_EXH07"
+				effect_id="ET_PS_EXHAUST_SMOKE1"
+				restartOnAnimationChange="0"
+				ImmediateRemove="0" />
+		</action>
+
+		<action
+			name="RESERVED2">
+			<lp
+				id="LP_LIGHT01"
+				effect_id="ET_PS_HLIGHT"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_LIGHT02"
+				effect_id="ET_PS_HLIGHT"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_LIGHT03"
+				effect_id="ET_PS_HLIGHT"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_LIGHT04"
+				effect_id="ET_PS_HLIGHT"
+				restartOnAnimationChange="0" />
+			<lp
+				id="LP_LIGHT05"
+				effect_id="ET_PS_HLIGHT"
+				restartOnAnimationChange="0" />
+
+			<lp
+				id="LP_LIGHT06"
+				effect_id="ET_PS_HLIGHT"
+				restartOnAnimationChange="0" />
+
+
+			<lp
+				id="LP_PROJECTOR"
+				effect_id="ET_PS_PROJECTOR_MOLOKOVOZ_CAB02"
+				restartOnAnimationChange="0" />
+		</action>
+	</model>
+
 	<model
 		id="tankChassis"
 		shadow="1"

@@ -62,4 +62,16 @@
 		<Point  coord="2136.722 299.937 3433.130" rotation="-0.035 0.950 -0.115 0.288"/>
 		<Point  coord="2028.664 283.737 3345.220" rotation="-0.015 0.985 -0.107 0.137"/>
 	</Path>
+
+
+	<Path Name="EscapeCats_cam0">
+		<Point  coord="3181.655 263.424 3581.489" rotation="-0.015 -0.521 0.009 0.853"/>
+		<Point  coord="3158.536 264.360 3569.629" rotation="-0.015 -0.521 0.009 0.853"/>
+	</Path>
+
+
+	<Path Name="AuntGato_cam0">
+		<Point  coord="3351.930 279.403 3340.417" rotation="0.048 0.925 -0.124 -0.357"/>
+		<Point  coord="3366.706 272.622 3217.408" rotation="-0.115 -0.315 0.039 0.941"/>
+	</Path>
 </Paths>

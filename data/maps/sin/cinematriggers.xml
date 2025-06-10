@@ -467,6 +467,7 @@
 
 			TakeQuest("sin_ComeToCats_Quest")
 			TakeQuest("sin_LeaveSin_Quest")
+			AddImportantFadingMsg("Вы получили несколько заданий. Рекомендуется зайти в журнал заданий.")
 
 			SetCameraBehindPlayerVehicle() 
 		</script>
@@ -567,7 +568,8 @@
 
 			RestoreAllToleranceStatus()
 
-			CompleteQuest("r7m1_FKIerihon_Quest")
+			CompleteQuest("r7m1_FindKitty_Quest")
+			TakeQuest("r7m1_SaveKitty_Quest")
 
 			TDeactivate("sinKittyinTrap_cam01")
 			TDeactivate("sinKittyinTrap_cam02")
@@ -1621,7 +1623,9 @@
 			CompleteQuest("sin_DefendChurch_Quest")
 
 			TakeQuest("sin_GoToHellIerihon_Quest")
-			TakeQuest("sin_GoToHellIerihon_Quest")
+			TakeQuest("sin_FreeKittyCat_Quest")
+
+			AddImportantFadingMsg("Вы получили несколько заданий. Рекомендуется зайти в журнал заданий.")
 
 			TActivate("trSpawnBattleIerihon")
 
@@ -1701,6 +1705,8 @@
 			if Egoc then
 				Egoc:Remove()
 			end	
+
+			FailQuest("sin_FreeKittyCat_Quest")
 
 			RestoreAllToleranceStatus()
 
@@ -2045,6 +2051,159 @@
 		</script>
 	</trigger>
 
+<!--Навестили Китти с Джесс и потом нас спалили-->
+	<trigger Name="sinComeKitty" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_DogHouse_enter"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("FredKity_cam0", CINEMATIC_NO_AIM, 0, 16, 1, 0)
+			Fly	("CatEscapeKitty_cam0", CINEMATIC_NO_AIM, 0, 8, 0, 0)
+			Fly	("CatEscapeKitty_cam1", CINEMATIC_NO_AIM, 0, 7, 0, 1)
+			StartCinematic()
+
+			TActivate("sinComeKitty_FadeIn")
+			TActivate("sinComeKitty_cam0")
+			TActivate("sinComeKitty_cam1")
+			TActivate("sinComeKitty_End")
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinComeKitty_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(2083.105, 247.681, 609.780))
+				Plf:SetRotation(Quaternion(0.044, -0.985, -0.053, 0.156))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			CreateTeam("Kitty", 1103, { CVector(getPos("Sin_K2_KS_loc"))}, {"Scout01"}, nil, nil, {Quaternion(-0.062, -0.269, -0.049, -0.960)})
+			CreateTeam("CatsAlarm", 1106, { CVector(getPos("sin_CatsAlarm_loc"))}, {"EgoistCar", "Bug01", "Scout02"}, nil, nil, {Quaternion(0.003, -0.998, -0.001, -0.055)})
+
+			AddCinematicMessage( 6550, 0.5 )
+			AddCinematicMessage( 6551, 0.5 )
+			AddCinematicMessage( 6552, 0.5 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinComeKitty_cam0" active="0">
+		<event flypath="CatEscapeKitty_cam0" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("Sin_PlayerCaravan_loc")))
+				Plf:SetRotation(Quaternion(0.025, 0.416, -0.036, 0.908))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetExternalPathByName("EscapeCatKitty")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 6560, 4.0 )
+			AddCinematicMessage( 6561, 0.5 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinComeKitty_cam1" active="0">
+		<event flypath="CatEscapeKitty_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(2696.040, 188.285, 1410.110))
+				Plf:SetRotation(Quaternion(-0.004, -0.937, 0.006, -0.348))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:setGodMode(1)
+				Plf:SetExternalPathByName("EscapeCatKitty2") 
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			SetTolerance(1100, 1106, RS_ENEMY)
+
+			AddCinematicMessage( 6562, 0.5 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinComeKitty_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(2772.635, 200.266, 1313.918))
+				Plf:SetRotation(Quaternion(-0.004, -0.937, 0.006, -0.348))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:setGodMode(0)
+				Plf:SetExternalPathByName("EscapeCatKitty2") 
+				Plf:PlaceToEndOfPath()
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local CtA1 = getObj("CatsAlarm_vehicle_0")
+			if CtA1 then
+				CtA1:SetGamePositionOnGround( CVector(2733.322, 190.551, 1367.684))
+				CtA1:SetRotation(Quaternion(-0.004, -0.937, 0.006, -0.348))
+				CtA1:setGodMode(1)
+			end
+
+			local CtA2 = getObj("CatsAlarm_vehicle_1")
+			if CtA2 then
+				CtA2:SetGamePositionOnGround( CVector(2772.978, 198.175, 1340.895))
+				CtA2:SetRotation(Quaternion(-0.004, -0.937, 0.006, -0.348))
+				CtA2:setGodMode(1)
+			end
+
+			local CtA3 = getObj("CatsAlarm_vehicle_2")
+			if CtA3 then
+				CtA3:SetGamePositionOnGround( CVector(2748.615, 194.385, 1319.053))
+				CtA3:SetRotation(Quaternion(-0.004, -0.937, 0.006, -0.348))
+				CtA3:setGodMode(1)
+			end
+
+			local Kty = getObj("Kitty_vehicle_0")
+			if Kty then
+				Kty:Remove()
+			end
+
+			CompleteQuest("sin_NotFindKitty_Quest")
+			CompleteQuest("r7m1_FindKitty_Quest") 
+			TakeQuest("sin_RunToCats_Quest")
+
+			TDeactivate("sinComeKitty_FadeIn")
+			TDeactivate("sinComeKitty_cam0")
+			TDeactivate("sinComeKitty_cam1")
+
+			SetTolerance(1100, 1106, RS_ENEMY)
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
 <!--Освобождаем из дома котов Китти-->
 	<trigger Name="sinKittyLeave" active="0">
 		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
@@ -2313,6 +2472,7 @@
 		</script>
 	</trigger>
 
+<!--Сделка Котов и Псов (выключено)-->
 	<trigger Name="Cross_ctr" active="0">
 		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_WestIerihon"/>
 		<script>
@@ -2382,6 +2542,7 @@
 			AddCinematicMessage( 5803, 0.25 )
 		</script>
 	</trigger>
+
 	<trigger Name="Cross_cam2_ctr" active="0">
 		<event flypath="Cross_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
 		<script>
@@ -2409,6 +2570,7 @@
 			end
 		</script>
 	</trigger>
+
 	<trigger Name="Cross_actr" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
@@ -2446,6 +2608,7 @@
 		</script>
 	</trigger>
 
+<!--Не знаю, что это (выключено)-->
 	<trigger Name="After_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -2488,6 +2651,7 @@
 		</script>
 	</trigger>
 
+<!--Китти на ферме-->
 	<trigger Name="Farm_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -2555,6 +2719,7 @@
 		</script>
 	</trigger>
 
+<!--Освободили Китти с Джесс-->
 	<trigger Name="sinFreedomKitty" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -2629,6 +2794,7 @@
 		</script>
 	</trigger>
 
+<!--Дождались Псов на ферме-->
 	<trigger Name="Capture_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -2653,7 +2819,6 @@
 			TActivate("Capture2_ctr")
 			</script>
 	</trigger>
-
 
 	<trigger Name="Capture_fctr" active="0">
 		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
@@ -2917,6 +3082,7 @@
 		</script>
 	</trigger>
 
+<!--Сбежали от Псов-->
 	<trigger Name="sinEscapeDog" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -3040,6 +3206,7 @@
 		</script>
 	</trigger>
 
+<!--Горит Кошкин Дом-->
 	<trigger Name="sinBurnCatHouse" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="PlayerHide_loc"/>
 		<script>
@@ -3235,6 +3402,7 @@
 		</script>
 	</trigger>
 
+<!--Битва с Борном-->
 	<trigger Name="BornBattle" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Final_loc" />
 		<script>
@@ -3325,6 +3493,7 @@
 		</script>
 	</trigger>
 
+<!--Финал (хорошая концовка)-->
 	<trigger Name="Final_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -3339,6 +3508,7 @@
 			TActivate("Final_actr")
 		</script>
 	</trigger>
+
 	<trigger Name="Final_fctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -3408,6 +3578,728 @@
 		</script>
 	</trigger>
 
+<!--Катсцена в Сан-Рафаэле (Спасаем предателя)-->
+	<trigger Name="SaveSanRafael" active="0">
+		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("SanRafael_cam0", CINEMATIC_NO_AIM, 0, 5, 1, 0)
+			Fly	("SanRafael_cam1", CINEMATIC_NO_AIM, 0, 4, 0, 0)
+			Fly	("SanRafael_cam2", CINEMATIC_NO_AIM, 0, 2, 0, 1)
+			StartCinematic()
+
+			TActivate("SaveSanRafael_FadeIn")
+			TActivate("SaveSanRafael_cam1")
+			TActivate("SaveSanRafael_End")
+
+		</script>
+	</trigger>
+
+	<trigger Name="SaveSanRafael_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("Sin_P_SR_loc")))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			CreateTeam("CatGuard1", 1106, {CVector(getPos("Sin_EG1_SR_loc"))}, {"Bug01"}, nil, nil, {})
+			CreateTeam("CatGuard2", 1106, {CVector(getPos("Sin_EG2_SR_loc"))}, {"Sml201"}, nil, nil, {})
+			CreateTeam("CatGuard3", 1106, {CVector(getPos("Sin_EG3_SR_loc"))}, {"Scout01"}, nil, nil, {})
+
+		</script>
+	</trigger>
+
+	<trigger Name="SaveSanRafael_cam1" active="0">
+		<event flypath="SanRafael_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 5700, 0.5 )
+		</script>
+	</trigger>
+
+	<trigger Name="SaveSanRafael_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("SaveSanRafael_cam1")
+			
+			SetCameraBehindPlayerVehicle()
+
+			TActivate("trSaveSanRafaelAfter")
+		</script>
+	</trigger>
+
+<!--Спасли предателя-->
+	<trigger Name="sinExitTraitorCat" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Final_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 25, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinExitTraitorCat_FadeIn")
+			TActivate("sinExitTraitorCat_End")
+			
+		</script>
+	</trigger>
+
+	<trigger Name="sinExitTraitorCat_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(6600, 1.0)
+			AddCinematicMessage(6601, 0.25)
+			AddCinematicMessage(6602, 0.25)
+			AddCinematicMessage(6603, 0.25)
+		</script>
+	</trigger>
+
+	<trigger Name="sinExitTraitorCat_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("sinExitTraitorCat_FadeIn")
+
+			CompleteQuest("sin_DeliveryTraitor_Quest")
+			TakeQuest("sin_AfterTraitorDog_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Приехали к Арлекину-->
+	<trigger Name="sinArlekinBlock1" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="KillBlockEnter_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("sinArlekinBlock1_FadeIn")
+			TActivate("sinArlekinBlock1_cam0")
+			TActivate("sinArlekinBlock1_cam1")
+			TActivate("sinArlekinBlock1_End")
+			TActivate("sinArlekinBlock1_Skip")
+
+			Fly	("KillBlock_cam0", CINEMATIC_NO_AIM, 0, 6, 1, 0)
+			Fly	("ArlBlock_cam0", CINEMATIC_NO_AIM, 0, 22, 0, 0)
+			Fly	("ArlBlock_cam1", CINEMATIC_NO_AIM, 0, 6, 0, 1)
+			StartCinematic()
+
+		</script>
+	</trigger>
+	<trigger Name="sinArlekinBlock1_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("Arlekin", 1104, {CVector(getPos("Arlekin2_loc"))}, {"ArlekinCar"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+			CreateTeam("ArGuy", 1104, {CVector(getPos("band2_2_loc"))}, {"Sml101"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+			CreateTeam("ArGuy1", 1104, {CVector(getPos("band2_loc"))}, {"Sml101"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+			CreateTeam("ArGuy2", 1104, {CVector(getPos("band2_1_loc"))}, {"Sml301"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("KillBlockPlayer_loc")))
+				Plf:SetRotation(Quaternion(-0.016, -0.943, 0.012, -0.333))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetExternalPathByName("KillBlock")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 6610, 2.0 )
+			AddCinematicMessage( 6611, 0.25 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinArlekinBlock1_cam0" active="0">
+		<event flypath="ArlBlock_cam0" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("TraderBack", 1104, {CVector(getPos("TraderBack_loc"))}, {"Bug01"}, nil, nil, {Quaternion(-0.016, -0.963, 0.003, -0.269)})
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("BornLook_loc")))
+				Plf:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:PlaceToEndOfPath()
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local TrB = getObj("TraderBack_vehicle_0")
+			if TrB then
+				TrB:SetCustomControlEnabled( true )
+				TrB:SetCustomLinearVelocity( 0 )
+				TrB:SetThrottle( 0 )
+				TrB:SetExternalPathByName("TraderBack")
+				TrB:SetCustomControlEnabled( false )
+			end
+
+			local Arlc = getObj("Arlekin_vehicle_0")
+			if Arlc then
+				Arlc:SetGamePositionOnGround( CVector(getPos("FinalLook_loc")))
+				Arlc:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+				Arlc:setGodMode(1)
+			end
+
+			local Arg = getObj("ArGuy_vehicle_0")
+			if Arg then
+				Arg:SetGamePositionOnGround( CVector(getPos("Born_loc")))
+				Arg:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+			end
+
+			local Arg1 = getObj("ArGuy1_vehicle_0")
+			if Arg1 then
+				Arg1:SetGamePositionOnGround( CVector(getPos("Kevin_loc")))
+				Arg1:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+			end
+
+			local Arg2 = getObj("ArGuy2_vehicle_0")
+			if Arg2 then
+				Arg2:SetGamePositionOnGround( CVector(getPos("KevinLook_loc")))
+				Arg2:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+			end
+
+			AddCinematicMessage( 8804, 1.0 )
+			AddCinematicMessage( 6612, 0.25 )
+			AddCinematicMessage( 6613, 0.25 )
+			AddCinematicMessage( 6614, 0.25 )
+			AddCinematicMessage( 6615, 0.25 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinArlekinBlock1_cam1" active="0">
+		<event flypath="ArlBlock_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("CatGang", 1106, {CVector(getPos("band2_1_loc"))}, {"Sml401", "Sml301", "Scout03", "Bug01"}, nil, nil, {Quaternion(-0.016, -0.963, 0.003, -0.269)})
+
+			local TrB = getObj("TraderBack_vehicle_0")
+			if TrB then
+				TrB:Remove()
+			end
+
+			AddCinematicMessage( 6616, 0.25 )
+			AddCinematicMessage( 6617, 0.25 )
+
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinArlekinBlock1_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("BornLook_loc")))
+				Plf:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			TDeactivate("sinArlekinBlock1_FadeIn")
+			TDeactivate("sinArlekinBlock1_cam0")
+			TDeactivate("sinArlekinBlock1_cam1")
+			TDeactivate("sinArlekinBlock1_Skip")
+
+			CompleteQuest("sin_GoToBlockDog_Quest")
+
+			RestoreAllToleranceStatus()
+
+			TActivate("sinSaveArlekin")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+	<trigger Name="sinArlekinBlock1_Skip" active="0">
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("CatGang", 1106, {CVector(getPos("band2_1_loc"))}, {"Sml401", "Sml301", "Scout03", "Bug01"}, nil, nil, {Quaternion(-0.016, -0.963, 0.003, -0.269)})
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("BornLook_loc")))
+				Plf:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:PlaceToEndOfPath()
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local Arlc = getObj("Arlekin_vehicle_0")
+			if Arlc then
+				Arlc:SetGamePositionOnGround( CVector(getPos("FinalLook_loc")))
+				Arlc:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+				Arlc:setGodMode(1)
+			end
+
+			local Arg = getObj("ArGuy_vehicle_0")
+			if Arg then
+				Arg:SetGamePositionOnGround( CVector(getPos("Born_loc")))
+				Arg:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+			end
+
+			local Arg1 = getObj("ArGuy1_vehicle_0")
+			if Arg1 then
+				Arg1:SetGamePositionOnGround( CVector(getPos("Kevin_loc")))
+				Arg1:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+			end
+
+			local Arg2 = getObj("ArGuy2_vehicle_0")
+			if Arg2 then
+				Arg2:SetGamePositionOnGround( CVector(getPos("KevinLook_loc")))
+				Arg2:SetRotation(Quaternion(-0.016, -0.963, 0.003, -0.269))
+			end
+
+			TDeactivate("sinArlekinBlock1_FadeIn")
+			TDeactivate("sinArlekinBlock1_cam0")
+			TDeactivate("sinArlekinBlock1_cam1")
+			TDeactivate("sinArlekinBlock1_End")
+
+			CompleteQuest("sin_GoToBlockDog_Quest")
+
+			RestoreAllToleranceStatus()
+
+			TActivate("sinSaveArlekin")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Спасли Арлекина-->
+	<trigger Name="sinSaveArlekin" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGang_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGang_vehicle_1"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGang_vehicle_2"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGang_vehicle_3"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 4>count then
+				return
+			end
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 9, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinSaveArlekin_FadeIn")
+			TActivate("sinSaveArlekin_End")
+			
+		</script>
+	</trigger>
+
+	<trigger Name="sinSaveArlekin_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(6618, 0.25)
+			AddCinematicMessage(6619, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinSaveArlekin_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			local Arlc = getObj("Arlekin_vehicle_0")
+			if Arlc then
+				Arlc:Remove()
+			end
+
+			local Arg = getObj("ArGuy_vehicle_0")
+			if Arg then
+				Arg:Remove()
+			end
+
+			local Arg1 = getObj("ArGuy1_vehicle_0")
+			if Arg1 then
+				Arg1:Remove()
+			end
+
+			local Arg2 = getObj("ArGuy2_vehicle_0")
+			if Arg2 then
+				Arg2:Remove()
+			end
+
+			TDeactivate("sinSaveArlekin_FadeIn")
+
+			CompleteQuest("sin_BattleBlock_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Спустя какое-то время (Будка)-->
+	<trigger Name="sinAfterSomeTimeBudka" active="0">
+		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("sinAfterSomeTimeBudka_FadeIn")
+			TActivate("sinAfterSomeTimeBudka_End")
+
+			Fly	("SomeTimeLaterDog_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 1)
+			StartCinematic()
+		</script>
+	</trigger>
+	<trigger Name="sinAfterSomeTimeBudka_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 8804, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="sinAfterSomeTimeBudka_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			StartConversation("Sin_Garfield1")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Спасти Китти (у Псов)-->
+	<trigger Name="sinSaveKittyfromDogs" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Final_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 10, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinSaveKittyfromDogs_FadeIn")
+			TActivate("sinSaveKittyfromDogs_End")
+			
+		</script>
+	</trigger>
+
+	<trigger Name="sinSaveKittyfromDogs_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(6620, 1.0)
+			AddCinematicMessage(6621, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinSaveKittyfromDogs_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("sinSaveKittyfromDogs_FadeIn")
+
+			CompleteQuest("sin_DeliveryTraitor_Quest")
+			TakeQuest("sin_AfterTraitorDog_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Джесс в Иерихоне-->
+	<trigger Name="sinJessIerihon1" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_EastIerihon_enter"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("sinJessIerihon1_FadeIn")
+			TActivate("sinJessIerihon1_End")
+
+			Fly	("JessIerihon_cam0", CINEMATIC_NO_AIM, 0, 25, 1, 1)
+			StartCinematic()
+		</script>
+	</trigger>
+
+	<trigger Name="sinJessIerihon1_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 6540, 0.25 )
+			AddCinematicMessage( 6541, 0.25 )
+			AddCinematicMessage( 6542, 0.25 )
+			AddCinematicMessage( 65431, 0.25 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinJessIerihon1_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			CompleteQuest("r7m1_GoToJess_Quest")
+			TakeQuest("sin_FinalJoe_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Приехали к Арлекину, пока спасаем Китти-->
+	<trigger Name="sinArlekinBlock2" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="KillBlockEnter_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("sinArlekinBlock2_FadeIn")
+			TActivate("sinArlekinBlock2_End")
+
+			Fly	("KillBlock_cam0", CINEMATIC_NO_AIM, 0, 15, 1, 1)
+			StartCinematic()
+
+		</script>
+	</trigger>
+	<trigger Name="sinArlekinBlock2_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("Arlekin", 1104, {CVector(getPos("Arlekin2_loc"))}, {"ArlekinCar"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+			CreateTeam("ArGuy", 1104, {CVector(getPos("band2_2_loc"))}, {"Sml101"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+			CreateTeam("ArGuy1", 1104, {CVector(getPos("band2_loc"))}, {"Sml101"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+			CreateTeam("ArGuy2", 1104, {CVector(getPos("band2_1_loc"))}, {"Sml301"}, nil, nil, {Quaternion(-0.002, -0.329, -0.016, 0.944)})
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("KillBlockPlayer_loc")))
+				Plf:SetRotation(Quaternion(-0.016, -0.943, 0.012, -0.333))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetExternalPathByName("KillBlock")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 5200, 3.0 )
+			AddCinematicMessage( 5201, 0.25 )
+			AddCinematicMessage( 5202, 0.25 )
+			AddCinematicMessage( 5203, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="sinArlekinBlock2_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetRotation(Quaternion(-0.016, -0.943, 0.012, -0.333))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:PlaceToEndOfPath("KillBlock")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			RestoreAllToleranceStatus()
+
+			CompleteQuest("sin_GoToBlock_Quest")
+
+			TActivate("trfterArlekinBlock")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Отвезти Китти к Псам-->
+	<trigger Name="sinPickKittytoDogs" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Final_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 7, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinPickKittytoDogs_FadeIn")
+			TActivate("sinPickKittytoDogs_End")
+			
+		</script>
+	</trigger>
+
+	<trigger Name="sinPickKittytoDogs_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(6620, 1.0)
+			AddCinematicMessage(6621, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinPickKittytoDogs_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("sinPickKittytoDogs_FadeIn")
+
+			CompleteQuest("sin_DeliveryTraitor_Quest")
+			TakeQuest("sin_AfterTraitorDog_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Оригинальный финал (выключено)-->
 	<trigger Name="Final2_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -3427,7 +4319,6 @@
 
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
---Первая камера скипается поэтому 2 раза
 			Fly	("Start_cam0", CINEMATIC_NO_AIM, 0, 1, 1, 0)
 			Fly	("Start_cam0", CINEMATIC_NO_AIM, 0, 8, 0, 0)
 			Fly	("Start_cam1", CINEMATIC_NO_AIM, 0, 9, 0, 0)

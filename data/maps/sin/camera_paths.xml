@@ -157,6 +157,15 @@
 	<Point  coord="2436.026 260.222 1675.291" rotation="-0.001 0.995 -0.099 0.011"/>
 </Path>
 
+<Path Name = "CatEscapeKitty_cam0">
+	<Point  coord="2435.547 238.527 1229.555" rotation="-0.092 -0.353 0.035 0.930"/>
+	<Point  coord="2658.285 196.242 1490.079" rotation="-0.132 -0.004 0.001 0.991"/>
+</Path>
+<Path Name = "CatEscapeKitty_cam1">
+	<Point  coord="2582.384 226.332 1559.046" rotation="0.044 0.934 -0.123 -0.333"/>
+	<Point  coord="2582.384 226.332 1559.046" rotation="0.030 0.941 -0.088 -0.325"/>
+</Path>
+
 <Path Name = "KittyPlayer_cam0">
 	<Point  coord="1491.350 313.831 2121.493" rotation="-0.015 0.755 -0.017 0.656"/>
 	<Point  coord="1608.741 291.398 2122.307" rotation="0.008 0.767 0.009 0.642"/>
@@ -288,6 +297,23 @@
 <Path Name = "Final_cam1">
 	<Point  coord="3591.110 288.161 558.520" rotation="-0.043 0.007 -0.000 0.999"/>
 	<Point  coord="3625.773 288.570 599.951" rotation="-0.044 0.732 -0.047 0.678"/>
+</Path>
+
+
+<Path Name = "ArlBlock_cam0">
+	<Point  coord="3617.844 293.872 615.843" rotation="-0.003 0.992 -0.127 0.026"/>
+	<Point  coord="3619.076 300.027 639.421" rotation="-0.003 0.992 -0.127 0.026"/>
+</Path>
+
+<Path Name = "ArlBlock_cam1">
+	<Point  coord="3582.605 291.708 608.693" rotation="-0.032 0.345 -0.012 0.938"/>
+	<Point  coord="3602.761 293.859 584.975" rotation="-0.032 0.345 -0.012 0.938"/>
+</Path>
+
+
+<Path Name = "SomeTimeLaterDog_cam0">
+	<Point  coord="3630.205 231.256 2296.997" rotation="0.040 0.903 -0.086 -0.420"/>
+	<Point  coord="3594.153 240.274 2327.377" rotation="0.040 0.903 -0.086 -0.420"/>
 </Path>
 
 </Paths>

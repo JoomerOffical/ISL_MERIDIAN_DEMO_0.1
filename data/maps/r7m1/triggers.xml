@@ -78,18 +78,31 @@
 		</script>
 	</trigger>
 
-<!--Возвращаемся к Лео после Иерихона-->
-<trigger Name="trAfterIerihon" active="1">
+<!--Сбежали от котов с Китти и Джесс-->
+<trigger Name="trAfterIerihonKitty" active="1">
 	<event 	timeout="1" eventid="GE_TIME_PERIOD" />
 	<script>	
-		if (QuestStatus("sin_BackToLeo_Quest")==Q_TAKEN) or (QuestStatus("sin_LeaveSin_Quest")==Q_TAKEN) then
-			TActivate("trAfterIerihon2")
+		if (QuestStatus("sin_RunToCats_Quest")==Q_TAKEN) then
+			TActivate("cinEscapedCats")
 			trigger:Deactivate()
 		end
 
 	</script>
 </trigger>
 
+<!--Возвращаемся к Гато после Иерихона-->
+<trigger Name="trAfterIerihon" active="1">
+	<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+	<script>	
+		if (QuestStatus("r7m1_ComeToGato_Quest")==Q_TAKEN) or (QuestStatus("r7m1_GoToJess_Quest")==Q_COMPLETED) then
+			TActivate("cinKittyGato1")
+			trigger:Deactivate()
+		end
+
+	</script>
+</trigger>
+
+<!--Быстро вернулись из Иерихона-->
 <trigger Name="trAfterIerihonFast" active="1">
 	<event 	timeout="1" eventid="GE_TIME_PERIOD" />
 	<script>	

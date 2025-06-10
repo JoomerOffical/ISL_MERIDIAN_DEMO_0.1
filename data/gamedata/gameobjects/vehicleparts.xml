@@ -6,6 +6,29 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 
 <Prototypes>
 	<Folder Name = "Chassis">
+
+        <Prototype
+			Class		= "Chassis"
+			Name		= "CumbineChassis"
+			ModelFile	= "CumbineChassis"
+			ResourceType	= "CUMBINE_CHASSIS"
+			NodeScale	= "1 1 1"
+
+			Price				= "10000"
+			RepairCoef			= "0.2"
+
+			Mass		= "5.0"			
+			MaxHealth	= "3000" 
+			MaxFuel	= "600"
+			BrakingSound="ET_S_BRAKE01"
+			PneumoSound	="ET_S_PNEUMO_BRAKE01"
+			GearShiftSound="ET_S_GEAR_SHIFT01"
+			LoadPoints	= "LP_CAB01 LP_BSK01" >
+				<GroupsHealth
+					Main   = "10000"	
+				/>
+        </Prototype>
+
 		<Prototype
 			Class				= "Chassis"
 			Name				= "robot03Chassis_big"
@@ -533,6 +556,45 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 	</Folder>
 
 	<Folder Name = "Cabins">
+
+        <Prototype
+			Class				= "Cabin"
+			Name				= "CumbineCab01"
+			ModelFile			= "CumbineCab01"
+			ResourceType			= "CUMBINE_CABIN"
+			NodeScale			= "1 1 1"
+			Mass				= "5.0" 
+			Durability			= "50"
+			DurCoeffsForDamageTypes		= "12 8 0"
+			MaxPower			= "500"
+			MaxTorque			= "250"
+			MaxSpeed			= "50.0"
+			BlowEffect	= "ET_PS_VEH_PART_BLOW_BIG_CAB"
+
+			Price				= "5000"
+			RepairCoef			= "0.5"
+                        FuelConsumption                 = "0.5"
+			LoadPoints			= "LP_SML01" 
+                        EngineHighSound		= "ET_S_ENGINE_BELAZ_1_HIGH">
+			<GadgetDescription>
+				<Slot
+					ResourceType	= "GADGET_COMMON"
+					MaxAmount	= "3" />      
+			</GadgetDescription>
+			<GroupsHealth
+				Main   = "0"	
+				Breakable1   = "1.5"	
+			    Breakable2   = "1.5"
+				Breakable3   = "1.5"
+				Breakable4   = "1.5"
+				Breakable5   = "1.5"
+				Breakable6   = "1.5"
+				Breakable7   = "1.5"
+				Breakable8   = "1.5"
+				Breakable9   = "0.2"
+			/>
+		</Prototype>
+
 		<Prototype
 			Class				= "Cabin"
 			Name				= "robot01Cab01"
@@ -2253,6 +2315,28 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 
 	<Folder
 		Name = "Baskets">
+		
+        <Prototype
+			Class				= "Basket"
+			Name				= "CumbineCargo01"
+			ModelFile			= "cub"
+			VisibleInEncyclopedia   = "false"
+			ResourceType		= "CUMBINE_BASKET"
+			Durability			= "0"
+			DurCoeffsForDamageTypes	= "0 0 0"
+			NodeScale			= "1 1 1"
+			BlowEffect	= "ET_PS_VEH_PART_BLOW_SMALL_CAB"
+
+
+			Price				= "0"
+			RepairCoef			= "0"
+
+			Mass				= "5.0" 
+			LoadPoints			= "NO_LP" >
+			<RepositoryDescription
+				RepositorySize		= "5 8"/>
+		</Prototype>
+
 		<Prototype
 			Class				= "Basket"
 			Name				= "fakeCargo"
@@ -3229,6 +3313,58 @@ $Id: VehicleParts.xml,v 1.5 2006/01/26 09:16:31 vano Exp $
 	</Folder>
 
 	<Folder Name = "Wheels">
+        <Prototype
+			Class			= "Wheel"
+			Name			= "CumbineWheelFL"
+			ModelFile		= "CumbineWheelFL"
+			NodeScale		= "1 1 1"
+			Mass			= "5"
+			SuspensionModelFile	= "M35Susp01l"
+			SuspensionCFM	= "0.0013"
+			SuspensionERP		= "0.25"
+			SuspensionRange	= "1.0"
+			mU			= "1.0" 
+			EffectType		= "BIGWHEEL" />	
+			
+        <Prototype
+			Class			= "Wheel"
+			Name			= "CumbineWheelFR"
+			ModelFile		= "CumbineWheelFR"
+			NodeScale		= "1 1 1"
+			Mass			= "5"
+			SuspensionModelFile	= "CumbineSusp01r"
+			SuspensionCFM	= "0.0013"
+			SuspensionERP		= "0.25"
+			SuspensionRange	= "1.0"
+			mU			= "1.0" 
+			EffectType		= "BIGWHEEL" />	
+			
+        <Prototype
+			Class			= "Wheel"
+			Name			= "CumbineWheelRL"
+			ModelFile		= "CumbineWheelRL"
+			NodeScale		= "1 1 1"
+			Mass			= "5"
+			SuspensionModelFile	= "CumbineSusp02"
+			SuspensionCFM	= "0.0013"
+			SuspensionERP		= "0.25"
+			SuspensionRange	= "1.0"
+			mU			= "1.0" 
+			EffectType		= "BIGWHEEL" />	
+			
+        <Prototype
+			Class			= "Wheel"
+			Name			= "CumbineWheelRR"
+			ModelFile		= "CumbineWheelRR"
+			NodeScale		= "1 1 1"
+			Mass			= "5"
+			SuspensionModelFile	= "CumbineSusp02"
+			SuspensionCFM	= "0.0013"
+			SuspensionERP		= "0.25"
+			SuspensionRange	= "1.0"
+			mU			= "1.0" 
+			EffectType		= "BIGWHEEL" />	
+
 		<Prototype
 			Class			= "Wheel"
 			Name			= "sml1Wheel01"

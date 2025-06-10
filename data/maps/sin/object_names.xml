@@ -3,6 +3,7 @@
 	<Object 	Name="ToR7M1" 						FullName = "Дорога на Прибрежье"/>
 	<Object 	Name="Sin_WestIerihon" 				FullName = "Восточный Иерихон"/>
 	<Object 	Name="Sin_WestIerihon_enter" 		FullName = "Восточный Иерихон"/>
+	<Object 	Name="Sin_Gonzalo" 					FullName = "Торговец Гонзало"/>
 	<Object 	Name="Sin_WI_Bar_Barman" 			FullName = "Официантка Ханна"/>
 	<Object 	Name="Sin_WestIerihon_Bar" 			FullName = "Бар 'У Джо'"/>
 	<Object	    Name="Sin_WestIerihon_Shop" 		FullName = "Магазин"/>
@@ -32,6 +33,7 @@
 	<Object 	Name="Sin_IerihonEast_MayorPlace"	FullName = "Мэрия"/>
 	<Object 	Name="Sin_Joe" 						FullName = "Джо"/>
 	<Object 	Name="Sin_TraitorDog" 				FullName = "Подкупленный Пол"/>
+	<Object 	Name="Sin_TraitorCat" 				FullName = "Предатель Коул"/>
 	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
 	<Object   	Name="Sin_Bulldog" 					FullName = "Борн"/>
 	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд"/>
@@ -54,6 +56,7 @@
 	<Object 	Name="Sin_CatHouse_House"      		FullName = "Штаб" />
 	<Object 	Name="Sin_SanRafael_Bar"     		FullName = "Бар 'Аллигатор'" />
 	<Object 	Name="Sin_SanRafael_Bar_Barman"     FullName = "Марио" />
+	<Object 	Name="Sin_TraitorCat" 				FullName = "Предатель Коул" />
 	<Object 	Name="SinDogHouse"     				FullName = "Собачья Будка" />
 	<Object 	Name="SinDogHouse_enter"     		FullName = "Собачья Будка" />
 	<Object 	Name="SinDogHouse_Shop"     		FullName = "Магазин" />

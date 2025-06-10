@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!-- $Id: charisma.xml 432 2006-06-22 05:31:14Z anton $ -->
+
+<Charisma>
+	<Logos>
+
+		<Logo
+			Name="cats.dds"
+			CharismaIncrease="-2" />
+		<Logo
+			Name="dogs.dds"
+			CharismaIncrease="-2" />
+		<Logo
+			Name="fetish_punk_01.dds"
+			CharismaIncrease="-1" />
+		<Logo
+			Name="fetish_qqqr_01.dds"
+			CharismaIncrease="-1" />
+		<Logo
+			Name="fetish_military_01.dds"
+			CharismaIncrease="0" />
+		<Logo
+			Name="fetish_skull_01.dds"
+			CharismaIncrease="1" />
+		<Logo
+			Name="fetish_ninja_01.dds"
+			CharismaIncrease="2" />
+
+		<Logo
+			Name="fetish_peace_01.dds"
+			CharismaIncrease="2" />
+	</Logos>
+
+	<Masks>
+		<MASK_TRADE
+			CharismaIncrease="1" />
+
+		<MASK_WAR
+			CharismaIncrease="-1" />
+	</Masks>
+</Charisma>

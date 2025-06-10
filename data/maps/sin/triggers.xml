@@ -9,6 +9,8 @@
 
 			SetRadarUpgrade(1)
 
+			AddPlayerMoney(1000)
+
 			TakeQuest("r7m1_PosilkaForJoe_Quest")
 			TakeQuest("r7m1_FindKitty_Quest")
 
@@ -50,8 +52,17 @@
 				TActivate("sinKittyinTrap")
 				TakeQuest("sin_ComeToCats_Quest")
 				TakeQuest("sin_ComeToDogs2_Quest")
-				AddImportantFadingMsg("Вы получили несколько заданий.")
+				AddImportantFadingMsg("Вы получили несколько заданий. Рекомендуется зайти в журнал заданий.")
 			end
+		</script>
+	</trigger>
+
+<!--Заметка про задания-->
+	<trigger Name="trManyQuest" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ABand"/>
+		<script>
+			trigger:Deactivate()
+			AddImportantFadingMsg("У вас все еще несколько заданий. Рекомендуется зайти в журнал заданий.")
 		</script>
 	</trigger>
 
@@ -62,7 +73,38 @@
 			trigger:Deactivate()
 			CompleteQuest("sin_KillArlekin_Quest")
 			TActivate("sinAfterArlekin")
-			AddImportantFadingMsg("Вы получили несколько заданий.")
+		</script>
+	</trigger>
+
+<!--Проверка, у кого мы были до Джо-->
+	<trigger Name="trAfterJoe" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+			if QuestStatus("sin_ComeToCats_Quest")==Q_COMPLETED and QuestStatus("sin_ComeToDogs2_Quest")==Q_COMPLETED then
+				TakeQuest("sin_Caravan_Quest")
+				TActivate("trCaravan")
+			else
+				if QuestStatus("sin_ComeToCats_Quest")==Q_COMPLETED and not(QuestStatus("sin_ComeToDogs2_Quest")==Q_COMPLETED) then
+					FailQuest("sin_ComeToDogs2_Quest")
+					TakeQuest("sin_Caravan_Quest")
+					TActivate("trCaravan")
+				else
+					FailQuest("sin_ComeToCats_Quest)
+					TakeQuest("sin_Caravan_Quest")
+					TActivate("trCaravan")
+				end
+			end
+		</script>
+	</trigger>
+
+<!--Эгоист проиграл-->
+	<trigger Name="trEgoistKill" active="0">
+		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="Egoist1_vehicle_0"/>
+		<script>
+			trigger:Deactivate()
+			CompleteQuest("sin_KillEgoist_Quest")
+			TActivate("sinEgoistAfter")
 		</script>
 	</trigger>
 
@@ -77,16 +119,6 @@
 			else
 				TakeQuest("sin_ComeBackJoe_Quest")
 			end
-		</script>
-	</trigger>
-
-<!--Эгоист проиграл-->
-	<trigger Name="trEgoistKill" active="0">
-		<event eventid="GE_VEHICLE_WITHOUT_HEALTH" ObjName="Egoist1_vehicle_0"/>
-		<script>
-			trigger:Deactivate()
-			CompleteQuest("sin_KillEgoist_Quest")
-			TActivate("sinEgoistAfter")
 		</script>
 	</trigger>
 
@@ -110,6 +142,25 @@
 		</script>
 	</trigger>
 
+<!--Проверка после могильщика, у кого мы побыли-->
+	<trigger Name="trGraveAfter" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+			if QuestStatus("sin_ComeToCats_Quest")==Q_COMPLETED and QuestStatus("sin_ComeToDogs2_Quest")==Q_COMPLETED then
+				TakeQuest("sin_BackToCats1_Quest")
+				TakeQuest("sin_ComeToDogs3_Quest")
+				AddImportantFadingMsg("Вы получили несколько заданий. Рекомендуется зайти в журнал заданий.")
+			else
+				if QuestStatus("sin_ComeToCats_Quest")==Q_COMPLETED and not(QuestStatus("sin_ComeToDogs2_Quest")==Q_COMPLETED) then
+					TakeQuest("sin_BackToCats1_Quest")
+				else
+					TakeQuest("sin_ComeToDogs3_Quest")
+				end
+			end
+		</script>
+	</trigger>
+
 <!--Меняем лого игрока на котов-->
 	<trigger Name="trChangeLogoCat" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
@@ -118,8 +169,26 @@
 
 			getObj("Player1"):SetProperty("Logo","4")
 
+			AddImportantFadingMsg("Вы вступили в группировку ''Банда Котов''.")
+
 			SetTolerance(1100, 1104, RS_ENEMY)	
 			SetTolerance(1100, 1106, RS_ALLY)
+			
+		</script>
+	</trigger>
+
+<!--Меняем лого игрока на псов-->
+	<trigger Name="trChangeLogoDog" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			getObj("Player1"):SetProperty("Logo","3")
+
+			AddImportantFadingMsg("Вы вступили в группировку ''Банда Псов''.")
+
+			SetTolerance(1100, 1104, RS_ALLY)	
+			SetTolerance(1100, 1106, RS_ENEMY)
 			
 		</script>
 	</trigger>
@@ -132,8 +201,13 @@
 
 			getObj("Player1"):SetProperty("Logo","16")
 
-			SetTolerance(1100, 1103, RS_ALLY)
-			
+			AddImportantFadingMsg("Вы больше не в группировке.")
+
+			SetTolerance(1100, 1104, RS_NEUTRAL)	
+			SetTolerance(1100, 1106, RS_NEUTRAL)
+			SetTolerance(1100, 1103, RS_NEUTRAL)
+			SetTolerance(1100, 1107, RS_NEUTRAL)
+
 		</script>
 	</trigger>
 
@@ -336,8 +410,6 @@
 
 			CompleteQuest("sin_DefendChirchNow_Quest")
 
-			AddImportantFadingMsg("Вы получили несколько заданий.")
-
 			TActivate("sinDogsChurch")
 		</script>
 	</trigger>	
@@ -364,6 +436,8 @@
 			end
 
 			CompleteQuest("sin_GoToIerihonBattle_Quest")
+			CompleteQuest("sin_GoToIerihonBattle2_Quest")
+			FailQuest("sin_FreeKittyCat_Quest")
 
 			TActivate("trDieDogsIerihon")		
 		</script>
@@ -385,6 +459,7 @@
 			TActivate("sinFreeEastIerihon")
 
 			CompleteQuest("sin_ShootToHellIerihon_Quest")
+			CompleteQuest("sin_ShootToHellIerihon2_Quest")
 		</script>
 	</trigger>	
 
@@ -484,10 +559,13 @@
 			TActivate("sinCatVictory")
 
 			SetTolerance(1100, 1104, RS_ALLY)
+			SetTolerance(1103, 1104, RS_ALLY)
+			SetTolerance(1106, 1104, RS_ALLY)
+			SetTolerance(1107, 1104, RS_ALLY)
 		</script>
 	</trigger>	
 
-<!--Диалог с Эгоистом после Сан-рафаэля (выключено)-->
+<!--После смерти предателя-->
 	<trigger Name="SanRafael_Kill_tr" active="0">
 		<event eventid="GE_OBJECT_DIE" ObjName="TraitorGuard1_vehicle_0"/>
 		<event eventid="GE_OBJECT_DIE" ObjName="TraitorGuard2_vehicle_0"/>
@@ -906,6 +984,53 @@
 			CompleteQuest("sin_KillBorn_Quest")
 			TActivate("Final_ctr")
 	</script>
+	</trigger>
+
+<!--Катсцена в Сан-рафаэле (Спасаем предателя)-->
+	<trigger Name="trSaveSanRafael" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_SanRafael_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_SanRafael")
+			if town then
+				town:SetOpenGateToPlayer(false)
+			end
+
+			CompleteQuest("sin_GoToRafaelTraitor_Quest")
+			TActivate("SaveSanRafael")
+		</script>
+	</trigger>
+
+<!--После спасения предателя-->
+	<trigger Name="trSaveSanRafaelAfter" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGuard1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGuard2_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="CatGuard3_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 3>count then
+				return
+			end
+			
+			StartConversation("Sin_TraitorCat")
+
+		</script>
+	</trigger>
+
+<!--Открываем Сан-рафаэль-->
+	<trigger Name="trOpenRafael" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_SanRafael")
+			if town then
+				town:SetOpenGateToPlayer(true)
+			end
+
+		</script>
 	</trigger>
 
 <!--Телепорт на Прибрежье-->

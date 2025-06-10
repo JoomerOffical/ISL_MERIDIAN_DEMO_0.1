@@ -1656,6 +1656,12 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="r7m1_AuntGato2_Quest"
+		briefDiz="Вернуться к тете Гато"
+		fullDiz="Я не смог спас"
+		isMainQuest="0" />
+
+	<QuestInfo
 		questName="r7m1_AuntGato_Quest"
 		briefDiz="Заехать к тете Гато"
 		fullDiz="В Кристи живет одна женщина, у которой дочь пропала в Иерихоне. Леонель просил навестить ее перед поездкой в Иерихон."
@@ -1750,6 +1756,7 @@
 	<QuestInfo
 		questName="r7m1_ComeToGato_Quest"
 		briefDiz="Вернуться к Тете Гато"
+		fullDiz="Надо навестить тетю Гато, все ли с ней в порядке."
 		isMainQuest="1">
 		<Map
 			name="r7m1"
@@ -1819,11 +1826,12 @@
 
 	<QuestInfo
 		questName="r7m1_FindKitty_Quest"
-		briefDiz="Найти Китти"
+		briefDiz="Найти Китти в Иерихоне"
 		fullDiz="Одна женщина просила найти ее дочку в Иерихоне. Что ж... постараемся ее найти."
 		isMainQuest="1">
 		<Map
-			name="r7m1" />
+			name="r7m1"
+			targetObjName="ToR7M2" />
 
 		<Map
 			name="sin" />
@@ -1866,11 +1874,8 @@
 	<QuestInfo
 		questName="r7m1_GoToJess_Quest"
 		briefDiz="Отвезти Китти мужу"
+		fullDiz="Китти у меня, пора ее отвезти к мужу."
 		isMainQuest="1">
-		<Map
-			name="r7m1"
-			targetObjName="ToR7M2" />
-
 		<Map
 			name="sin"
 			targetObjName="Sin_EastIerihon" />
@@ -1947,13 +1952,20 @@
 	</QuestInfo>
 
 	<QuestInfo
-		questName="r7m1_SaveKitty_Quest"
-		briefDiz="Спасти Китти каким-то способом"
+		questName="r7m1_ReturnGatoGood_Quest"
+		briefDiz="Вернуть Китти к Гато"
+		fullDiz="Теперь, когда Китти и ее муж спасены, пора их вернуть к ее маме."
 		isMainQuest="1">
 		<Map
 			name="r7m1"
-			targetObjName="ToR7M2" />
+			targetObjName="Kristy" />
+	</QuestInfo>
 
+	<QuestInfo
+		questName="r7m1_SaveKitty_Quest"
+		briefDiz="Спасти Китти каким-то способом"
+		fullDiz="Китти я нашел, теперь надо ее как-то спасти."
+		isMainQuest="1">
 		<Map
 			name="sin" />
 	</QuestInfo>
@@ -2258,6 +2270,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_AfterTraitorDog_Quest"
+		briefDiz="Вернуться к псам"
+		fullDiz="Теперь, когда я разобрался с предателем, можно вернуться к Псам и отчитаться им про предателя."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_AttackToPort_Quest"
 		briefDiz="Уничтожить оставшихся Псов"
 		isMainQuest="1">
@@ -2351,6 +2373,30 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_BackToDogsBlock_Quest"
+		briefDiz="Вернуться к Псам"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BackToGato_Quest"
+		briefDiz="Вернуться к Гато"
+		fullDiz="Теперь когда Китти в безопасности, пора вернуть ее домой."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_BackToKitty_Quest"
+		briefDiz="Вернуться к Китти"
+		fullDiz="Пока Китти ищут по всей земле, я поеду на ферму, может они уже уехали."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_BackToLeo_Quest"
 		briefDiz="Вернуться к Леонелю"
 		fullDiz="Теперь, когда мои приключения в Иерихоне завершились, пора вернуться к Леонелю и рассказать ему, где я так долго был."
@@ -2365,8 +2411,23 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_BattleBlock_Quest"
+		briefDiz="Уничтожить Котов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_FF_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_BattleForBlock_Quest"
+		briefDiz="Битва за блокпост"
+		fullDiz="Борн отправил меня к Арлекину, сторожить блокпост от постороних."
+		isMainQuest="1" />
+
+	<QuestInfo
 		questName="sin_BeatDealWI_Quest"
-		briefDiz="Выбить долг с должников"
+		briefDiz="Должники за крышу"
 		fullDiz="Первое задание от Котов - выбить долг с ребят, чей бизнес они крышуют."
 		isMainQuest="1">
 		<Map
@@ -2375,7 +2436,7 @@
 
 	<QuestInfo
 		questName="sin_BlockNoArl_Quest"
-		briefDiz="Уничтожить блокаду"
+		briefDiz="Блокада Псов"
 		fullDiz="После смерти Арлекина и его ребят псы решили подсуетиться, чтобы вернуть контроль над проездом. Надо добить остатки."
 		isMainQuest="1">
 		<Map
@@ -2411,7 +2472,7 @@
 
 	<QuestInfo
 		questName="sin_Caravan_Quest"
-		briefDiz="Проследовать за караваном"
+		briefDiz="Караван торговцев"
 		fullDiz="Этот караван не похоже, что хочет предложить котам какие-то ценности. Хочется глянуть, чем они там торговать норовят."
 		isMainQuest="1">
 		<Map
@@ -2450,6 +2511,25 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_ComeBackDeliveryDogs_Quest"
+		briefDiz="Вернуться к Псам"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_ComeBackJoe2_Quest"
+		briefDiz="Вернуться к Джо"
+		fullDiz="Борн дал мне немного денег на выпить. Пора это потратить у Джо."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_ComeBackJoeWEg_Quest"
 		briefDiz="Поехать к Джо"
 		fullDiz="Гарфилд дал мне немного денег на выпить. Пора это потратить у Джо."
@@ -2462,7 +2542,7 @@
 	<QuestInfo
 		questName="sin_ComeBackJoe_Quest"
 		briefDiz="Вернуться к Джо"
-		fullDiz="Гарфилд дал мне немного денег на выпить. Пора это потратить у Джо."
+		fullDiz="Мне дали немного денег на выпить. Пора это потратить у Джо."
 		isMainQuest="1">
 		<Map
 			name="sin"
@@ -2502,6 +2582,16 @@
 		questName="sin_ComeToDogs2_Quest"
 		briefDiz="Поехать к псам"
 		fullDiz="Псы более открыты и честны, чем коты. Но они слишком непредсказуемы. Может к ним присоединиться?"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_ComeToDogs3_Quest"
+		briefDiz="Вернуться к псам"
+		fullDiz="Мне стоит им рассказать про котов и их сделку с караваном. Они наверняка будут в восторге от раскрытия интриг."
 		isMainQuest="1">
 		<Map
 			name="sin"
@@ -2568,9 +2658,25 @@
 
 	<QuestInfo
 		questName="sin_DefendChurch_Quest"
-		briefDiz="Оборонять церковь"
+		briefDiz="Оборона Церкви"
 		fullDiz="По словам Гарфилда псы хотят атаковать Церковь Колеса. Что ж, защитим святых людей."
 		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_DeliverDog_Quest"
+		briefDiz="Первое задание Псов"
+		fullDiz="Псы решили дать мне первое задание - провести мелкую сделку с их торговцем."
+		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_DeliveryTraitor_Quest"
+		briefDiz="Провести предателя из этих земель"
+		fullDiz="Я решил его помиловать и вывести из этих земель. Пусть живет."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Final_loc" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_DestroyEnter_Quest"
@@ -2618,18 +2724,36 @@
 
 	<QuestInfo
 		questName="sin_Final_Quest"
-		briefDiz="Начать войну с бандами"
+		briefDiz="Война двух банд"
 		fullDiz="Псы прознали, что это я создаю проблемы, но если я скроюсь, Псы возможно подумают, что я у Котов. Надо закончить, что я начал."
 		isMainQuest="1" />
 
 	<QuestInfo
-		questName="sin_FreeKittyCat_Quest"
-		briefDiz="Спрятать Китти"
-		fullDiz="Надо спрятать Китти на старой ферме, чтобы коты не заподозрили мое долгое отсутствие."
+		questName="sin_FindJess_Quest"
+		briefDiz="Найти мужа Китти"
+		fullDiz="Пока Китти на ферме прячется, я приведу ей мужа."
 		isMainQuest="1">
 		<Map
 			name="sin"
-			targetObjName="Sin_DogHouse" />
+			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_FindKitty_Quest"
+		briefDiz="Поискать Китти"
+		fullDiz="Китти как-то сбежала от Котов, надо ее найти. А там посмотрим, что с ней делать."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_FreeKittyCat_Quest"
+		briefDiz="Прикрытие Китти"
+		fullDiz="Надо спрятать Китти на старой ферме, чтобы коты не заподозрили мое долгое отсутствие."
+		isMainQuest="1">
+		<Map
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2643,9 +2767,18 @@
 
 	<QuestInfo
 		questName="sin_FreedomKitty_Quest"
-		briefDiz="Освободить Китти"
+		briefDiz="Освобождение Китти"
 		fullDiz="Китти держат на старой ферме, если пойду один, то точно помру. Надо привлечь ее мужа к освобождению."
 		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_GoToBlockDog_Quest"
+		briefDiz="Добраться до блокпоста"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="KillBlockEnter_loc" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_GoToBlockNA_Quest"
@@ -2684,10 +2817,37 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_GoToDeliverDog_Quest"
+		briefDiz="Приехать в Иерихон"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToHellIerihon2_Quest"
+		briefDiz="Битва за Иерихон"
+		fullDiz="Псы начали штурмовать Иерихон. Это будет великая битва."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_GoToHellIerihon_Quest"
 		briefDiz="Битва за Иерихон"
 		fullDiz="Псы начали штурмовать Иерихон. Это будет великая битва."
 		isMainQuest="1" />
+
+	<QuestInfo
+		questName="sin_GoToIerihonBattle2_Quest"
+		briefDiz="Добраться до Иерихона"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
 
 	<QuestInfo
 		questName="sin_GoToIerihonBattle_Quest"
@@ -2705,6 +2865,15 @@
 		<Map
 			name="sin"
 			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToRafaelTraitor_Quest"
+		briefDiz="Добраться до Сан-Рафаэля"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_SanRafael" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2735,6 +2904,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_IerihonGarfield2_Quest"
+		briefDiz="Пообщаться с Гарфилдом"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_IerihonGarfield_Quest"
 		briefDiz="Пообщаться с Гарфилдом"
 		isMainQuest="1">
@@ -2754,7 +2932,7 @@
 
 	<QuestInfo
 		questName="sin_KillArlekinBlock_Quest"
-		briefDiz="Уничтожить блокаду"
+		briefDiz="Блокада Псов"
 		fullDiz="Пока Арлекин жив, его блокада продолжит существовать. Пора с ним разобраться."
 		isMainQuest="1">
 		<Map
@@ -2809,11 +2987,20 @@
 
 	<QuestInfo
 		questName="sin_KillCatTraitor_Quest"
-		briefDiz="Прикончить предателя"
+		briefDiz="Предатель Котов"
 		fullDiz="Среди Котов оказался предатель, который сейчас пьет в Сан-Рафаэле. И теперь мне придется его прикончить."
 		isMainQuest="1">
 		<Map
 			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_KillCatsTraitor_Quest"
+		briefDiz="Прибить Котов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_SanRafael" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2837,6 +3024,16 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_KnowFindKitty_Quest"
+		briefDiz="Найти Китти на старой ферме"
+		fullDiz="Теперь, когда я знаю, где Китти. Надо найти ее, пока Коты ее не забрали."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_DogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_LeaveSin_Quest"
 		briefDiz="Вернуться к Леонелю"
 		fullDiz="Посылку я отправил. Теперь меня тут ничего не держит. Можно валить."
@@ -2857,6 +3054,16 @@
 		isMainQuest="1">
 		<Map
 			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_NotFindKitty_Quest"
+		briefDiz="Вернуться на ферму"
+		fullDiz="Пока Коты ищут Китти, мне надо удостовериться, что они уехали и их на ферме нету."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_DogHouse" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2900,6 +3107,34 @@
 		<Map
 			name="sin"
 			targetObjName="Debt3_vehicle_0" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_RunToCats_Quest"
+		briefDiz="Убежать от Котов"
+		fullDiz="Нас спалили, но дороги назад нет, нам пора бежать из этих земель."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="ToR7M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_SaveTraitor_Quest"
+		briefDiz="Предатель среди Котов"
+		fullDiz="Второе Задание - спасти предателя Котов, чтобы он ничего не раскрыл Котам под пытками."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_ShootToHellIerihon2_Quest"
+		briefDiz="Уничтожить Псов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
 	</QuestInfo>
 
 	<QuestInfo

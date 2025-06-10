@@ -169,6 +169,121 @@
 		time="5" />
 
 	<string
+		id="500"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|Фух... Кажется оторвались. Мы в безопасности."
+		sound=""
+		time="4" />
+
+	<string
+		id="501"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Похоже на то, ядрен бензин. Ладно, пора вас отвезти к тете Гато."
+		sound=""
+		time="5" />
+
+	<string
+		id="510"
+		modelName="r1_woman"
+		modelSkin="2"
+		modelCfg="88"
+		modelSlot="1"
+		value="ТЕТЯ ГАТО|Oh, gloria al Senor! (О, слава тебе господи!) Вы вернулись, сеньор. Да и еще и с моей дочкой и моим зятью."
+		sound=""
+		time="8" />
+
+	<string
+		id="511"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Мамочка! Я думала, что никогда не вернусь домой. Если бы не этот чужеземец, вряд ли я бы выбралась из этого ада."
+		sound=""
+		time="7" />
+
+	<string
+		id="512"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не стоит благодарностей. Главное, что ваша дочь и ее муж вернулись."
+		sound=""
+		time="5" />
+
+	<string
+		id="513"
+		modelName="r1_woman"
+		modelSkin="2"
+		modelCfg="88"
+		modelSlot="1"
+		value="ТЕТЯ ГАТО|Ладно, держите, сеньор. Примите это в знак благодарности. Расскажите хоть, что у вас произошло, что вы пропали на такое время."
+		sound=""
+		time="8" />
+
+	<string
+		id="514"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну это уже тебе расскажут они. А я, пожалуй поеду. Мне надо к Леонелю вернуться, он ждет меня. Берегите себя."
+		sound=""
+		time="7" />
+
+	<string
+		id="515"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|Тогда пока, чужеземец. В общем, когда мы приехали в Иерихон..."
+		sound=""
+		time="4" />
+
+	<string
+		id="520"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|А вот и наш спаситель. Мы уже думали, ты не приедешь."
+		sound=""
+		time="3" />
+
+	<string
+		id="521"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну как видишь, я приехал. Решил навестить вас."
+		sound=""
+		time="3" />
+
+	<string
+		id="522"
+		modelName="r1_woman"
+		modelSkin="2"
+		modelCfg="88"
+		modelSlot="1"
+		value="ТЕТЯ ГАТО|O, gracias, amigo, за спасение моей дочки. Не хотите с нами остаться на чай?"
+		sound=""
+		time="5" />
+
+	<string
+		id="523"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Нет, спасибо. Мне надо к Леонелю, отчитаться про посылку. Берегите себя."
+		sound=""
+		time="5" />
+
+	<string
+		id="524"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|В таком случае, прими от нас эти подарки. Мы будем рады тебя снова видеть. Пока, чужеземец."
+		sound=""
+		time="5" />
+
+	<string
 		id="196"
 		value="ExMachina: Меридиан 113||Вы хотите воспользоваться|интерактивной системой помощи игры?"
 		numButtons="2" />

@@ -2,7 +2,7 @@
 <triggers>
 
 <!--Начало игры-->
-	<trigger Name="cinDoctorOut" active="1">
+	<trigger Name="cinDoctorOut" active="0">
 	<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate()
@@ -309,6 +309,194 @@
 			trigger:Deactivate()
 
 			StopPlayingCustomMusic()
+		</script>
+	</trigger>
+
+<!--Сбежали от котов-->
+	<trigger Name="cinEscapedCats" active="0">
+		<event	timeout="0.01"		eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("EscapeCats_cam0", CINEMATIC_NO_AIM, 0, 10, 1, 1)
+			StartCinematic()
+
+			TActivate("cinEscapedCats_FadeIn")
+			TActivate("cinEscapedCats_End")
+
+			</script>
+	</trigger>
+
+	<trigger Name="cinEscapedCats_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetPosition(CVector(3240.614, 257.926, 3611.873))
+				Plf:SetRotation(Quaternion(-0.032, 0.890, 0.013, -0.455))
+				Plf:SetThrottle( 0 )
+				Plf:SetExternalPathByName("EscapedDogs")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(500, 3.00)
+			AddCinematicMessage(501, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="cinEscapedCats_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:PlaceToEndOfPath()
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			TDeactivate("cinEscapedCats_FadeIn")
+			TDeactivate("cinEscapedCats_cam0")
+			TActivate("cinKittyGato")
+
+			CompleteQuest("sin_RunToCats_Quest")
+			TakeQuest("r7m1_ReturnGatoGood_Quest")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Тетя Гато (Привезли Китти)-->
+	<trigger Name="cinKittyGato" active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Kristy_enter" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("AuntGato_cam0", CINEMATIC_NO_AIM, 0, 35, 1, 1)
+			StartCinematic()
+
+			TActivate("cinKittyGato_FadeIn")
+			TActivate("cinKittyGato_End")
+
+			</script>
+	</trigger>
+
+	<trigger Name="cinKittyGato_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(510, 1.00)
+			AddCinematicMessage(511, 0.25)
+			AddCinematicMessage(512, 0.25)
+			AddCinematicMessage(513, 0.25)
+			AddCinematicMessage(514, 0.25)
+			AddCinematicMessage(515, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="cinKittyGato_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("cinKittyGato_FadeIn")
+			TActivate("trAfterIerihon2")
+
+			CompleteQuest("r7m1_ReturnGatoGood_Quest")
+			TakeQuest("sin_BackToLeo_Quest")
+
+			AddItemsToPlayerRepository( "potato", 1 )	
+			AddItemsToPlayerRepository( "oil", 1 )				
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Тетя Гато (Китти уехала раньше нас)-->
+	<trigger Name="cinKittyGato1" active="0">
+		<event	eventid="GE_OBJECT_ENTERS_LOCATION"	ObjName="Kristy_enter" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("AuntGato_cam0", CINEMATIC_NO_AIM, 0, 20, 1, 1)
+			StartCinematic()
+
+			TActivate("cinKittyGato1_FadeIn")
+			TActivate("cinKittyGato1_End")
+
+			</script>
+	</trigger>
+
+	<trigger Name="cinKittyGato1_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(520, 1.00)
+			AddCinematicMessage(521, 0.25)
+			AddCinematicMessage(522, 0.25)
+			AddCinematicMessage(523, 0.25)
+			AddCinematicMessage(524, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="cinKittyGato1_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("cinKittyGato1_FadeIn")
+			TActivate("trAfterIerihon2")
+
+			CompleteQuest("r7m1_ComeToGato_Quest")
+			TakeQuest("sin_BackToLeo_Quest")		
+
+			AddItemsToPlayerRepository( "potato", 1 )	
+			AddItemsToPlayerRepository( "oil", 1 )		
+
+			SetCameraBehindPlayerVehicle()
 		</script>
 	</trigger>
 

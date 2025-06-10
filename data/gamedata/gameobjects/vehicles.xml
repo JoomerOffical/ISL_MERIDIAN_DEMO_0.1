@@ -5,6 +5,53 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 -->
 
 <Prototypes>
+    <Prototype
+        Class="Vehicle"
+        Name="Cumbine"
+        ResourceType="VEHICLE"
+        PressingForce="2.0"
+        BlastWave="bigBlastWave"
+        DiffRatio="5.0"
+        MaxEngineRpm="4500"
+        LowGearShiftLimit="1500"
+        HighGearShiftLimit="3500"
+        DestroyEffectPiercing="ET_PS_VEH_EXP1_MED"
+        DestroyEffectBlast="ET_PS_VEH_EXP2_MED"
+        DestroyEffectEnergy="ET_PS_VEH_EXP3_MED"
+        DestroyEffectWater="ET_PS_VEH_EXP2_MED"
+        SteeringSpeed="0.2"
+        CameraHeight="6.5"
+        CameraMaxDist="23"
+        HornSound="ET_S_HORN06"
+        DecisionMatrix="vehiclemain.lua"
+        LookRadius="200.0"
+        IntersectionRadius="9.0"
+        TakingRadius="30.0"
+        DriftCoeff="0.04"
+        MassSize="4 4.5 12"
+        MassTranslation="0 -1.9 -2"
+        Abstract="true">
+
+        <MainPartDescription id="CHASSIS" partResourceType="CUMBINE_CHASSIS">
+            <PartDescription id="CABIN" partResourceType="CUMBINE_CABIN" lpName="LP_CAB01">
+                <PartDescription id="CABIN_SMALL_GUN" partResourceType="SMALL_GUN" lpName="LP_SML01" />
+            </PartDescription>
+            <PartDescription id="BASKET" partResourceType="CUMBINE_BASKET" lpName="LP_BSK01">
+            </PartDescription>
+        </MainPartDescription>
+
+        <Parts>
+            <Part id="CHASSIS" Prototype="CumbineChassis" />
+        </Parts>
+
+        <Wheels>
+            <Wheel Prototype="CumbineWheelFL" />
+            <Wheel Prototype="CumbineWheelFR" />
+            <Wheel Prototype="CumbineWheelRL" steering="inverse" />
+            <Wheel Prototype="CumbineWheelRR" steering="inverse" />
+        </Wheels>
+    </Prototype>
+
 	<Prototype
 		Class				= "Vehicle"
 		Name				= "Robot04_SMALL"
@@ -4056,4 +4103,15 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 			<Part id = "BASKET_BIG_GUN_1"		Prototype = "bumblebee01" /> 
 		</Parts>
 	</Prototype>
+
+    <Prototype
+        Class="Vehicle"
+        Name="Cumbine01"
+        ParentPrototype="Cumbine"
+        VisibleInEncyclopedia="true">
+        <Parts>
+            <Part id="CABIN" Prototype="CumbineCab01" />
+            <Part id="BASKET" Prototype="CumbineCargo01" />
+        </Parts>
+    </Prototype>
 </Prototypes>

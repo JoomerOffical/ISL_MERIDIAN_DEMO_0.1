@@ -1164,6 +1164,13 @@
 		time="7" />
 
 	<string
+		id="65431"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Тот, кто освободил твою жену из заточения. Нам пора уезжать. В Кристи Китти ждет ее мама."
+		sound=""
+		time="7" />
+
+	<string
 		id="6544"
 		modelName="r2_woman"
 		modelSkin="1"
@@ -1179,6 +1186,252 @@
 		value ="БРОДЯГА|У меня осталась пара дел. Одна из них - навестить Джо. До встречи в Кристи."
 		sound=""
 		time="7" />
+
+	<string
+		id="6550"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Вы здесь? Почему вы не уехали?"
+		sound=""
+		time="5" />
+
+	<string
+		id="6551"
+		modelName="r2_man"
+		modelSkin="1"
+		modelCfg="8"
+		modelSlot="1"
+		value="ДЖЕСС|Мы испугались. Мы услышали по рации, что нас ищут. Потому решили продолжить прятаться."
+		sound=""
+		time="7" />
+
+	<string
+		id="6552"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Эх... Ладно, поехали со мной, я вас отвезу из этих земель."
+		sound=""
+		time="6" />
+
+	<string
+		id="6560"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="168"
+		modelSlot="1"
+		value="ЭГОИСТ|Эй! Смотрите! Чужеземец с Китти и Джесс. Он предатель!"
+		sound=""
+		time="5" />
+
+	<string
+		id="6561"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|Боже! Нас раскрыли. Нам конец."
+		sound=""
+		time="3" />
+
+	<string
+		id="6562"
+		modelName="NewHero_mask"
+		value ="БРОДЯГА|Еще нет. Мой тарантас быстрее этих развалюх, пора бежать."
+		sound=""
+		time="5" />
+
+	<string
+		id="6600"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Мы приехали. Дальше ты сам по себе. Уходи, пока Коты тебя не поймали."
+		sound=""
+		time="5" />
+
+	<string
+		id="6601"
+		modelName="r1_man"
+		modelSkin="3"
+		modelCfg="182"
+		modelSlot="1"
+		value="КОУЛ|Спасибо, конечно, но как я без машины уйду?"
+		sound=""
+		time="4" />
+
+	<string
+		id="6602"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Это уже не моя проблема. Я вообще доложен тебя убить. Но решил помиловать. А теперь иди."
+		sound=""
+		time="7" />
+
+	<string
+		id="6603"
+		modelName="r1_man"
+		modelSkin="3"
+		modelCfg="182"
+		modelSlot="1"
+		value="КОУЛ|Что ж, спасибо и на том. Прощай."
+		sound=""
+		time="3" />
+
+	<string
+		id="6610"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Вот и ты. Готов крышевать приезжих?"
+		sound=""
+		time="4" />
+
+	<string
+		id="6611"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Надеюсь, оно того стоит."
+		sound=""
+		time="3" />
+
+	<string
+		id="6612"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Ну? Какого это, когда ты кого-то прессуешь, а не тебя кто-то?"
+		sound=""
+		time="6" />
+
+	<string
+		id="6613"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну, не скажу, что доволен. Но деньги не пахнут."
+		sound=""
+		time="5" />
+
+	<string
+		id="6614"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Очень скоро... ты разбогатеешь. С нами."
+		sound=""
+		time="4" />
+
+	<string
+		id="6615"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Что ж, мое сердце от этого не разобьется."
+		sound=""
+		time="4" />
+
+	<string
+		id="6616"
+		modelName="r2_man"
+		modelSkin="2"
+		modelCfg="332"
+		value="БОЕЦ ПСОВ|Босс, к нам гости..."
+		sound=""
+		time="2" />
+
+	<string
+		id="6617"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|О... Давно у нас таких стычек не было. Готовьте стволы, псы."
+		sound=""
+		time="5" />
+
+	<string
+		id="6618"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Это было эпично, псы. А ты, Бродяга, молодец. Что ж, проверка завершена. Ты готовь стать одним из нас. Возвращайся на базу."
+		sound=""
+		time="8" />
+
+	<string
+		id="6619"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ладно, еду."
+		sound=""
+		time="2" />
+
+	<string
+		id="6620"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я вытащу тебя из этих земель, тебя ждет матушка."
+		sound=""
+		time="4" />
+
+	<string
+		id="6621"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="125"
+		modelSlot="1"
+		value="КИТТИ|А? Вы от моей мамы? Спасибо вам, но нам нужно забрать моего мужа тогда уж. Он в Западном Иерихоне."
+		sound=""
+		time="6" />
+
+	<string
+		id="6630"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Черт. Арлекин тут. Скройтесь под полотно и не двигайтесь."
+		sound=""
+		time="5" />
+
+	<string
+		id="6631"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Ты куда собрался, Бродяга?"
+		sound=""
+		time="3" />
+
+	<string
+		id="6631"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Борн попросил меня отвезти тела из этих земель. Никто не имеет права, как он сказал, открывать полотно. И даже я не знаю, кто там."
+		sound=""
+		time="8" />
+
+	<string
+		id="6632"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Хм... Ладно. Но с тобой поедет один из моих ребят. Он поможет тебе сжечь тела или похоронить их."
+		sound=""
+		time="6" />
+
+	<string
+		id="6633"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Э... Ну ладно."
+		sound=""
+		time="2" />
+
+	<string
+		id="6630"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Борн, Китти у меня. Я нашел ее."
+		sound=""
+		time="3" />
+
+	<string
+		id="6631"
+		modelAutosized="true"
+		modelName="gadget_12"
+		modelSlot="1"
+		value="БОРН|Отличная работа, Бродяга. Тащи ее к нам на Базу."
+		sound=""
+		time="4" />
 
 	<string
 		id="8801"
@@ -1205,4 +1458,8 @@
 		value="СПУCТЯ КАКОЕ-ТО ВРЕМЯ..."
 		sound=""
 		time="5" />
+
+	<string
+		id="8805"
+		value="Вступление в группировки - разблокировано.||Теперь вам доступна возможность вступать в гуппировки. Как по основному сюжету так и просто в открытом мире.|Вступая в группировку вы можете получить квесты, доступные только внутри группировки. Помимо этого вы|можете получить товар или оружие, недоступное в магазинах." />
 </resource>

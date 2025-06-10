@@ -169,6 +169,24 @@
 	</Path>
 
 	<Path
+		Name="CatAlarm">
+		<Point
+			coord="2659.517 1494.234" />
+
+		<Point
+			coord="2669.366 1453.693" />
+
+		<Point
+			coord="2691.495 1417.639" />
+
+		<Point
+			coord="2722.035 1380.555" />
+
+		<Point
+			coord="2751.460 1342.292" />
+	</Path>
+
+	<Path
 		Name="Church_SCH_DQC">
 		<Point
 			coord="2519.558 2927.664" />
@@ -925,6 +943,36 @@
 
 		<Point
 			coord="1386.827 2102.600" />
+	</Path>
+
+	<Path
+		Name="EscapeCatKitty">
+		<Point
+			coord="2513.450 1332.655" />
+
+		<Point
+			coord="2551.088 1364.208" />
+
+		<Point
+			coord="2589.375 1396.367" />
+
+		<Point
+			coord="2624.680 1403.927" />
+
+		<Point
+			coord="2672.550 1408.339" />
+	</Path>
+
+	<Path
+		Name="EscapeCatKitty2">
+		<Point
+			coord="2698.105 1406.574" />
+
+		<Point
+			coord="2737.333 1356.314" />
+
+		<Point
+			coord="2772.635 1313.918" />
 	</Path>
 
 	<Path
@@ -1741,6 +1789,33 @@
 
 		<Point
 			coord="3701.334 378.677" />
+	</Path>
+
+	<Path
+		Name="TraderBack">
+		<Point
+			coord="3631.306 532.579" />
+
+		<Point
+			coord="3650.258 503.809" />
+
+		<Point
+			coord="3666.070 479.701" />
+
+		<Point
+			coord="3686.937 433.648" />
+
+		<Point
+			coord="3706.587 377.513" />
+
+		<Point
+			coord="3711.982 340.032" />
+
+		<Point
+			coord="3718.414 305.659" />
+
+		<Point
+			coord="3721.912 257.243" />
 	</Path>
 
 	<Path

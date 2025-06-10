@@ -2,6 +2,42 @@
 <Servers>
 	<AnimatedModelsServer>
 		<Item
+			id="CumbineChassis"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineCab01"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineSusp01l"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineSusp01r"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineSusp02"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineWheelFL"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineWheelFR"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineWheelRL"
+			file="data\models\AnimModels.xml" />
+
+		<Item
+			id="CumbineWheelRR"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="helvecia"
 			file="data\models\AnimModels.xml" />
 

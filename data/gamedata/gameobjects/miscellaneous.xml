@@ -149,7 +149,7 @@
 	<Prototype
 		Class			= "DynamicQuestTreasure"
 		Name			= "dynamicQuestTreasure"
-		MinReward		= "200"
+		MinReward		= "400"
 		PlayerSchwarzPart = "0.015"
 		TimeRewardCoeff = "1.5"
 		MaximumDifference = "200.0"
