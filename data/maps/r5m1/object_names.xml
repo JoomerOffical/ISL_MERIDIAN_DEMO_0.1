@@ -53,25 +53,26 @@
 	<Object	Name = "TheApple_Bar"					FullName = "Бар ''Хилл''" />
 	<Object	Name = "TheApple_Workshop"				FullName = "Мастерская" />
 	<Object	Name = "TheApple_Shop"					FullName = "Магазин" />
-	<Object	Name = "TheApple_Bar_Barman"				FullName = "Бармен Пако" />
+	<Object	Name = "TheApple_Bar_Barman"			FullName = "Бармен Пако" />
 	<Object	Name = "TheApple_Bar_Ralf_NPC"			FullName = "Вождь Янки" />
-	<Object	Name = "TheApple_Bar_TreasureMan_NPC"		FullName = "Авантюрист Нодин" />
-	<Object	Name = "TheApple_BuyerNarkota_NPC"			FullName = "Пройдоха Керси" />
+	<Object	Name = "TheApple_BuyerNarkota_NPC"		FullName = "Пройдоха Керси" />
 
 	<Object	Name = "BigApple"						FullName = "Большое яблоко" />
 	<Object	Name = "BigApple_Bar"					FullName = "Трапезная" />
 	<Object	Name = "BigApple_Workshop"				FullName = "Мастерская" />
 	<Object	Name = "BigApple_Shop"					FullName = "Магазин" />
-	<Object	Name = "BigApple_Bar_Barman"				FullName = "Повар Раунд" />
-	<Object	Name = "BigApple_enter"				FullName = "Большое яблоко" />
+	<Object	Name = "BigApple_Bar_Barman"			FullName = "Повар Раунд" />
+	<Object	Name = "BigApple_enter"					FullName = "Большое яблоко" />
 
 	<Object	Name = "FieldCamp"						FullName = "Полевой лагерь" />
-	<Object	Name = "FieldCamp_House"					FullName = "Госпиталь" />
+	<Object	Name = "FieldCamp_House"				FullName = "Госпиталь" />
 	<Object	Name = "FieldCamp_Workshop"				FullName = "Мастерская" />
 	<Object	Name = "FieldCamp_enter"				FullName = "Полевой лагерь" />
 
 	<Object	Name = "r5m1_Arena"						FullName = "Арена" />
 	<Object	Name = "r5m1_Arena_enter"				FullName = "Арена" />
+	<Object	Name = "r5m1_Arena_bar"					FullName = "Бар ''Гладиатор''" />
+	<Object	Name = "r5m1_Arena_Bar_Barman"			FullName = "Продавец Нейт" />
 
 	<Object	Name = "DynQEnemy01"					FullName = "Гарольд" />
 	<Object	Name = "DynQEnemy02"					FullName = "Сизый Билл" />

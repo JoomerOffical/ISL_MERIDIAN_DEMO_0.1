@@ -4240,7 +4240,7 @@
 
 <!--Отвезти Китти к Псам-->
 	<trigger Name="sinPickKittytoDogs" active="0">
-		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Final_loc"/>
+		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate()
 
@@ -4292,8 +4292,275 @@
 
 			TDeactivate("sinPickKittytoDogs_FadeIn")
 
-			CompleteQuest("sin_DeliveryTraitor_Quest")
-			TakeQuest("sin_AfterTraitorDog_Quest")
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Сделка между двумя Иерихонами 1-->
+	<trigger Name="sinDealKitty1" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="cinDealKitty_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("DealKitty_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 0)
+			Fly	("DealKitty_cam1", CINEMATIC_NO_AIM, 0, 2, 0, 0)
+			Fly	("DealKitty_cam2", CINEMATIC_NO_AIM, 0, 15, 0, 0)
+			Fly	("DealKitty_cam3", CINEMATIC_NO_AIM, 0, 15, 0, 0)
+			Fly	("DealKitty_cam4", CINEMATIC_NO_AIM, 0, 6, 0, 1)
+			StartCinematic()
+
+			TActivate("sinDealKitty1_FadeIn")
+			TActivate("sinDealKitty1_cam2")
+			TActivate("sinDealKitty1_cam3")
+			TActivate("sinDealKitty1_cam4")
+			TActivate("sinDealKitty1_End")
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinDealKitty1_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("BornCar", 1104, { CVector(getPos("sin_BornCar_loc"))}, {"Molokovoz02"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+			CreateTeam("Dog1", 1104, { CVector(getPos("sin_Scout02_1_loc"))}, {"Scout02"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+			CreateTeam("Dog2", 1104, { CVector(getPos("sin_sml2_1_loc"))}, {"Sml201"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+			CreateTeam("Dog3", 1104, { CVector(getPos("sin_sml3_loc"))}, {"Sml201"}, nil, nil, {Quaternion(-0.009, -0.899, 0.001, 0.439)})
+
+			CreateTeam("Egoist", 1106, { CVector(getPos("sin_EgoistCar_loc"))}, {"EgoistCar"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+			CreateTeam("Garfield", 1106, { CVector(getPos("sin_GarfieldCar_loc"))}, {"Fighter02"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+			CreateTeam("Cat1", 1106, { CVector(getPos("sin_sml2_loc"))}, {"Sml201"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+			CreateTeam("Cat2", 1106, { CVector(getPos("sin_sml1_loc"))}, {"Sml101"}, nil, nil, {Quaternion(0.114, 0.543, -0.047, 0.831)})
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("sin_PlayerGo_loc")))
+				Plf:SetRotation(Quaternion(0.000, -0.968, 0.002, 0.251))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetExternalPathByName("PlayerGoCross")
+				Plf:SetCustomControlEnabled( false )
+			end
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinDealKitty1_cam2" active="0">
+		<event flypath="DealKitty_cam2" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 5800, 0.5 )
+			AddCinematicMessage( 5801, 0.5 )
+			AddCinematicMessage( 5802, 0.5 )
+			AddCinematicMessage( 5803, 0.5 )
+			AddCinematicMessage( 5804, 0.5 )
+			AddCinematicMessage( 5805, 0.5 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinDealKitty1_cam3" active="0">
+		<event flypath="DealKitty_cam3" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1106, 1104, RS_ENEMY)
+
+			local Cvn = getObj("BornCar_vehicle_0")
+			if Cvn then
+				Cvn:setGodMode(1)
+			end
+
+			local Cgd = getObj("Dog1_vehicle_0")
+			if Cgd then
+				Cgd:setGodMode(1)
+			end
+
+			local Tr1 = getObj("Dog2_vehicle_0")
+			if Tr1 then
+				Tr1:setGodMode(1)
+			end
+
+			local Tr2 = getObj("Dog3_vehicle_0")
+			if Tr2 then
+				Tr2:setGodMode(1)
+			end
+
+			local Ego = getObj("Egoist_vehicle_0")
+			if Ego then
+				Ego:setGodMode(1)
+			end
+
+			local Gar = getObj("Garfield_vehicle_0")
+			if Gar then
+				Gar:setGodMode(1)
+			end
+
+			local Ct1 = getObj("Cat1_vehicle_0")
+			if Ct1 then
+				Ct1:setGodMode(1)
+			end
+
+			local Ct2 = getObj("Cat2_vehicle_0")
+			if Ct2 then
+				Ct2:setGodMode(1)
+			end
+
+			AddCinematicMessage( 5806, 0.5 )
+		</script>
+	</trigger>
+
+	<trigger Name="sinDealKitty1_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:PlaceToEndOfPath()
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local Cgd = getObj("Dog1_vehicle_0")
+			if Cgd then
+				Cgd:setGodMode(0)
+			end
+
+			local Tr1 = getObj("Dog2_vehicle_0")
+			if Tr1 then
+				Tr1:setGodMode(0)
+			end
+
+			local Tr2 = getObj("Dog3_vehicle_0")
+			if Tr2 then
+				Tr2:setGodMode(0)
+			end
+
+			local Ego = getObj("Egoist_vehicle_0")
+			if Ego then
+				Ego:setGodMode(0)
+			end
+
+			local Gar = getObj("Garfield_vehicle_0")
+			if Gar then
+				Gar:setGodMode(0)
+			end
+
+			local Ct1 = getObj("Cat1_vehicle_0")
+			if Ct1 then
+				Ct1:setGodMode(0)
+			end
+
+			local Ct2 = getObj("Cat2_vehicle_0")
+			if Ct2 then
+				Ct2:setGodMode(0)
+			end
+
+			TDeactivate("sinDealKitty1_FadeIn")
+			TDeactivate("sinDealKitty1_cam2")
+			TDeactivate("sinDealKitty1_cam3")
+
+			CompleteQuest("sin_GoToIerihon_Quest")
+			TActivate("sinCapIerihonDog")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+		</script>
+	</trigger>
+
+<!--После битвы за Иерихон (Псы)-->
+	<trigger Name="sinCapIerihonDog" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Egoist_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Garfield_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat2_vehicle_0"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 4>count then
+				return
+			end
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 9, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinCapIerihonDog_FadeIn")
+			TActivate("sinCapIerihonDog_End")
+			
+		</script>
+	</trigger>
+
+	<trigger Name="sinCapIerihonDog_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(6640, 1.0)
+			AddCinematicMessage(6641, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinCapIerihonDog_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			local Cvn = getObj("BornCar_vehicle_0")
+			if Cvn then
+				Cvn:Remove()
+			end
+
+			local Cgd = getObj("Dog1_vehicle_0")
+			if Cgd then
+				Cgd:Remove()
+			end
+
+			local Tr1 = getObj("Dog2_vehicle_0")
+			if Tr1 then
+				Tr1:Remove()
+			end
+
+			local Tr2 = getObj("Dog3_vehicle_0")
+			if Tr2 then
+				Tr2:Remove()
+			end
+
+			TDeactivate("sinCapIerihonDog_FadeIn")
+
+			CompleteQuest("sin_KillCatsIerihon_Quest")
 
 			SetCameraBehindPlayerVehicle()
 		</script>

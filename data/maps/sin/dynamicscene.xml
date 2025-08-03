@@ -412,6 +412,16 @@
 				SpokenCount="0" />
 
 			<Object
+				Name="Sin_Bulldog1"
+				Belong="1104"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="4"
+				cfg="314"
+				helloReplyNames="Born10_DLG"
+				SpokenCount="0" />
+
+			<Object
 				Name="Sin_Debt1"
 				Belong="1103"
 				Prototype="NPC"
@@ -9667,7 +9677,7 @@
 				ModelName="r2_man"
 				skin="4"
 				cfg="314"
-				helloReplyNames="Born1_DLG Born2_DLG Born3_DLG Born4_DLG Born5_DLG Born6_DLG Born7_DLG Born8_DLG"
+				helloReplyNames="Born1_DLG Born2_DLG Born3_DLG Born4_DLG Born5_DLG Born6_DLG Born7_DLG Born8_DLG Born9_DLG"
 				SpokenCount="0" />
 
 			<Object

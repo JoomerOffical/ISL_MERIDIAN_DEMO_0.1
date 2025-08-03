@@ -2453,6 +2453,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_CapToKitty_Quest"
+		briefDiz="Отвезти Китти к псам"
+		fullDiz="Теперь можно воспользоваться Китти против Котов"
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_CaravanChase_Quest"
 		briefDiz="Догнать караван"
 		isMainQuest="1">
@@ -2635,6 +2644,15 @@
 		<Map
 			name="sin"
 			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_DealKitty2_Quest"
+		briefDiz="Сделка с Котами"
+		fullDiz="Теперь Котам ничего не останется, кроме как уступить Псам что-то в обмен на Китти."
+		isMainQuest="1">
+		<Map
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2859,6 +2877,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_GoToIerihon_Quest"
+		briefDiz="Добаться до Иерихона"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="sin_PlayerGo_loc" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_GoToKittyCat_Quest"
 		briefDiz="Вернуться в Кошкин Дом"
 		isMainQuest="1">
@@ -2883,6 +2910,15 @@
 		<Map
 			name="sin"
 			targetObjName="Sin_SanRafael" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToWestIerihon_Quest"
+		briefDiz="Приехать в Западный Иерихон"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_EastIerihon" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2992,6 +3028,15 @@
 		isMainQuest="1">
 		<Map
 			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_KillCatsIerihon_Quest"
+		briefDiz="Уничтожить котов"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_WestIerihon" />
 	</QuestInfo>
 
 	<QuestInfo

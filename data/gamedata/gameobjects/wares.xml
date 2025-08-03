@@ -103,11 +103,6 @@ $Id: Wares.xml,v 1.1 2005/12/08 08:58:06 anton Exp $
 
 		ModelFile		= "goods_canbox"
 		ResourceType	= "CANNEDFOOD" /> 
-
-
-
-
-
 <!--
 	<Prototype
 		Class			= "Ware"
@@ -141,6 +136,19 @@ $Id: Wares.xml,v 1.1 2005/12/08 08:58:06 anton Exp $
 
 		ModelFile		= "lom"
 		ResourceType	= "SCRAP_METAL" />
+
+	<Prototype
+		Class			= "SpecialWare"
+		Name			= "electronics"
+		SwareType 		= "1"
+
+		Price			= "25000"
+		Durability		= "90"
+		PriceDispersion	= "5"
+
+		AidPercent		= "7"
+		ModelFile		= "mikro"
+		ResourceType	= "ELECTRONICS" />
 
 	<Prototype
 		Class			= "Ware"

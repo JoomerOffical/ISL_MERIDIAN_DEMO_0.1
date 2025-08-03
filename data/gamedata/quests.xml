@@ -1149,6 +1149,44 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_CapToKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+<!--Root/sin/Сюжетные/Побыть на сделке 2-->
+	<quest
+		Name="sin_DealKitty2_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToIerihon_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_DealKitty2_Quest" />
+
+		<quest
+			Name="sin_KillCatsIerihon_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToIerihon_Quest" />
+
+		<quest
+			Name="sin_GoToWestIerihon_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_KillCatsIerihon_Quest" />
+	</quest>
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"

@@ -313,12 +313,29 @@
 
 <!-- Города -->
 
+   <Item id="r7m1_Monterrey"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+   <Item id="sin_CatDog"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="TownOneEye_prototype"				file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="TownMapleSheet"					file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="TownBigHead"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="TownMichikar"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
-   <Item id="SinCity"							file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
    <Item id="r5m1_BigApple"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+   <Item id="r5m2_Vraska_prototype"				file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+   <Item id="Torreon"		   file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+   <Item id="r7m3_Ermosinyo"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
+
+   <Item id="r7m1_Village"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+
+   <Item id="sin_EastRaf"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+   <Item id="EastIerihon"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+   <Item id="ChurchIerihon"					file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+
+   <Item id="r7m3_Village"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+
+   <Item id="r5m1_Village"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+
+   <Item id="r5m2_Village"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
+   <Item id="r5m2_Mercenary"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
 
    <Item id="r6m1_Onto_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="r6m1_Lodon_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
@@ -331,28 +348,10 @@
    <Item id="r6m2_Bey_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="r6m2_Kanata_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
 
-   <Item id="r5m1_Apple"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="r5m1_Konneks"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="r5m1_Pensilvansk"					file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-
-   <Item id="SinVillage1"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="sin_EastRaf"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="EastIerihon"						file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="ChurchIerihon"					file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="sin_CatDog"						file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
-
    <Item id="r5m2_Pervomayka_prototype"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="r5m2_Sagevsal_prototype"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="r5m2_Cvetograd_prototype"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
    <Item id="r5m2_Mexico_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="r5m2_Vraska_prototype"				file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-
-   <Item id="r7m1_Village"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="r7m1_Monterrey"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
-
-   <Item id="r7m3_Village"			file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
-   <Item id="Torreon"		   file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
-   <Item id="r7m3_Ermosinyo"		file="data\if\ico\LocalMap\icn_town.dds" file1="data\if\ico\LocalMap\icn_town_shadow.dds"/>
 
    <Item id="PetrolStationTown"					file="data\if\ico\LocalMap\icn_village.dds" file1="data\if\ico\LocalMap\icn_village_shadow.dds"/>
 
@@ -404,35 +403,34 @@
 <!-- группировки -->
    <Item id="Belong_1101"	file="data\if\ico\clans\farmers_union03.dds" 		file1="data\if\ico\clans\farmers_union02.dds"/>
    <Item id="Belong_1102"	file="data\if\ico\clans\refuelers03.dds" 			file1="data\if\ico\clans\refuelers02.dds"/>
+
    <Item id="Belong_1103"	file="data\if\ico\clans\trappers03.dds" 	file1="data\if\ico\clans\trappers02.dds"/>
    <Item id="Belong_1104"	file="data\if\ico\clans\dogs03.dds" 	file1="data\if\ico\clans\dogs02.dds"/>
    <Item id="Belong_1105"	file="data\if\ico\clans\vagabonds03.dds" 			file1="data\if\ico\clans\vagabonds02.dds"/>
    <Item id="Belong_1106"	file="data\if\ico\clans\cats03.dds" 	file1="data\if\ico\clans\cats02.dds"/>
    <Item id="Belong_1107"	file="data\if\ico\clans\church_of_enlightenment03.dds" 	file1="data\if\ico\clans\church_of_enlightenment02.dds"/>
+
    <Item id="Belong_1190"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
    <Item id="Belong_1191"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
+
    <Item id="Belong_1108"	file="data\if\ico\clans\winemakers03.dds" 			file1="data\if\ico\clans\winemakers02.dds"/>
+
    <Item id="Belong_1109"	file="data\if\ico\clans\beer03.dds" 			file1="data\if\ico\clans\beer02.dds"/>
    <Item id="Belong_1110"	file="data\if\ico\clans\bure_32.dds" 			file1="data\if\ico\clans\bure_128.dds"/>
    <Item id="Belong_1111"	file="data\if\ico\clans\free_traders_alliance03.dds" 	file1="data\if\ico\clans\free_traders_alliance02.dds"/>
-
-   
-   <Item id="Belong_1192"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
-   <Item id="Belong_1193"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
-
    <Item id="Belong_1196"	file="data\if\ico\clans\beer03.dds" 			file1="data\if\ico\clans\beer02.dds"/>
-   <Item id="Belong_1112"	file="data\if\ico\clans\go_32.dds" 				file1="data\if\ico\clans\go_128.dds"/>
-   <Item id="Belong_1194"	file="data\if\ico\clans\go_32.dds" 				file1="data\if\ico\clans\go_128.dds"/>
-   <Item id="Belong_1195"	file="data\if\ico\clans\go_32.dds" 				file1="data\if\ico\clans\go_128.dds"/>
-   <Item id="Belong_1113"	file="data\if\ico\clans\farmers_union03.dds" 		file1="data\if\ico\clans\farmers_union02.dds"/>
-   <Item id="Belong_1114"	file="data\if\ico\clans\che_32.dds" 			file1="data\if\ico\clans\che_128.dds"/>
-   <Item id="Belong_1115"	file="data\if\ico\clans\fallout_32.dds" 			file1="data\if\ico\clans\fallout_128.dds"/>
-   <Item id="Belong_1116"	file="data\if\ico\clans\lost_32.dds" 			file1="data\if\ico\clans\lost_128.dds"/>
-   <Item id="Belong_1117"	file="data\if\ico\clans\tech_32.dds" 			file1="data\if\ico\clans\tech_128.dds"/>
-   <Item id="Belong_1118"	file="data\if\ico\clans\oracles_disciples03.dds" 	file1="data\if\ico\clans\oracles_disciples02.dds"/>
+
+   <Item id="Belong_1112"	file="data\if\ico\clans\bounty_hunters03.dds" 				file1="data\if\ico\clans\bounty_hunters02.dds"/>
+   <Item id="Belong_1113"	file="data\if\ico\clans\go_3.dds" 		file1="data\if\ico\clans\go_2.dds"/>
+   <Item id="Belong_1114"	file="data\if\ico\clans\rnl03.dds" 			file1="data\if\ico\clans\rnl02.dds"/>
+   <Item id="Belong_1115"	file="data\if\ico\clans\explorers03.dds" 			file1="data\if\ico\clans\explorers02.dds"/>
+   <Item id="Belong_1116"	file="data\if\ico\clans\adventurers03.dds" 			file1="data\if\ico\clans\adventurers02.dds"/>
+   <Item id="Belong_1117"	file="data\if\ico\clans\oracles_disciples03.dds" 	file1="data\if\ico\clans\oracles_disciples02.dds"/>
    <Item id="Belong_1119"	file="data\if\ico\clans\refuelers03.dds" 	file1="data\if\ico\clans\refuelers02.dds"/>
    <Item id="Belong_1120"	file="data\if\ico\clans\trappers03.dds" 	file1="data\if\ico\clans\trappers02.dds"/>
    <Item id="Belong_1121"	file="data\if\ico\clans\dogs03.dds" 	file1="data\if\ico\clans\dogs02.dds"/>
    <Item id="Belong_1122"	file="data\if\ico\clans\cats03.dds" 	file1="data\if\ico\clans\cats02.dds"/>
    <Item id="Belong_1123"	file="data\if\ico\clans\church_of_enlightenment03.dds" 	file1="data\if\ico\clans\church_of_enlightenment02.dds"/>
+   <Item id="Belong_1192"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
+   <Item id="Belong_1193"	file="data\if\ico\clans\adventurers03.dds" 		file1="data\if\ico\clans\adventurers02.dds"/>
 </icons>

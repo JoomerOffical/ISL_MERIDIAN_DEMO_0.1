@@ -16,7 +16,7 @@
 		<Object
 			Name="MyCar"
 			Belong="1100"
-			Prototype="Scout01"
+			Prototype="Molokovoz01"
 			Logo="16"
 			Pos="3698.740 356.813 420.564"
 			Rot="0.000 -0.133 0.000 0.991"
@@ -25,13 +25,13 @@
 				<BASKET
 					present="1"
 					Belong="1100"
-					Prototype="scoutCargo01"
+					Prototype="molokovozCargo01"
 					Logo="16" />
 
 				<CABIN
 					present="1"
 					Belong="1100"
-					Prototype="scoutCab01"
+					Prototype="molokovozCab01"
 					Logo="16" />
 
 				<CABIN_SMALL_GUN
@@ -43,7 +43,7 @@
 				<CHASSIS
 					present="1"
 					Belong="1100"
-					Prototype="scoutChassis"
+					Prototype="molokovozChassis"
 					Logo="16" />
 			</Parts>
 
@@ -156,80 +156,63 @@
 			Belong="1110"
 			Prototype="workshop">
 			<CabinsAndBaskets>
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="scoutCab01" />
-
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="scoutCab01" />
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="scoutCab02" />
 
 				<Item
 					PosX="5"
 					PosY="5"
 					Flags="16"
-					Prototype="bugCab01" />
+					Prototype="bugCab02" />
 
 				<Item
 					PosX="0"
 					PosY="10"
 					Flags="16"
-					Prototype="bugCab01" />
+					Prototype="bugCab03" />
 
 				<Item
 					PosX="5"
 					PosY="10"
 					Flags="16"
-					Prototype="bugCab01" />
+					Prototype="bugCab03" />
 
 				<Item
 					PosX="0"
 					PosY="15"
 					Flags="16"
-					Prototype="bugCargo01" />
+					Prototype="bugCargo02" />
 
 				<Item
 					PosX="5"
 					PosY="15"
 					Flags="16"
-					Prototype="bugCargo01" />
+					Prototype="bugCargo03" />
 
 				<Item
 					PosX="0"
 					PosY="20"
 					Flags="16"
-					Prototype="bugCargo01" />
+					Prototype="bugCargo03" />
 
 				<Item
 					PosX="5"
 					PosY="20"
-					Flags="16"
-					Prototype="molokovozCab01" />
-
-				<Item
-					PosX="0"
-					PosY="25"
-					Flags="16"
-					Prototype="molokovozCab01" />
-
-				<Item
-					PosX="5"
-					PosY="25"
 					Flags="16"
 					Prototype="molokovozCab02" />
 
 				<Item
 					PosX="0"
+					PosY="25"
+					Flags="16"
+					Prototype="molokovozCab03" />
+
+				<Item
+					PosX="5"
+					PosY="25"
+					Flags="16"
+					Prototype="molokovozCab03" />
+
+				<Item
+					PosX="0"
 					PosY="30"
 					Flags="16"
 					Prototype="molokovozCargo02" />
@@ -238,13 +221,31 @@
 					PosX="5"
 					PosY="30"
 					Flags="16"
-					Prototype="molokovozCargo02" />
+					Prototype="molokovozCargo03" />
 
 				<Item
 					PosX="0"
 					PosY="35"
 					Flags="16"
-					Prototype="molokovozCargo02" />
+					Prototype="molokovozCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="fighterCab01" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="fighterCab01" />
+
+				<Item
+					PosX="5"
+					PosY="15"
+					Flags="16"
+					Prototype="fighterCab02" />
 
 				<Item
 					PosX="5"
@@ -288,23 +289,23 @@
 					PosX="0"
 					PosY="0"
 					Flags="16"
-					Prototype="ScoutForSale"
+					Prototype="MolokovozForSale"
 					Pos="0.000 369.722 0.000">
 					<Parts>
 						<BASKET
 							present="1"
 							Flags="16"
-							Prototype="scoutCargo01" />
+							Prototype="molokovozCargo01" />
 
 						<CABIN
 							present="1"
 							Flags="16"
-							Prototype="scoutCab01" />
+							Prototype="molokovozCab01" />
 
 						<CHASSIS
 							present="1"
 							Flags="16"
-							Prototype="scoutChassis" />
+							Prototype="molokovozChassis" />
 					</Parts>
 
 					<Repository />
@@ -314,23 +315,23 @@
 					PosX="1"
 					PosY="0"
 					Flags="16"
-					Prototype="BugForSale"
+					Prototype="FighterForSale"
 					Pos="0.000 369.722 0.000">
 					<Parts>
 						<BASKET
 							present="1"
 							Flags="16"
-							Prototype="bugCargo01" />
+							Prototype="fighterCargo01" />
 
 						<CABIN
 							present="1"
 							Flags="16"
-							Prototype="bugCab01" />
+							Prototype="fighterCab01" />
 
 						<CHASSIS
 							present="1"
 							Flags="16"
-							Prototype="bugChassis" />
+							Prototype="fighterChassis" />
 					</Parts>
 
 					<Repository />
@@ -446,7 +447,7 @@
 	<Object
 		Name="TheApple"
 		Belong="1109"
-		Prototype="r5m1_Apple"
+		Prototype="r5m1_Village"
 		Pos="3611.704 367.524 880.792"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravanLocations=""
@@ -467,89 +468,9 @@
 			Name="TheApple_Workshop"
 			Belong="1109"
 			Prototype="workshop">
-			<CabinsAndBaskets>
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="scoutCab01" />
+			<CabinsAndBaskets />
 
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="scoutCab01" />
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="scoutCab01" />
-
-				<Item
-					PosX="5"
-					PosY="5"
-					Flags="16"
-					Prototype="bugCab01" />
-
-				<Item
-					PosX="0"
-					PosY="10"
-					Flags="16"
-					Prototype="bugCab01" />
-
-				<Item
-					PosX="5"
-					PosY="10"
-					Flags="16"
-					Prototype="bugCab01" />
-
-				<Item
-					PosX="0"
-					PosY="15"
-					Flags="16"
-					Prototype="bugCargo01" />
-
-				<Item
-					PosX="5"
-					PosY="15"
-					Flags="16"
-					Prototype="bugCargo01" />
-
-				<Item
-					PosX="0"
-					PosY="20"
-					Flags="16"
-					Prototype="bugCargo01" />
-			</CabinsAndBaskets>
-
-			<Vehicles>
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="ScoutForSale"
-					Pos="0.000 369.722 0.000">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="scoutCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="scoutCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="scoutChassis" />
-					</Parts>
-
-					<Repository />
-				</Item>
-			</Vehicles>
+			<Vehicles />
 		</Object>
 
 		<Object
@@ -573,15 +494,6 @@
 				skin="2"
 				cfg="314"
 				helloReplyNames="r5m1_Aplle_Bar_Ralf_1_N01"
-				SpokenCount="0" />
-
-			<Object
-				Name="TheApple_Bar_TreasureMan_NPC"
-				Belong="1109"
-				Prototype="NPC"
-				ModelName="r1_man"
-				cfg="58"
-				helloReplyNames="r5m1_TreasureMan_1_N01 r5m1_TreasureMan_2_N01"
 				SpokenCount="0" />
 
 			<Object
@@ -622,7 +534,7 @@
 	<Object
 		Name="TheKonneks"
 		Belong="1110"
-		Prototype="r5m1_Konneks"
+		Prototype="r5m1_Village"
 		Pos="3558.389 461.887 2441.698"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravanLocations=""
@@ -643,151 +555,9 @@
 			Name="TheKonneks_Workshop"
 			Belong="1110"
 			Prototype="workshop">
-			<CabinsAndBaskets>
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="scoutCab02" />
+			<CabinsAndBaskets />
 
-				<Item
-					PosX="5"
-					PosY="0"
-					Flags="16"
-					Prototype="scoutCab02" />
-
-				<Item
-					PosX="0"
-					PosY="5"
-					Flags="16"
-					Prototype="scoutCab03" />
-
-				<Item
-					PosX="5"
-					PosY="5"
-					Flags="16"
-					Prototype="bugCab01" />
-
-				<Item
-					PosX="0"
-					PosY="10"
-					Flags="16"
-					Prototype="bugCab02" />
-
-				<Item
-					PosX="5"
-					PosY="10"
-					Flags="16"
-					Prototype="bugCab02" />
-
-				<Item
-					PosX="0"
-					PosY="15"
-					Flags="16"
-					Prototype="bugCargo01" />
-
-				<Item
-					PosX="5"
-					PosY="15"
-					Flags="16"
-					Prototype="bugCargo01" />
-
-				<Item
-					PosX="0"
-					PosY="20"
-					Flags="16"
-					Prototype="bugCargo02" />
-
-				<Item
-					PosX="5"
-					PosY="20"
-					Flags="16"
-					Prototype="uralCab03" />
-
-				<Item
-					PosX="0"
-					PosY="25"
-					Flags="16"
-					Prototype="uralCab03" />
-
-				<Item
-					PosX="5"
-					PosY="25"
-					Flags="16"
-					Prototype="uralCab03" />
-
-				<Item
-					PosX="0"
-					PosY="30"
-					Flags="16"
-					Prototype="uralCargo03" />
-
-				<Item
-					PosX="5"
-					PosY="30"
-					Flags="16"
-					Prototype="uralCargo03" />
-
-				<Item
-					PosX="0"
-					PosY="35"
-					Flags="16"
-					Prototype="uralCargo03" />
-			</CabinsAndBaskets>
-
-			<Vehicles>
-				<Item
-					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="ScoutForSale"
-					Pos="0.000 369.722 0.000">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="scoutCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="scoutCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="scoutChassis" />
-					</Parts>
-
-					<Repository />
-				</Item>
-
-				<Item
-					PosX="1"
-					PosY="0"
-					Flags="16"
-					Prototype="BugForSale"
-					Pos="0.000 369.722 0.000">
-					<Parts>
-						<BASKET
-							present="1"
-							Flags="16"
-							Prototype="bugCargo01" />
-
-						<CABIN
-							present="1"
-							Flags="16"
-							Prototype="bugCab01" />
-
-						<CHASSIS
-							present="1"
-							Flags="16"
-							Prototype="bugChassis" />
-					</Parts>
-
-					<Repository />
-				</Item>
-			</Vehicles>
+			<Vehicles />
 		</Object>
 
 		<Object
@@ -927,37 +697,43 @@
 					PosX="0"
 					PosY="0"
 					Flags="16"
-					Prototype="molokovozCab01" />
+					Prototype="molokovozCab02" />
 
 				<Item
 					PosX="5"
 					PosY="0"
 					Flags="16"
-					Prototype="molokovozCab01" />
+					Prototype="molokovozCab02" />
 
 				<Item
 					PosX="0"
 					PosY="5"
 					Flags="16"
-					Prototype="molokovozCab01" />
+					Prototype="molokovozCab03" />
 
 				<Item
 					PosX="5"
 					PosY="5"
 					Flags="16"
-					Prototype="molokovozCargo01" />
+					Prototype="molokovozCargo02" />
 
 				<Item
 					PosX="0"
 					PosY="10"
 					Flags="16"
-					Prototype="molokovozCargo01" />
+					Prototype="molokovozCargo02" />
 
 				<Item
 					PosX="5"
 					PosY="10"
 					Flags="16"
-					Prototype="molokovozCargo01" />
+					Prototype="molokovozCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="fighterCab01" />
 
 				<Item
 					PosX="0"
@@ -977,23 +753,23 @@
 					PosX="0"
 					PosY="0"
 					Flags="16"
-					Prototype="MolokovozForSale"
+					Prototype="BugForSale"
 					Pos="0.000 369.722 0.000">
 					<Parts>
 						<BASKET
 							present="1"
 							Flags="16"
-							Prototype="molokovozCargo01" />
+							Prototype="bugCargo01" />
 
 						<CABIN
 							present="1"
 							Flags="16"
-							Prototype="molokovozCab01" />
+							Prototype="bugCab01" />
 
 						<CHASSIS
 							present="1"
 							Flags="16"
-							Prototype="molokovozChassis" />
+							Prototype="bugChassis" />
 					</Parts>
 
 					<Repository />
@@ -1080,7 +856,7 @@
 	<Object
 		Name="ThePensilvansk"
 		Belong="1111"
-		Prototype="r5m1_Pensilvansk"
+		Prototype="r5m1_Village"
 		Pos="1461.885 364.686 1004.515"
 		PointOfViewInInterface="50.000 50.000 50.000"
 		CaravanLocations="TheTownMichikar_enter"
@@ -21618,7 +21394,135 @@
 			Name="BigApple_Workshop"
 			Belong="1109"
 			Prototype="workshop">
-			<CabinsAndBaskets />
+			<CabinsAndBaskets>
+
+				<Item
+					PosX="5"
+					PosY="5"
+					Flags="16"
+					Prototype="bugCab02" />
+
+				<Item
+					PosX="0"
+					PosY="10"
+					Flags="16"
+					Prototype="bugCab03" />
+
+				<Item
+					PosX="5"
+					PosY="10"
+					Flags="16"
+					Prototype="bugCab03" />
+
+				<Item
+					PosX="0"
+					PosY="15"
+					Flags="16"
+					Prototype="bugCargo02" />
+
+				<Item
+					PosX="5"
+					PosY="15"
+					Flags="16"
+					Prototype="bugCargo03" />
+
+				<Item
+					PosX="0"
+					PosY="20"
+					Flags="16"
+					Prototype="bugCargo03" />
+
+				<Item
+					PosX="5"
+					PosY="20"
+					Flags="16"
+					Prototype="molokovozCab02" />
+
+				<Item
+					PosX="0"
+					PosY="25"
+					Flags="16"
+					Prototype="molokovozCab02" />
+
+				<Item
+					PosX="5"
+					PosY="25"
+					Flags="16"
+					Prototype="molokovozCab03" />
+
+				<Item
+					PosX="0"
+					PosY="30"
+					Flags="16"
+					Prototype="molokovozCargo02" />
+
+				<Item
+					PosX="5"
+					PosY="30"
+					Flags="16"
+					Prototype="molokovozCargo02" />
+
+				<Item
+					PosX="0"
+					PosY="35"
+					Flags="16"
+					Prototype="molokovozCargo03" />
+
+			</CabinsAndBaskets>
+
+			<Vehicles>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="BugForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="bugCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="bugCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="bugChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="MolokovozForSale"
+					Pos="0.000 369.722 0.000">
+					<Parts>
+						<BASKET
+							present="1"
+							Flags="16"
+							Prototype="molokovozCargo01" />
+
+						<CABIN
+							present="1"
+							Flags="16"
+							Prototype="molokovozCab01" />
+
+						<CHASSIS
+							present="1"
+							Flags="16"
+							Prototype="molokovozChassis" />
+					</Parts>
+
+					<Repository />
+				</Item>
+			</Vehicles>
 		</Object>
 
 		<Object
@@ -21679,7 +21583,7 @@
 	<Object
 		Name="FieldCamp"
 		Belong="1109"
-		Prototype="r5m1_Apple"
+		Prototype="r5m1_Village"
 		Pos="3130.021 390.770 954.077"
 		PointOfViewInInterface="5.000 20.000 5.000"
 		CaravanLocations=""
@@ -21690,16 +21594,16 @@
 		IsSellingDrugs="1"
 		IsBuyingDrugs="1">
 		<Object
-			Name="FieldCamp_House"
-			Belong="1109"
-			Prototype="barWithoutBarman" />
-
-		<Object
 			Name="FieldCamp_Workshop"
 			Belong="1109"
 			Prototype="workshop">
 			<CabinsAndBaskets />
 		</Object>
+
+		<Object
+			Name="FieldCamp_House"
+			Belong="1109"
+			Prototype="barWithoutBarman" />
 
 		<Object
 			Name="FieldCamp_deploy"
@@ -21804,7 +21708,7 @@
 	<Object
 		Name="r5m1_Arena"
 		Belong="1110"
-		Prototype="r5m1_Apple"
+		Prototype="r5m1_Village"
 		Pos="2488.144 349.146 2249.724"
 		PointOfViewInInterface="5.000 20.000 5.000"
 		CaravanLocations=""
@@ -21814,6 +21718,37 @@
 		DestroyLocations=""
 		IsSellingDrugs="1"
 		IsBuyingDrugs="1">
+		<Object
+			Name="r5m1_Arena_Shop"
+			Belong="1110"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r5m1_Arena_Workshop"
+			Belong="1110"
+			Prototype="workshop">
+			<CabinsAndBaskets />
+
+			<Vehicles />
+		</Object>
+
+		<Object
+			Name="r5m1_Arena_Bar"
+			Belong="1110"
+			Prototype="bar">
+			<Object
+				Name="r5m1_Arena_Bar_Barman"
+				Belong="1110"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				skin="4"
+				cfg="72"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+		</Object>
+
 		<Object
 			Name="r5m1_Arena_enter"
 			Belong="1110"
@@ -21873,7 +21808,7 @@
 	<Object
 		Name="r5m1_BanditBase"
 		Belong="1105"
-		Prototype="r5m1_Apple"
+		Prototype="r5m1_Village"
 		Pos="736.779 468.035 893.055"
 		PointOfViewInInterface="5.000 20.000 5.000"
 		CaravanLocations=""
@@ -21883,6 +21818,43 @@
 		DestroyLocations=""
 		IsSellingDrugs="1"
 		IsBuyingDrugs="1">
+		<Object
+			Name="r5m2_BaseMercenary_Shop"
+			Belong="1112"
+			Prototype="shop">
+			<GunsAndGadgets />
+		</Object>
+
+		<Object
+			Name="r5m1_BanditBase_Workshop"
+			Belong="1105"
+			Prototype="workshop">
+			<CabinsAndBaskets />
+
+			<Vehicles />
+		</Object>
+
+		<Object
+			Name="r5m2_BanditBase_Bar"
+			Belong="1105"
+			Prototype="bar">
+			<Object
+				Name="r5m2_BanditBase_Barman"
+				Belong="1112"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="2"
+				cfg="166"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="r5m2_BanditBase_House"
+			Belong="1105"
+			Prototype="barWithoutBarman">
+		</Object>
+
 		<Object
 			Name="r5m1_BanditBase_defend"
 			Belong="1105"

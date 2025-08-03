@@ -5055,7 +5055,7 @@
 		name="Dlg_pl_000571"
 		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); TakeQuest('sin_Caravan_Quest'); TDeactivate('sinKittyinTrap'); TActivate('trCaravan'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); TakeQuest('sin_Caravan_Quest'); TActivate('trCaravan'); EndConversation()" />
 
 	<Reply
 		name="Joe3_DLG"
@@ -5172,7 +5172,7 @@
 		name="Dlg_pl_001002"
 		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); CompleteQuest('sin_ComeBackJoe2_Quest'); FailQuest('sin_ComeToCats_Quest'); TakeQuest('sin_Caravan_Quest'); TActivate('trCaravan'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); CompleteQuest('sin_ComeBackJoe2_Quest'); FailQuest('sin_ComeToCats_Quest'); TakeQuest('sin_Caravan_Quest'); TDeactivate('sinKittyinTrap'); TActivate('trCaravan'); EndConversation()" />
 
 	<Reply
 		name="Joe5_DLG"
@@ -6588,6 +6588,68 @@
 		text="Спасибо, босс."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_BackToDogsBlock_Quest'); AddPlayerMoney(700); EndConversation()" />
+
+	<Reply
+		name="Born9_DLG"
+		text="Что ж, Китти теперь с нами, пора назначить им сделку."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_CapToKitty_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001253" />
+
+	<Reply
+		name="Dlg_pl_001253"
+		text="На что будете обменивать?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001259" />
+
+	<Reply
+		name="Dlg_npc_001259"
+		text="Наверное на оружие, которое они украли у торговцев. Есть вероятность, что обмен пойдет не по плану, так что надо быть готовым."
+		role="NPC"
+		nextReplies="Dlg_pl_001260" />
+
+	<Reply
+		name="Dlg_pl_001260"
+		text="Ладно. Увидимся на сделке."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_CapToKitty_Quest'); TakeQuest('sin_DealKitty2_Quest'); TActivate('sinDealKitty1'); EndConversation()" />
+
+	<Reply
+		name="Born10_DLG"
+		text="Молодцы. Молодцы, господа. Иерихон теперь наш. Котам деваться некуда."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_GoToWestIerihon_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001261" />
+
+	<Reply
+		name="Dlg_pl_001261"
+		text="Что теперь? И где Китти? И оружие?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001262" />
+
+	<Reply
+		name="Dlg_npc_001262"
+		text="О, не переживай. Китти мы решили спрятать у себя в порту. А оружие теперь у нас. Ну а мы будем готовиться к атаке Кошкиного Дома."
+		role="NPC"
+		nextReplies="Dlg_pl_001263" />
+
+	<Reply
+		name="Dlg_pl_001263"
+		text="Прямо сейчас?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001264" />
+
+	<Reply
+		name="Dlg_npc_001264"
+		text="Ну а смысл тянуть? Гоним их, пока они еще не опомнились. Выдыигайся с остальными к Кошкиному Дому."
+		role="NPC"
+		nextReplies="Dlg_pl_001265" />
+
+	<Reply
+		name="Dlg_pl_001265"
+		text="Понял."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_GoToWestIerihon_Quest'); EndConversation()" />
 <!--Root/Sin/Китти-->
 	<Reply
 		name="Kitty1_DLG"
@@ -6933,7 +6995,7 @@
 		text="Езжай быстрее, пока ничего никто не понял."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_FindJess_Quest'); TakeQuest('sin_GoToHellIerihon2_Quest'); TActivate('trSpawnBattleIerihon'); EndConversation()" />
-<!--Root/Sin/Опциональные--><!--Root/Sin/Выборы-->
+<!--Root/Sin/Выборы-->
 	<Reply
 		name="Vibor_DLG"
 		text="Хм... может им заплатить, чтобы они до меня не докапывались?"
@@ -6976,17 +7038,20 @@
 		name="Vibor3_DLG"
 		text="Хм... А ведь это мой шанс спасти Китти. А может забить и отвезти ее к Псам?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_FindKitty_Quest')==Q_COMPLETED or QuestStatus('sin_KnowFindKitty_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_pl_001251 Dlg_pl_001252" />
 
 	<Reply
 		name="Dlg_pl_001252"
 		text="*Отвезти Китти к Псам*"
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_CapToKitty_Quest'); TActivate('sinPickKittytoDogs'); LeaveTown()" />
 
 	<Reply
 		name="Dlg_pl_001251"
 		text="*Спасти Китти*"
-		role="PLAYER" />
+		role="PLAYER"
+		scriptResult="EndConversation()" />
 <!--Root/Sin/Должники-->
 	<Reply
 		name="Dolzhnik_DLG"
