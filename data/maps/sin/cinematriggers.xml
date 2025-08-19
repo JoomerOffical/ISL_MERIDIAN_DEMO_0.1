@@ -4566,6 +4566,168 @@
 		</script>
 	</trigger>
 
+<!--Приехали к Кошкиному Дому за Псов-->
+	<trigger Name="sinBattleCatHouse" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="CatHouse_Out"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			Fly	("HideDog_cam0", CINEMATIC_NO_AIM, 0, 11, 1, 0)
+			Fly	("CatsTrap_cam0", CINEMATIC_NO_AIM, 0, 6, 0, 1)
+			StartCinematic()
+
+			TActivate("sinBattleCatHouse_FadeIn")
+			TActivate("sinBattleCatHouse_cam1")
+			TActivate("sinBattleCatHouse_End")
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinBattleCatHouse_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("Born", 1104, { CVector(getPos("sin_BornCar1_loc"))}, {"Molokovoz02"}, nil, nil, {Quaternion(-0.060, -0.682, -0.032, 0.729)})
+			CreateTeam("Dog2", 1104, { CVector(getPos("sin_Scout02Dg_loc"))}, {"Scout02"}, nil, nil, {Quaternion(-0.060, -0.682, -0.032, 0.729)})
+			CreateTeam("Dog3", 1104, { CVector(getPos("sin_Scout3Dg_loc"))}, {"Scout03"}, nil, nil, {Quaternion(-0.060, -0.682, -0.032, 0.729)})
+			CreateTeam("Dog4", 1104, { CVector(getPos("sin_Sml401Dg_loc"))}, {"Sml401"}, nil, nil, {Quaternion(-0.060, -0.682, -0.032, 0.729)})
+			CreateTeam("Garfield", 1106, { CVector(getPos("sin_GarfieldCar1_loc"))}, {"Fighter02"}, nil, nil, {Quaternion(-0.068, -0.722, 0.068, -0.685)})
+			CreateTeam("Cat1", 1106, { CVector(getPos("sin_Sml201Ct_loc"))}, {"Sml201"}, nil, nil, {Quaternion(-0.068, -0.722, 0.068, -0.685)})
+			CreateTeam("Cat2", 1106, { CVector(getPos("sin_Sml0301Ct_loc"))}, {"Sml301"}, nil, nil, {Quaternion(-0.068, -0.722, 0.068, -0.685)})
+			CreateTeam("Cat3", 1106, { CVector(getPos("sin_Scout02Ct_loc"))}, {"Scout02"}, nil, nil, {Quaternion(-0.068, -0.722, 0.068, -0.685)})
+			CreateTeam("CatsTrap", 1106, {CVector(getPos("sin_CatTrap_loc"))}, {"Sml201","Sml101","Scout01","Sml101"}, nil, nil, {Quaternion(-0.060, -0.682, -0.032, 0.729)})
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("sin_Bug02Dg_loc")))
+				Plf:SetRotation(Quaternion(-0.060, -0.682, -0.032, 0.729))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 6650, 0.5 )
+			AddCinematicMessage( 6651, 0.5 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinBattleCatHouse_cam1" active="0">
+		<event flypath="CatsTrap_cam0" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			AddCinematicMessage( 6652, 0.5 )
+			AddCinematicMessage( 6653, 0.5 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinBattleCatHouse_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround( CVector(getPos("sin_Bug02Dg_loc")))
+				Plf:SetRotation(Quaternion(-0.060, -0.682, -0.032, 0.729))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			local Brn = getObj("Born_vehicle_0")
+			if Brn then
+				Brn:setGodMode(1)
+			end
+
+			TDeactivate("sinBattleCatHouse_FadeIn")
+			TDeactivate("sinBattleCatHouse_cam1")
+
+			CompleteQuest("sin_GoToIerihon_Quest")
+			TActivate("sinCapIerihonDog")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+
+		</script>
+	</trigger>
+
+<!--Убили Котов и дом горит-->
+	<trigger Name="sinCatsIsDead" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat3_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Garfield_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat1_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat2_vehicle_0"/>
+		<event eventid="GE_OBJECT_DIE" ObjName="CatsTrap"/>
+		<script>
+			trigger:IncCount()
+			local count = trigger:GetCount()
+			if 5>count then
+				return
+			end
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("sinCatsIsDead_FadeIn")
+			TActivate("sinCatsIsDead_End")
+
+			Fly	("KittyTrap_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 1)
+			StartCinematic()
+		</script>
+	</trigger>
+	<trigger Name="sinCatsIsDead_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_CatHouse")
+			if town then
+				town:SetOpenGateToPlayer(false)
+				town:SetRuined(true)
+			end
+
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE01", -1, -1, CVector(1277.746, 306.663, 2101.817), Quaternion(0.0000, 0.0000, 0.0000, 10.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE02", -1, -1, CVector(1330.937, 306.663, 2146.654), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE03", -1, -1, CVector(1330.211, 306.663, 2049.794), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(1448.463, 300.663, 2061.282), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(1466.273, 300.663, 2158.944), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
+
+			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 8804, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="sinAfterSomeTime_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
 <!--Оригинальный финал (выключено)-->
 	<trigger Name="Final2_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />

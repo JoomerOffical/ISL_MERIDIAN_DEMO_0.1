@@ -280,6 +280,10 @@
 	<Point  coord="1689.998 282.979 2226.242" rotation="-0.030 0.853 -0.049 0.518"/>
 </Path>
 
+<Path Name = "CatsTrap_cam0">
+	<Point  coord="1578.164 280.125 2100.129" rotation="-0.069 -0.661 0.062 0.745"/>
+	<Point  coord="1559.818 283.601 2097.939" rotation="-0.069 -0.661 0.062 0.745"/>
+</Path>
 
 <Path Name = "Mayor_cam0">
 	<Point  coord="2573.936 278.923 2954.698" rotation="-0.092 0.898 -0.222 0.370"/>

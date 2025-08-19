@@ -90,7 +90,7 @@
 					TakeQuest("sin_Caravan_Quest")
 					TActivate("trCaravan")
 				else
-					FailQuest("sin_ComeToCats_Quest)
+					FailQuest("sin_ComeToCats_Quest")
 					TakeQuest("sin_Caravan_Quest")
 					TActivate("trCaravan")
 				end
@@ -690,7 +690,7 @@
 	</trigger>
 
 <!--Город открыт-->
-	<trigger Name="trAfterJoe" active="0">
+	<trigger Name="trAfterJoe1" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate()

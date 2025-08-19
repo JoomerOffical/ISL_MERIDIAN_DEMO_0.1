@@ -1427,18 +1427,9 @@
 		time="6" />
 
 	<string
-		id="6621"
-		modelAutosized="true"
-		modelName="gadget_12"
-		modelSlot="1"
-		value="БОРН|Отличная работа, Бродяга. Тащи ее к нам на Базу."
-		sound=""
-		time="4" />
-
-	<string
 		id="6640"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Победа."
+		value="БРОДЯГА|Победа!"
 		sound=""
 		time="2" />
 
@@ -1448,9 +1439,66 @@
 		modelSkin="5"
 		modelCfg="40"
 		modelSlot="1"
-		value="КЕВИН|Более того, теперь и Западный Иерихон наш. Наши ребята смогли снять остальных людей Псов в Зап. Иерихоне. Теперь мы будем диктовать правила."
+		value="КЕВИН|Это больше, чем просто победа. Теперь и Западный Иерихон наш. Наши ребята смогли снять остальных людей Псов в Зап. Иерихоне. Теперь мы будем диктовать правила."
 		sound=""
-		time="8" />
+		time="10" />
+
+	<string
+		id="6650"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="314"
+		modelSlot="1"
+		value="БОРН|Сдавайтесь! Ваше влияние падает, вам некуда бежать."
+		sound=""
+		time="5" />
+
+	<string
+		id="6651"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		modelSlot="1"
+		value ="ГАРФИЛД|Никогда! Вы попались в мою ловушку. Вы умрете!"
+		sound=""
+		time="5" />
+
+	<string
+		id="6652"
+		modelName="r2_woman"
+		modelSkin="1"
+		modelCfg="58"
+		modelSlot="1"
+		value="АРЛЕКИН|Черт, мы окружены!"
+		sound=""
+		time="2" />
+
+	<string
+		id="6653"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Делать нечего, придется сражаться."
+		sound=""
+		time="3" />
+
+	<string
+		id="6660"
+		modelName="r2_woman"
+		modelSkin="5"
+		modelCfg="40"
+		modelSlot="1"
+		value="КЕВИН|Черт! ПОЖАР! Надо срочно тушить его."
+		sound=""
+		time="4" />
+
+	<string
+		id="6650"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="314"
+		modelSlot="1"
+		value="БОРН|Не стоит, пусть оно горит красным пламенем. Пойдемте отсюда. Будем праздновать."
+		sound=""
+		time="5" />
 
 	<string
 		id="8801"

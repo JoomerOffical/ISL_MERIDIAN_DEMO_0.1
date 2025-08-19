@@ -17,7 +17,7 @@
 		Name			= "fuel"
 		SwareType 		= "0"
 
-		Price			= "60"
+		Price			= "50"
 		Durability		= "100"
 		PriceDispersion	= "1"
 
@@ -30,7 +30,7 @@
 		Name			= "scrap_metal"
 		SwareType 		= "2"
 
-		Price			= "90"
+		Price			= "100"
 		Durability		= "100"
 		PriceDispersion	= "1"
 
@@ -43,7 +43,7 @@
 		Name			= "machinery"
 		SwareType 		= "1"
 
-		Price			= "110"
+		Price			= "150"
 		Durability		= "100"
 		PriceDispersion	= "1"
 

@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="298611259">
+	LastId="298611433">
 	<Node
 		name="Object76479715"
 		class="SgAnimatedModelNode"
@@ -5470,4 +5470,15 @@
 		id="exit"
 		ndmAction="0"
 		passable="0" />
+
+	<Node
+		name="ET_S_RAIN"
+		class="SgNode"
+		org="1668.923 361.919 2096.228"
+		orgRel="0">
+		<Node
+			name="noise"
+			class="SgSoundSourceNode"
+			id="Fake_Sound_Do_Not_Use_It" />
+	</Node>
 </World>

@@ -140,7 +140,7 @@
 		<Node
 			name="wndItemPattern"
 			class="ButtonWnd"
-			org="23.000 334.000 466.000 30.000"
+			org="23.000 334.000 466.000 28.000"
 			style="262688"
 			order="14"
 			id="300250"
@@ -261,7 +261,7 @@
 		<Node
 			name="wndWareIco"
 			class="ImageWnd"
-			org="37.000 339.000 28.000 22.000"
+			org="37.000 339.000 28.000 20.000"
 			style="768"
 			order="7"
 			id="0"
@@ -285,7 +285,7 @@
 		<Node
 			name="wndBuyPricesIco"
 			class="ImageWnd"
-			org="378.000 292.000 48.000 30.000"
+			org="378.000 292.000 48.000 28.000"
 			style="512"
 			order="2"
 			id="0"
@@ -309,7 +309,7 @@
 		<Node
 			name="wndSellPricesIco"
 			class="ImageWnd"
-			org="316.000 292.000 48.000 30.000"
+			org="316.000 292.000 48.000 28.000"
 			style="512"
 			order="3"
 			id="0"
@@ -333,7 +333,7 @@
 		<Node
 			name="wndAmountsIco"
 			class="ImageWnd"
-			org="437.000 292.000 48.000 30.000"
+			org="437.000 292.000 48.000 28.000"
 			style="512"
 			order="4"
 			id="0"
@@ -357,7 +357,7 @@
 		<Node
 			name="wndWareName"
 			class="Wnd"
-			org="89.000 334.000 209.000 30.000"
+			org="89.000 334.000 209.000 28.000"
 			style="2816"
 			order="8"
 			id="0"
@@ -380,7 +380,7 @@
 		<Node
 			name="wndWareBuyPrice"
 			class="Wnd"
-			org="372.000 334.000 60.000 30.000"
+			org="372.000 334.000 60.000 28.000"
 			style="3840"
 			order="9"
 			id="0"
@@ -403,9 +403,9 @@
 		<Node
 			name="wndWareSellPrice"
 			class="Wnd"
-			org="310.000 334.000 60.000 30.000"
+			org="310.000 334.000 60.000 28.000"
 			style="3840"
-			order="14"
+			order="10"
 			id="0"
 			caption=""
 			tip=""
@@ -426,7 +426,7 @@
 		<Node
 			name="wndWareAmount"
 			class="Wnd"
-			org="434.000 334.000 53.000 32.000"
+			org="434.000 334.000 53.000 30.000"
 			style="3840"
 			order="11"
 			id="0"

@@ -56,7 +56,7 @@
 		value="Вэн" />
 
 	<Item
-		id="bottles_of_wine"
+		id="quest_bottles_of_wine"
 		locForm="0"
 		value="Бутылки вина" />
 

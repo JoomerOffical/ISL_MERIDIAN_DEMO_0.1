@@ -197,6 +197,7 @@ $Id: ResourceTypes.xml,v 1.1 2005/12/08 08:58:02 anton Exp $
 		<Type Name="QUEST_LETTER_LAMP" />
 		<Type Name="QUEST_LAMP" />
 		<Type Name="QUEST_PACK_JOE" />
+		<Type Name="QUEST_BOTTLES_OF_WINE" />
 		<Type Name="QUEST_BASEBALL_BAT" />
 		<Type Name="QUEST_GRAND_PRIX" />
 		<Type Name="QUEST_MOVIE_REEL_1" />

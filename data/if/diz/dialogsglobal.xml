@@ -640,7 +640,7 @@
 		name="Dlg_pl_000791"
 		text="Отлично, а теперь к Отшельнику."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_BackToTorreon_Quest'); TakeQuest('r7m3_BackToHermit2_Quest'); RemoveQuestItem('bottles_of_wine'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_BackToTorreon_Quest'); TakeQuest('r7m3_BackToHermit2_Quest'); RemoveQuestItem('quest_bottles_of_wine'); EndConversation()" />
 
 	<Reply
 		name="TraderTorreon5_DLG"
@@ -1050,7 +1050,7 @@
 		name="Dlg_pl_000788"
 		text="Спасибо, и тебе не хворать."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_BackToJefe3_Quest'); TakeQuest('r7m3_BackToTorreon_Quest'); AddPlayerMoney(5000); AddQuestItem('bottles_of_wine'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_BackToJefe3_Quest'); TakeQuest('r7m3_BackToTorreon_Quest'); AddPlayerMoney(5000); AddQuestItem('quest_bottles_of_wine'); EndConversation()" />
 
 	<Reply
 		name="JefeErmosinyo5_DLG"
@@ -5104,7 +5104,7 @@
 		name="Dlg_pl_000644"
 		text="Если ты уверен, тогда ладно."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_FreedomJoe_Quest'); TActivate('trAfterJoe'); TActivate('BornBattle'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_FreedomJoe_Quest'); TActivate('trAfterJoe1'); TActivate('BornBattle'); EndConversation()" />
 
 	<Reply
 		name="Joe4_DLG"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="5315">
+	LastId="5321">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
@@ -413,7 +413,7 @@
 
 			<Object
 				Name="Sin_Bulldog1"
-				Belong="1104"
+				Belong="1103"
 				Prototype="NPC"
 				ModelName="r2_man"
 				skin="4"
@@ -867,48 +867,6 @@
 					NumPathPoint="-1" />
 			</DefendTeam>
 		</Parts>
-
-		<EntryPath />
-
-		<ExitPath />
-	</Object>
-
-	<Object
-		Name="Sin_DogHouse"
-		Belong="1103"
-		Prototype="SinVillage1"
-		Pos="2039.712 259.763 608.693"
-		PointOfViewInInterface="5.000 20.000 5.000"
-		CaravanLocations=""
-		CaravanPaths=""
-		TreasureLocations=""
-		ReachLocations=""
-		DestroyLocations=""
-		IsSellingDrugs="0"
-		IsBuyingDrugs="0">
-		<Object
-			Name="Sin_DogHouse_Bar"
-			Belong="1103"
-			Prototype="barWithoutBarman">
-			<Object
-				Name="Sin_Kitty_Trapped"
-				Belong="1103"
-				Prototype="NPC"
-				ModelName="r2_woman"
-				skin="1"
-				cfg="125"
-				helloReplyNames="Kitty6_DLG"
-				SpokenCount="0" />
-		</Object>
-
-		<Object
-			Name="Sin_DogHouse_enter"
-			Belong="1103"
-			Prototype="location"
-			Pos="2065.241 247.683 594.454"
-			Radius="40.000" />
-
-		<Parts />
 
 		<EntryPath />
 
@@ -12219,13 +12177,20 @@
 		Radius="10.000" />
 
 	<Object
-		Belong="1100"
-		Prototype="vehicleRecollection" />
-
-	<Object
 		Name="TraderBack_loc"
 		Belong="1001"
 		Prototype="genericLocation"
 		Pos="3630.636 280.316 534.103"
 		Radius="10.000" />
+
+	<Object
+		Belong="1100"
+		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="sin_CatTrap_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1610.352 272.613 2094.415"
+		Radius="5.000" />
 </DynamicScene>

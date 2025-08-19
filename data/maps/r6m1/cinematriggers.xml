@@ -13,7 +13,6 @@
 
 			CreateNewDummyObject( "BUGcargo", "camT", -1, -1, CVector(1881.775, 343.945, 941.326), Quaternion(0.000, -0.808, 0.000, 0.590), 0)
 
--- ˜˜˜˜ ˜˜˜˜ ˜˜˜˜˜˜˜˜, ˜˜˜˜˜˜ ˜˜ ˜˜˜˜ ˜˜˜˜˜˜˜ ˜ ˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜˜˜
 			local most = getObj("BigMost")
 			local Plf = GetPlayerVehicle()
 
@@ -44,8 +43,6 @@
 			if vehSem then vehSem:SetSkin(1) end
 			if vehNaparn1 then vehNaparn1:setGodMode(1) end
 
--- ˜˜˜˜˜˜˜˜ ˜˜˜˜ ˜ ˜˜˜˜˜˜˜˜, ˜˜˜ ˜˜˜˜˜˜
--- ˜˜˜˜ ˜˜˜ ˜˜˜˜˜ ˜˜˜˜˜, ˜˜˜˜˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜ ˜˜ ˜˜˜˜˜˜˜
 			for i=1,5 do
 				if comand[i] then
 					comand[i]:SetCustomControlEnabled(1)
@@ -112,7 +109,6 @@
 			local comand = {vehNaparn1, vehNaparn2, vehNaparn3, vehSem, Plf}
 			local path = {"naparn1_path01", "naparn2_path01", "naparn3_path01", "startSam_path01", "startPlayer_path01"}
 
--- **************** ˜˜˜˜˜˜ ˜˜˜˜ ˜ ˜˜˜˜˜ ˜˜˜˜, ˜˜˜˜˜˜˜˜ ************
 			for i=1,5 do
 				if comand[i] then
 					comand[i]:SetCustomControlEnabled(1)
@@ -123,7 +119,6 @@
 				end
 			end
 
--- ****************˜˜˜˜˜˜˜ ˜˜˜˜˜˜˜˜˜˜˜******************
 			CreateNewDummyObject( "dweller_new_hero", "humPlayer", -1, -1, CVector(2735.872, 354.442, 752.729), Quaternion(0.000, 0.395, 0.000, 0.919), 0)
 			CreateNewDummyObject( "dweller_sam", "humSem", -1, -1, CVector(2737.211, 354.420, 753.902), Quaternion(0.000, 0.874, 0.000, -0.487), 0)
 
