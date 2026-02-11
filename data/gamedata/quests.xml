@@ -1144,13 +1144,6 @@
 		ConditionToGive="all complete" />
 
 	<quest
-		Name="sin_KnowFindKitty_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
-
-	<quest
 		Name="sin_CapToKitty_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
@@ -1186,6 +1179,29 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="sin_KillCatsIerihon_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Пресануть котов-->
+	<quest
+		Name="sin_WarForHouse_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete">
+		<quest
+			Name="sin_GoToCHWar_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_WarForHouse_Quest" />
+
+		<quest
+			Name="sin_BattleForHouse_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_GoToCHWar_Quest" />
 	</quest>
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest

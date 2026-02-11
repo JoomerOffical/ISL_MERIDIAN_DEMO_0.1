@@ -2426,6 +2426,11 @@
 		isMainQuest="1" />
 
 	<QuestInfo
+		questName="sin_BattleForHouse_Quest"
+		briefDiz="Уничтожить Котов"
+		isMainQuest="1" />
+
+	<QuestInfo
 		questName="sin_BeatDealWI_Quest"
 		briefDiz="Должники за крышу"
 		fullDiz="Первое задание от Котов - выбить долг с ребят, чей бизнес они крышуют."
@@ -2458,7 +2463,8 @@
 		fullDiz="Теперь можно воспользоваться Китти против Котов"
 		isMainQuest="1">
 		<Map
-			name="sin" />
+			name="sin"
+			targetObjName="SinDogHouse" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2652,7 +2658,8 @@
 		fullDiz="Теперь Котам ничего не останется, кроме как уступить Псам что-то в обмен на Китти."
 		isMainQuest="1">
 		<Map
-			name="sin" />
+			name="sin"
+			targetObjName="CatHouse_Out" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2814,6 +2821,15 @@
 		<Map
 			name="sin"
 			targetObjName="KillBlockEnter_loc" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_GoToCHWar_Quest"
+		briefDiz="Добраться до Кошкиного Дома"
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="CatHouse_Out" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3211,6 +3227,12 @@
 			name="sin"
 			targetObjName="Sin_DogHouse" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_WarForHouse_Quest"
+		briefDiz="Штурм Кошкиного Дома"
+		fullDiz="Псы решили не медлить и добить Котов до конца. Ну а я что? Я за любой движ."
+		isMainQuest="1" />
 
 	<QuestInfo
 		questName="sin_WarforPort_Quest"

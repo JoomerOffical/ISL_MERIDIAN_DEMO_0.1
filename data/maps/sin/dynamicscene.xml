@@ -157,7 +157,7 @@
 				ModelName="r2_man"
 				skin="3"
 				cfg="294"
-				helloReplyNames="Joe1_DLG Joe2_DLG Joe4_DLG Joe3_DLG Joe5_DLG"
+				helloReplyNames="Joe1_DLG Joe2_DLG Joe4_DLG Joe3_DLG Joe5_DLG Joe6_DLG Joe7_DLG"
 				SpokenCount="0" />
 
 			<Object
@@ -174,7 +174,7 @@
 				Belong="1103"
 				Prototype="NPC"
 				ModelName="r2_woman"
-				skin="3"
+				skin="5"
 				cfg="78"
 				helloReplyNames="Gonzalo_DLG"
 				SpokenCount="0" />
@@ -858,6 +858,89 @@
 				Prototype="settlementTeam">
 				<Formation
 					Belong="1106"
+					Prototype="caravanFormation"
+					DistBetweenVehicles="30.000"
+					Pos="0.000 0.000 0.000"
+					Direction="0.000 0.000 1.000"
+					LinearVelocity="100.000"
+					AngularVelocity="0.500"
+					NumPathPoint="-1" />
+			</DefendTeam>
+		</Parts>
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="Sin_DogHouse"
+		Belong="1103"
+		Prototype="sin_EastRaf"
+		Pos="2039.712 259.763 608.693"
+		PointOfViewInInterface="5.000 20.000 5.000"
+		CaravanLocations=""
+		CaravanPaths=""
+		TreasureLocations=""
+		ReachLocations=""
+		DestroyLocations=""
+		IsSellingDrugs="0"
+		IsBuyingDrugs="0">
+		<Object
+			Name="Sin_DogHouse_House"
+			Belong="1103"
+			Prototype="barWithoutBarman">
+			<Object
+				Name="Sin_Kitty1"
+				Belong="1103"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				skin="1"
+				cfg="125"
+				helloReplyNames="Kitty6_DLG Kitty7_DLG"
+				SpokenCount="0" />
+			</Object>
+
+		<Object
+			Name="Sin_DogHouse_caravan"
+			Belong="1103"
+			Prototype="location"
+			Pos="2039.712 243.811 608.693"
+			Radius="50.000" />
+
+		<Object
+			Name="Sin_DogHouse_enter"
+			Belong="1103"
+			Prototype="location"
+			Pos="2039.712 243.811 608.693"
+			Radius="50.000" />
+
+		<Object
+			Name="Sin_DogHouse_deploy"
+			Belong="1103"
+			Prototype="location"
+			Pos="2039.712 243.811 608.693"
+			Radius="50.000" />
+
+		<Object
+			Name="Sin_DogHouse_defend"
+			Belong="1103"
+			Prototype="location"
+			Pos="2039.712 243.811 608.693"
+			Radius="50.000"
+			Active="0" />
+
+		<Parts>
+			<AttackTeam
+				present="no" />
+
+			<DefendTeam
+				present="yes"
+				Name="Sin_DogHouse_DefendTeam"
+				Belong="1103"
+				Prototype="settlementTeam">
+				<Formation
+					Belong="1194"
 					Prototype="caravanFormation"
 					DistBetweenVehicles="30.000"
 					Pos="0.000 0.000 0.000"
@@ -9645,7 +9728,17 @@
 				ModelName="r2_woman"
 				skin="1"
 				cfg="125"
-				helloReplyNames="Kitty2_DLG"
+				helloReplyNames="Kitty2_DLG Kitty4_DLG"
+				SpokenCount="0" />
+	
+			<Object
+				Name="Sin_Kevin"
+				Belong="1104"
+				Prototype="NPC"
+				ModelName="r2_woman"
+				skin="5"
+				cfg="40"
+				helloReplyNames="Kevin_DLG"
 				SpokenCount="0" />
 		</Object>
 

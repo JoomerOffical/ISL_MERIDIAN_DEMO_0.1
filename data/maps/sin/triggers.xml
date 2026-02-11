@@ -167,9 +167,10 @@
 		<script>
 			trigger:Deactivate()
 
-			getObj("Player1"):SetProperty("Logo","4")
+			getObj("Player1"):SetProperty("Logo","5")
 
 			AddImportantFadingMsg("Вы вступили в группировку ''Банда Котов''.")
+			SpawnMessageBox("8805")
 
 			SetTolerance(1100, 1104, RS_ENEMY)	
 			SetTolerance(1100, 1106, RS_ALLY)
@@ -183,9 +184,10 @@
 		<script>
 			trigger:Deactivate()
 
-			getObj("Player1"):SetProperty("Logo","3")
+			getObj("Player1"):SetProperty("Logo","4")
 
 			AddImportantFadingMsg("Вы вступили в группировку ''Банда Псов''.")
+			SpawnMessageBox("8805")
 
 			SetTolerance(1100, 1104, RS_ALLY)	
 			SetTolerance(1100, 1106, RS_ENEMY)
@@ -193,7 +195,7 @@
 		</script>
 	</trigger>
 
-<!--Меняем лого котов на игрока-->
+<!--Меняем лого котов/псов на игрока-->
 	<trigger Name="trChangeLogoPlayer" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
@@ -622,6 +624,15 @@
 			if Dg2 then Dg2:Remove() end
 
 			SetTolerance(1194,1100,RS_ENEMY)
+		</script>
+	</trigger>
+
+<!--Заметка про карту-->
+	<trigger Name="trMapTip" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+			AddImportantFadingMsg("У вас появилась подсказка на карте, рекомендуется ее открыть.")
 		</script>
 	</trigger>
 

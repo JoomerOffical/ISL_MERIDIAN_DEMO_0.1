@@ -4943,61 +4943,61 @@
 
 	<Reply
 		name="Dlg_pl_000523"
-		text="Так, расскажи подробнее про Псов."
+		text="Так, расскажи подробнее про обоих."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000526" />
 
 	<Reply
 		name="Dlg_npc_000526"
-		text='А что про них рассказывать? Банда с востока, обосновались в заброшенном порту, любят контролировать асолютно все, что не прикреплено. Ими командует Борн, с его 2-мя "руками": Кевин и Арлекин. А еще они контролируют эту часть Иерихона, так что будь осторожнее.'
+		text="А что про них рассказывать? Псы - открытые и честные, но агрессивные. Коты - более спокойные и тактичные, но очень мутные."
 		role="NPC"
 		nextReplies="Dlg_pl_000545" />
 
 	<Reply
 		name="Dlg_pl_000545"
-		text="Так, ладно. А Коты?"
+		text="Не густо, честно говоря."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000553" />
 
 	<Reply
 		name="Dlg_npc_000553"
-		text="А Коты, почти те же самые, но только поспокойней и с запада. Обосновались в Кошкином Доме. Ими руководит Гарфилд. И любят больше сделки нелегальные проворачивать. Естественно на это местные шерифы закрывают глаза, потому что им платят, раз. И два, они боятся потерять свои должности."
+		text="Если более подробно, Псами правит Борн в когда-то заброшенном порту на востоке. Котами - Гарфилд в Кошкином Доме на западе. Эх... если бы их отец был жив. "
 		role="NPC"
 		nextReplies="Dlg_pl_000554" />
 
 	<Reply
 		name="Dlg_pl_000554"
-		text="Что ж, понятно."
+		text="Отец?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000532" />
 
 	<Reply
 		name="Dlg_npc_000532"
-		text="Кажется, у тебя на ум пришла какая-то мысль, раз ты так сидишь задумчиво."
+		text="А! Черт... Ладно, не буду скрывать, Борн и Гарфилд - братья по крови... "
 		role="NPC"
 		nextReplies="Dlg_pl_000555" />
 
 	<Reply
 		name="Dlg_pl_000555"
-		text="Мне не хочется так-то в этот конфликт встревать, но и в этом я вижу хороший способ заработка пару сотен зеленых."
+		text="Вот как? Они типа разделили власть?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000556" />
 
 	<Reply
 		name="Dlg_npc_000556"
-		text="Не рискуй. Оно того не стоит, чужеземец. Словишь пулю и не заметишь."
+		text="Ну можно и так сказать. Их отец был вождем их кланов, точнее единого клана, который потом разделился из-за того, что никто не мог определить, кто должен был занять место отца. В итоге имеем, что имеем: кровные братья пытаются убить друг друга за власть."
 		role="NPC"
 		nextReplies="Dlg_pl_000557" />
 
 	<Reply
 		name="Dlg_pl_000557"
-		text="Не надо за меня так переживать. За себя постоять смогу."
+		text="Понятно. Ладно, поеду, пожалуй. Может найду того, у кого можно деньгу зашибать."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000568" />
 
 	<Reply
 		name="Dlg_npc_000568"
-		text="Ну... по тебе видно, что за себя постоять сможешь. И все равно, будь осторожен."
+		text="Будь осторожен."
 		role="NPC"
 		nextReplies="Dlg_pl_000569" />
 
@@ -5178,7 +5178,7 @@
 		name="Joe5_DLG"
 		text="Снова ты. Пришел еще помучить меня?"
 		role="NPC"
-		scriptCondition="QuestStatus('sin_FinalJoe_Quest')==Q_TAKEN"
+		scriptCondition="QuestStatus('sin_FinalJoe_Quest')==Q_TAKEN and QuestStatus('sin_AttackToPort_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_pl_001150" />
 
 	<Reply
@@ -5227,7 +5227,7 @@
 		name="Joe6_DLG"
 		text="Это ты? Ну и как дела в банде псов?"
 		role="NPC"
-		scriptCondition="QuestStatus('sin_FindKitty_Quest')==Q_TAKEN"
+		scriptCondition="QuestStatus('sin_FindKitty_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0 "
 		nextReplies="Dlg_pl_001254" />
 
 	<Reply
@@ -5258,7 +5258,32 @@
 		name="Dlg_pl_001258"
 		text="Спасибо."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_FindKitty_Quest'); TakeQuest('sin_KnowFindKitty_Quest'); EndConversation()" />
+		scriptResult="GetCurNpc():SetSpokenCount(1); ShowCircleOnMinimapByName('Sin_DogHouse'); TActivate('trMapTip'); EndConversation()" />
+
+	<Reply
+		name="Joe7_DLG"
+		text="Вот и ты. Уже уезжаешь?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_FinalJoe_Quest')==Q_TAKEN and QuestStatus('sin_BattleForHouse_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_pl_001279" />
+
+	<Reply
+		name="Dlg_pl_001279"
+		text="Да, пора валить. А у тебя как дела?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001280" />
+
+	<Reply
+		name="Dlg_npc_001280"
+		text="Более-менее. Клиенты приходят и уходят. Псы меня особо не докучают. Раздавай пойло, сколько хочешь."
+		role="NPC"
+		nextReplies="Dlg_pl_001281" />
+
+	<Reply
+		name="Dlg_pl_001281"
+		text="Понятно. Ладно, я поехал. Удачи тебе в продаже спиртного."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_FinalJoe_Quest'); TakeQuest('r7m1_ComeToGato_Quest'); EndConversation()" />
 <!--Root/Sin/Гарфилд-->
 	<Reply
 		name="Garfield1_DLG"
@@ -5900,7 +5925,7 @@
 		name="Dlg_pl_001137"
 		text="Бывай. Надо бы заехать к Джо, проведать его."
 		role="PLAYER"
-		scriptResult="FailedQuest('r7m1_SaveKitty_Quest'); CompleteQuest('sin_AttackToPort_Quest'); TakeQuest('sin_FinalJoe_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
+		scriptResult="FailQuest('r7m1_SaveKitty_Quest'); CompleteQuest('sin_AttackToPort_Quest'); TakeQuest('sin_FinalJoe_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001134"
@@ -5943,7 +5968,7 @@
 		name="Dlg_pl_001118"
 		text="Спасибо, босс. Удачной вам жизни. Надо бы заехать к Джо, навестить его."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_AttackToPort_Quest'); TakeQuest('sin_FinalJoe_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
+		scriptResult="CompleteQuest('sin_AttackToPort_Quest'); FailQuest('r7m1_SaveKitty_Quest'); TakeQuest('sin_FinalJoe_Quest'); TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation()" />
 
 	<Reply
 		name="Garfield11_DLG"
@@ -6587,7 +6612,7 @@
 		name="Dlg_pl_001224"
 		text="Спасибо, босс."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToDogsBlock_Quest'); AddPlayerMoney(700); EndConversation()" />
+		scriptResult="CompleteQuest('sin_BackToDogsBlock_Quest'); TActivate('sinAfterSomeTimeBudka'); AddPlayerMoney(700); LeaveTown()" />
 
 	<Reply
 		name="Born9_DLG"
@@ -6641,7 +6666,7 @@
 
 	<Reply
 		name="Dlg_npc_001264"
-		text="Ну а смысл тянуть? Гоним их, пока они еще не опомнились. Выдыигайся с остальными к Кошкиному Дому."
+		text="Ну а смысл тянуть? Гоним их, пока они еще не опомнились. Выдвигайся с остальными к Кошкиному Дому."
 		role="NPC"
 		nextReplies="Dlg_pl_001265" />
 
@@ -6649,7 +6674,86 @@
 		name="Dlg_pl_001265"
 		text="Понял."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_GoToWestIerihon_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_GoToWestIerihon_Quest'); TakeQuest('sin_WarForHouse_Quest'); TActivate('sinBattleCatHouse'); EndConversation()" />
+
+	<Reply
+		name="Dlg_npc_001266"
+		text="Вот и все, мы победили, теперь Иерихон и впринципе эти местности под нашим контролем."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_BattleForHouse_Quest')==Q_COMPLETED and not(QuestStatus('sin_FinalJoe_Quest')==Q_TAKEN)"
+		nextReplies="Dlg_pl_001267" />
+
+	<Reply
+		name="Dlg_pl_001267"
+		text="Что будете делать теперь?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001268" />
+
+	<Reply
+		name="Dlg_npc_001268"
+		text="Ну, проведем реформы, установим более улучшенный контроль над этими территориями, избавим жителей от бандитов, и наладим продажу оружия в другие регионы. "
+		role="NPC"
+		nextReplies="Dlg_pl_001269" />
+
+	<Reply
+		name="Dlg_pl_001269"
+		text="Понятно. Получается, будете милитаризироваться. "
+		role="PLAYER"
+		nextReplies="Dlg_npc_001270" />
+
+	<Reply
+		name="Dlg_npc_001270"
+		text="Кстати, не хочешь остаться с нами? Такой боец, как ты, просто достоин хорошей жизни с нами."
+		role="NPC"
+		nextReplies="Dlg_pl_001271" />
+
+	<Reply
+		name="Dlg_pl_001271"
+		text="Не, прости, босс. Я должен уехать. Я сюда приехал ради доставки посылки для Джо, я и так достаточно задержался."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001272" />
+
+	<Reply
+		name="Dlg_npc_001272"
+		text="В таком случае, держи от нас лично, хороший гонорар за все, что ты для нас сделал. Удачи тебе на дорогах."
+		role="NPC"
+		nextReplies="Dlg_pl_001273 Dlg_pl_001274" />
+
+	<Reply
+		name="Dlg_pl_001274"
+		text="Спасибо, но мне нужно от тебя кое-что еще."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001275" />
+
+	<Reply
+		name="Dlg_npc_001275"
+		text="Слушаю."
+		role="NPC"
+		nextReplies="Dlg_pl_001276" />
+
+	<Reply
+		name="Dlg_pl_001276"
+		text="Раз уж вы все равно теперь победили, можете, пожалуйста, отдать мне Китти? Ее матушка ждет дома."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001277" />
+
+	<Reply
+		name="Dlg_npc_001277"
+		text="Китти? Хотя... от нее все равно никакого проку не будет. Да и работорговлей мы никогда не промышляли. Ладно, забирай."
+		role="NPC"
+		nextReplies="Dlg_pl_001278" />
+
+	<Reply
+		name="Dlg_pl_001278"
+		text="Спасибо. Удачи вам. "
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m1_SaveKitty_Quest'); TakeQuest('r7m1_GoToJess_Quest'); AddPlayerMoney(5000); TActivate('trChangeLogoPlayer'); StartConversation('Sin_Kitty')" />
+
+	<Reply
+		name="Dlg_pl_001273"
+		text="Спасибо, Борн. Удачи и вам. Надо навестить Борна."
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_FinalJoe_Quest');  FailQuest('r7m1_SaveKitty_Quest);  TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation() " />
 <!--Root/Sin/Китти-->
 	<Reply
 		name="Kitty1_DLG"
@@ -6902,13 +7006,31 @@
 		name="Dlg_npc_001249"
 		text="Э..."
 		role="NPC"
-		nextReplies="Dlg_pl_001250" />
+		nextReplies="Dlg_pl_001250 Dlg_pl_001251" />
+
+	<Reply
+		name="Dlg_pl_001251"
+		text="Поехали, пока Коты не прибыли. (Надо валить отсюда.)"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001252" />
+
+	<Reply
+		name="Dlg_npc_001252"
+		text="Стойте. Нам нужно забрать моего мужа. Он в Западном Иерихоне."
+		role="NPC"
+		nextReplies="Dlg_pl_001282" />
+
+	<Reply
+		name="Dlg_pl_001282"
+		text="Нет времени, но ладно. Поехали к нему."
+		role="PLAYER"
+		scriptResult="CompleteQuest('r7m1_FindKitty_Quest'); CompleteQuest('sin_FindKitty_Quest'); TakeQuest('r7m1_GoToJess_Quest'); TActivate('sinJessIerihon1'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001250"
-		text="Поехали, пока Коты не прибыли."
+		text="Поехали, пока Коты не прибыли. (Отвезу ее к псам, а там посмотрим, что делать.)"
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_FindKitty_Quest'); CompleteQuest('sin_KnowFindKitty_Quest'); StartConversation('Vibor_NPC')" />
+		scriptResult="CompleteQuest('r7m1_FindKitty_Quest'); CompleteQuest('sin_FindKitty_Quest'); TakeQuest('r7m1_SaveKitty_Quest'); TakeQuest('sin_CapToKitty_Quest'); TActivate('sinPickKittytoDogs'); EndConversation()" />
 <!--Root/Sin/Муж Джес-->
 	<Reply
 		name="Jess1_DLG"
@@ -7033,25 +7155,6 @@
 		text="*Подойти*"
 		role="PLAYER"
 		scriptResult="StartConversation('Sin_Kitty')" />
-
-	<Reply
-		name="Vibor3_DLG"
-		text="Хм... А ведь это мой шанс спасти Китти. А может забить и отвезти ее к Псам?"
-		role="NPC"
-		scriptCondition="QuestStatus('sin_FindKitty_Quest')==Q_COMPLETED or QuestStatus('sin_KnowFindKitty_Quest')==Q_COMPLETED"
-		nextReplies="Dlg_pl_001251 Dlg_pl_001252" />
-
-	<Reply
-		name="Dlg_pl_001252"
-		text="*Отвезти Китти к Псам*"
-		role="PLAYER"
-		scriptResult="TakeQuest('sin_CapToKitty_Quest'); TActivate('sinPickKittytoDogs'); LeaveTown()" />
-
-	<Reply
-		name="Dlg_pl_001251"
-		text="*Спасти Китти*"
-		role="PLAYER"
-		scriptResult="EndConversation()" />
 <!--Root/Sin/Должники-->
 	<Reply
 		name="Dolzhnik_DLG"
@@ -7391,7 +7494,7 @@
 		name="Dlg_pl_001233"
 		text="Поехали."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_KillCatsTraitor_Quest'); TakeQuest('sin_DeliveryTraitor_Quest'); TActivate('trOpenRafael'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_KillCatsTraitor_Quest'); TakeQuest('sin_DeliveryTraitor_Quest'); TActivate('trOpenRafael'); TActivate('sinExitTraitorCat'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001227"
@@ -7470,5 +7573,5 @@
 		name="Dlg_pl_001247"
 		text="Понял, найдем."
 		role="PLAYER"
-		scriptResult="TakeQuest('sin_FindKitty_Quest'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
+		scriptResult="TakeQuest('sin_FindKitty_Quest'); GetCurNpc():SetSpokenCount(1); SpawnMessageBox('8806'); EndConversation()" />
 </DialogsResource>

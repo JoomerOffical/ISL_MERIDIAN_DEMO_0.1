@@ -4049,7 +4049,7 @@
 
 			RestoreAllToleranceStatus()
 
-			StartConversation("Sin_Garfield1")
+			StartConversation("Sin_Kevin")
 
 			SetCameraBehindPlayerVehicle()
 		</script>
@@ -4116,7 +4116,7 @@
 		</script>
 	</trigger>
 
-<!--Джесс в Иерихоне-->
+<!--Джесс в Иерихоне (c Китти)-->
 	<trigger Name="sinJessIerihon1" active="0">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="Sin_EastIerihon_enter"/>
 		<script>
@@ -4162,7 +4162,9 @@
 			RestoreAllToleranceStatus()
 
 			CompleteQuest("r7m1_GoToJess_Quest")
-			TakeQuest("sin_FinalJoe_Quest")
+			TakeQuest("r7m1_ComeToGato_Quest")
+
+			TActivate("sinArlekinBlock2")
 
 			SetCameraBehindPlayerVehicle()
 		</script>
@@ -4205,10 +4207,14 @@
 				Plf:SetCustomControlEnabled( false )
 			end
 
-			AddCinematicMessage( 5200, 3.0 )
-			AddCinematicMessage( 5201, 0.25 )
-			AddCinematicMessage( 5202, 0.25 )
-			AddCinematicMessage( 5203, 0.25 )
+			AddCinematicMessage( 6632, 3.0 )
+			AddCinematicMessage( 6633, 0.25 )
+			AddCinematicMessage( 6634, 0.25 )
+			AddCinematicMessage( 6635, 0.25 )
+			AddCinematicMessage( 6636, 0.25 )
+			AddCinematicMessage( 6637, 0.25 )
+			AddCinematicMessage( 6638, 0.25 )
+			AddCinematicMessage( 6639, 0.25 )
 		</script>
 	</trigger>
 
@@ -4221,18 +4227,30 @@
 			local Plf = GetPlayerVehicle()
 			if Plf then
 				Plf:SetCustomControlEnabled( true )
-				Plf:SetRotation(Quaternion(-0.016, -0.943, 0.012, -0.333))
 				Plf:SetCustomLinearVelocity( 0 )
 				Plf:SetThrottle( 0 )
 				Plf:PlaceToEndOfPath("KillBlock")
 				Plf:SetCustomControlEnabled( false )
 			end
 
+			local Arl = getObj("Arlekin_vehicle_0")
+			if Arl then
+				Arl:Remove()
+			end
+			local AB1 = getObj("ArGuy_vehicle_0")
+			if AB1  then
+				AB1 :Remove()
+			end
+			local AB2 = getObj("ArGuy1_vehicle_0")
+			if AB2 then
+				AB2:Remove()
+			end
+			local AB3 = getObj("ArGuy2_vehicle_0")
+			if AB3 then
+				AB3:Remove()
+			end
+
 			RestoreAllToleranceStatus()
-
-			CompleteQuest("sin_GoToBlock_Quest")
-
-			TActivate("trfterArlekinBlock")
 
 			SetCameraBehindPlayerVehicle()
 		</script>
@@ -4575,11 +4593,13 @@
 			SaveAllToleranceStatus(RS_NEUTRAL)
 
 			Fly	("HideDog_cam0", CINEMATIC_NO_AIM, 0, 11, 1, 0)
-			Fly	("CatsTrap_cam0", CINEMATIC_NO_AIM, 0, 6, 0, 1)
+			Fly	("CatsTrap_cam0", CINEMATIC_NO_AIM, 0, 6, 0, 0)
+			Fly	("CatsTrap_cam1", CINEMATIC_NO_AIM, 0, 6, 0, 1)
 			StartCinematic()
 
 			TActivate("sinBattleCatHouse_FadeIn")
 			TActivate("sinBattleCatHouse_cam1")
+			TActivate("sinBattleCatHouse_cam2")
 			TActivate("sinBattleCatHouse_End")
 
 		</script>
@@ -4627,6 +4647,40 @@
 		</script>
 	</trigger>
 
+	<trigger Name="sinBattleCatHouse_cam2" active="0">
+		<event flypath="CatsTrap_cam1" eventid="GE_START_CINEMATIC_FLY" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("trDestroyDots")
+
+			AddCinematicMessage( 6654, 4 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="trDestroyDots" active="0">
+		<event 	timeout="2" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+
+		</script>
+	</trigger>
+
+	<trigger Name="trDestroyDotsFast" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+
+		</script>
+	</trigger>
+
 	<trigger Name="sinBattleCatHouse_End" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
@@ -4650,9 +4704,11 @@
 
 			TDeactivate("sinBattleCatHouse_FadeIn")
 			TDeactivate("sinBattleCatHouse_cam1")
+			TDeactivate("sinBattleCatHouse_cam2")
 
-			CompleteQuest("sin_GoToIerihon_Quest")
-			TActivate("sinCapIerihonDog")
+			CompleteQuest("sin_GoToCHWar_Quest")
+			TActivate("sinCatsIsDead")
+			TActivate("trDestroyDotsFast")
 
 			RestoreAllToleranceStatus()
 
@@ -4701,8 +4757,55 @@
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE04", -1, -1, CVector(1448.463, 300.663, 2061.282), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 			CreateNewSgNodeObject("ET_PS_HOUSE_MED_FIRE", "FIRE05", -1, -1, CVector(1466.273, 300.663, 2158.944), Quaternion(0.0000, 0.0000, 0.0000, 1.0000))
 
-			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
-			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 6660, 0.25 )
+			AddCinematicMessage( 6661, 0.25 )
+		</script>
+	</trigger>
+
+	<trigger Name="sinCatsIsDead_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			CompleteQuest("sin_BattleForHouse_Quest")
+
+			TActivate("sinAfterSomeTimeBudka1")
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Спустя какое-то время (Будка) 1-->
+	<trigger Name="sinAfterSomeTimeBudka1" active="0">
+		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			TActivate("sinAfterSomeTimeBudka1_FadeIn")
+			TActivate("sinAfterSomeTimeBudka1_End")
+
+			Fly	("SomeTimeLaterDog_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 1)
+			StartCinematic()
+		</script>
+	</trigger>
+	
+	<trigger Name="sinAfterSomeTimeBudka1_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
 
 			local Plf = GetPlayerVehicle()
 			if Plf then
@@ -4716,13 +4819,15 @@
 		</script>
 	</trigger>
 
-	<trigger Name="sinAfterSomeTime_End" active="0">
+	<trigger Name="sinAfterSomeTimeBudka1_End" active="0">
 		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			trigger:Deactivate()
 
 			RestoreAllToleranceStatus()
+
+			StartConversation("Sin_Bulldog")
 
 			SetCameraBehindPlayerVehicle()
 		</script>
