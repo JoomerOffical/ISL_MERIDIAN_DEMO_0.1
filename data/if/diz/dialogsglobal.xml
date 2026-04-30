@@ -5493,7 +5493,7 @@
 		name="Dlg_pl_000604"
 		text="Ну тогда увидимся позже."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToCats2_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_BackToCats2_Quest'); TakeQuest('sin_TalkToKitty_Quest'); EndConversation()" />
 
 	<Reply
 		name="Garfield4_DLG"
@@ -6276,7 +6276,7 @@
 		name="Dlg_pl_000615"
 		text="Денюшки - это хорошо."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_KittyToDogs_Quest'); AddPlayerMoney(500); EndConversation()" />
+		scriptResult="CompleteQuest('sin_KittyToDogs_Quest'); TakeQuest('sin_TalkToKitty1_Quest'); AddPlayerMoney(500); EndConversation()" />
 
 	<Reply
 		name="Born3_DLG"
@@ -6757,46 +6757,58 @@
 <!--Root/Sin/Китти-->
 	<Reply
 		name="Kitty1_DLG"
-		text="Помоги мне, незнакомец."
+		text="..."
 		role="NPC"
-		scriptCondition="QuestStatus('sin_BackToCats2_Quest')==Q_COMPLETED and QuestStatus('sin_KittyToDogs_Quest')==Q_CANBEGIVEN"
+		scriptCondition="QuestStatus('sin_TalkToKitty_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000606" />
 
 	<Reply
 		name="Dlg_pl_000606"
-		text="Что случилось?"
+		text="Привет, не тебя ли кличут Китти?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000607" />
 
 	<Reply
 		name="Dlg_npc_000607"
-		text="Муж задолжал Котам денег и собирает их, чтобы отдать долг. А чтобы он быстрее отдал долг, Коты похитили меня. Помоги мне."
+		text="..."
 		role="NPC"
 		nextReplies="Dlg_pl_000608" />
 
 	<Reply
 		name="Dlg_pl_000608"
-		text="Вот что, у меня тут одна идея появилась. Но для этого мы должны с тобой поехать к Псам. Забирайся ко мне в машину, пока никто не видит. Объясню потом."
+		text="Мне о тебе твоя мама из Кристи рассказывала."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000605" />
 
 	<Reply
 		name="Dlg_npc_000605"
-		text="Не знаю, почему, но я тебе верю."
+		text="Подожди. Моя мама? Кто ты?"
 		role="NPC"
 		nextReplies="Dlg_pl_000609" />
 
 	<Reply
 		name="Dlg_pl_000609"
-		text="Быстрее, пока никто не видит."
+		text="Неважно. Важно лишь то, что я здесь, чтобы тебя вытащить отсюда."
 		role="PLAYER"
-		scriptResult="TakeQuest('sin_KittyToDogs_Quest'); TActivate('sinKittyLeave'); EndConversation()" />
+		nextReplies="Dlg_npc_001283" />
+
+	<Reply
+		name="Dlg_npc_001283"
+		text="Но как?"
+		role="NPC"
+		nextReplies="Dlg_pl_001284" />
+
+	<Reply
+		name="Dlg_pl_001284"
+		text="Поехали отсюда, у меня есть небольшая идея."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_TalkToKitty_Quest'); TakeQuest('sin_KittyToDogs_Quest'); TActivate('sinKittyLeave'); EndConversation()" />
 
 	<Reply
 		name="Kitty2_DLG"
 		text="Что-то я переживаю, а если меня убьют?"
 		role="NPC"
-		scriptCondition="QuestStatus('sin_KittyToDogs_Quest')==Q_COMPLETED and QuestStatus('sin_DealKitty_Quest')==Q_CANBEGIVEN"
+		scriptCondition="QuestStatus('sin_TalkToKitty1_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000616" />
 
 	<Reply
@@ -6815,7 +6827,7 @@
 		name="Dlg_pl_000618"
 		text="Если что-то пойдет не так, я буду рядом."
 		role="PLAYER"
-		scriptResult="TakeQuest('sin_DealKitty_Quest'); TActivate('sinDealKitty'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_TalkToKitty1_Quest'); TakeQuest('sin_DealKitty_Quest'); TActivate('sinDealKitty'); EndConversation()" />
 
 	<Reply
 		name="Kitty3_DLG"
@@ -6844,13 +6856,13 @@
 
 	<Reply
 		name="Dlg_npc_001082"
-		text="Подожди. Моя мама? Она жива?"
+		text="Подожди. Моя мама? "
 		role="NPC"
 		nextReplies="Dlg_pl_001083" />
 
 	<Reply
 		name="Dlg_pl_001083"
-		text="Она жива, и надеется, что ты вернешься домой."
+		text="Она надеется, что ты вернешься домой."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001084" />
 

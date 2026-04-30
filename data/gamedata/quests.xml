@@ -571,9 +571,23 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_TalkToKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/sin/Сюжетные/Побыть на сделке-->
 	<quest
 		Name="sin_DealKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_TalkToKitty1_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"

@@ -176,7 +176,36 @@
 	<Point  coord="2452.074 237.506 1785.222" rotation="-0.048 0.412 -0.022 0.910"/>
 	<Point  coord="2556.478 211.751 1579.684" rotation="-0.041 0.303 -0.013 0.952"/>
 </Path>
+<Path Name = "KittyPlayer_cam1">
+	<Point  coord="2608.281 203.892 1691.684" rotation="-0.265 0.116 -0.032 0.957"/>
+	<Point  coord="2613.608 217.260 1670.029" rotation="-0.265 0.116 -0.032 0.957"/>
+</Path>
+<Path Name = "KittyPlayer_cam2">
+	<Point  coord="2473.733 203.960 1665.344" rotation="-0.054 -0.548 0.035 0.834"/>
+	<Point  coord="2486.841 202.107 1671.010" rotation="-0.054 -0.548 0.035 0.834"/>
+</Path>
+<Path Name = "KittyPlayer_cam3">
+	<Point  coord="2702.665 191.914 1773.935" rotation="-0.003 0.900 -0.007 0.437"/>
+	<Point  coord="2724.670 192.334 1791.246" rotation="-0.003 0.900 -0.007 0.437"/>
+</Path>
 
+
+<Path Name = "Trap_cam0">
+	<Point  coord="2740.119 218.289 1573.288" rotation="-0.077 0.457 -0.040 0.885"/>
+	<Point  coord="2710.565 211.918 1594.270" rotation="-0.077 0.457 -0.040 0.885"/>
+</Path>
+<Path Name = "Trap_cam1">
+	<Point  coord="2573.503 196.248 1696.778" rotation="-0.198 -0.200 0.041 0.959"/>
+	<Point  coord="2566.745 203.548 1681.299" rotation="-0.198 -0.200 0.041 0.959"/>
+</Path>
+<Path Name = "Trap_cam2">
+	<Point  coord="2752.225 194.556 1690.090" rotation="-0.020 0.669 -0.018 0.743"/>
+	<Point  coord="2767.718 195.398 1688.467" rotation="-0.020 0.669 -0.018 0.743"/>
+</Path>
+<Path Name = "Trap_cam3">
+	<Point  coord="2472.320 206.180 1722.751" rotation="-0.054 -0.743 0.060 0.665"/>
+	<Point  coord="2453.488 209.277 1724.849" rotation="-0.054 -0.743 0.060 0.665"/>
+</Path>
 
 <Path Name = "DealKitty_cam0">
 	<Point  coord="2730.797 196.637 1649.030" rotation="-0.018 0.898 -0.036 0.438"/>

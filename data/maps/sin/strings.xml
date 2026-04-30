@@ -372,7 +372,7 @@
 		modelSkin="0"
 		modelCfg="132"
 		modelSlot="1"
-		value="ГАРФИЛД|Отлично, берем. Эгоист, вытаскивай коробку с деньгами."
+		value="ГАРФИЛД|Отлично, берем. Эгоист, вытаскивай деньги."
 		sound=""
 		time="5" />
 
@@ -477,6 +477,52 @@
 		value="БРОДЯГА|Не бойся, я буду рядом."
 		sound=""
 		time="3" />
+
+	<string
+		id="5506"
+		modelName="r2_woman"
+		modelSkin="3"
+		modelCfg="77"
+		modelSlot="1"
+		value="МОГИЛЬЩИК ГАН|Эй, чужеземец! Подъедь ко мне, глянь сюда. Не знаю, что ты им наговорил, но они купились на твою уловку."
+		sound=""
+		time="9" />
+
+	<string
+		id="5507"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Отличная работа, могильщик. Пусть они пообижают друг друга, а я пока дам по газам."
+		sound=""
+		time="6" />
+
+	<string
+		id="5508"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="314"
+		modelSlot="1"
+		value="БОРН|Че вы, комки шерсти? Думали, мы не узнаем про вашу авантюру с караванщиками? Эй, караванщики, двигайтесь к нам, если можете. Мы вас прикроем."
+		sound=""
+		time="10" />
+
+	<string
+		id="5509"
+		modelName="r2_man"
+		modelSkin="0"
+		modelCfg="132"
+		value="ГАРФИЛД|Ха! Не думаю, что мертвые умеют реагировать на собачъем. Как же вас легко развести, блохастых."
+		sound=""
+		time="8" />
+
+	<string
+		id="55010"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="314"
+		modelSlot="1"
+		value="БОРН|Че? Они мертвые? Похоже они умерли раньше, чем мы предполагали..."
+		sound=""
+		time="5" />
 
 	<string
 		id="54030"
@@ -771,6 +817,72 @@
 		time="1" />
 
 	<string
+		id="6008"
+		value="СПУСТЯ КАКОЕ-ТО ВРЕМЯ."
+		sound=""
+		time="3" />
+
+	<string
+		id="6009"
+		modelName="r2_woman"
+		modelSkin="5"
+		modelCfg="40"
+		modelSlot="1"
+		value="КЕВИН|Значит так, либо ты нам говоришь, где Китти, либо тебе капут."
+		sound="data\sounds\Speech\sin\sin_6006_kevin.ogg"
+		time="5" />
+
+	<string
+		id="6010"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Я не знаю... Она куда-то уехала... Я не в курсе..."
+		sound=""
+		time="3" />
+
+	<string
+		id="6011"
+		modelName="r2_woman"
+		modelSkin="5"
+		modelCfg="40"
+		modelSlot="1"
+		value="КЕВИН|Ложь! Это ты ее освободил! Если ты не скажешь, то я с тебя шлем с маской сорву."
+		sound=""
+		time="5" />
+
+	<string
+		id="6012"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="314"
+		value="БОРН|Оставь его. Он вряд ли прямо сейчас расколется. Есть вероятность, что Китти у Котов вновь."
+		sound=""
+		time="6" />
+
+	<string
+		id="6013"
+		modelName="r2_man"
+		modelSkin="4"
+		modelCfg="314"
+		modelSlot="1"
+		value="БОРН|Макс, Флемминг, останьтесь здесь. Остальные со мной!"
+		sound="data\sounds\Speech\sin\sin_6013_cat.ogg"
+		time="6" />
+
+	<string
+		id="6014"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Кх! Надо... добраться... до своей машины..."
+		sound=""
+		time="3" />
+
+	<string
+		id="6015"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Еще чу-чуть... Все! Сваливаем!"
+		sound=""
+		time="3" />
+
+	<string
 		id="6100"
 		modelName="r2_man"
 		modelSkin="4"
@@ -797,7 +909,7 @@
 		modelCfg="58"
 		value="МАКС|Вон он!!!"
 		sound="data\sounds\Speech\sin\sin_6102_max.ogg"
-		time="2" />
+		time="1" />
 
 	<string
 		id="6103"
@@ -807,7 +919,7 @@
 		modelSlot="1"
 		value="ФЛЕМИНГ|Лови!!"
 		sound="data\sounds\Speech\sin\sin_6103_fleming.ogg"
-		time="2" />
+		time="1" />
 
 	<string
 		id="6104"

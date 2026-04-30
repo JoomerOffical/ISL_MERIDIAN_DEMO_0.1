@@ -3208,6 +3208,25 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_TalkToKitty1_Quest"
+		briefDiz="Поговорить с Китти вновь"
+		fullDiz="Похоже, Китти боится. Надо ее успокоить."
+		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_TalkToKitty_Quest"
+		briefDiz="Поговорить с Китти"
+		fullDiz="Теперь, пока Коты отвлечены, надо освободить Китти и сделать небольшую грязь двум бандам."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="Sin_CatHouse" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_ToIerihon_Quest"
 		briefDiz="Отправится на Свободные Земли"
 		isMainQuest="1">
