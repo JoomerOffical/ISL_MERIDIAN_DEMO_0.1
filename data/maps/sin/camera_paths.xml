@@ -273,13 +273,17 @@
 	<Point  coord="2052.441 255.757 605.506" rotation="-0.054 -0.254 0.014 0.966"/>
 </Path>
 <Path Name = "Capture_cam2">
-	<Point  coord="2076.918 261.449 824.212" rotation="0.001 0.997 -0.018 -0.076"/>
+	<Point  coord="2261.409 267.209 872.045" rotation="-0.012 0.956 -0.040 0.290"/>
+	<Point  coord="2114.162 272.189 850.749" rotation="-0.002 0.997 -0.069 0.032"/>
+	<Point  coord="2002.131 255.065 745.277" rotation="0.008 0.919 -0.018 -0.393"/>
+	<Point  coord="1913.026 260.256 625.129" rotation="-0.043 -0.601 0.032 0.797"/>
 </Path>
 <Path Name = "Capture_cam3">
-	<Point  coord="1993.049 367.493 620.820" rotation="-0.395 0.586 -0.392 0.590"/>
+	<Point  coord="2048.944 273.772 824.397" rotation="0.005 0.991 -0.040 -0.126"/>
+	<Point  coord="2077.172 264.645 715.570" rotation="0.005 0.991 -0.040 -0.126"/>
 </Path>
 <Path Name = "Capture_cam4">
-	<Point  coord="2006.067 240.472 630.058" rotation="-0.024 0.709 -0.024 0.704"/>
+	<Point  coord="1993.049 367.493 620.820" rotation="-0.395 0.586 -0.392 0.590"/>
 </Path>
 <Path Name = "Capture_cam5">
 	<Point  coord="1986.718 314.152 547.033" rotation="-0.235 0.402 -0.107 0.878"/>
@@ -290,8 +294,6 @@
 	<Point  coord="1378.660 237.811 1154.526" rotation="-0.011 0.988 -0.127 0.084"/>
 	<Point  coord="1349.248 243.553 1181.783" rotation="0.008 0.990 -0.121 -0.066"/>
 </Path>
-
-
 <Path Name = "Escape_cam1">
 	<Point  coord="1461.892 254.723 1446.413" rotation="-0.047 0.430 -0.023 0.902"/>
 	<Point  coord="1313.935 252.811 1446.448" rotation="-0.039 -0.241 0.010 0.970"/>
@@ -299,7 +301,15 @@
 <Path Name = "Escape_cam2">
 	<Point  coord="1313.935 252.811 1446.448" rotation="-0.039 -0.241 0.010 0.970"/>
 </Path>
-
+<Path Name = "Escape_cam3">
+	<Point  coord="1360.248 267.161 1464.250" rotation="-0.019 -0.206 0.004 0.978"/>
+	<Point  coord="1561.060 288.588 1666.220" rotation="0.006 0.079 0.000 0.997"/>
+	<Point  coord="1665.998 309.104 2024.256" rotation="-0.010 0.591 -0.007 0.807"/>
+	<Point  coord="1641.909 309.701 2196.314" rotation="-0.012 0.826 -0.017 0.563"/>
+</Path>
+<Path Name = "Escape_cam4">
+	<Point  coord="1689.998 282.979 2226.242" rotation="-0.030 0.853 -0.049 0.518"/>
+</Path>
 
 <Path Name = "HideDog_cam0">
 	<Point  coord="1665.998 309.104 2024.256" rotation="-0.010 0.591 -0.007 0.807"/>
@@ -335,7 +345,14 @@
 	<Point  coord="3591.110 288.161 558.520" rotation="-0.043 0.007 -0.000 0.999"/>
 	<Point  coord="3625.773 288.570 599.951" rotation="-0.044 0.732 -0.047 0.678"/>
 </Path>
-
+<Path Name = "Final_cam2">
+	<Point  coord="2732.043 202.178 1539.023" rotation="-0.035 0.450 -0.018 0.892"/>
+	<Point  coord="2676.246 196.755 1580.272" rotation="-0.035 0.450 -0.018 0.892"/>
+</Path>
+<Path Name = "Final_cam3">
+	<Point  coord="2676.246 196.755 1580.272" rotation="0.300 0.445 0.161 0.828"/>
+	<Point  coord="2676.246 196.755 1580.272" rotation="-0.035 0.450 -0.018 0.892"/>
+</Path>
 
 <Path Name = "ArlBlock_cam0">
 	<Point  coord="3617.844 293.872 615.843" rotation="-0.003 0.992 -0.127 0.026"/>

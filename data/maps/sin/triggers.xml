@@ -696,7 +696,13 @@
 			TActivate("JoeSave_tr")
 
 			local Plf = GetPlayerVehicle()
-			Plf:SetNewPart("CABIN_SMALL_GUN","pkt01")
+				Plf:SetNewPart("CABIN_SMALL_GUN","pkt01")
+				Plf:AddModifier( "hp", "+ 1000000" )
+				Plf:AddModifier( "fuel", "+ 1000000" )
+			local cab = Plf:GetCabin()
+				if cab then cab:AddModifier( "dur", "+ 1000000" ) end	
+			local basket = Plf:GetBasket()
+				if basket then basket:AddModifier( "dur", "+ 1000000" ) end
 		</script>
 	</trigger>
 

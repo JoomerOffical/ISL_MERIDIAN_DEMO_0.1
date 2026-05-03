@@ -829,7 +829,7 @@
 		modelCfg="40"
 		modelSlot="1"
 		value="КЕВИН|Значит так, либо ты нам говоришь, где Китти, либо тебе капут."
-		sound="data\sounds\Speech\sin\sin_6006_kevin.ogg"
+		sound=""
 		time="5" />
 
 	<string
@@ -870,13 +870,32 @@
 
 	<string
 		id="6014"
+		modelName="r1_man"
+		modelSkin="3"
+		modelCfg="164"
+		value="МАКС|Ну и что нам с ним делать? Может немного с ним поиграть?"
+		sound=""
+		time="6" />
+
+	<string
+		id="6015"
+		modelName="r2_woman"
+		modelSkin="5"
+		modelCfg="46"
+		modelSlot="1"
+		value="ФЛЕМИНГ|Нам дали указание сторожить его, а не пытать, идиот. Так что пойдем на улице посидим."
+		sound=""
+		time="8" />
+
+	<string
+		id="6016"
 		modelName="NewHero_mask"
 		value="БРОДЯГА|Кх! Надо... добраться... до своей машины..."
 		sound=""
 		time="3" />
 
 	<string
-		id="6015"
+		id="6017"
 		modelName="NewHero_mask"
 		value="БРОДЯГА|Еще чу-чуть... Все! Сваливаем!"
 		sound=""
@@ -888,7 +907,7 @@
 		modelSkin="4"
 		modelCfg="314"
 		modelSlot="1"
-		value="БОРН|Как вы могли его упустить?! Поймайте его немедленно!!!"
+		value="БОРН|Как вы могли его упустить?! Поймайте его немедленно!"
 		sound="data\sounds\Speech\sin\sin_6100_cat.ogg"
 		time="3" />
 
@@ -904,20 +923,20 @@
 
 	<string
 		id="6102"
-		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
-		value="МАКС|Вон он!!!"
+		modelName="r1_man"
+		modelSkin="3"
+		modelCfg="164"
+		value="МАКС|Вон он!"
 		sound="data\sounds\Speech\sin\sin_6102_max.ogg"
 		time="1" />
 
 	<string
 		id="6103"
 		modelName="r2_woman"
-		modelSkin="0"
-		modelCfg="58"
+		modelSkin="5"
+		modelCfg="46"
 		modelSlot="1"
-		value="ФЛЕМИНГ|Лови!!"
+		value="ФЛЕМИНГ|Лови!"
 		sound="data\sounds\Speech\sin\sin_6103_fleming.ogg"
 		time="1" />
 
@@ -929,7 +948,7 @@
 		modelSlot="1"
 		value="ЖИТЕЛЬ|Мы от Джо. Он рассказал про твою авантюру на ферме. Езжай быстрее, мы тебя прикроем."
 		sound=""
-		time="5" />
+		time="7" />
 
 	<string
 		id="6105"
@@ -951,7 +970,7 @@
 		modelSkin="5"
 		modelCfg="40"
 		modelSlot="1"
-		value="КЕВИН|Где бейсболист!? Где он!!?"
+		value="КЕВИН|Где Китти!? Где она!!?"
 		sound=""
 		time="4" />
 
@@ -961,7 +980,7 @@
 		modelSkin="4"
 		modelCfg="168"
 		modelSlot="0"
-		value="ЭГОИСТ|Да нету его здесь, мы сами не знаем, где он!"
+		value="ЭГОИСТ|Да нету ее здесь, мы сами не знаем, где она!"
 		sound=""
 		time="4" />
 
@@ -971,7 +990,7 @@
 		modelSkin="5"
 		modelCfg="40"
 		modelSlot="1"
-		value="КЕВИН|Ложь! Он у вас прячется, выдайте его нам или вы все умрете!"
+		value="КЕВИН|Ложь! Она у вас прячется, выдайте ее нам или вы все умрете!"
 		sound=""
 		time="5" />
 
@@ -1102,9 +1121,9 @@
 	<string
 		id="6311"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Не я... Мы это сделали."
+		value="БРОДЯГА|Ну, не скажу, что я один это сделал. Если бы не помощь местных жителей, я бы не справился."
 		sound=""
-		time="3" />
+		time="6" />
 
 	<string
 		id="6312"
@@ -1112,33 +1131,89 @@
 		modelSkin="3"
 		modelCfg="294"
 		modelSlot="1"
-		value="ДЖО|Предлагаю это отметить, Бродяга. Погнали, выпьем. За счет заведения."
+		value="ДЖО|Предлагаю это отметить, Бродяга. Погнали, мэр тебя ждет для кое-чего."
 		sound=""
 		time="5" />
 
 	<string
 		id="6313"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Нет, прости. Но мне надо ехать. Я вообще должен был приехать сюда тебе доставить посылку, а я и так достаточно подзадержался."
+		value="БРОДЯГА|Ну... а почему бы и нет?"
 		sound=""
-		time="8" />
+		time="3" />
 
 	<string
 		id="6314"
 		modelName="r2_man"
 		modelSkin="3"
-		modelCfg="294"
+		modelCfg="6"
 		modelSlot="1"
-		value="ДЖО|Что ж, тогда возьми от меня награду за все, что ты для нас сделал. И передавай привет Леонелю. Чистого бензина, чужеземец."
+		value="МЭР|От имени Свободных Земель, от имени Объединенного Иерихона. Я, мэр Глорон, награждаю чужеземца по кличке ''Бродяга'' почетной медалью защитника Иерихона. Мои поздравления!"
 		sound=""
-		time="8" />
+		time="10" />
 
-		<string
+	<string
 		id="6315"
 		modelName="NewHero_mask"
-		value="БРОДЯГА|Спасибо. Чистого бензина, Джо."
+		value="БРОДЯГА|Спасибо. Я ни на что и не надеялся."
 		sound=""
 		time="3" />
+
+	<string
+		id="6316"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="6"
+		modelSlot="1"
+		value="МЭР|Не хотел бы остаться с нами? Ты смог бы стать главным шерифом наших земель, следить за порядком."
+		sound=""
+		time="6" />
+
+	<string
+		id="6317"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Не, прости. Не люблю сидеть на одном месте. Да и вообще я сюда приехал, чтобы доставить посылку Джо, я и так тут достаточно подзадержался."
+		sound=""
+		time="9" />
+
+	<string
+		id="6318"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="6"
+		modelSlot="1"
+		value="МЭР|В таком случае я могу лишь пожелать тебе удачи. И держи небольшой гонорар лично от меня. А сейчас давай отпразднуем победу над бандами. Джо, наливай за мой счет!"
+		sound=""
+		time="10" />
+
+	<string
+		id="6319"
+		modelName="r2_man"
+		modelSkin="3"
+		modelCfg="294"
+		value="ДЖО|Как прикажете, сэр. До дна, джентельмены!"
+		sound=""
+		time="4" />
+
+	<string
+		id="6320"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Да, до дна."
+		sound=""
+		time="2" />
+
+	<string
+		id="6321"
+		value="НА СЛЕДУЮЩИЙ ДЕНЬ."
+		sound=""
+		time="2" />
+
+	<string
+		id="6322"
+		modelName="NewHero_mask"
+		value="БРОДЯГА|Ну-с, возвращаемся обратно. Надо навестить тетю Гато. Доехала ли та любовная парочка?"
+		sound=""
+		time="6" />
 
 	<string
 		id="6400"

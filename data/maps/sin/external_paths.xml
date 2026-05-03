@@ -976,6 +976,57 @@
 	</Path>
 
 	<Path
+		Name="Escape_Vag1">
+		<Point
+			coord="1376.471 1547.308" />
+
+		<Point
+			coord="1405.693 1607.310" />
+
+		<Point
+			coord="1465.910 1653.506" />
+
+		<Point
+			coord="1497.551 1708.550" />
+
+		<Point
+			coord="1529.744 1771.241" />
+
+		<Point
+			coord="1558.948 1846.943" />
+
+		<Point
+			coord="1581.674 1915.543" />
+
+		<Point
+			coord="1592.203 1965.818" />
+
+		<Point
+			coord="1634.012 1985.147" />
+
+		<Point
+			coord="1678.288 2022.438" />
+
+		<Point
+			coord="1701.594 2072.504" />
+
+		<Point
+			coord="1710.213 2115.877" />
+
+		<Point
+			coord="1709.452 2149.609" />
+
+		<Point
+			coord="1709.919 2185.816" />
+
+		<Point
+			coord="1692.954 2206.988" />
+
+		<Point
+			coord="1667.423 2202.896" />
+	</Path>
+
+	<Path
 		Name="FF_A">
 		<Point
 			coord="3502.850 711.735" />

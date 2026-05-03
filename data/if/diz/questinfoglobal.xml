@@ -2382,6 +2382,20 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_BackToGato1_Quest"
+		briefDiz="Вернуться к тете Гато"
+		fullDiz="Мне стало интересно, добрались ли Джесс и Китти до Гато. Надо бы ее навестить."
+		isMainQuest="1">
+		<Map
+			name="r7m1"
+			targetObjName="Kristy" />
+
+		<Map
+			name="sin"
+			targetObjName="ToR7M1" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_BackToGato_Quest"
 		briefDiz="Вернуться к Гато"
 		fullDiz="Теперь когда Китти в безопасности, пора вернуть ее домой."
