@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?><!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by scorp (targem) -->
 <ModelNames>
 	<Item
+		id="diaryofvagrant_start"
+		locForm="0"
+		value="Дневник Бродяги: После выписки" />
+
+	<Item
 		id="quest_letter_lamp"
 		locForm="0"
 		value="Извещение о посылке" />
@@ -14,6 +19,11 @@
 		id="quest_pack_joe"
 		locForm="0"
 		value="Посылка для Джо" />
+
+	<Item
+		id="diaryofvagrant_leonel"
+		locForm="0"
+		value="Дневник Бродяги: Леонель и долг" />
 
 	<Item
 		id="ArlekinCar"
@@ -46,6 +56,11 @@
 		value="Гарфилд" />
 
 	<Item
+		id="collectionbook1"
+		locForm="0"
+		value="Дневник Генриха Пола" />
+
+	<Item
 		id="UralTreasure"
 		locForm="0"
 		value="Торговец" />
@@ -61,7 +76,7 @@
 		value="Бутылки вина" />
 
 	<Item
-		id="collectionbook1"
+		id="collectionbook11111"
 		locForm="0"
 		value="''Туристический проспект''" />
 

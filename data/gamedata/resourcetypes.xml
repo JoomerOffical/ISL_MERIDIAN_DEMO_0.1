@@ -178,6 +178,8 @@ $Id: ResourceTypes.xml,v 1.1 2005/12/08 08:58:02 anton Exp $
 	</Type>
 
 	<Type Name="QUEST_ITEM" >
+		<Type Name="DIARY_VAGRANT_LAMP" />
+
 		<Type Name="QUEST_WANTED" />
 		<Type Name="QUEST_DRUGS" />
 		<Type Name="QUEST_REACH" />

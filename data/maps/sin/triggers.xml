@@ -1050,6 +1050,29 @@
 		</script>
 	</trigger>
 
+<!--Дневник Генриха-->
+	<trigger Name="trBooks" active="1">
+		<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewDummyObject( "collectionbook1", "diary_paul", -1, -1, CVector(getPos("diarypaul_loc")), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+<!--Подбираем дневник на могиле-->
+	<trigger Name="trBooksBurn" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="diarypaul_loc" />
+		<script>
+			local rrr = GetEntityByName ("diary_paul")
+			if rrr then rrr:Remove() end
+
+			AddQuestItem("collectionbook1")
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
 <!--Телепорт на Прибрежье-->
 	<trigger Name="triggerExitToMap71" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="ToR7M1" />

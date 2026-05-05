@@ -2,7 +2,7 @@
 <triggers>
 
 <!--Начало игры-->
-	<trigger Name="cinDoctorOut" active="0">
+	<trigger Name="cinDoctorOut" active="1">
 	<event	timeout="0.1"		eventid="GE_TIME_PERIOD" />
 		<script>
 			trigger:Deactivate()
@@ -218,6 +218,9 @@
 
 			TakeQuest("r7m1_LampToMayak_Quest")
 			AddQuestItem("quest_letter_lamp")
+
+			AddQuestItem("diaryofvagrant_start")
+			AddQuestItem("collectionbook1")
 
 			getObj("Mayak"):SetNodeAction(AT_MOVE1)
 

@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="298611433">
+	LastId="299002126">
 	<Node
 		name="Object76479715"
 		class="SgAnimatedModelNode"
@@ -732,22 +732,6 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object76482737"
-		class="SgAnimatedModelNode"
-		org="1410.848 0.000 2145.086"
-		orgRel="1"
-		id="heavy_dot2"
-		ndmAction="0" />
-
-	<Node
-		name="Object76482740"
-		class="SgAnimatedModelNode"
-		org="1410.596 0.000 2060.570"
-		orgRel="1"
-		id="heavy_dot2"
-		ndmAction="0" />
-
-	<Node
 		name="Object76482741"
 		class="SgAnimatedModelNode"
 		org="1410.525 0.000 2068.173"
@@ -1039,22 +1023,6 @@
 		org="1254.555 -1.196 2165.116"
 		orgRel="1"
 		id="heavy_bigwall1"
-		ndmAction="0" />
-
-	<Node
-		name="Object76482779"
-		class="SgAnimatedModelNode"
-		org="1353.594 0.000 2164.965"
-		orgRel="1"
-		id="heavy_dot2"
-		ndmAction="0" />
-
-	<Node
-		name="Object76482780"
-		class="SgAnimatedModelNode"
-		org="1356.121 0.000 2037.945"
-		orgRel="1"
-		id="heavy_dot2"
 		ndmAction="0" />
 
 	<Node
@@ -5472,13 +5440,61 @@
 		passable="0" />
 
 	<Node
-		name="ET_S_RAIN"
-		class="SgNode"
-		org="1668.923 361.919 2096.228"
-		orgRel="0">
-		<Node
-			name="noise"
-			class="SgSoundSourceNode"
-			id="Fake_Sound_Do_Not_Use_It" />
-	</Node>
+		name="Object298611619"
+		class="SgAnimatedModelNode"
+		org="1344.603 0.072 2186.542"
+		orgRel="1"
+		rot="0.4582 -0.4946 -0.5264 0.5180"
+		scale="0.100 0.100 0.100"
+		id="concrete_plate"
+		ndmAction="0" />
+
+	<Node
+		name="Object298611620"
+		class="SgAnimatedModelNode"
+		org="1344.487 -1.000 2181.235"
+		orgRel="1"
+		rot="0.0000 0.7239 0.0000 0.6899"
+		id="conteiner"
+		ndmAction="0"
+		passable="0" />
+
+	<Node
+		name="Object298611622"
+		class="SgAnimatedModelNode"
+		org="1343.065 0.000 2192.091"
+		orgRel="1"
+		scale="1.228 1.228 1.228"
+		id="concrete_ruins3"
+		ndmAction="0" />
+
+	<Node
+		name="Object298611623"
+		class="SgAnimatedModelNode"
+		org="1337.170 0.000 2170.853"
+		orgRel="1"
+		rot="0.0000 -0.7071 0.0000 0.7071"
+		scale="1.228 1.228 1.228"
+		id="concrete_ruins3"
+		ndmAction="0" />
+
+	<Node
+		name="Object298611624"
+		class="SgAnimatedModelNode"
+		org="1337.287 0.000 2183.513"
+		orgRel="1"
+		rot="0.0000 -0.7025 0.0000 0.7117"
+		scale="1.228 1.228 1.228"
+		id="concrete_ruins3"
+		ndmAction="0" />
+
+	<Node
+		name="Object298611625"
+		class="SgAnimatedModelNode"
+		org="1351.157 0.000 2186.217"
+		orgRel="1"
+		rot="0.0000 0.7102 0.0000 0.7040"
+		scale="1.228 1.228 1.228"
+		id="concrete_ruins3"
+		ndmAction="0" />
 </World>

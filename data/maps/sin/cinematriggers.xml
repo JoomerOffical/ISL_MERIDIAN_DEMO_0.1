@@ -3341,6 +3341,10 @@
 
 			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
 			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5325"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5322"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5323"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5324"):AddModifier("hp","= -10000")
 
 			AddCinematicMessage( 6104, 0.5 )
 			AddCinematicMessage( 6105, 0.5 )
@@ -3424,6 +3428,10 @@
 
 			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
 			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5325"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5322"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5323"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5324"):AddModifier("hp","= -10000")
 
 			local Plf = GetPlayerVehicle()
 			if Plf then
@@ -4816,6 +4824,10 @@
 
 			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
 			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5325"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5322"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5323"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5324"):AddModifier("hp","= -10000")
 
 		</script>
 	</trigger>
@@ -4827,6 +4839,10 @@
 
 			getObj("heavy_dot3_vulcan5141"):AddModifier("hp","= -10000")
 			getObj("heavy_dot3_vulcan5140"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5325"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5322"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5323"):AddModifier("hp","= -10000")
+			getObj("heavy_dot3_vulcan5324"):AddModifier("hp","= -10000")
 
 		</script>
 	</trigger>

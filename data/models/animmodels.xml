@@ -138,7 +138,7 @@
 		shadow="1"
 		shadowVolume="1"
 		windwavy="0"
-		file="data\models\questitems\books\edmonton.sam" />
+		file="data\models\questitems\books\diary_paul.sam" />
 
 	<model
 		id="collectionbook2"

@@ -4,80 +4,56 @@
 		name="sin">
 		<ColorType
 			name="sunrise"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyClear3.dds" />
+			CloudsTexture="skyblight.dds" />
 
 		<ColorType
 			name="day"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
 			CloudsTexture="SkyClear1.dds" />
 
 		<ColorType
 			name="sunset"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyCloudy1.dds" />
+			CloudsTexture="skyblight.dds" />
 
 		<ColorType
 			name="night"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="Tx_Sky_Cloudy.dds" />
+			CloudsTexture="skystars3.dds" />
 	</WeatherItem>
 
 	<WeatherItem
 		name="sin_foggy">
 		<ColorType
 			name="sunrise"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyClear.dds" />
+			CloudsTexture="skyfoggy.dds" />
 
 		<ColorType
 			name="day"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyCloudy1.dds" />
+			CloudsTexture="skyfoggy.dds" />
 
 		<ColorType
 			name="sunset"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyClear1.dds" />
+			CloudsTexture="skyfoggy.dds" />
 
 		<ColorType
 			name="night"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyCloudy.dds" />
+			CloudsTexture="skystars3.dds" />
 	</WeatherItem>
 
 	<WeatherItem
 		name="sin_Thunderstorm">
 		<ColorType
 			name="sunrise"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyThunder.dds" />
+			CloudsTexture="skythunder.dds" />
 
 		<ColorType
 			name="day"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="Tx_Sky_Stormy.tga" />
+			CloudsTexture="skythunder.dds" />
 
 		<ColorType
 			name="sunset"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyRainy.dds" />
+			CloudsTexture="skythunder.dds" />
 
 		<ColorType
 			name="night"
-			DiffuseTexture="LoadMe.txt"
-			LightMapTexture="LoadMe.txt"
-			CloudsTexture="SkyStormy.dds" />
+			CloudsTexture="skystars3.dds" />
 	</WeatherItem>
 </Weather>

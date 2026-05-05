@@ -1801,7 +1801,7 @@
 		name="Dlg_pl_000466"
 		text="Бывай."
 		role="PLAYER"
-		scriptResult="CompleteQuest('r7m1_DolgForMechanic_Quest'); TakeQuest('r7m1_AuntGato_Quest'); AddQuestItem('quest_pack_joe'); AddPlayerMoney('400'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m1_DolgForMechanic_Quest'); TakeQuest('r7m1_AuntGato_Quest'); AddQuestItem('quest_pack_joe'); AddQuestItem('diaryofvagrant_leonel'); AddPlayerMoney('400'); EndConversation()" />
 
 	<Reply
 		name="Leonel2_DLG"
@@ -4897,7 +4897,45 @@
 		text="Лучше рассчитывайте, сколько вы сможете мне заплатить. Бандит он или нет, а боеприпасы денег стоят."
 		role="PLAYER"
 		scriptResult="TakeQuest('r5m1_KillKontrabondist'); TActivate ('trCreateKontr');  FailQuest('r5m1_K_TravelLetter');  FailQuest('r5m1_K_FindBtotherMan');  FailQuest('r5m1_Kontrabanda');  EndConversation()" />
-<!--Root/Sin/Джо-->
+<!--Root/Sin/Выборы-->
+	<Reply
+		name="Vibor_DLG"
+		text="Хм... может им заплатить, чтобы они до меня не докапывались?"
+		role="NPC"
+		scriptCondition="QuestStatus('r7m1_PosilkaForJoe_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_000986 Dlg_pl_000987" />
+
+	<Reply
+		name="Dlg_pl_000987"
+		text="У меня есть дела в городе."
+		role="PLAYER"
+		scriptResult="TActivate('sinArlekinGangFight'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_000986"
+		text="*Заплатить 1000 долларов*"
+		role="PLAYER"
+		scriptResult="TActivate('sinArlekinGangPay'); EndConversation()" />
+
+	<Reply
+		name="Vibor2_DLG"
+		text="Во время отдыха я заметил ту самую девушку, которую я видел перед кошкином домом. По слухам ее зовут Китти, которая и является дочерью матушки из Кристи. Может подойти к ней и разузнать как она оказалась у Котов в заложниках?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_KillArlekinBlock_Quest')==Q_COMPLETED or QuestStatus('sin_BlockNoArl_Quest')==Q_COMPLETED"
+		nextReplies="Dlg_pl_001076 Dlg_pl_001077" />
+
+	<Reply
+		name="Dlg_pl_001077"
+		text="*Не подходить*"
+		role="PLAYER"
+		scriptResult="StartConversation('Sin_Garfield')" />
+
+	<Reply
+		name="Dlg_pl_001076"
+		text="*Подойти*"
+		role="PLAYER"
+		scriptResult="StartConversation('Sin_Kitty')" />
+<!--Root/Sin/Сюжетные--><!--Root/Sin/Опциональные--><!--Root/Sin/Сюжетные/Джо-->
 	<Reply
 		name="Joe1_DLG"
 		text="Давно у нас не было новых лиц в Иерихоне. Что ищешь в наших забытых землях, чужеземец?"
@@ -5284,7 +5322,7 @@
 		text="Понятно. Ладно, я поехал. Удачи тебе в продаже спиртного."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_FinalJoe_Quest'); TakeQuest('r7m1_ComeToGato_Quest'); EndConversation()" />
-<!--Root/Sin/Гарфилд-->
+<!--Root/Sin/Сюжетные/Гарфилд-->
 	<Reply
 		name="Garfield1_DLG"
 		text="Ну привет, чужеземец. Кто таков будешь? "
@@ -6062,7 +6100,7 @@
 		text="Понял, босс. (шепотом) Надо найти ее с мужем на ферме."
 		role="PLAYER"
 		scriptResult="TakeQuest('sin_NotFindKitty_Quest'); TActivate('sinComeKitty'); GetCurNpc():SetSpokenCount(1); EndConversation()" />
-<!--Root/Sin/Могильщик-->
+<!--Root/Sin/Сюжетные/Могильщик-->
 	<Reply
 		name="Graveman1_DLG"
 		text="Эх, сколько людей полегло в войне банд."
@@ -6179,7 +6217,7 @@
 		text="Хех, не стоило конечно, но спасибо. А теперь прости, пора разбить пару-тройку голов."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_ComeToChurch_Quest'); TActivate('trGraverWeapon'); EndConversation()" />
-<!--Root/Sin/Борн-->
+<!--Root/Sin/Сюжетные/Борн-->
 	<Reply
 		name="Born1_DLG"
 		text="Смотрите, кто к нам приехал. Назови хотя бы одну причину, почему мы должны тебя оставить в живых?"
@@ -6754,7 +6792,7 @@
 		text="Спасибо, Борн. Удачи и вам. Надо навестить Борна."
 		role="PLAYER"
 		scriptResult="TakeQuest('sin_FinalJoe_Quest');  FailQuest('r7m1_SaveKitty_Quest);  TActivate('trChangeLogoPlayer'); AddPlayerMoney(5000); EndConversation() " />
-<!--Root/Sin/Китти-->
+<!--Root/Sin/Сюжетные/Китти-->
 	<Reply
 		name="Kitty1_DLG"
 		text="..."
@@ -7043,7 +7081,7 @@
 		text="Поехали, пока Коты не прибыли. (Отвезу ее к псам, а там посмотрим, что делать.)"
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m1_FindKitty_Quest'); CompleteQuest('sin_FindKitty_Quest'); TakeQuest('r7m1_SaveKitty_Quest'); TakeQuest('sin_CapToKitty_Quest'); TActivate('sinPickKittytoDogs'); EndConversation()" />
-<!--Root/Sin/Муж Джес-->
+<!--Root/Sin/Сюжетные/Муж Джес-->
 	<Reply
 		name="Jess1_DLG"
 		text="Боже, что ты натворил? Китти теперь под стражей хорошо вооруженных бойцов. Что с ней теперь будет?"
@@ -7129,45 +7167,7 @@
 		text="Езжай быстрее, пока ничего никто не понял."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_FindJess_Quest'); TakeQuest('sin_GoToHellIerihon2_Quest'); TActivate('trSpawnBattleIerihon'); EndConversation()" />
-<!--Root/Sin/Выборы-->
-	<Reply
-		name="Vibor_DLG"
-		text="Хм... может им заплатить, чтобы они до меня не докапывались?"
-		role="NPC"
-		scriptCondition="QuestStatus('r7m1_PosilkaForJoe_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_000986 Dlg_pl_000987" />
-
-	<Reply
-		name="Dlg_pl_000987"
-		text="У меня есть дела в городе."
-		role="PLAYER"
-		scriptResult="TActivate('sinArlekinGangFight'); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_000986"
-		text="*Заплатить 1000 долларов*"
-		role="PLAYER"
-		scriptResult="TActivate('sinArlekinGangPay'); EndConversation()" />
-
-	<Reply
-		name="Vibor2_DLG"
-		text="Во время отдыха я заметил ту самую девушку, которую я видел перед кошкином домом. По слухам ее зовут Китти, которая и является дочерью матушки из Кристи. Может подойти к ней и разузнать как она оказалась у Котов в заложниках?"
-		role="NPC"
-		scriptCondition="QuestStatus('sin_KillArlekinBlock_Quest')==Q_COMPLETED or QuestStatus('sin_BlockNoArl_Quest')==Q_COMPLETED"
-		nextReplies="Dlg_pl_001076 Dlg_pl_001077" />
-
-	<Reply
-		name="Dlg_pl_001077"
-		text="*Не подходить*"
-		role="PLAYER"
-		scriptResult="StartConversation('Sin_Garfield')" />
-
-	<Reply
-		name="Dlg_pl_001076"
-		text="*Подойти*"
-		role="PLAYER"
-		scriptResult="StartConversation('Sin_Kitty')" />
-<!--Root/Sin/Должники-->
+<!--Root/Sin/Сюжетные/Должники-->
 	<Reply
 		name="Dolzhnik_DLG"
 		text="Здравствуйте, чего-то хотите купить?"
@@ -7334,7 +7334,7 @@
 		text="Ладно, давай сюда все и вали отсюда, пока я не передумал."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_RunDeal3_Quest'); AddPlayerMoney(500); EndConversation()" />
-<!--Root/Sin/Подкупленные-->
+<!--Root/Sin/Сюжетные/Подкупленные-->
 	<Reply
 		name="DogTraitor_DLG"
 		text="Гарфилд доложил, что нам дадут денег за данную операцию. Где они?"
@@ -7420,7 +7420,7 @@
 		text="Удачи вам."
 		role="PLAYER"
 		scriptResult="AddPlayerMoney(-1000); TActivate('trfterBlockDis'); EndConversation()" />
-<!--Root/Sin/Отец Патрик-->
+<!--Root/Sin/Сюжетные/Отец Патрик-->
 	<Reply
 		name="PatrickDad_DLG"
 		text="Что тебя привело в мою обитель, сын мой?"
@@ -7445,7 +7445,7 @@
 		text="Как раз таки может, а вот кстати и они."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_GoToChurchDef_Quest'); TActivate('trSpawnDogsChurch'); LeaveTown()" />
-<!--Root/Sin/Торговец Гонзало-->
+<!--Root/Sin/Сюжетные/Торговец Гонзало-->
 	<Reply
 		name="Gonzalo_DLG"
 		text="По логотипе на твоей тачке, я понял, что ты от Perros (Псов). Товар на месте?"
@@ -7470,7 +7470,7 @@
 		text="Спасибо."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_GoToDeliverDog_Quest'); EndConversation()" />
-<!--Root/Sin/Предатель Котов-->
+<!--Root/Sin/Сюжетные/Предатель Котов-->
 	<Reply
 		name="Traitor_DLG"
 		text="Фух... спасибо тебе, парень. "
@@ -7537,7 +7537,7 @@
 		text="Все, он мертв. Пора возаращаться."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_KillCatsTraitor_Quest'); TakeQuest('sin_AfterTraitorDog_Quest'); TActivate('trOpenRafael'); EndConversation()" />
-<!--Root/Sin/Кевин-->
+<!--Root/Sin/Сюжетные/Кевин-->
 	<Reply
 		name="Kevin_DLG"
 		text="Просыпайся, Бродяга. "

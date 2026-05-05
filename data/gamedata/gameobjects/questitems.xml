@@ -5,6 +5,22 @@ $Id: QuestItems.xml,v 1.1 2005/12/08 08:58:05 anton Exp $
 -->
 
 <Prototypes>
+<!--ƒневник Ѕрод€ги-->
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_start"
+		ModelFile		= "collectionbook7"
+		ResourceType	= "DIARY_VAGRANT_LAMP" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_leonel"
+		ModelFile		= "collectionbook7"
+		ResourceType	= "DIARY_VAGRANT_LAMP" />
+
+<!-- вестовые предметы-->
+
 	<Prototype
 		Class			= "QuestItem"
 		Name			= "quest_letter_lamp"
