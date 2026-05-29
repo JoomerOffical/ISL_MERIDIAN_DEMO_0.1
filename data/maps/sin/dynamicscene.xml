@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="5327">
+	LastId="5328">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
@@ -18,7 +18,7 @@
 			Prototype="Scout01"
 			Pos="3730.213 274.770 429.625"
 			Rot="-0.011 -0.198 -0.029 0.980"
-			Skin="36">
+			Skin="24">
 			<Parts />
 
 			<Repository />
@@ -605,6 +605,16 @@
 				cfg="182"
 				helloReplyNames="Traitor_DLG"
 				SpokenCount="0" />
+
+			<Object
+				Name="Sin_VillagerSanRaf"
+				Belong="1103"
+				Prototype="NPC"
+				ModelName="r2_man"
+				skin="2"
+				cfg="348"
+				helloReplyNames="VillagerSanRaf_SQ_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -1007,6 +1017,16 @@
 				skin="2"
 				cfg="12"
 				NpcType="BARMAN"
+				SpokenCount="0" />
+
+			<Object
+				Name="Sin_Doctor"
+				Belong="1107"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="4"
+				cfg="54"
+				helloReplyNames="Doc_SQ_DLG Doc2_SQ_DLG"
 				SpokenCount="0" />
 		</Object>
 
@@ -9718,7 +9738,7 @@
 				ModelName="r2_man"
 				skin="4"
 				cfg="314"
-				helloReplyNames="Born1_DLG Born2_DLG Born3_DLG Born4_DLG Born5_DLG Born6_DLG Born7_DLG Born8_DLG Born9_DLG"
+				helloReplyNames="Born1_DLG Born2_DLG Born3_DLG Born4_DLG Born5_DLG Born6_DLG Born7_DLG Born8_DLG Born9_DLG Born11_DLG"
 				SpokenCount="0" />
 
 			<Object
@@ -12291,10 +12311,6 @@
 		Radius="5.000" />
 
 	<Object
-		Belong="1100"
-		Prototype="vehicleRecollection" />
-
-	<Object
 		Name="heavy_dot3_vulcan5322"
 		Belong="1106"
 		Prototype="heavy_dot3_vulcan"
@@ -12325,4 +12341,15 @@
 		Pos="1356.096 310.427 2165.401">
 		<Parts />
 	</Object>
+
+	<Object
+		Belong="1100"
+		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="MedHouse_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="1159.638 244.005 3506.658"
+		Radius="15.000" />
 </DynamicScene>

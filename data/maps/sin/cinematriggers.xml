@@ -5001,6 +5001,55 @@
 		</script>
 	</trigger>
 
+<!--Осмотр медпункта-->
+	<trigger Name="sinLookMed" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="MedHouse_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			Fly	("LookMed_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 1)
+			StartCinematic()
+
+			TActivate("sinLookMed_FadeIn")
+			TActivate("sinLookMed_End")
+
+			</script>
+	</trigger>
+	<trigger Name="sinLookMed_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround(CVector(1151.862, 244.891, 3514.080))
+				Plf:SetRotation(Quaternion(-0.015, 0.999, -0.027, 0.017))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage( 6670, 3 )
+
+		</script>
+	</trigger>
+
+	<trigger Name="sinLookMed_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CompleteQuest("sin_ComeToAmbul_Quest")
+
+			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
 <!--Оригинальный финал (выключено)-->
 	<trigger Name="Final2_ctr" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />

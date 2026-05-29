@@ -585,48 +585,6 @@
 		</script>
 	</trigger>
 
-<!--Катсцена на перекрестке мз ванилы (выключено)-->
-	<trigger Name="Cat_Talk_tr" active="0">
-		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
-		<script>
-			trigger:Deactivate()
-
-			SetTolerance(1193,1100,RS_ENEMY)
-
-			TActivate("Cross_ctr")
-
-			CompleteQuest("Sin_Cross_Talk_qst")
-		</script>
-	</trigger>
-
-<!--Победили котов на перекрестке (выключено)-->
-	<trigger Name="Cat_Kill_tr" active="0">
-		<event eventid="GE_OBJECT_DIE" ObjName="Cat"/>
-		<script>
-			trigger:Deactivate()
-			CompleteQuest("Sin_Cross_Fight_qst")
-			StartConversation("Sin_Bulldog3_dlg")
-			TActivate("OldFarm_tr")
-			TActivate("CrossRemove_tr")
-		</script>
-	</trigger>
-
-<!--Удаление псов на перекрестке (выключено)-->
-	<trigger Name="CrossRemove_tr" active="0">
-		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="Cross_Out"/>
-		<script>
-			trigger:Deactivate()
-
-			local Dg1 = getObj("Dog_vehicle_0")
-			if Dg1 then Dg1:Remove() end
-
-			local Dg2 = getObj("Dog_vehicle_1")
-			if Dg2 then Dg2:Remove() end
-
-			SetTolerance(1194,1100,RS_ENEMY)
-		</script>
-	</trigger>
-
 <!--Заметка про карту-->
 	<trigger Name="trMapTip" active="0">
 		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
@@ -1070,6 +1028,48 @@
 			AddQuestItem("collectionbook1")
 
 			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+<!--Катсцена на перекрестке мз ванилы (выключено)-->
+	<trigger Name="Cat_Talk_tr" active="0">
+		<event eventid="GE_LEAVE_TOWN" ObjName="Sin_CatHouse"/>
+		<script>
+			trigger:Deactivate()
+
+			SetTolerance(1193,1100,RS_ENEMY)
+
+			TActivate("Cross_ctr")
+
+			CompleteQuest("Sin_Cross_Talk_qst")
+		</script>
+	</trigger>
+
+<!--Победили котов на перекрестке (выключено)-->
+	<trigger Name="Cat_Kill_tr" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="Cat"/>
+		<script>
+			trigger:Deactivate()
+			CompleteQuest("Sin_Cross_Fight_qst")
+			StartConversation("Sin_Bulldog3_dlg")
+			TActivate("OldFarm_tr")
+			TActivate("CrossRemove_tr")
+		</script>
+	</trigger>
+
+<!--Удаление псов на перекрестке (выключено)-->
+	<trigger Name="CrossRemove_tr" active="0">
+		<event eventid="GE_OBJECT_LEAVES_LOCATION" ObjName="Cross_Out"/>
+		<script>
+			trigger:Deactivate()
+
+			local Dg1 = getObj("Dog_vehicle_0")
+			if Dg1 then Dg1:Remove() end
+
+			local Dg2 = getObj("Dog_vehicle_1")
+			if Dg2 then Dg2:Remove() end
+
+			SetTolerance(1194,1100,RS_ENEMY)
 		</script>
 	</trigger>
 

@@ -4935,7 +4935,226 @@
 		text="*Подойти*"
 		role="PLAYER"
 		scriptResult="StartConversation('Sin_Kitty')" />
-<!--Root/Sin/Сюжетные--><!--Root/Sin/Опциональные--><!--Root/Sin/Сюжетные/Джо-->
+<!--Root/Sin/Сюжетные--><!--Root/Sin/Опциональные--><!--Root/Sin/Опциональные/Документы Доктора--><!--Root/Sin/Опциональные/Документы Доктора/Доктор-->
+	<Reply
+		name="Doc_SQ_DLG"
+		text="Вам что-то нужно, уважаемый?"
+		role="NPC"
+		scriptCondition="IsQuestItemPresent('collectionbook1') and QuestStatus('sin_DocDocuments_Quest')==Q_CANBEGIVEN and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_001286" />
+
+	<Reply
+		name="Dlg_pl_001286"
+		text="Привет, Док, хотел подробно про Генриха Пола узнать. На его, похоже, могиле, я нашел его дневник."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001287" />
+
+	<Reply
+		name="Dlg_npc_001287"
+		text="Про него нечего рассказывать. Он был советником отца Гарфилда и Борна. Он помогал Ремиро с решениями и реформами в банде. Да и в банде он состоял с молодых лет, а после распада банды он ушел из-за здоровья. Ну а остальное ты, наверное, знаешь по его дневнику."
+		role="NPC"
+		nextReplies="Dlg_pl_001288" />
+
+	<Reply
+		name="Dlg_pl_001288"
+		text="Мда, а где могила Ремиро?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001289" />
+
+	<Reply
+		name="Dlg_npc_001289"
+		text="А вот этого уже никто не знает, кроме самих Борна и Гарфилда, ибо они сами хоронили отца, без участия других. Никто не знает, почему. Скорее всего, их отец держал какой-то секрет и братья решили оставить этот секрет с отцом в могиле."
+		role="NPC"
+		nextReplies="Dlg_pl_001290" />
+
+	<Reply
+		name="Dlg_pl_001290"
+		text="Понятно."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001291" />
+
+	<Reply
+		name="Dlg_npc_001291"
+		text="Кстати, а с чего такая заинтересованность историей банд?"
+		role="NPC"
+		nextReplies="Dlg_pl_001292" />
+
+	<Reply
+		name="Dlg_pl_001292"
+		text="Да так, надо же знать с кем я работаю и имею дело."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001293" />
+
+	<Reply
+		name="Dlg_npc_001293"
+		text="Слушайте, а не могли бы вы съездить за медицинской документацией на моем старом месте работы?"
+		role="NPC"
+		nextReplies="Dlg_pl_001294" />
+
+	<Reply
+		name="Dlg_pl_001294"
+		text="А что там?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001295" />
+
+	<Reply
+		name="Dlg_npc_001295"
+		text="Медкарты пациентов, то бишь жителей Иерихона, протоколы осмотра, и мой дневник врача. "
+		role="NPC"
+		nextReplies="Dlg_pl_001296 Dlg_pl_001297" />
+
+	<Reply
+		name="Dlg_pl_001297"
+		text="Потом, я сейчас занят."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001296"
+		text="Ладно, съезжу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001301" />
+
+	<Reply
+		name="Dlg_npc_001301"
+		text="Спасибо, чужеземец. Документация в небольшом чемонданчике в Сан-Рафаэле. Держите ключи от моего кабинета."
+		role="NPC"
+		nextReplies="Dlg_pl_001302" />
+
+	<Reply
+		name="Dlg_pl_001302"
+		text="Понял, сейчас приеду."
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_DocDocuments_Quest'); TActivate('sinLookMed'); EndConversation()" />
+
+	<Reply
+		name="Doc2_SQ_DLG"
+		text="Ну что? Теперь поможете?"
+		role="NPC"
+		scriptCondition="IsQuestItemPresent('collectionbook1') and QuestStatus('sin_DocDocuments_Quest')==Q_CANBEGIVEN"
+		nextReplies="Dlg_pl_001299 Dlg_pl_001300" />
+
+	<Reply
+		name="Dlg_pl_001300"
+		text="Еще нет."
+		role="PLAYER"
+		scriptResult="EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001299"
+		text="Да, помогу."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001266" />
+
+	<Reply
+		name="Dlg_npc_001266"
+		text="Спасибо, чужеземец. Документация в небольшом чемонданчике в Сан-Рафаэле. Держите ключ от моего кабинета."
+		role="NPC"
+		nextReplies="Dlg_pl_001285" />
+
+	<Reply
+		name="Dlg_pl_001285"
+		text="Понял, сейчас приеду."
+		role="PLAYER"
+		scriptResult="TakeQuest('sin_DocDocuments_Quest'); TActivate('sinLookMed'); EndConversation()" />
+<!--Root/Sin/Опциональные/Документы Доктора/Житель 1-->
+	<Reply
+		name="VillagerSanRaf_SQ_DLG"
+		text="Кого-то ищите?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_AskThiefDoc_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001315" />
+
+	<Reply
+		name="Dlg_pl_001315"
+		text="Да. Того, кто проник в медпункт дока Дэлла."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001316" />
+
+	<Reply
+		name="Dlg_npc_001316"
+		text="Хм... да, я видел вчера ночью ошивался какой-то типок в зеленой куртке с цветочком."
+		role="NPC"
+		nextReplies="Dlg_pl_001317" />
+
+	<Reply
+		name="Dlg_pl_001317"
+		text="В зеленых куртках много кто ходит, и даже ты. Нужно побльше информации."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001318" />
+
+	<Reply
+		name="Dlg_npc_001318"
+		text="К сожалению, маски я его не увидел, но знаю, что он носит шлем с визором. Это все, что я про него рассказать могу."
+		role="NPC"
+		nextReplies="Dlg_pl_001319" />
+
+	<Reply
+		name="Dlg_pl_001319"
+		text="Не знаешь, куда он поехал? И на чем?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001320" />
+
+	<Reply
+		name="Dlg_npc_001320"
+		text="К сожалению нет, тут у нас одна дорога, а куда он далее уехал, никто не знает, по крайней мере из жителей нашего города. Поспрашивай в других городах, может и найдешь. А насчет машины, это был скаут, почти того же цвета, что и сам ворюга."
+		role="NPC"
+		nextReplies="Dlg_pl_001321" />
+
+	<Reply
+		name="Dlg_pl_001321"
+		text="Ладно, поищем."
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_AskThiefDoc_Quest'); EndConversation()" />
+<!--Root/Sin/Опциональные/Документы Доктора/Житель 2-->
+	<Reply
+		name="Dlg_npc_001314"
+		text="Что-то нужно?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_FindThiefDoc_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_001322" />
+
+	<Reply
+		name="Dlg_pl_001322"
+		text="Не видел одного человечка, в шлеме с визором и зеленой курткой?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001323" />
+
+	<Reply
+		name="Dlg_npc_001323"
+		text="Ммм... Вряд ли, мимо немало людей проезжает, развидеть кого-то не получается."
+		role="NPC"
+		nextReplies="Dlg_pl_001324" />
+
+	<Reply
+		name="Dlg_pl_001324"
+		text="А если сказать, что он ездит он на болотно зеленом скауте под цвета куртки хиппи?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001325" />
+
+	<Reply
+		name="Dlg_npc_001325"
+		text="О, а вот машину я видел, она поехала в сторону Иерихона."
+		role="NPC"
+		nextReplies="Dlg_pl_001326" />
+
+	<Reply
+		name="Dlg_pl_001326"
+		text="Понял, спасибо, едем в Иерихон."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
+<!--Root/Sin/Опциональные/Документы Доктора/Вор-->
+	<Reply
+		name="Dlg_npc_001298"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_001303" />
+
+	<Reply
+		name="Dlg_pl_001303"
+		text="(Кажется, это он, описание по крайней мере подоходящее.) Эй, ты! Это ты тут у нас любитель руки притянуть к тому, что не закреплено?"
+		role="PLAYER" />
+<!--Root/Sin/Сюжетные/Джо-->
 	<Reply
 		name="Joe1_DLG"
 		text="Давно у нас не было новых лиц в Иерихоне. Что ищешь в наших забытых землях, чужеземец?"
@@ -6715,7 +6934,7 @@
 		scriptResult="CompleteQuest('sin_GoToWestIerihon_Quest'); TakeQuest('sin_WarForHouse_Quest'); TActivate('sinBattleCatHouse'); EndConversation()" />
 
 	<Reply
-		name="Dlg_npc_001266"
+		name="Born11_DLG"
 		text="Вот и все, мы победили, теперь Иерихон и впринципе эти местности под нашим контролем."
 		role="NPC"
 		scriptCondition="QuestStatus('sin_BattleForHouse_Quest')==Q_COMPLETED and not(QuestStatus('sin_FinalJoe_Quest')==Q_TAKEN)"

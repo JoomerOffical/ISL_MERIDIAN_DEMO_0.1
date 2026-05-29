@@ -450,7 +450,39 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
-<!--Root/sin/Сюжетные--><!--Root/sin/Сюжетные/Проход-->
+<!--Root/sin/Сюжетные--><!--Root/sin/Опциональные--><!--Root/sin/Опциональные/Документы Дока-->
+	<quest
+		Name="sin_DocDocuments_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin">
+		<quest
+			Name="sin_ComeToAmbul_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_DocDocuments_Quest" />
+
+		<quest
+			Name="sin_AskThiefDoc_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_ComeToAmbul_Quest" />
+
+		<quest
+			Name="sin_FindThiefDoc_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_AskThiefDoc_Quest" />
+	</quest>
+<!--Root/sin/Сюжетные/Проход-->
 	<quest
 		Name="sin_KillArlekinGang_Quest"
 		Automatic="0"

@@ -2280,6 +2280,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_AskThiefDoc_Quest"
+		briefDiz="Спросить в городе про вора"
+		isMainQuest="0">
+		<Map
+			name="sin"
+			targetObjName="Sin_SanRafael" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_AttackToPort_Quest"
 		briefDiz="Уничтожить оставшихся Псов"
 		isMainQuest="1">
@@ -2579,6 +2588,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_ComeToAmbul_Quest"
+		briefDiz="Доехать до старого медпункта"
+		isMainQuest="0">
+		<Map
+			name="sin"
+			targetObjName="MedHouse_loc" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_ComeToCats2_Quest"
 		briefDiz="Поехать к Котам"
 		fullDiz="Коты менее агрессивные, по словам Джо. Но грешков у них ничуть не меньше, чем у Псов. Может к ним присоединиться?"
@@ -2726,6 +2744,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_DocDocuments_Quest"
+		briefDiz="Документация Доктора Делла"
+		fullDiz="Доктор из Церкви Колеса попросил меня привести его документацию в чемоданчике. Надеюсь, потраченное время на это стоит того."
+		isMainQuest="0">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_EscapeDogs_Quest"
 		briefDiz="Сбежать от Псов"
 		isMainQuest="1">
@@ -2782,6 +2809,14 @@
 		briefDiz="Поискать Китти"
 		fullDiz="Китти как-то сбежала от Котов, надо ее найти. А там посмотрим, что с ней делать."
 		isMainQuest="1">
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_FindThiefDoc_Quest"
+		briefDiz="Найти вора"
+		isMainQuest="0">
 		<Map
 			name="sin" />
 	</QuestInfo>
@@ -3202,6 +3237,17 @@
 		<Map
 			name="sin" />
 	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_SellDocumentsIer_Quest"
+		briefDiz="Отправиться в Иерихон"
+		isMainQuest="0" />
+
+	<QuestInfo
+		questName="sin_SellDocuments_Quest"
+		briefDiz="Продажа Документов"
+		fullDiz="Этот вор предложил мне продать документы. Я конечно не вижу чего-то особенного в этих бумажках, но если на этом можно заработать, то почему нет."
+		isMainQuest="0" />
 
 	<QuestInfo
 		questName="sin_ShootToHellIerihon2_Quest"

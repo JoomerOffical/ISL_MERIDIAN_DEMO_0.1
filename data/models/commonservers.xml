@@ -665,6 +665,14 @@
 		<Item id="r6_22_alarm"/>
 		<Item id="r6_22_battle" />
 		
+		<Item id="r7_1_driving"/>
+		<Item id="r7_1_alarm"/>
+		<Item id="r7_1_battle" />
+
+		<Item id="r7_2_driving"/>
+		<Item id="r7_2_alarm"/>
+		<Item id="r7_2_battle" />
+
 		<Item id="block0_driving" />
 		<Item id="block0_alarm" />
 		<Item id="block0_battle" />

@@ -75,7 +75,7 @@
 		image1="data\if\ico\GlobalMap\city_5_d.dds"
 		image2="data\if\ico\GlobalMap\city_5_e.dds"
 		splashes="data\if\ico\Splashes\Loading_sin.dds"
-		musicBlocks="r5_1 r5_12" />
+		musicBlocks="r7_1 r7_2" />
 
 	<LevelInfo
 		name	="r7m1"
@@ -88,7 +88,7 @@
 		image1="data\if\ico\GlobalMap\city_6_d.dds"
 		image2="data\if\ico\GlobalMap\city_6_e.dds"
 		splashes="data\if\ico\Splashes\Loading_r7m1_1.dds data\if\ico\Splashes\Loading_r7m1_2.dds data\if\ico\Splashes\Loading_r7m1_3.dds"
-		musicBlocks="r5_1 r5_12" />
+		musicBlocks="r7_1 r7_2" />
 
 	<LevelInfo
 		name	="r7m3"
@@ -101,6 +101,6 @@
 		image1="data\if\ico\GlobalMap\city_7_d.dds"
 		image2="data\if\ico\GlobalMap\city_7_e.dds"
 		splashes="data\if\ico\Splashes\Loading_r7m3_1.dds data\if\ico\Splashes\Loading_r7m3_2.dds data\if\ico\Splashes\Loading_r7m3_3.dds"
-		musicBlocks="r5_1 r5_12" />
+		musicBlocks="r7_1 r7_2" />
 
 </LevelInfoResource>

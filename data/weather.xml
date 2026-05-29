@@ -2418,9 +2418,9 @@
 
 		<PostEffect
 			sunrise="wr5m2"
-			day="wsin_day"
-			sunset="wsin_sunset"
-			night="wsin_night" />
+			day="wr5m2"
+			sunset="wr5m2"
+			night="wr5m2" />
 
 		<ShadowVisibility
 			sunrise="1"
@@ -2429,9 +2429,9 @@
 			night="0" />
 
 		<ShadowTransparency
-			sunrise="0.500"
-			day="0.500"
-			sunset="0.500"
+			sunrise="46.000"
+			day="100.000"
+			sunset="46.000"
 			night="0.500" />
 
 		<cloudsSpeed
@@ -2459,10 +2459,10 @@
 		waterCourseAngle="0.000"
 		waterSpecularM="200.000"
 		waterSpecularS="0.005"
-		reduceDistFactor="0.617">
+		reduceDistFactor="0.531">
 		<Sky
 			sunriseColor="128.000 128.000 128.000"
-			dayColor="76.500 102.000 112.200"
+			dayColor="91.800 119.850 104.550"
 			sunsetColor="99.450 94.350 45.900"
 			nightColor="45.900 56.100 38.250" />
 
@@ -2521,10 +2521,10 @@
 			nightColor="76.500 102.000 132.600" />
 
 		<PostEffect
-			sunrise="wsin_sunrise_F"
-			day="wsin_day_F"
-			sunset="wsin_sunset_F"
-			night="wsin_night_F" />
+			sunrise="wr5m2"
+			day="wr5m2"
+			sunset="wr5m2"
+			night="wr5m2" />
 
 		<ShadowVisibility
 			sunrise="1"
@@ -2534,8 +2534,8 @@
 
 		<ShadowTransparency
 			sunrise="0.500"
-			day="0.500"
-			sunset="12.000"
+			day="0.000"
+			sunset="0.000"
 			night="0.500" />
 
 		<cloudsSpeed
@@ -2554,7 +2554,7 @@
 	<WeatherItem
 		class="WeatherThunderstorm"
 		name="sin_Thunderstorm"
-		skyDomeFactor="0.520"
+		skyDomeFactor="0.640"
 		waterSpeed="0.520"
 		waterWaveHBig="0.000"
 		waterWaveHSmall="0.000"
@@ -2563,11 +2563,11 @@
 		waterCourseAngle="0.000"
 		waterSpecularM="200.000"
 		waterSpecularS="0.005"
-		reduceDistFactor="0.247"
+		reduceDistFactor="0.395"
 		inclementWeatherPS="ET_PS_RAIN_WEATHER"
 		soundName="ET_S_RAIN"
-		density="5"
-		distance="30.900"
+		density="10"
+		distance="48.200"
 		minThunderDuty="300"
 		maxThunderDuty="600"
 		minThunderPeriod="30000"
@@ -2576,7 +2576,7 @@
 		lightEffectName1="ET_PS_LIGHT_WEATHER1">
 		<Sky
 			sunriseColor="86.700 73.950 73.950"
-			dayColor="155.550 137.700 124.950"
+			dayColor="128.000 128.000 128.000"
 			sunsetColor="71.400 63.750 66.300"
 			nightColor="109.650 122.400 64.000" />
 
@@ -2636,9 +2636,9 @@
 
 		<PostEffect
 			sunrise="wr5m2"
-			day="wsin_day_TS"
-			sunset="wsin_sunset_TS"
-			night="wsin_night_TS" />
+			day="wr5m2"
+			sunset="wr5m2"
+			night="wr5m2" />
 
 		<ShadowVisibility
 			sunrise="1"

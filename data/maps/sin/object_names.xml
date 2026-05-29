@@ -1,64 +1,63 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <ObjectNames>
 	<Object 	Name="ToR7M1" 						FullName = "Дорога на Прибрежье"/>
+
 	<Object 	Name="Sin_WestIerihon" 				FullName = "Восточный Иерихон"/>
 	<Object 	Name="Sin_WestIerihon_enter" 		FullName = "Восточный Иерихон"/>
-	<Object 	Name="Sin_Gonzalo" 					FullName = "Торговец Гонзало"/>
-	<Object 	Name="Sin_WI_Bar_Barman" 			FullName = "Официантка Ханна"/>
 	<Object 	Name="Sin_WestIerihon_Bar" 			FullName = "Бар 'У Джо'"/>
 	<Object	    Name="Sin_WestIerihon_Shop" 		FullName = "Магазин"/>
 	<Object	    Name="Sin_WestIerihon_Workshop" 	FullName = "Мастерская"/>
+	<Object 	Name="Sin_WI_Bar_Barman" 			FullName = "Официантка Ханна"/>
+	<Object 	Name="Sin_Joe" 						FullName = "Джо"/>
+	<Object 	Name="Sin_Gonzalo" 					FullName = "Торговец Гонзало"/>
+	<Object	    Name="Sin_Garfield1" 				FullName = "Гарфилд Ред"/>
+
+	<Object	    Name="Sin_EastIerihon" 				FullName = "Западный Иерихон"/>
+	<Object	    Name="Sin_EastIerihon_enter" 		FullName = "Западный Иерихон"/>
 	<Object	    Name="Sin_EastIerihon_Shop" 		FullName = "Магазин"/>
 	<Object	    Name="Sin_EastIerihon_Workshop" 	FullName = "Мастерская"/>
 	<Object	    Name="Sin_EastIerihon_Bar" 			FullName = "Бар 'Шарк'"/>
-	<Object	    Name="Sin_SanRafael_Shop" 			FullName = "Магазин"/>
-	<Object	    Name="Sin_SanRafael_Workshop" 		FullName = "Мастерская"/>
-	<Object	    Name="Sin_CatHouse_Shop" 			FullName = "Магазин"/>
-	<Object	    Name="Sin_CatHouse_Workshop" 		FullName = "Мастерская"/>
-	<Object	    Name="Sin_DogHouse" 				FullName = "Старая Ферма"/>
-	<Object	    Name="Sin_DogHouse_House" 			FullName = "Старый Сарай"/>
-	<Object	    Name="Sin_Church_Workshop" 			FullName = "Мастерская"/>
-	<Object	    Name="Sin_Church_Bar" 				FullName = "Храм"/>
-	<Object	    Name="Sin_Church_Bar_Barman" 		FullName = "Монашка Пэтти"/>
-	<Object	    Name="Sin_Church_House" 			FullName = "Дом Отца"/>
-	<Object	    Name="PetrolStation_Workshop" 		FullName = "Мастерская"/>
 	<Object	    Name="Sin_EastIerihon_Bar_Barman" 	FullName = "Бармен Денниель"/>
 	<Object	    Name="Sin_Debt1" 					FullName = "Продавец Ли"/>
 	<Object	    Name="Sin_Debt2" 					FullName = "Консьержка Кел"/>
 	<Object	    Name="Sin_Debt3" 					FullName = "Бизнесмен Рудольф"/>
 	<Object	    Name="Sin_GuardDebt" 				FullName = "Наемник"/>
-	<Object	    Name="Sin_EastIerihon" 				FullName = "Западный Иерихон"/>
-	<Object	    Name="Sin_EastIerihon_enter" 		FullName = "Западный Иерихон"/>
-	<Object 	Name="Sin_IerihonEast_MayorPlace"	FullName = "Мэрия"/>
-	<Object 	Name="Sin_Joe" 						FullName = "Джо"/>
-	<Object 	Name="Sin_TraitorDog" 				FullName = "Подкупленный Пол"/>
-	<Object 	Name="Sin_TraitorCat" 				FullName = "Предатель Коул"/>
-	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
-	<Object 	Name="Sin_Kitty1" 					FullName = "Крошка Китти"/>
-	<Object   	Name="Sin_Bulldog" 					FullName = "Борн Ред"/>
-	<Object   	Name="Sin_Bulldog1" 				FullName = "Борн Ред"/>
-	<Object   	Name="Sin_Kevin" 					FullName = "Кевин"/>
-	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд Ред"/>
-	<Object	    Name="Sin_Garfield1" 				FullName = "Гарфилд Ред"/>
-	<Object  	Name="Sin_BlackWood" 				FullName = "Блэквуд"/>
-	<Object   	Name="Sin_Egoist" 					FullName = "Эгоист"/>
-	<Object		Name="Sin_Kitty_Trapped" 			FullName = "Крошка Китти"/>
 	<Object		Name="Sin_JessDriver" 				FullName = "Водитель Джесс"/>
-	<Object		Name="Sin_Graveman" 				FullName = "Могильщик Эггер"/>
-	<Object 	Name="Sin_Father" 					FullName = "Отец Патрик" />
-	<Object 	Name="Sin_Church" 					FullName = "Церковь Колеса" />
-	<Object 	Name="Sin_CatHouse" 				FullName = "Кошкин Дом"/>
-	<Object 	Name="Sin_CatHouse_enter" 			FullName = "Кошкин Дом"/>
-	<Object 	Name="Sin_DogHouse" 				FullName = "Старая Ферма" />
+	<Object   	Name="Sin_Bulldog1" 				FullName = "Борн Ред"/>
+
 	<Object 	Name="Sin_SanRafael" 				FullName = "Сан Рафаэль" />
-	<Object 	Name="Sin_Church_enter"				FullName = "Церковь Колеса" />
-	<Object 	Name="PetrolStation" 				FullName = "Заправка" />
-	<Object 	Name="Sin_CatHouse_Bar"      		FullName = "Винный погреб" />
-	<Object 	Name="Sin_CatHouse_Bar_Barman"      FullName = "Винодел Чак" />
-	<Object 	Name="Sin_CatHouse_House"      		FullName = "Штаб" />
+	<Object 	Name="Sin_SanRafael_enter" 			FullName = "Сан Рафаэль" />
+	<Object	    Name="Sin_SanRafael_Shop" 			FullName = "Магазин"/>
+	<Object	    Name="Sin_SanRafael_Workshop" 		FullName = "Мастерская"/>
 	<Object 	Name="Sin_SanRafael_Bar"     		FullName = "Бар 'Аллигатор'" />
 	<Object 	Name="Sin_SanRafael_Bar_Barman"     FullName = "Марио" />
 	<Object 	Name="Sin_TraitorCat" 				FullName = "Предатель Коул" />
+	<Object 	Name="Sin_VillagerSanRaf" 			FullName = "Житель Мэдди" />
+
+	<Object 	Name="Sin_CatHouse" 				FullName = "Кошкин Дом"/>
+	<Object 	Name="Sin_CatHouse_enter" 			FullName = "Кошкин Дом"/>
+	<Object	    Name="Sin_CatHouse_Shop" 			FullName = "Магазин"/>
+	<Object	    Name="Sin_CatHouse_Workshop" 		FullName = "Мастерская"/>
+	<Object 	Name="Sin_CatHouse_Bar"      		FullName = "Винный погреб" />
+	<Object 	Name="Sin_CatHouse_Bar_Barman"      FullName = "Винодел Чак" />
+	<Object 	Name="Sin_CatHouse_House"      		FullName = "Штаб" />
+	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд Ред"/>
+	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
+
+	<Object 	Name="Sin_Church" 					FullName = "Церковь Колеса" />
+	<Object 	Name="Sin_Church_enter"				FullName = "Церковь Колеса" />
+	<Object	    Name="Sin_Church_Workshop" 			FullName = "Мастерская"/>
+	<Object	    Name="Sin_Church_Bar" 				FullName = "Храм"/>
+	<Object	    Name="Sin_Church_Bar_Barman" 		FullName = "Монашка Пэтти"/>
+	<Object	    Name="Sin_Church_House" 			FullName = "Дом Отца"/>
+	<Object	    Name="PetrolStation_Workshop" 		FullName = "Мастерская"/>
+	<Object		Name="Sin_Graveman" 				FullName = "Могильщик Эггер"/>
+	<Object 	Name="Sin_Father" 					FullName = "Отец Патрик" />
+	<Object 	Name="Sin_Doctor" 					FullName = "Доктор Дэлл" />
+
+	<Object	    Name="Sin_DogHouse" 				FullName = "Старая Ферма"/>
+	<Object	    Name="Sin_DogHouse_House" 			FullName = "Старый Сарай"/>
+
 	<Object 	Name="SinDogHouse"     				FullName = "Собачья Будка" />
 	<Object 	Name="SinDogHouse_enter"     		FullName = "Собачья Будка" />
 	<Object 	Name="SinDogHouse_Shop"     		FullName = "Магазин" />
@@ -66,7 +65,21 @@
 	<Object 	Name="SinDogHouse_Bar"     			FullName = "Кальянная" />
 	<Object 	Name="SinDogHouse_Bar_Barman"     	FullName = "Табачник Пью" />
 	<Object 	Name="SinDogHouse_House"     		FullName = "Штаб" />
+	<Object   	Name="Sin_Bulldog" 					FullName = "Борн Ред"/>
+	<Object 	Name="Sin_Kitty1" 					FullName = "Крошка Китти"/>
+	<Object   	Name="Sin_Kevin" 					FullName = "Кевин"/>
+
+	<Object 	Name="PetrolStation" 				FullName = "Заправка" />
+
+	<Object 	Name="Sin_IerihonEast_MayorPlace"	FullName = "Мэрия"/>
+	<Object  	Name="Sin_BlackWood" 				FullName = "Блэквуд"/>
+	<Object   	Name="Sin_Egoist" 					FullName = "Эгоист"/>
+	<Object		Name="Sin_Kitty_Trapped" 			FullName = "Крошка Китти"/>
+	<Object 	Name="Sin_TraitorDog" 				FullName = "Подкупленный Пол"/>
+
 	<Object 	Name="Vibor_NPC"     				FullName = "Бродяга" />
+
+
 
 	<Object 	Name="DynQEnemy01"     		FullName = "Мартин Кокс" />
 	<Object 	Name="DynQEnemy02"     		FullName = "Джефри Родригез" />
