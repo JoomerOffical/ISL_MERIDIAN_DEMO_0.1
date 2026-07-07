@@ -14,27 +14,6 @@
 		CheckAll="0"
 		ConditionToGive="all complete"
 		OnTake='ShowCircleOnMinimapByName("r7m3_ErmosinyoVine")' />
-<!--Root/r7m3/Купить билет-->
-	<quest
-		Name="r7m3_BuyAPass_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
-
-	<quest
-		Name="r7m3_CollectMoneyPass_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
-<!--Root/r7m3/Вернуться на КПП-->
-	<quest
-		Name="r7m3_ComeBackKPP_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
 <!--Root/r7m3/Добраться до склада-->
 	<quest
 		Name="r7m3_ComeToStorage_Quest"
@@ -260,12 +239,21 @@
 		ConditionToGive="all complete"
 		Levels="r7m1">
 		<quest
-			Name="r7m1_FindBook_Quest"
+			Name="r7m1_GoToSklad_Quest"
 			Automatic="1"
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all taken"
-			PrecedingQuests="r7m1_BookForNodin_Quest" />
+			PrecedingQuests="r7m1_BookForNodin_Quest"
+			OnTake='ShowCircleOnMinimapByName("BurnedSklad_loc")' />
+
+		<quest
+			Name="r7m1_FindBook_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="r7m1_GoToSklad_Quest" />
 
 		<quest
 			Name="r7m1_BackBook_Quest"
@@ -481,6 +469,46 @@
 			CheckAll="0"
 			ConditionToGive="all complete"
 			PrecedingQuests="sin_AskThiefDoc_Quest" />
+
+		<quest
+			Name="sin_PunchThief_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_FindThiefDoc_Quest" />
+
+		<quest
+			Name="sin_BackDocFDoc_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_PunchThief_Quest" />
+	</quest>
+
+	<quest
+		Name="sin_UnusualWeapon_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete"
+		Levels="sin">
+		<quest
+			Name="sin_FindLocaUnWe_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all taken"
+			PrecedingQuests="sin_UnusualWeapon_Quest" />
+
+		<quest
+			Name="sin_FindGrave_Quest"
+			Automatic="1"
+			SubQuestsCondition="and"
+			CheckAll="0"
+			ConditionToGive="all complete"
+			PrecedingQuests="sin_FindLocaUnWe_Quest" />
 	</quest>
 <!--Root/sin/Сюжетные/Проход-->
 	<quest
@@ -596,6 +624,13 @@
 		SubQuestsCondition="and"
 		CheckAll="0"
 		ConditionToGive="all complete" />
+
+	<quest
+		Name="sin_TalkToKitty_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/sin/Сюжетные/Китти к псам-->
 	<quest
 		Name="sin_KittyToDogs_Quest"
@@ -605,7 +640,7 @@
 		ConditionToGive="all complete" />
 
 	<quest
-		Name="sin_TalkToKitty_Quest"
+		Name="sin_TalkToKitty1_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
@@ -613,13 +648,6 @@
 <!--Root/sin/Сюжетные/Побыть на сделке-->
 	<quest
 		Name="sin_DealKitty_Quest"
-		Automatic="0"
-		SubQuestsCondition="and"
-		CheckAll="0"
-		ConditionToGive="all complete" />
-
-	<quest
-		Name="sin_TalkToKitty1_Quest"
 		Automatic="0"
 		SubQuestsCondition="and"
 		CheckAll="0"
@@ -644,8 +672,7 @@
 			SubQuestsCondition="and"
 			CheckAll="0"
 			ConditionToGive="all taken"
-			PrecedingQuests="sin_FreedomKitty_Quest"
-			OnTake='ShowCircleOnMinimapByName("Sin_SanRafael")' />
+			PrecedingQuests="sin_FreedomKitty_Quest" />
 
 		<quest
 			Name="sin_ComeToFarm_Quest"
@@ -1241,6 +1268,13 @@
 			ConditionToGive="all complete"
 			PrecedingQuests="sin_GoToCHWar_Quest" />
 	</quest>
+<!--Root/sin/Сюжетные/Сбежать от Псов-->
+	<quest
+		Name="sin_RunToDogs_Quest"
+		Automatic="0"
+		SubQuestsCondition="and"
+		CheckAll="0"
+		ConditionToGive="all complete" />
 <!--Root/r6m2/сюжетные--><!--Root/r6m2/Опциональные--><!--Root/r6m2/Опциональные/Проследить за роботом-->
 	<quest
 		Name="r6m2_WhereRobotGo"

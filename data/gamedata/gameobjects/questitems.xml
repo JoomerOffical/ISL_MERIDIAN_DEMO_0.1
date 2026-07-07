@@ -10,14 +10,56 @@ $Id: QuestItems.xml,v 1.1 2005/12/08 08:58:05 anton Exp $
 	<Prototype
 		Class			= "QuestItem"
 		Name			= "diaryofvagrant_start"
-		ModelFile		= "collectionbook7"
-		ResourceType	= "DIARY_VAGRANT_LAMP" />
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
 
 	<Prototype
 		Class			= "QuestItem"
 		Name			= "diaryofvagrant_leonel"
-		ModelFile		= "collectionbook7"
-		ResourceType	= "DIARY_VAGRANT_LAMP" />
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_arlekin"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_arlekin_pay"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_joe"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_joe_dogdead"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_caravan"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_kitty"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
+
+	<Prototype
+		Class			= "QuestItem"
+		Name			= "diaryofvagrant_ierihon_good"
+		ModelFile		= "diary_vag"
+		ResourceType	= "DIARY_VAGRANT" />
 
 <!--Êגוסעמגûו ןנוהלועû-->
 

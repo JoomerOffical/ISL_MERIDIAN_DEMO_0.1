@@ -2,7 +2,7 @@
 <World
 	name="Object299"
 	class="SgNode"
-	LastId="299002301">
+	LastId="299002844">
 	<Node
 		name="Object76479715"
 		class="SgAnimatedModelNode"
@@ -5496,5 +5496,25 @@
 		rot="0.0000 0.7102 0.0000 0.7040"
 		scale="1.228 1.228 1.228"
 		id="concrete_ruins3"
+		ndmAction="0" />
+
+	<Node
+		name="Object299002476"
+		class="SgAnimatedModelNode"
+		org="1611.480 -1.006 584.427"
+		orgRel="1"
+		rot="0.0851 0.6686 0.0932 0.7328"
+		id="conteiner"
+		ndmAction="0"
+		passable="0" />
+
+	<Node
+		name="Object299002477"
+		class="SgAnimatedModelNode"
+		org="1612.398 0.072 578.573"
+		orgRel="1"
+		rot="0.4582 -0.4946 -0.5264 0.5180"
+		scale="0.100 0.100 0.100"
+		id="concrete_plate"
 		ndmAction="0" />
 </World>

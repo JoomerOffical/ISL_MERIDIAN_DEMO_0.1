@@ -11,6 +11,7 @@
 	<Object 	Name="Sin_Joe" 						FullName = "Джо"/>
 	<Object 	Name="Sin_Gonzalo" 					FullName = "Торговец Гонзало"/>
 	<Object	    Name="Sin_Garfield1" 				FullName = "Гарфилд Ред"/>
+	<Object	    Name="Sin_Thief" 					FullName = "Вор Лин"/>
 
 	<Object	    Name="Sin_EastIerihon" 				FullName = "Западный Иерихон"/>
 	<Object	    Name="Sin_EastIerihon_enter" 		FullName = "Западный Иерихон"/>
@@ -43,6 +44,7 @@
 	<Object 	Name="Sin_CatHouse_House"      		FullName = "Штаб" />
 	<Object	    Name="Sin_Garfield" 				FullName = "Гарфилд Ред"/>
 	<Object 	Name="Sin_Kitty" 					FullName = "Крошка Китти"/>
+	<Object 	Name="Sin_VillageCat" 				FullName = "Боец Котов"/>
 
 	<Object 	Name="Sin_Church" 					FullName = "Церковь Колеса" />
 	<Object 	Name="Sin_Church_enter"				FullName = "Церковь Колеса" />

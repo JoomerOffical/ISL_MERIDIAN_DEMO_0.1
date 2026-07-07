@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
-<!--Встреча Арлекина с бандой-->
+
 <triggers>
+<!--Встреча Арлекина с бандой-->
 	<trigger Name="sinArlekinGang" active="0">
 		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
 		<script>
@@ -176,6 +177,8 @@
 		<script>
 			trigger:Deactivate()
 
+			AddQuestItem("diaryofvagrant_arlekin")
+
 			RestoreAllToleranceStatus()
 
 			SetTolerance(1100, 1104, RS_ENEMY)
@@ -285,6 +288,7 @@
 			RestoreAllToleranceStatus()
 
 			AddPlayerMoney(-1000)
+			AddQuestItem("diaryofvagrant_arlekin_pay")
 
 			local Plf = GetPlayerVehicle()
 			if Plf then
@@ -461,6 +465,8 @@
 			trigger:Deactivate()
 
 			RestoreAllToleranceStatus()
+
+			AddQuestItem("diaryofvagrant_joe_dogdead")
 
 			TDeactivate("sinAfterArlekin_FadeIn")
 			TActivate("sinKittyinTrap")
@@ -2307,6 +2313,8 @@
 		<script>
 			trigger:Deactivate()
 
+			AddQuestItem("diaryofvagrant_kitty")
+
 			local DgK = GetEntityByName("DogsKitty")
 			if DgK then
 				DgK:Remove()
@@ -3001,6 +3009,8 @@
 		<script>
 			trigger:Deactivate()
 
+			AddPlayerMoney(-GetPlayerMoney())
+
 			local Plf = GetPlayerVehicle()
 			if Plf then
 				Plf:SetCustomControlEnabled( true )
@@ -3084,7 +3094,6 @@
 			local Plf = GetPlayerVehicle()
 			if Plf then
 				Plf:SetCustomControlEnabled( true )
-				Plf:TakeOffAllGuns()
 				Plf:SetGamePositionOnGround( CVector(getPos("Sin_P_R_loc")))
 				Plf:SetRotation(Quaternion(0.000, -0.745, 0.000, 0.668))
 				Plf:SetCustomLinearVelocity( 0 )
@@ -3132,6 +3141,8 @@
 		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
 		<script>
 			trigger:Deactivate()
+
+			AddPlayerMoney(-GetPlayerMoney())
 
 			local Plf = GetPlayerVehicle()
 			if Plf then
@@ -3612,7 +3623,7 @@
 
 			Fly	("Final_cam1", CINEMATIC_NO_AIM, 0, 16, 1, 0)
 			Fly	("Final_cam2", CINEMATIC_NO_AIM, 0, 42, 0, 0)
-			Fly	("Final_cam3", CINEMATIC_NO_AIM, 0, 7, 1, 1)
+			Fly	("Final_cam3", CINEMATIC_NO_AIM, 0, 20, 1, 1)
 			StartCinematic()
 
 			TActivate("Final_fctr")
@@ -3691,6 +3702,9 @@
 
 			AddCinematicMessage( 6321, 1.0 )
 			AddCinematicMessage( 6322, 0.25 )
+			AddCinematicMessage( 6323, 0.25 )
+			AddCinematicMessage( 6324, 0.25 )
+			AddCinematicMessage( 6325, 0.25 )
 
 		</script>
 	</trigger>
@@ -3702,6 +3716,8 @@
 			trigger:Deactivate()
 
 			RestoreAllToleranceStatus()
+
+			AddQuestItem("diaryofvagrant_ierihon_good")
 
 			SetGameTime(6,0)
 
@@ -4321,6 +4337,7 @@
 
 			CompleteQuest("r7m1_GoToJess_Quest")
 			TakeQuest("r7m1_ComeToGato_Quest")
+			TakeQuest("sin_RunToDogs_Quest")
 
 			TActivate("sinArlekinBlock2")
 
@@ -4407,6 +4424,8 @@
 			if AB3 then
 				AB3:Remove()
 			end
+
+			CompleteQuest("sin_RunToDogs_Quest")
 
 			RestoreAllToleranceStatus()
 
@@ -5045,6 +5064,153 @@
 			CompleteQuest("sin_ComeToAmbul_Quest")
 
 			RestoreAllToleranceStatus()
+
+			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Открыли Чемоданчик-->
+	<trigger Name="sinAfterPunThief" active="0">
+		<event	timeout="0.1"	eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local Plf = GetPlayerVehicle()
+			Plf:SetThrottle( 0 )
+			Plf:SetCustomLinearVelocity( 0 )
+
+			local PlfID = GetPlayerVehicleId()
+			local PlfCoor = Plf:GetPosition()
+			PlfCoor.y = PlfCoor.y + 25*0.74
+			PlfCoor.z = PlfCoor.z + 25*0.74
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+
+			FlyAround(1, 0, 23, 6, PlfCoor, PlfID, 1, 1 )
+			StartCinematic()
+
+			TActivate("sinAfterPunThief_FadeIn")
+			TActivate("sinAfterPunThief_End")
+		</script>
+	</trigger>
+
+	<trigger Name="sinAfterPunThief_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(6671, 0.25)
+			AddCinematicMessage(6672, 0.25)
+
+			TActivate("trKordCheck")
+		</script>
+	</trigger>
+
+<!--Проверка, посетили ли мы могилу-->
+	<trigger Name="trKordCheck" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+
+		trigger:Deactivate() 		
+		if getObj("sinLookGrave"):IsActivated() == 0 then
+			AddCinematicMessage(6673, 0.25)
+		else
+			AddCinematicMessage(6674, 0.25)
+			TakeQuest("sin_UnusualWeapon_Quest")
+		end
+		
+		</script>
+	</trigger>
+
+	<trigger Name="sinAfterPunThief_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			RestoreAllToleranceStatus()
+
+			TDeactivate("trKordCheck")
+			TActivate("trFindGrave")
+
+			CompleteQuest("sin_PunchThief_Quest")
+
+			SetCameraBehindPlayerVehicle() 
+		</script>
+	</trigger>
+
+<!--Осмотр могилы-->
+	<trigger Name="sinLookGrave" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FoundKord_loc"/>
+		<script>
+			trigger:Deactivate()
+
+			SaveAllToleranceStatus(RS_NEUTRAL)
+			Fly	("LookGrave_cam0", CINEMATIC_NO_AIM, 0, 8, 1, 1)
+			StartCinematic()
+
+			TActivate("sinLookGrave_FadeIn")
+			TActivate("sinLookGrave_End")
+
+		</script>
+	</trigger>
+	<trigger Name="sinLookGrave_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			CreateNewDummyObject( "dweller_new_hero", "humPlayer", -1, -1, CVector(1610.981, 201.011, 589.115), Quaternion(0.0000, -0.9964, 0.0000, -0.0850), 0)
+
+			local Plf = GetPlayerVehicle()
+			if Plf then
+				Plf:SetCustomControlEnabled( true )
+				Plf:SetGamePositionOnGround(CVector(1609.233, 200.147, 601.298))
+				Plf:SetRotation(Quaternion(-0.009, 0.756, 0.010, 0.655))
+				Plf:SetCustomLinearVelocity( 0 )
+				Plf:SetThrottle( 0 )
+				Plf:SetCustomControlEnabled( false )
+			end
+		
+			if QuestStatus("sin_FindGrave_Quest")==Q_TAKEN then
+				AddCinematicMessage(6677, 3.0)
+			else
+				AddCinematicMessage(6675, 3.0)
+			end
+
+			AddCinematicMessage(6676, 0.25)
+		</script>
+	</trigger>
+
+	<trigger Name="sinLookGrave_End" active="0">
+		<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+		<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local humPl = GetEntityByName ("humPlayer")
+			if humPl then
+				humPl:Remove() 
+			end
+
+			if QuestStatus("sin_FindGrave_Quest")==Q_TAKEN then
+				AddCinematicMessage(6677, 0.25)
+			end
+
+			local kkk = GetEntityByName ("kordec")
+			if kkk then kkk:Remove() end
+
+			AddPlayerGunsWithRandomAffix("kord01",1,10,"kord01")
+
+			RestoreAllToleranceStatus()
+
+			CompleteQuest("sin_FindGrave_Quest")
 
 			SetCameraBehindPlayerVehicle()
 		</script>

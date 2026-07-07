@@ -78,12 +78,4 @@ $Id: $
 		Class 			= "VehicleRoleBarrier"
 		Name			= "roleBarrier"
 	/>
-	
-	<Prototype
-		Class			= "TeamTacticWithRoles"
-		Name			= "TeamTacticTerroristsR7M1"
-		ResourceType		= "TEAMTACTIC">	
-		<Role Prototype="MeatRole"/>
-		<Role Prototype="MeatRole"/>
-	</Prototype>
 </Prototypes>

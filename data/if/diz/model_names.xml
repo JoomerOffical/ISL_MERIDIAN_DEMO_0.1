@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?><!-- edited with XML Spy v4.2 U (http://www.xmlspy.com) by scorp (targem) -->
 <ModelNames>
+
+<!--Дневник Бродяги-->
+
 	<Item
 		id="diaryofvagrant_start"
 		locForm="0"
 		value="Дневник Бродяги: После выписки" />
-
-	<Item
-		id="quest_letter_lamp"
-		locForm="0"
-		value="Извещение о посылке" />
-
-	<Item
-		id="quest_lamp"
-		locForm="0"
-		value="Лампа для маяка" />
-
-	<Item
-		id="quest_pack_joe"
-		locForm="0"
-		value="Посылка для Джо" />
 
 	<Item
 		id="diaryofvagrant_leonel"
@@ -26,34 +14,40 @@
 		value="Дневник Бродяги: Леонель и долг" />
 
 	<Item
-		id="ArlekinCar"
+		id="diaryofvagrant_arlekin"
 		locForm="0"
-		value="Арлекин" />
+		value="Дневник Бродяги: Арлекин" />
 
 	<Item
-		id="EgoistCar"
+		id="diaryofvagrant_arlekin_pay"
 		locForm="0"
-		value="Эгоист" />
+		value="Дневник Бродяги: Арлекин" />
 
 	<Item
-		id="MolokovozBorn"
+		id="diaryofvagrant_joe"
 		locForm="0"
-		value="Борн" />
+		value="Дневник Бродяги: Джо" />
 
 	<Item
-		id="BugJoe"
+		id="diaryofvagrant_joe_dogdead"
 		locForm="0"
-		value="Джо" />
+		value="Дневник Бродяги: Джо" />
 
 	<Item
-		id="BugKevin"
+		id="diaryofvagrant_caravan"
 		locForm="0"
-		value="Кевин" />
+		value="Дневник Бродяги: Умная идея из-за каравана" />
 
 	<Item
-		id="GarfieldCar"
+		id="diaryofvagrant_kitty"
 		locForm="0"
-		value="Гарфилд" />
+		value="Дневник Бродяги: Спасение Китти" />
+	
+	<Item
+		id="diaryofvagrant_ierihon_good"
+		locForm="0"
+		value="Дневник Бродяги: Иерихон в безопасности" />
+<!--Книги-->
 
 	<Item
 		id="collectionbook1"
@@ -61,32 +55,12 @@
 		value="Дневник Генриха Пола" />
 
 	<Item
-		id="UralTreasure"
-		locForm="0"
-		value="Торговец" />
-
-	<Item
-		id="Bug02"
-		locForm="0"
-		value="Вэн" />
-
-	<Item
-		id="quest_bottles_of_wine"
-		locForm="0"
-		value="Бутылки вина" />
-
-	<Item
-		id="collectionbook11111"
+		id="collectionbook2"
 		locForm="0"
 		value="''Туристический проспект''" />
 
 	<Item
-		id="forb_books"
-		locForm="0"
-		value="Погорелые книги" />
-
-	<Item
-		id="collectionbook2"
+		id="collectionbook2222"
 		locForm="0"
 		value="Руководство к танку" />
 
@@ -129,6 +103,269 @@
 		id="collectionbook10"
 		locForm="0"
 		value="Библия Водителя" />
+
+<!--Квестовые предметы-->
+
+	<Item
+		id="quest_baseball_bat"
+		locForm="0"
+		value="Бейсбольная бита" />
+
+	<Item
+		id="quest_letter_lamp"
+		locForm="0"
+		value="Извещение о посылке" />
+
+	<Item
+		id="quest_lamp"
+		locForm="0"
+		value="Лампа для маяка" />
+
+	<Item
+		id="quest_goldsellector"
+		locForm="0"
+		value="Кладоискатель" />
+
+	<Item
+		id="quest_pack_joe"
+		locForm="0"
+		value="Посылка для Джо" />
+
+	<Item
+		id="quest_bottles_of_wine"
+		locForm="0"
+		value="Бутылки вина" />
+
+	<Item
+		id="forb_books"
+		locForm="0"
+		value="Погорелые книги" />
+
+	<Item
+		id="quest_grand_prix"
+		locForm="0"
+		value="Кубок" />
+
+	<Item
+		id="quest_movie_reel_1"
+		locForm="0"
+		value="Древний свиток" />
+
+	<Item
+		id="quest_movie_reel_2"
+		locForm="0"
+		value="Отобранный свиток" />
+
+	<Item
+		id="quest_robot_part_1"
+		locForm="0"
+		value="Камеры оптической системы" />
+
+	<Item
+		id="quest_robot_part_2"
+		locForm="0"
+		value="Аккумулятор" />
+
+	<Item
+		id="quest_robot_part_3"
+		locForm="0"
+		value="Шланг для гидравлической системы" />
+
+	<Item
+		id="quest_emissary_trophies"
+		locForm="0"
+		value="Трофеи" />
+
+	<Item
+		id="quest_airplane_part"
+		locForm="0"
+		value="Двигатель" />
+
+<!--Барменские квестовые предметы-->
+
+	<Item
+		id="quest_drugs"
+		locForm="0"
+		value="Контрабандный товар" />
+
+	<Item
+		id="quest_special_drugs"
+		locForm="0"
+		value="Контрабанда" />
+
+	<Item
+		id="quest_reach"
+		locForm="0"
+		value="Посылка" />
+
+	<Item
+		id="quest_wanted"
+		locForm="0"
+		value="Листовка ''Разыскивается!''" />
+
+<!--Квестовые предметы из оригинала-->
+
+	<Item
+		id="quest_start_father_letter"
+		locForm="0"
+		value="Письмо" />
+
+	<Item
+		id="quest_potato"
+		locForm="0"
+		value="Пакет" />
+
+	<Item
+		id="quest_medicine_box"
+		locForm="0"
+		value="Медикаменты" />
+
+	<Item
+		id="quest_explosive"
+		locForm="0"
+		value="Взрывчатка" />
+
+	<Item
+		id="quest_wine_barrels"
+		locForm="0"
+		value="Бочки с вином" />
+
+	<Item
+		id="quest_komp_splav"
+		locForm="0"
+		value="Редкий сплав" />
+
+	<Item
+		id="quest_shaman_head1"
+		locForm="0"
+		value="Голова сектанта" />
+
+	<Item
+		id="quest_shaman_head2"
+		locForm="0"
+		value="Голова язычника" />
+
+	<Item
+		id="quest_old_digital"
+		locForm="0"
+		value="Старый двигатель" />
+
+	<Item
+		id="quest_art_masterpice"
+		locForm="0"
+		value="Произведение искусства" />
+
+	<Item
+		id="quest_mafia_narcotik"
+		locForm="0"
+		value="Наркотики" />
+
+	<Item
+		id="quest_first_canistra"
+		locForm="0"
+		value="Канистра нефти" />
+
+	<Item
+		id="quest_disk_1"
+		locForm="0"
+		value="Диск" />
+
+	<Item
+		id="quest_disk_2"
+		locForm="0"
+		value="Второй диск" />
+
+	<Item
+		id="quest_key_for_submarine"
+		locForm="0"
+		value="Ключ от морских врат" />
+
+	<Item
+		id="quest_key_for_tunnel"
+		locForm="0"
+		value="Ключ к тоннелю" />
+
+	<Item
+		id="quest_repair_robot3"
+		locForm="0"
+		value="Робот-настройщик" />
+
+	<Item
+		id="quest_repair_robot1"
+		locForm="0"
+		value="Робот-помощник" />
+
+	<Item
+		id="quest_repair_robot2"
+		locForm="0"
+		value="Робот-ремонтник" />
+
+	<Item
+		id="quest_explosion_stone"
+		locForm="0"
+		value="Камень с рунами" />
+
+	<Item
+		id="quest_magic_thing2"
+		locForm="0"
+		value="Сломанный прибор" />
+
+	<Item
+		id="quest_magic_thing1"
+		locForm="0"
+		value="Старинный артефакт" />
+
+	<Item
+		id="quest_monster_head"
+		locForm="0"
+		value="Голова монстра" />
+
+<!--Неотфильтровано-->
+
+	<Item
+		id="ArlekinCar"
+		locForm="0"
+		value="Арлекин" />
+
+	<Item
+		id="EgoistCar"
+		locForm="0"
+		value="Эгоист" />
+
+	<Item
+		id="MolokovozBorn"
+		locForm="0"
+		value="Борн" />
+
+	<Item
+		id="BugJoe"
+		locForm="0"
+		value="Джо" />
+
+	<Item
+		id="BugKevin"
+		locForm="0"
+		value="Кевин" />
+
+	<Item
+		id="GarfieldCar"
+		locForm="0"
+		value="Гарфилд" />
+
+	<Item
+		id="UralTreasure"
+		locForm="0"
+		value="Торговец" />
+
+	<Item
+		id="Bug02"
+		locForm="0"
+		value="Вэн" />
+
+	<Item
+		id="forb_books"
+		locForm="0"
+		value="Погорелые книги" />
 
 	<Item
 		id="thorn1"
@@ -559,196 +796,6 @@
 		id="electronics"
 		locForm="0"
 		value="Электроника" />
-
-	<Item
-		id="quest_start_father_letter"
-		locForm="0"
-		value="Письмо" />
-
-	<Item
-		id="quest_potato"
-		locForm="0"
-		value="Пакет" />
-
-	<Item
-		id="quest_medicine_box"
-		locForm="0"
-		value="Медикаменты" />
-
-	<Item
-		id="quest_explosive"
-		locForm="0"
-		value="Взрывчатка" />
-
-	<Item
-		id="quest_wine_barrels"
-		locForm="0"
-		value="Бочки с вином" />
-
-	<Item
-		id="quest_komp_splav"
-		locForm="0"
-		value="Редкий сплав" />
-
-	<Item
-		id="quest_shaman_head1"
-		locForm="0"
-		value="Голова сектанта" />
-
-	<Item
-		id="quest_shaman_head2"
-		locForm="0"
-		value="Голова язычника" />
-
-	<Item
-		id="quest_old_digital"
-		locForm="0"
-		value="Старый двигатель" />
-
-	<Item
-		id="quest_art_masterpice"
-		locForm="0"
-		value="Произведение искусства" />
-
-	<Item
-		id="quest_mafia_narcotik"
-		locForm="0"
-		value="Наркотики" />
-
-	<Item
-		id="quest_first_canistra"
-		locForm="0"
-		value="Канистра нефти" />
-
-	<Item
-		id="quest_disk_1"
-		locForm="0"
-		value="Диск" />
-
-	<Item
-		id="quest_disk_2"
-		locForm="0"
-		value="Второй диск" />
-
-	<Item
-		id="quest_key_for_submarine"
-		locForm="0"
-		value="Ключ от морских врат" />
-
-	<Item
-		id="quest_key_for_tunnel"
-		locForm="0"
-		value="Ключ к тоннелю" />
-
-	<Item
-		id="quest_repair_robot3"
-		locForm="0"
-		value="Робот-настройщик" />
-
-	<Item
-		id="quest_repair_robot1"
-		locForm="0"
-		value="Робот-помощник" />
-
-	<Item
-		id="quest_repair_robot2"
-		locForm="0"
-		value="Робот-ремонтник" />
-
-	<Item
-		id="quest_explosion_stone"
-		locForm="0"
-		value="Камень с рунами" />
-
-	<Item
-		id="quest_magic_thing2"
-		locForm="0"
-		value="Сломанный прибор" />
-
-	<Item
-		id="quest_magic_thing1"
-		locForm="0"
-		value="Старинный артефакт" />
-
-	<Item
-		id="quest_monster_head"
-		locForm="0"
-		value="Голова монстра" />
-
-	<Item
-		id="quest_baseball_bat"
-		locForm="0"
-		value="Бейсбольная бита" />
-
-	<Item
-		id="quest_grand_prix"
-		locForm="0"
-		value="Кубок" />
-
-	<Item
-		id="quest_movie_reel_1"
-		locForm="0"
-		value="Древний свиток" />
-
-	<Item
-		id="quest_movie_reel_2"
-		locForm="0"
-		value="Отобранный свиток" />
-
-	<Item
-		id="quest_robot_part_1"
-		locForm="0"
-		value="Камеры оптической системы" />
-
-	<Item
-		id="quest_robot_part_2"
-		locForm="0"
-		value="Аккумулятор" />
-
-	<Item
-		id="quest_robot_part_3"
-		locForm="0"
-		value="Шланг для гидравлической системы" />
-
-	<Item
-		id="quest_emissary_trophies"
-		locForm="0"
-		value="Трофеи" />
-
-	<Item
-		id="quest_airplane_part"
-		locForm="0"
-		value="Двигатель" />
-
-	<Item
-		id="quest_goldsellector"
-		locForm="0"
-		value="Кладоискатель" />
-
-	<Item
-		id="quest_drugs"
-		locForm="0"
-		value="Контрабандный товар" />
-
-	<Item
-		id="quest_special_drugs"
-		locForm="0"
-		value="Контрабанда" />
-
-	<Item
-		id="quest_reach"
-		locForm="0"
-		value="Посылка" />
-
-	<Item
-		id="quest_forbidden_books"
-		locForm="0"
-		value="Запретные книги" />
-
-	<Item
-		id="quest_wanted"
-		locForm="0"
-		value="Листовка ''Разыскивается!''" />
 
 	<Item
 		id="someTurboAccelerationPusher"

@@ -134,6 +134,13 @@
 		file="data\models\dynamic\breakble\wonderful_fence_dyn.sam" />
 
 	<model
+		id="diary_vag"
+		shadow="1"
+		shadowVolume="1"
+		windwavy="0"
+		file="data\models\questitems\books\diary_vag.sam" />
+
+	<model
 		id="collectionbook1"
 		shadow="1"
 		shadowVolume="1"
@@ -21206,4 +21213,5 @@
 		windwavy="0"
 		trans="0"
 		composite="0" />
+
 </AnimatedModels>

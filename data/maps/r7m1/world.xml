@@ -2,7 +2,7 @@
 <World
 	name="Object670"
 	class="SgNode"
-	LastId="992748479">
+	LastId="992748635">
 	<Node
 		name="Object992744636"
 		class="SgAnimatedModelNode"
@@ -7110,7 +7110,7 @@
 	<Node
 		name="Object992746815"
 		class="SgAnimatedModelNode"
-		org="643.914 0.000 2986.471"
+		org="700.896 0.000 2987.412"
 		orgRel="1"
 		id="r2_crag_copped_6"
 		ndmAction="0"
@@ -8299,15 +8299,6 @@
 		org="175.160 0.000 3241.081"
 		orgRel="1"
 		rot="0.0000 -0.6511 0.0000 0.7590"
-		id="r2_crag_copped_3"
-		ndmAction="0" />
-
-	<Node
-		name="Object992747090"
-		class="SgAnimatedModelNode"
-		org="221.156 0.000 2936.416"
-		orgRel="1"
-		rot="0.0000 0.4886 0.0000 0.8725"
 		id="r2_crag_copped_3"
 		ndmAction="0" />
 
@@ -9621,22 +9612,6 @@
 	</Node>
 
 	<Node
-		name="Object992748229"
-		class="SgAnimatedModelNode"
-		org="2233.790 0.000 2568.531"
-		orgRel="1"
-		id="lamppost3"
-		ndmAction="0" />
-
-	<Node
-		name="Object992748230"
-		class="SgAnimatedModelNode"
-		org="2082.625 0.000 2567.233"
-		orgRel="1"
-		id="lamppost3"
-		ndmAction="0" />
-
-	<Node
 		name="Object992748231"
 		class="SgAnimatedModelNode"
 		org="3397.267 0.000 3165.119"
@@ -9653,33 +9628,9 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object992748233"
-		class="SgAnimatedModelNode"
-		org="389.679 0.000 2372.836"
-		orgRel="1"
-		id="lamppost3"
-		ndmAction="0" />
-
-	<Node
 		name="Object992748234"
 		class="SgAnimatedModelNode"
 		org="315.530 0.000 2208.728"
-		orgRel="1"
-		id="lamppost3"
-		ndmAction="0" />
-
-	<Node
-		name="Object992748235"
-		class="SgAnimatedModelNode"
-		org="321.539 0.000 2767.627"
-		orgRel="1"
-		id="lamppost3"
-		ndmAction="0" />
-
-	<Node
-		name="Object992748236"
-		class="SgAnimatedModelNode"
-		org="279.129 0.000 2578.822"
 		orgRel="1"
 		id="lamppost3"
 		ndmAction="0" />
@@ -9693,94 +9644,9 @@
 		ndmAction="0" />
 
 	<Node
-		name="Object992748248"
-		class="SgNode"
-		org="279.872 9.000 2578.948"
-		orgRel="1">
-		<Node
-			name="Object1"
-			class="SgPointLightSourceNode"
-			id="LS_LIGHT_YELLOW" />
-
-		<Node
-			name="Object2"
-			class="SgParticlesNode"
-			id="PS_LENS_S4"
-			psNumEmitterMesh="-1" />
-	</Node>
-
-	<Node
-		name="Object992748249"
-		class="SgNode"
-		org="321.482 9.000 2767.942"
-		orgRel="1">
-		<Node
-			name="Object1"
-			class="SgPointLightSourceNode"
-			id="LS_LIGHT_YELLOW" />
-
-		<Node
-			name="Object2"
-			class="SgParticlesNode"
-			id="PS_LENS_S4"
-			psNumEmitterMesh="-1" />
-	</Node>
-
-	<Node
-		name="Object992748250"
-		class="SgNode"
-		org="389.441 9.000 2373.366"
-		orgRel="1">
-		<Node
-			name="Object1"
-			class="SgPointLightSourceNode"
-			id="LS_LIGHT_YELLOW" />
-
-		<Node
-			name="Object2"
-			class="SgParticlesNode"
-			id="PS_LENS_S4"
-			psNumEmitterMesh="-1" />
-	</Node>
-
-	<Node
 		name="Object992748251"
 		class="SgNode"
 		org="315.775 9.000 2208.809"
-		orgRel="1">
-		<Node
-			name="Object1"
-			class="SgPointLightSourceNode"
-			id="LS_LIGHT_YELLOW" />
-
-		<Node
-			name="Object2"
-			class="SgParticlesNode"
-			id="PS_LENS_S4"
-			psNumEmitterMesh="-1" />
-	</Node>
-
-	<Node
-		name="Object992748252"
-		class="SgNode"
-		org="2082.457 9.000 2567.292"
-		orgRel="1">
-		<Node
-			name="Object1"
-			class="SgPointLightSourceNode"
-			id="LS_LIGHT_YELLOW" />
-
-		<Node
-			name="Object2"
-			class="SgParticlesNode"
-			id="PS_LENS_S4"
-			psNumEmitterMesh="-1" />
-	</Node>
-
-	<Node
-		name="Object992748253"
-		class="SgNode"
-		org="2234.113 9.000 2568.278"
 		orgRel="1">
 		<Node
 			name="Object1"
@@ -10019,5 +9885,284 @@
 		orgRel="1"
 		rot="0.0000 0.1089 0.0000 0.9941"
 		id="agro_tech3"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748589"
+		class="SgAnimatedModelNode"
+		org="630.129 0.000 2908.319"
+		orgRel="1"
+		rot="0.0000 -0.4501 0.0000 0.8930"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748590"
+		class="SgAnimatedModelNode"
+		org="623.978 0.000 2899.299"
+		orgRel="1"
+		rot="0.0000 -0.4501 0.0000 0.8930"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748591"
+		class="SgAnimatedModelNode"
+		org="687.622 0.000 2948.292"
+		orgRel="1"
+		rot="0.0000 -0.2015 0.0000 0.9795"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748592"
+		class="SgAnimatedModelNode"
+		org="697.393 0.000 2952.441"
+		orgRel="1"
+		rot="0.0000 -0.2015 0.0000 0.9795"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748595"
+		class="SgAnimatedModelNode"
+		org="707.112 0.000 2955.761"
+		orgRel="1"
+		rot="0.0000 -0.1349 0.0000 0.9909"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748609"
+		class="SgAnimatedModelNode"
+		org="717.583 0.000 2958.538"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748610"
+		class="SgAnimatedModelNode"
+		org="728.196 0.000 2960.892"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748611"
+		class="SgAnimatedModelNode"
+		org="738.694 0.000 2963.379"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748612"
+		class="SgAnimatedModelNode"
+		org="749.086 0.000 2965.760"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748613"
+		class="SgAnimatedModelNode"
+		org="759.700 0.000 2968.114"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748614"
+		class="SgAnimatedModelNode"
+		org="770.198 0.000 2970.601"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748615"
+		class="SgAnimatedModelNode"
+		org="780.794 0.000 2972.990"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748616"
+		class="SgAnimatedModelNode"
+		org="791.408 0.000 2975.343"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748617"
+		class="SgAnimatedModelNode"
+		org="801.906 0.000 2977.831"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748618"
+		class="SgAnimatedModelNode"
+		org="812.038 0.000 2980.003"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748619"
+		class="SgAnimatedModelNode"
+		org="822.652 0.000 2982.356"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748620"
+		class="SgAnimatedModelNode"
+		org="833.150 0.000 2984.844"
+		orgRel="1"
+		rot="0.0000 -0.1110 0.0000 0.9938"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748621"
+		class="SgAnimatedModelNode"
+		org="843.393 -0.000 2985.635"
+		orgRel="1"
+		rot="0.0000 0.0175 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748622"
+		class="SgAnimatedModelNode"
+		org="853.681 -0.000 2985.353"
+		orgRel="1"
+		rot="0.0000 0.0175 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748623"
+		class="SgAnimatedModelNode"
+		org="864.631 -0.000 2984.842"
+		orgRel="1"
+		rot="0.0000 0.0175 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748624"
+		class="SgAnimatedModelNode"
+		org="875.338 -0.000 2984.492"
+		orgRel="1"
+		rot="0.0000 0.0175 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748625"
+		class="SgAnimatedModelNode"
+		org="884.794 -0.000 2984.755"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748626"
+		class="SgAnimatedModelNode"
+		org="895.475 -0.000 2985.206"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748627"
+		class="SgAnimatedModelNode"
+		org="984.201 -0.000 2988.520"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748628"
+		class="SgAnimatedModelNode"
+		org="973.105 -0.000 2987.543"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748629"
+		class="SgAnimatedModelNode"
+		org="962.386 -0.000 2987.009"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748630"
+		class="SgAnimatedModelNode"
+		org="906.595 -0.000 2984.949"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748631"
+		class="SgAnimatedModelNode"
+		org="994.847 -0.000 2988.883"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748632"
+		class="SgAnimatedModelNode"
+		org="1005.726 -0.000 2989.195"
+		orgRel="1"
+		rot="0.0000 -0.0196 0.0000 0.9998"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748633"
+		class="SgAnimatedModelNode"
+		org="636.333 0.000 2915.572"
+		orgRel="1"
+		rot="0.0000 -0.3746 0.0000 0.9272"
+		id="heavy_bigwall1"
+		ndmAction="0" />
+
+	<Node
+		name="Object992748634"
+		class="SgAnimatedModelNode"
+		org="858.087 13.000 2831.454"
+		orgRel="1"
+		rot="0.0000 0.9938 0.0000 0.1110"
+		id="port"
 		ndmAction="0" />
 </World>

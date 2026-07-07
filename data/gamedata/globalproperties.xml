@@ -103,7 +103,7 @@
 		GunPriceCoeffForDrop				= "0.8"
 		GadgetPriceCoeffForDrop				= "0.1"
 		
-		ProbToDropMoney					= "0.00"
+		ProbToDropMoney					= "0.0"
 		ProbToDropWares					= "0.05"
 		ProbToDropGuns					= "0.95"
 		ProbToDropGadgetWeapon				= "0.0"

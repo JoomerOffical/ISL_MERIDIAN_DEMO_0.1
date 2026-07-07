@@ -2,6 +2,10 @@
 <Servers>
 	<AnimatedModelsServer><!-- objects -->
 		<Item
+			id="diary_vag"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="BUGcargo"
 			file="data\models\AnimModels.xml" />
 

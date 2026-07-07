@@ -375,4 +375,9 @@
 	<Point  coord="1163.027 249.509 3523.317" rotation="-0.016 0.971 -0.066 0.230"/>
 </Path>
 
+<Path Name = "LookGrave_cam0">
+	<Point  coord="1614.004 209.241 577.331" rotation="-0.198 0.107 -0.022 0.974"/>
+	<Point  coord="1615.679 212.528 569.784" rotation="-0.198 0.107 -0.022 0.974"/>
+</Path>
+
 </Paths>

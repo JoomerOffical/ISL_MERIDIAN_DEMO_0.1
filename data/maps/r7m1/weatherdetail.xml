@@ -16,7 +16,7 @@
 
 		<ColorType
 			name="night"
-			CloudsTexture="LoadMe.txt" />
+			CloudsTexture="SkyStars2.dds" />
 	</WeatherItem>
 
 	<WeatherItem

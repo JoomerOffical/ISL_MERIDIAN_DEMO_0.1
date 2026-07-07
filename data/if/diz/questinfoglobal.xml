@@ -1737,7 +1737,7 @@
 
 	<QuestInfo
 		questName="r7m1_BookForNodin_Quest"
-		briefDiz="Найти книги для Нодина"
+		briefDiz="Книги для Нодина"
 		fullDiz="Один коллекционер попросил за хорошую плату найти для него книги на сгоревшем складе. Работа не пыльная, но стоит ли оно того?"
 		isMainQuest="0">
 		<Map
@@ -1879,6 +1879,15 @@
 		<Map
 			name="sin"
 			targetObjName="Sin_EastIerihon" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="r7m1_GoToSklad_Quest"
+		briefDiz="Добраться до склада"
+		isMainQuest="0">
+		<Map
+			name="r7m1"
+			targetObjName="BurnedSklad_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2352,6 +2361,15 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_BackDocFDoc_Quest"
+		briefDiz="Вернуть документы"
+		isMainQuest="0">
+		<Map
+			name="sin"
+			targetObjName="Sin_Church" />
+	</QuestInfo>
+
+	<QuestInfo
 		questName="sin_BackToCats1_Quest"
 		briefDiz="Вернуться к котам"
 		fullDiz="Небольшое наблюдение за котами прошла и я сделал небольшие выводы. Так стоит ли к ним присоединиться?"
@@ -2795,6 +2813,11 @@
 		isMainQuest="1" />
 
 	<QuestInfo
+		questName="sin_FindGrave_Quest"
+		briefDiz="Найти могилу"
+		isMainQuest="0" />
+
+	<QuestInfo
 		questName="sin_FindJess_Quest"
 		briefDiz="Найти мужа Китти"
 		fullDiz="Пока Китти на ферме прячется, я приведу ей мужа."
@@ -2811,6 +2834,15 @@
 		isMainQuest="1">
 		<Map
 			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_FindLocaUnWe_Quest"
+		briefDiz="Добраться до места ориентира"
+		isMainQuest="0">
+		<Map
+			name="sin"
+			targetObjName="FindGrave_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -2997,11 +3029,10 @@
 
 	<QuestInfo
 		questName="sin_Husband_Quest"
-		briefDiz="Найти мужа в Сан-Рафаэле"
+		briefDiz="Найти мужа"
 		isMainQuest="1">
 		<Map
-			name="sin"
-			targetObjName="Sin_EastIerihon" />
+			name="sin" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3211,6 +3242,11 @@
 	</QuestInfo>
 
 	<QuestInfo
+		questName="sin_PunchThief_Quest"
+		briefDiz="Наказать вора"
+		isMainQuest="0" />
+
+	<QuestInfo
 		questName="sin_RunDeal3_Quest"
 		briefDiz="Догнать должника"
 		isMainQuest="1">
@@ -3227,6 +3263,16 @@
 		<Map
 			name="sin"
 			targetObjName="ToR7M1" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_RunToDogs_Quest"
+		briefDiz="Пройти блокаду псов"
+		fullDiz="Арлекин наверняка патрулирует выезд из этих земель. Надо быть осторожным."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="KillBlockEnter_loc" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3273,7 +3319,18 @@
 		fullDiz="Похоже, Китти боится. Надо ее успокоить."
 		isMainQuest="1">
 		<Map
-			name="sin" />
+			name="sin"
+			targetObjName="SinDogHouse" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_TalkToKitty2_Quest"
+		briefDiz="Успокойть Китти"
+		fullDiz="Кажется, Китти, немного боится. Надо ее успокойть."
+		isMainQuest="1">
+		<Map
+			name="sin"
+			targetObjName="SinDogHouse" />
 	</QuestInfo>
 
 	<QuestInfo
@@ -3294,6 +3351,15 @@
 			name="r7m1"
 			targetObjName="ToR7M2" />
 
+		<Map
+			name="sin" />
+	</QuestInfo>
+
+	<QuestInfo
+		questName="sin_UnusualWeapon_Quest"
+		briefDiz="Место захоронения"
+		fullDiz="В чемоданчике я нашел записку с местоположением могилы отца Борна и Гарфилда. Можно поглядеть на нее. Ориентир: Неподалеку от Старой Фермы."
+		isMainQuest="0">
 		<Map
 			name="sin" />
 	</QuestInfo>

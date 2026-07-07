@@ -87,7 +87,7 @@
 		TargetSchwarzPart = "0.35"
 		PartForCompleteByOther ="0.25"
 		SoundOnCompleteId = "2"
-		TimeLimit		= "180"
+		TimeLimit		= "150"
 	/>
 
 	<Prototype
@@ -95,7 +95,7 @@
 		Name			= "dynamicQuestReach" 
 		MinReward		= "250"
 		PlayerSchwarzPart = "0.03"
-		TimeLimit		= "180"
+		TimeLimit		= "150"
 		TimeRewardCoeff = "1.5"
 	/>
 	
@@ -109,6 +109,7 @@
 		Name			= "dynamicQuestConvoy" 
 		MinReward		= "370"
 		PlayerSchwarzPart = "0.05"
+		TimeLimit		= "150"
 		StopDistFromPlayer	= "100"
 		CriticalDistFromPlayer	= "200"
 		CriticalTime			= "30"
@@ -128,9 +129,9 @@
 		Name			= "dynamicQuestHunt"
 		MinReward		= "110"
 		PlayerSchwarzPart = "0.017"
-		TimeLimit		= "180"
+		TimeLimit		= "150"
 		MinNumOfEnemies = "1"
-		MaxNumOfEnemies = "5"
+		MaxNumOfEnemies = "4"
 	/>
 	
 	<Prototype
@@ -149,17 +150,22 @@
 	<Prototype
 		Class			= "DynamicQuestTreasure"
 		Name			= "dynamicQuestTreasure"
-		MinReward		= "400"
+		MinReward		= "200"
 		PlayerSchwarzPart = "0.015"
 		TimeRewardCoeff = "1.5"
 		MaximumDifference = "200.0"
-		TreasureRadius	= "5.0"
+		TreasureRadius	= "10.0"
 	/>
 
 	<Prototype
 		Class			= "SgNodeObj"
 		Name			= "SgNodeObject" />
 
+
+    <Prototype
+        Class            = "LightObj"
+        Name            = "LampForStolb1" 
+        ModelFile        = "ET_PPS_LENS_S1"/>
 
 	<Prototype
 		Class			= "LightObj"

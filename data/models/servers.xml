@@ -46,6 +46,10 @@
 			file="data\models\AnimModels.xml" />
 
 		<Item
+			id="diary_vag"
+			file="data\models\AnimModels.xml" />
+
+		<Item
 			id="collectionbook1"
 			file="data\models\AnimModels.xml" />
 

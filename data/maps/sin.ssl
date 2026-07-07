@@ -75,7 +75,7 @@
 			name="REFRACTIONTINT">255 255 255</Key>
 
 		<Key
-			name="SKYDOMEDIVIDER">25.000</Key>
+			name="SKYDOMEDIVIDER">15.250</Key>
 
 		<Key
 			name="WATERSMALLTEX">WaterSm.tga</Key>
@@ -219,19 +219,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">3644.358</Key>
+			name="X">2798.770</Key>
 
 		<Key
-			name="Y">324.574</Key>
+			name="Y">409.239</Key>
 
 		<Key
-			name="Z">637.232</Key>
+			name="Z">1309.460</Key>
 
 		<Key
-			name="A">-110.120</Key>
+			name="A">-118.659</Key>
 
 		<Key
-			name="B">-0.492</Key>
+			name="B">-0.685</Key>
 
 		<Key
 			name="G">0.000</Key>
@@ -249,7 +249,7 @@
 	<Section
 		name="ILLUMINATION">
 		<Key
-			name="MODEL_AMBIENT">208 159 86</Key>
+			name="MODEL_AMBIENT">12 121 206</Key>
 
 		<Key
 			name="MODEL_DIFFUSE">0 0 0</Key>

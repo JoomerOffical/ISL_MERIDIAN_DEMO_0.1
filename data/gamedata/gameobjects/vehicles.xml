@@ -5,39 +5,61 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 -->
 
 <Prototypes>
+
     <Prototype
         Class="Vehicle"
         Name="Cumbine"
         ResourceType="VEHICLE"
-        PressingForce="2.0"
-        BlastWave="bigBlastWave"
-        DiffRatio="5.0"
-        MaxEngineRpm="4500"
-        LowGearShiftLimit="1500"
-        HighGearShiftLimit="3500"
+
+		DiffRatio = "5.0"
+        MaxEngineRpm = "4500"
+        LowGearShiftLimit = "1500"
+        HighGearShiftLimit = "3500"
+
+        PressingForce = "2.0"
+        BlastWave = "bigBlastWave"
+
+		SteeringSpeed = "0.2"
+		HitForce = "500.0"
+		HornSound = "ET_S_HORN08"
+		MinNotIdleRpm = "10000"
+		IdleEngineSoundSpeed = "0.5" 
+        EngineRpmForNormalSound = "6000" 
+
         DestroyEffectPiercing="ET_PS_VEH_EXP1_MED"
         DestroyEffectBlast="ET_PS_VEH_EXP2_MED"
         DestroyEffectEnergy="ET_PS_VEH_EXP3_MED"
         DestroyEffectWater="ET_PS_VEH_EXP2_MED"
-        SteeringSpeed="0.2"
+
+		DecisionMatrix="vehiclemain.lua"
+		LookRadius="200.0"
+		IntersectionRadius="9.0"
+		TakingRadius="30.0"
+		DriftCoeff="0.04"
+		MassSize="4 4.5 12"
+        MassTranslation="0 -1.9 -2"
+
         CameraHeight="6.5"
         CameraMaxDist="23"
-        HornSound="ET_S_HORN06"
-        DecisionMatrix="vehiclemain.lua"
-        LookRadius="200.0"
-        IntersectionRadius="9.0"
-        TakingRadius="30.0"
-        DriftCoeff="0.04"
-        MassSize="4 4.5 12"
-        MassTranslation="0 -1.9 -2"
-        Abstract="true">
+		DestroyEffectPiercing	= "ET_PS_VEH_EXP1_SMALL"
+		DestroyEffectBlast	= "ET_PS_VEH_EXP2_SMALL"
+		DestroyEffectEnergy	= "ET_PS_VEH_EXP3_SMALL"
+		DestroyEffectWater	= "ET_PS_VEH_EXP2_SMALL"
+		WheelSpringCoeffSmall		= "3000.0"
+		WheelSpringCoeffBig		= "6000.0"
+		WheelUpDampingCoeff		= "50.0f"
+		WheelDownDampingCoeff		= "200.0f"
+		WheelSuspensionRange		= "0.5"
+		WheelCriticalSuspensionDelta = "0.25"
+		AllowedRoles		= "roleMeat2 roleMeat8"
+
+    	Abstract="false">
 
         <MainPartDescription id="CHASSIS" partResourceType="CUMBINE_CHASSIS">
             <PartDescription id="CABIN" partResourceType="CUMBINE_CABIN" lpName="LP_CAB01">
-                <PartDescription id="CABIN_SMALL_GUN" partResourceType="SMALL_GUN" lpName="LP_SML01" />
+            	<PartDescription id="CABIN_SMALL_GUN" partResourceType="SMALL_GUN" lpName="LP_SML01" />
             </PartDescription>
-            <PartDescription id="BASKET" partResourceType="CUMBINE_BASKET" lpName="LP_BSK01">
-            </PartDescription>
+            <PartDescription id="BASKET" partResourceType="CUMBINE_BASKET" lpName="LP_BSK01" />
         </MainPartDescription>
 
         <Parts>
@@ -61,7 +83,7 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 		MaxEngineRpm		= "10000"
 		LowGearShiftLimit		= "1000"
 		HighGearShiftLimit	= "2000"
-     		AdditionalWheelsHover   = "-0.1"
+     	AdditionalWheelsHover   = "-0.1"
 
 		SteeringSpeed		= "1.0"
 		HitForce               = "75"		
@@ -131,7 +153,7 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 		MaxEngineRpm		= "10000"
 		LowGearShiftLimit	= "2500"
 		HighGearShiftLimit	= "6000"
-        	AdditionalWheelsHover   = "-0.1"
+        AdditionalWheelsHover   = "-0.1"
 		SteeringSpeed		= "1.5"
 		
 		HornSound		= "ET_S_HORN07"
@@ -2474,8 +2496,8 @@ $Id: Vehicles.xml,v 1.8 2006/01/26 09:17:42 vano Exp $
 		<Parts>
 			<Part id = "CABIN"			Prototype = "uralCab04" />
 			<Part id = "BASKET"			Prototype = "uralCargo01" />
-			<Part id = "CABIN_BIG_GUN_1"		Prototype = "kpvt01" />
-			<Part id = "BASKET_BIG_GUN_0"	Prototype = "kpvt01" /> 
+			<Part id = "CABIN_BIG_GUN_1"		Prototype = "vulcan01" />
+			<Part id = "BASKET_BIG_GUN_0"	Prototype = "vulcan01" /> 
 		</Parts>
 	</Prototype>
 

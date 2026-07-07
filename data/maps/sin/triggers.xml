@@ -9,11 +9,6 @@
 
 			SetRadarUpgrade(1)
 
-			AddPlayerMoney(1000)
-
-			TakeQuest("r7m1_PosilkaForJoe_Quest")
-			TakeQuest("r7m1_FindKitty_Quest")
-
 			if QuestStatus("r7m1_PosilkaForJoe_Quest")==Q_TAKEN then
 				ShowCircleOnMinimapByName("Sin_WestIerihon")
 				TActivate("trArlekinGang")
@@ -53,6 +48,7 @@
 				TakeQuest("sin_ComeToCats_Quest")
 				TakeQuest("sin_ComeToDogs2_Quest")
 				AddImportantFadingMsg("Вы получили несколько заданий. Рекомендуется зайти в журнал заданий.")
+				AddQuestItem("diaryofvagrant_joe")
 			end
 		</script>
 	</trigger>
@@ -1009,8 +1005,8 @@
 	</trigger>
 
 <!--Дневник Генриха-->
-	<trigger Name="trBooks" active="1">
-		<event 	timeout="1" eventid="GE_TIME_PERIOD" />
+	<trigger Name="trDiary" active="1">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
 		<script>
 			CreateNewDummyObject( "collectionbook1", "diary_paul", -1, -1, CVector(getPos("diarypaul_loc")), Quaternion(0.0000, 0.0000, 0.0000, 1.0000), 0)
 
@@ -1019,13 +1015,69 @@
 	</trigger>
 
 <!--Подбираем дневник на могиле-->
-	<trigger Name="trBooksBurn" active="1">
+	<trigger Name="trDiaryTake" active="1">
 		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="diarypaul_loc" />
 		<script>
 			local rrr = GetEntityByName ("diary_paul")
 			if rrr then rrr:Remove() end
 
 			AddQuestItem("collectionbook1")
+
+			trigger:Deactivate() 
+		</script>
+	</trigger>
+
+<!--Корд на могиле-->
+	<trigger Name="trKord" active="1">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			CreateNewDummyObject( "kord01gun", "kordec", -1, -1, CVector(1613.442, 202.700, 581.857), Quaternion(-0.2041, -0.6716, -0.2005, 0.6834), 0)
+
+			TActivate("sinLookGrave")
+
+			trigger:Deactivate()
+		</script>
+	</trigger>
+
+<!--Спавнится вор-->
+	<trigger Name="trSpawnThiefDoc" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			CreateTeam("ThiefDoc", 1190, { CVector(CVector(2651.546, 188.523, 1639.607))}, {"Scout02"}, nil, nil, {Quaternion(-0.001, -0.974, -0.001, -0.224)})
+
+			local town = GetEntityByName ("Sin_SanRafael")
+			if town then
+				town:SetOpenGateToPlayer(false)
+			end
+
+			SetTolerance(1100, 1190, RS_ENEMY)
+
+			TActivate("trThiefDie")
+		</script>
+	</trigger>
+
+	<trigger Name="trThiefDie" active="0">
+		<event eventid="GE_OBJECT_DIE" ObjName="ThiefDoc_vehicle_0"/>
+		<script>
+			trigger:Deactivate()
+
+			local town = GetEntityByName ("Sin_SanRafael")
+			if town then
+				town:SetOpenGateToPlayer(true)
+			end
+
+			StartConversation("Sin_Thief")
+
+		</script>
+	</trigger>
+
+<!--Добираемся до ориентира-->
+	<trigger Name="trFindGrave" active="0">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="FindGrave_loc" />
+		<script>
+			CompleteQuest("sin_FindLocaUnWe_Quest")
 
 			trigger:Deactivate() 
 		</script>

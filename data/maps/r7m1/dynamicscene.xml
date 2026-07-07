@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="1078">
+	LastId="1080">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
 	<AllowedWaresForDrop
-		Prototypes="tobacco firewood fuel scrap_metal machinery" />
+		Prototypes="tobacco fuel firewood scrap_metal machinery" />
 
 	<Object
 		Name="Player1"
@@ -1748,19 +1748,13 @@
 					PosX="0"
 					PosY="0"
 					Flags="16"
-					Prototype="firing_rate_guns" />
+					Prototype="additional_fuel_tank" />
 
 				<Item
 					PosX="0"
 					PosY="1"
 					Flags="16"
-					Prototype="additional_fuel_tank" />
-
-				<Item
-					PosX="1"
-					PosY="1"
-					Flags="16"
-					Prototype="additional_torque_guns" />
+					Prototype="firing_rate_guns" />
 			</GunsAndGadgets>
 		</Object>
 
@@ -1787,7 +1781,7 @@
 				cfg="38"
 				helloReplyNames="DrunkM_DLG DrunkM2_DLG"
 				SpokenCount="0" />
-			
+
 			<Object
 				Name="BattleRevol_NPC"
 				Belong="1101"
@@ -1857,18 +1851,19 @@
 					PosX="0"
 					PosY="0"
 					Flags="16"
-					Prototype="cooling_system_guns" />
+					Prototype="additional_torque" />
 
 				<Item
 					PosX="0"
 					PosY="1"
 					Flags="16"
-					Prototype="firing_rate_guns" />
+					Prototype="cooling_system_guns" />
+
 				<Item
-					PosX="0"
+					PosX="1"
 					PosY="1"
 					Flags="16"
-					Prototype="additional_torque" />
+					Prototype="firing_rate_guns" />
 			</GunsAndGadgets>
 		</Object>
 
@@ -1893,7 +1888,7 @@
 				skin="2"
 				cfg="88"
 				helloReplyNames="Mother1_DLG Mother2_DLG Mother3_DLG"
-				SpokenCount="0" />	
+				SpokenCount="0" />
 
 			<Object
 				Name="BanditThiago_NPC"
@@ -1903,7 +1898,7 @@
 				skin="3"
 				cfg="132"
 				helloReplyNames="VinoBandit_DLG"
-				SpokenCount="0" />				
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -3408,21 +3403,22 @@
 					Prototype="additional_fuel_tank" />
 
 				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="additional_stability" />
+
+				<Item
+					PosX="2"
+					PosY="0"
+					Flags="16"
+					Prototype="additional_durability" />
+
+				<Item
 					PosX="0"
 					PosY="1"
 					Flags="16"
 					Prototype="cooling_system_guns" />
-
-				<Item
-					PosX="1"
-					PosY="1"
-					Flags="16"
-					Prototype="additional_stability" />
-				<Item
-					PosX="1"
-					PosY="1"
-					Flags="16"
-					Prototype="additional_durability" />
 			</GunsAndGadgets>
 		</Object>
 
@@ -3466,8 +3462,8 @@
 				ModelName="r2_woman"
 				skin="4"
 				cfg="68"
-				helloReplyNames="Leonel_DLG Leonel2_DLG Leonel3_DLG"
-				SpokenCount="0" />				
+				helloReplyNames="Leonel_DLG Leonel2_DLG Leonel2_2_DLG Leonel3_DLG"
+				SpokenCount="0" />
 		</Object>
 
 		<Object
@@ -3482,49 +3478,50 @@
 					Prototype="scoutCab01" />
 
 				<Item
-					PosX="0"
+					PosX="5"
 					PosY="0"
 					Flags="16"
 					Prototype="scoutCab01" />
 
 				<Item
 					PosX="0"
-					PosY="0"
+					PosY="5"
 					Flags="16"
 					Prototype="scoutCab02" />
+
 				<Item
-					PosX="0"
-					PosY="0"
+					PosX="5"
+					PosY="5"
 					Flags="16"
 					Prototype="bugCab02" />
 
 				<Item
 					PosX="0"
-					PosY="0"
+					PosY="10"
 					Flags="16"
 					Prototype="bugCab02" />
 
 				<Item
-					PosX="0"
-					PosY="0"
+					PosX="5"
+					PosY="10"
 					Flags="16"
 					Prototype="bugCab03" />
 
 				<Item
 					PosX="0"
-					PosY="0"
+					PosY="15"
+					Flags="16"
+					Prototype="bugCargo02" />
+
+				<Item
+					PosX="5"
+					PosY="15"
 					Flags="16"
 					Prototype="bugCargo02" />
 
 				<Item
 					PosX="0"
-					PosY="0"
-					Flags="16"
-					Prototype="bugCargo02" />
-
-				<Item
-					PosX="0"
-					PosY="0"
+					PosY="20"
 					Flags="16"
 					Prototype="bugCargo03" />
 			</CabinsAndBaskets>
@@ -3863,7 +3860,7 @@
 		Name="r4_desert_palma_3_dyn743"
 		Belong="1001"
 		Prototype="r4_desert_palma_3_dyn"
-		Pos="639.930 254.920 2909.122" />
+		Pos="639.930 254.914 2909.122" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn744"
@@ -4501,8 +4498,8 @@
 		Pos="3323.987 255.000 3672.087"
 		Radius="100.000"
 		LookingTimeOut="100.000"
-		PassageAddress="sin FromR7M1" 
-		PassageActive="false" />
+		PassageAddress="sin FromR7M1"
+		PassageActive="0" />
 
 	<Object
 		Name="FromR7M2"
@@ -4518,7 +4515,7 @@
 		Belong="1100"
 		Prototype="genericLocation"
 		Pos="580.983 255.000 1214.285"
-		Radius="10.000" 
+		Radius="10.000"
 		LookingTimeOut="10.000"
 		ExitLocation="ToR7M3" />
 
@@ -6431,8 +6428,7 @@
 		Name="chest5"
 		Belong="1001"
 		Prototype="chest"
-		Pos="2199.023 287.417 3860.992"
-		Radius="10.000">
+		Pos="2199.023 287.417 3860.992">
 		<Object
 			Flags="16"
 			Belong="1001"
@@ -6866,13 +6862,7 @@
 		Belong="1001"
 		Prototype="someDummyObject"
 		Pos="3446.832 341.000 329.264"
-		Rot="0.000 0.000 0.000 0.000"
-		NodeScale="1"
 		ModelName="mayak" />
-
-	<Object
-		Belong="1100"
-		Prototype="vehicleRecollection" />
 
 	<Object
 		Name="MechanicLeo_loc"
@@ -6990,7 +6980,7 @@
 		Prototype="Breakable_BrickWall2"
 		Pos="1990.142 254.907 3264.247"
 		Rot="0.000 0.338 0.000 0.941" />
-		
+
 	<Object
 		Name="PlayerHideTruck_loc"
 		Belong="1100"
@@ -7011,10 +7001,34 @@
 		Prototype="genericLocation"
 		Pos="2072.867 263.645 3287.749"
 		Radius="100.000" />
+
 	<Object
 		Name="Avanpost2_loc"
 		Belong="1190"
 		Prototype="genericLocation"
 		Pos="2072.867 263.645 3287.749"
 		Radius="100.000" />
+
+	<Object
+		Name="lamppost31078"
+		Belong="1001"
+		Prototype="lamppost3"
+		Pos="360.982 334.510 2342.353">
+		<Object
+			Belong="1001"
+			Prototype="Light_Red"
+			Pos="361.082 347.070 2342.379"
+			Rot="0.998 0.000 0.000 0.060" />
+	</Object>
+
+	<Object
+		Name="BurnedSklad_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="380.631 255.636 3570.344"
+		Radius="80.000" />
+
+	<Object
+		Belong="1100"
+		Prototype="vehicleRecollection" />
 </DynamicScene>

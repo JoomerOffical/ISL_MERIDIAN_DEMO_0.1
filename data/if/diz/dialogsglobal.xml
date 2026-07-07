@@ -9,7 +9,7 @@
 
 	<Reply
 		name="Dlg_pl_000647"
-		text="Ищу Эрмитано, он же в ваших краях живет?"
+		text="Ищу Отшельника Эрмитано, он же в ваших краях живет?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000648" />
 
@@ -27,7 +27,7 @@
 
 	<Reply
 		name="Dlg_npc_000650"
-		text="Вот. Здесь его хижина. Только будь аккуратнее, он не очень сильно любит гостей. "
+		text="Вот, я отметил тебе на карте, где его хижина. Только будь аккуратнее, он не очень сильно любит гостей. "
 		role="NPC"
 		nextReplies="Dlg_pl_000651" />
 
@@ -179,30 +179,42 @@
 
 	<Reply
 		name="Dlg_npc_000660"
-		text="Эдмонтон... знакомое название. Примерно 5 лет назад я был в городе с таким же названием. И поверь, половина того, что написано в этой брошюре, тогда было ложью. Да и сейчас не уверен, что что-то изменилось."
+		text="Эдмонтон... знакомое название. И местоположение тоже знакомое, но там просто руины запечатанные. По крайней мере, когда я там был лет 15 назад."
 		role="NPC"
 		nextReplies="Dlg_pl_000661" />
 
 	<Reply
 		name="Dlg_pl_000661"
-		text="Я туда еду не ради того, чтобы там осесть, я еду туда ради золотой жилы."
+		text="Запечатанные?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000662" />
 
 	<Reply
 		name="Dlg_npc_000662"
-		text="Там тогда действительно было легко hacerse rico (разбогатеть), но сейчас мне не ведомо, может город давно заброшен. Я конечно тебя отговаривать от поисков не стану. Но я хочу, чтобы ты оказал для меня услугу."
+		text="Si. Тамошние местные рассказали, что некие мудрецы запечатали ворота в руины, якобы они предсказали некую катастрофу железную, которая когда-то там, в будущем, накроет наши земли. Я конечно, в это не верю, потому что кто в здравом уме умеет предсказывать будущее? "
 		role="NPC"
 		nextReplies="Dlg_pl_000663" />
 
 	<Reply
 		name="Dlg_pl_000663"
-		text="И что же ты хочешь?"
+		text="Понятно. Но все же, скажи мне, где эти руины находятся?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000664" />
 
 	<Reply
 		name="Dlg_npc_000664"
+		text="Что ж, раз тебе так хочется в Эдмонтон, то тебе придется мне кое с чем помочь."
+		role="NPC"
+		nextReplies="Dlg_pl_001344" />
+
+	<Reply
+		name="Dlg_pl_001344"
+		text="И что тебе нужно?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001345" />
+
+	<Reply
+		name="Dlg_npc_001345"
 		text="Как ты знаешь, я являюсь любителем выпить хорошего вина. И мне для коллекции и просто выпить не хватает одного экспоната моей коллекции вина."
 		role="NPC"
 		nextReplies="Dlg_pl_000665" />
@@ -215,7 +227,7 @@
 
 	<Reply
 		name="Dlg_npc_000666"
-		text="Искать не нужно, все есть на винодельне Эрмосиньо. Они именно и создают вино, они же отправляют караваны в Торреон, Монтерей и Иерихон. Но в последнее время с их поставками происходят какие-то проблемы."
+		text="Искать не нужно, все есть на винодельне Эрмосиньо. Они именно и создают вино, они же отправляют караваны. Но в последнее время с их поставками происходят какие-то проблемы."
 		role="NPC"
 		nextReplies="Dlg_pl_000667" />
 
@@ -276,7 +288,7 @@
 
 	<Reply
 		name="Dlg_npc_000714"
-		text="Не знаю, с чего ты взял, но да, в винограде я шарю."
+		text="Не знаю, с чего ты взял, но да, в этом я шарю."
 		role="NPC"
 		nextReplies="Dlg_pl_000715" />
 
@@ -495,7 +507,7 @@
 
 	<Reply
 		name="Dlg_npc_000677"
-		text="Даже чего-то сказать против не хочется. Problemo у нас хватает: то караваны не доезжают, то какие-то проблемы на самой винодельне. Вот что, езжайте на винодельню, вам все расскажут подробнее. Езжайте по северо-западной дороге, она вас приведет к ней. Buena suerte."
+		text="Даже чего-то сказать против не хочется. Problemo у нас хватает: то караваны не доезжают, то какие-то проблемы на самой винодельне. Вот что, езжайте на винодельню, вам все расскажут подробнее. Езжайте по северо-западной дороге, она вас приведет к ней. Buena suerte. Я сообщу о вас охране, чтобы они вас пропустили."
 		role="NPC"
 		nextReplies="Dlg_pl_000678" />
 
@@ -504,118 +516,6 @@
 		text="И вам не хворать."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m3_ComeToTorreon_Quest'); TakeQuest('r7m3_ComeToVino_Quest'); TActivate('trGuardVino'); EndConversation()" />
-
-	<Reply
-		name="TraderTorreon2_DLG"
-		text="Быстро вы вернулись, senior."
-		role="NPC"
-		scriptCondition="QuestStatus('r7m3_BuyAPass_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_000686" />
-
-	<Reply
-		name="Dlg_pl_000686"
-		text="Что же вы мне не сказали про то, чтобы пройти на винодельню, нужен пропуск?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000687" />
-
-	<Reply
-		name="Dlg_npc_000687"
-		text="Так вы и не спрашивали. Ладно, хотите я могу вам помочь добыть пропуск?"
-		role="NPC"
-		nextReplies="Dlg_pl_000688" />
-
-	<Reply
-		name="Dlg_pl_000688"
-		text="Я так понимаю, не за бесплатно?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000689" />
-
-	<Reply
-		name="Dlg_npc_000689"
-		text="Si. Нужно 1500. "
-		role="NPC"
-		nextReplies="Dlg_pl_000690 Dlg_pl_000691" />
-
-	<Reply
-		name="Dlg_pl_000691"
-		text="Денег нету, сейчас наберу и вернусь."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_BuyAPass_Quest'); TakeQuest('r7m3_CollectMoneyPass_Quest'); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_000690"
-		text="Держите."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney()>=1500"
-		nextReplies="Dlg_npc_000692" />
-
-	<Reply
-		name="Dlg_npc_000692"
-		text="Bien (Отлично), ждите здесь."
-		role="NPC"
-		nextReplies="Dlg_pl_000693" />
-
-	<Reply
-		name="Dlg_pl_000693"
-		text="<Ждать>"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000694" />
-
-	<Reply
-		name="Dlg_npc_000694"
-		text="Готово, держите."
-		role="NPC"
-		nextReplies="Dlg_pl_000695" />
-
-	<Reply
-		name="Dlg_pl_000695"
-		text="Спасибо."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_BuyAPass_Quest'); TakeQuest('r7m3_ComeBackKPP_Quest'); AddPlayerMoney(-1500); EndConversation()" />
-
-	<Reply
-		name="TraderTorreon3_DLG"
-		text="Ну что? Набрали нужную сумму?"
-		role="NPC"
-		scriptCondition="QuestStatus('r7m3_CollectMoneyPass_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_000696 Dlg_pl_000701" />
-
-	<Reply
-		name="Dlg_pl_000701"
-		text="Еще нет."
-		role="PLAYER"
-		scriptResult="EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_000696"
-		text="Да. Держите."
-		role="PLAYER"
-		scriptCondition="GetPlayerMoney()>=1500"
-		nextReplies="Dlg_npc_000697" />
-
-	<Reply
-		name="Dlg_npc_000697"
-		text="Bien (Отлично), ждите здесь."
-		role="NPC"
-		nextReplies="Dlg_pl_000698" />
-
-	<Reply
-		name="Dlg_pl_000698"
-		text="<Ждать>"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000699" />
-
-	<Reply
-		name="Dlg_npc_000699"
-		text="Готово, держите."
-		role="NPC"
-		nextReplies="Dlg_pl_000700" />
-
-	<Reply
-		name="Dlg_pl_000700"
-		text="Спасибо."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_CollectMoneyPass_Quest'); TakeQuest('r7m3_ComeBackKPP_Quest'); EndConversation()" />
 
 	<Reply
 		name="TraderTorreon4_DLG"
@@ -666,116 +566,35 @@
 		text="Тогда едем к нему."
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m3_FindTorr_Quest'); EndConversation()" />
-<!--Root/r7m3/Охрана винодельни-->
-	<Reply
-		name="GuardVino1_DLG"
-		text="Куда это вы, ciudadano (гражданин)?"
-		role="NPC"
-		scriptCondition="QuestStatus('r7m3_BuyAPass_Quest')==Q_CANBEGIVEN"
-		nextReplies="Dlg_pl_000680" />
-
-	<Reply
-		name="Dlg_pl_000680"
-		text="Я? К винодельне."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000681" />
-
-	<Reply
-		name="Dlg_npc_000681"
-		text="А у вас пропуск рабочего имеется?"
-		role="NPC"
-		nextReplies="Dlg_pl_000682" />
-
-	<Reply
-		name="Dlg_pl_000682"
-		text="Э? Пропуск?"
-		role="PLAYER"
-		nextReplies="Dlg_npc_000683" />
-
-	<Reply
-		name="Dlg_npc_000683"
-		text="Si, без него вы не сможете проити на территорию винодельни. А учитывая то, что у нас большие проблемы, пропуск обязателен."
-		role="NPC"
-		nextReplies="Dlg_pl_000684" />
-
-	<Reply
-		name="Dlg_pl_000684"
-		text="К сожалению нет. Черт, что же делать?"
-		role="PLAYER"
-		scriptResult="TakeQuest('r7m3_BuyAPass_Quest'); TActivate('trGoBackKPP'); EndConversation()" />
-
-	<Reply
-		name="GuardVino2_DLG"
-		text="Mierda, мы же вам четко сказали, без pase (пропуска) не пропускаем."
-		role="NPC"
-		scriptCondition="(QuestStatus('r7m3_BuyAPass_Quest')==Q_TAKEN) or (QuestStatus('r7m3_ComeBackKPP_Quest')==Q_TAKEN)"
-		nextReplies="Dlg_pl_000703 Dlg_pl_000834" />
-
-	<Reply
-		name="Dlg_pl_000834"
-		text="Знаю, просто мимо проезжал."
-		role="PLAYER"
-		scriptResult="TActivate('trGoBackKPP'); EndConversation()" />
-
-	<Reply
-		name="Dlg_pl_000703"
-		text="Так он у меня есть. <Показать пропуск>"
-		role="PLAYER"
-		scriptCondition="QuestStatus('r7m3_ComeBackKPP_Quest')==Q_TAKEN"
-		nextReplies="Dlg_npc_000704" />
-
-	<Reply
-		name="Dlg_npc_000704"
-		text="А. Ладно, проходите."
-		role="NPC"
-		nextReplies="Dlg_pl_000705" />
-
-	<Reply
-		name="Dlg_pl_000705"
-		text="Отлично."
-		role="PLAYER"
-		scriptResult="CompleteQuest('r7m3_ComeBackKPP_Quest'); EndConversation()" />
 <!--Root/r7m3/Эрмосиньо-->
 	<Reply
 		name="JefeErmosinyo1_DLG"
-		text="Я тебя раньше здесь не видел. Как ты прошел через охрану?"
+		text="Hola, это за тебя Вальдез словечко замолвил?"
 		role="NPC"
 		scriptCondition="QuestStatus('r7m3_ComeToVino_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000685" />
 
 	<Reply
 		name="Dlg_pl_000685"
-		text="Так у меня пропуск имеется."
+		text="Да. Я готов помочь вам с проблемами, за хороший гонорар, конечно."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000702" />
 
 	<Reply
 		name="Dlg_npc_000702"
-		text="Ты наверняка его у кого-то украл. Я даю тебе 5 minutos, чтобы ретироваться с винодельни. Иначе охрана сама тебя выдворит."
-		role="NPC"
-		nextReplies="Dlg_pl_000706" />
-
-	<Reply
-		name="Dlg_pl_000706"
-		text="Хорошо, если вам не нужен человек, что может решить ваши проблемы с производством вина и его доставкой, то нет проблем, я ухожу."
-		role="PLAYER"
-		nextReplies="Dlg_npc_000707" />
-
-	<Reply
-		name="Dlg_npc_000707"
-		text="А, mierda, так это про тебя рассказывал продавец из Торреона? Что же ты не сказал? Присаживайся. Не хочешь со мной выпить?"
+		text="Не переживай, amigo. Деньгами не обделю."
 		role="NPC"
 		nextReplies="Dlg_pl_000708" />
 
 	<Reply
 		name="Dlg_pl_000708"
-		text="Спасибо, воздержусь. Так что у вас за проблемы?"
+		text="Так что у вас за проблемы?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000709" />
 
 	<Reply
 		name="Dlg_npc_000709"
-		text="Проблем у нас действительно очень много. Все началось примерно 2 недели назад. Все началось с того, что большинство caravanas перестали доезжать до адресатов. Потом через 4 дня, вино стало некачественным, как будто сырье кто-то испортил. А еще через неделю бандиты захватили склад на востоке, и сырья теперь у нас стало еще меньше. Если все так дальше продолжится, то bodega (винодельня) закроется, а рабочие поуволятся. "
+		text="Проблем у нас очень много. Все началось примерно 2 недели назад. Все началось с того, что большинство caravanas перестали доезжать до адресатов. Потом через 4 дня, вино стало некачественным, как будто сырье кто-то испортил. А еще через неделю бандиты захватили склад на востоке, и сырья теперь у нас стало еще меньше. Если все так дальше продолжится, то винодельня закроется, а рабочие будут сокращены. "
 		role="NPC"
 		nextReplies="Dlg_pl_000710" />
 
@@ -842,13 +661,13 @@
 
 	<Reply
 		name="Dlg_pl_000725"
-		text="Да я был уже в этих городах, действительно далековато. А чем дальше в лес, тем больше палок."
+		text="Да я был уже в этих городах, действительно далековато. Чем дальше в лес, тем больше палок."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000726" />
 
 	<Reply
 		name="Dlg_npc_000726"
-		text="Si, и если мы быстро не решим проблему, то придется закрывать винодельню а работников сокращать. Ладно, вернемся к проблемам, как ты собираешься проблемы с караванами решать?"
+		text="Si, нам нужно быстро решать проблемы, пока не поздно. Ладно, вернемся к проблемам, как ты собираешься проблемы с караванами решать?"
 		role="NPC"
 		nextReplies="Dlg_pl_000727" />
 
@@ -927,13 +746,13 @@
 
 	<Reply
 		name="Dlg_pl_000749"
-		text="Значит, тут у меня 2 теории: либо после проверки кто-то подменил удобрения, либо специалистов подкупили, чтобы удобрение прошло проверку."
+		text="Значит, тут у меня две теории: либо после проверки кто-то подменил удобрения, либо специалистов подкупили, чтобы удобрение прошло проверку."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000750" />
 
 	<Reply
 		name="Dlg_npc_000750"
-		text="Так вот почему мои специалисты с хорошим денежным гонораром уволились и съехали из своих домов незадолго до инцидента с отравлением винограда. Вот поганцы!"
+		text="Так вот почему мои специалисты с хорошим денежным гонораром уволились и съехали из своих домов незадолго до инцидента с отравлением винограда. Вот hijos de puta! (сукины дети)"
 		role="NPC"
 		nextReplies="Dlg_pl_000751" />
 
@@ -945,7 +764,7 @@
 
 	<Reply
 		name="Dlg_npc_000752"
-		text="Нет, я с этим я сам разберусь. А что там по караванам?"
+		text="Нет, с этим я сам разберусь. А что там по караванам?"
 		role="NPC"
 		nextReplies="Dlg_pl_000753" />
 
@@ -1061,7 +880,7 @@
 
 	<Reply
 		name="Dlg_pl_000836"
-		text="Ну и вонизм у вас на складе, я думал все, маска не спасет. Однако я сам  не могу сказать, чем виноград отравили, поэтому мне нужен тот, кто мог бы помочь."
+		text="Ну и вонизм у вас на складе, я думал маска не спасет. Однако я сам  не могу сказать, чем виноград отравили, поэтому мне нужен тот, кто мог бы помочь."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000837" />
 
@@ -1259,7 +1078,7 @@
 
 	<Reply
 		name="Dlg_npc_000817"
-		text="Зачем, караванщик сам потребует с тебя хорошую сумму или возможно ты его как-то обхитришь."
+		text="Зачем? Караванщик сам потребует с тебя хорошую сумму или возможно ты его как-то обхитришь."
 		role="NPC"
 		nextReplies="Dlg_pl_000818" />
 
@@ -1472,7 +1291,19 @@
 		text="Ладно, держите."
 		role="PLAYER"
 		scriptCondition="GetPlayerMoney()>=7000"
-		scriptResult="CompleteQuest('r7m3_NorthLine_Quest'); TActivate('cinPassGranAl'); EndConversation()" />
+		scriptResult="CompleteQuest('r7m3_NorthLine_Quest'); TActivate('cinPassGranAl'); EndConversation()"
+		nextReplies="Dlg_npc_001298" />
+
+	<Reply
+		name="Dlg_npc_001298"
+		text="..."
+		role="NPC"
+		nextReplies="Dlg_pl_001334" />
+
+	<Reply
+		name="Dlg_pl_001334"
+		text="..."
+		role="PLAYER" />
 
 	<Reply
 		name="Lineguard2_DLG"
@@ -1490,7 +1321,7 @@
 
 	<Reply
 		name="Dlg_npc_000892"
-		text="А, да? Что ж, ладно, проходите."
+		text="А, да? Что ж, тогда держите скидку и платите 3000."
 		role="NPC"
 		nextReplies="Dlg_pl_000893" />
 
@@ -1812,14 +1643,15 @@
 
 	<Reply
 		name="Dlg_pl_000473"
-		text="Ты даже не представляешь, что в Иерихоне творилось... <рассказать о событиях>"
+		text="Ты даже не представляешь, что в Иерихоне творилось... "
 		role="PLAYER"
-		nextReplies="Leonel3_2_DLG" />
+		scriptResult="TActivate('cinLeoTime'); CompleteQuest('sin_BackToLeo_Quest'); EndConversation()" />
 
 	<Reply
-		name="Leonel3_2_DLG"
-		text="*через некоторое время* Вот это да. Коты, псы, интриги. Ты уверен, что войны в Иерихоне прекратятся на этом?"
+		name="Leonel2_2_DLG"
+		text="Вот это да! Коты, псы, интриги. Ты уверен, что войны в Иерихоне прекратятся на этом?"
 		role="NPC"
+		scriptCondition="QuestStatus('sin_BackToLeo_Quest')==Q_COMPLETED and not(QuestStatus('r7m1_DrinkToMara_Quest')==Q_TAKEN)"
 		nextReplies="Dlg_pl_000474 Dlg_pl_001160 Dlg_pl_001181" />
 
 	<Reply
@@ -1851,13 +1683,13 @@
 		name="Dlg_pl_001185"
 		text="Бывай."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToLeo_Quest'); TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
+		scriptResult="TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001160"
 		text="Я не уверен, если честно. "
 		role="PLAYER"
-		scriptCondition="QuestStatus('sin_WarforPort_Quest')==Q_COMPLETED"
+		scriptCondition="QuestStatus('sin_WarforPort_Quest')==Q_COMPLETED or QuestStatus('sin_WarForHouse_Quest')==Q_COMPLETED or QuestStatus('sin_RunToDogs_Quest')==Q_COMPLETED"
 		nextReplies="Dlg_npc_001161" />
 
 	<Reply
@@ -1882,7 +1714,7 @@
 		name="Dlg_pl_001164"
 		text="Бывай."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToLeo_Quest'); TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
+		scriptResult="TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000474"
@@ -1913,7 +1745,7 @@
 		name="Dlg_pl_000480"
 		text="Бывай."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToLeo_Quest'); TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
+		scriptResult="TakeQuest('r7m1_DrinkToMara_Quest'); EndConversation()" />
 
 	<Reply
 		name="Leonel3_DLG"
@@ -2016,61 +1848,61 @@
 
 	<Reply
 		name="Dlg_npc_000498"
-		text="Эдмонтон... от кого-то я слышал про этот город. Только никак не могу вспомнить."
+		text="Ну-ка... Мммм... Какая-то старая бумажка. Очередное наследие старого мира."
 		role="NPC"
 		nextReplies="Dlg_pl_000499" />
 
 	<Reply
 		name="Dlg_pl_000499"
-		text="Может тебе кажется? Ведь эта брошюра, как минимум, времени старого мира."
+		text="Спорить не буду. Хотя, судя по брошюре, этот город был богатый. Наверняка у него осталось немало сокровищ со старого мира."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000500" />
 
 	<Reply
 		name="Dlg_npc_000500"
-		text="Нет, я точно помню как примерно пол-года назад мне один друг рассказывал про Эдмонтон, и говорил, что он там сам был, примерно лет 5 назад."
+		text="Вряд ли... Сколько времени прошло с начала апокалипсиса? Да и существует ли этот ciudad (город) до сих пор? "
 		role="NPC"
 		nextReplies="Dlg_pl_000501" />
 
 	<Reply
 		name="Dlg_pl_000501"
-		text="Значит этот город может существовать?"
+		text="Ну, попытка - не пытка. Мне все равно делать нечего, а так хоть приключение какое-то будет."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000502" />
 
 	<Reply
 		name="Dlg_npc_000502"
-		text="Не знаю, у него самого спроси."
+		text="Ну, значит не буду тебя отговаривать."
 		role="NPC"
 		nextReplies="Dlg_pl_000503" />
 
 	<Reply
 		name="Dlg_pl_000503"
-		text="А где мне его искать?"
+		text="Так, с чего бы начать? Судя по всему, мне надо найти того, кто знает дорогу на север."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000504" />
 
 	<Reply
 		name="Dlg_npc_000504"
-		text="Езжай на восток, доберешься до местностей под горой Мадрэ, там где-то и живет Эрмитано - это если что мой amigo."
+		text="О, ну с этим тебе поможет один старый Aventurero (Искатель Приключений) - Отшельник Эрмитано."
 		role="NPC"
 		nextReplies="Dlg_pl_000505" />
 
 	<Reply
 		name="Dlg_pl_000505"
-		text="Как-то слишком легко ты рассказал, хоть и не точно."
+		text="Отшельник? И где мне его искать?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000506" />
 
 	<Reply
 		name="Dlg_npc_000506"
-		text="Да его там вся округа знает, хоть он редко и выкарабкивается из своей хижины. "
+		text="На горе Мадрэ стоит его хижина. Он редко оттуда выходит. Отправляйся на запад, в Вексику. Там его и найдешь. Его там вся округа знает."
 		role="NPC"
 		nextReplies="Dlg_pl_000507" />
 
 	<Reply
 		name="Dlg_pl_000507"
-		text="Ладно, посмотрим, что у вас за отшельник там живет."
+		text="Ладно, посмотрим, что у вас за отшельник там живет. Спасибо за информацию. "
 		role="PLAYER"
 		scriptResult="CompleteQuest('r7m1_BackToMara_Quest'); TakeQuest('r7m1_SearchHermit_Quest'); EndConversation()" />
 <!--Root/r7m1/Горящие книги (опционально)-->
@@ -2148,7 +1980,7 @@
 		text="Ладно, по рукам."
 		role="PLAYER"
 		scriptCondition="not(IsQuestItemPresent('forb_books' ))"
-		scriptResult="TakeQuest('r7m1_BookForNodin_Quest'); EndConversation()" />
+		scriptResult="TakeQuest('r7m1_BookForNodin_Quest'); TActivate('trGoToSklad'); EndConversation()" />
 
 	<Reply
 		name="Optional1.2_DLG"
@@ -2271,8 +2103,39 @@
 		name="Mother2_DLG"
 		text="Это вы. А где моя hija? (дочка)"
 		role="NPC"
-		scriptCondition="QuestStatus('r7m1_FindKitty_Quest')==Q_FAILED and QuestStatus('r7m1_ComeToGato_Quest')==Q_TAKEN"
-		nextReplies="Dlg_pl_001145" />
+		scriptCondition="QuestStatus('r7m1_FindKitty_Quest')==Q_FAILED or QuestStatus('r7m1_SaveKitty_Quest')==Q_FAILED and QuestStatus('r7m1_ComeToGato_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001145 Dlg_pl_001335" />
+
+	<Reply
+		name="Dlg_pl_001335"
+		text="К сожалению, я не смог ее найти. "
+		role="PLAYER"
+		scriptCondition="QuestStatus('sin_LeaveSin_Quest')==Q_TAKEN and QuestStatus('r7m1_FindKitty_Quest')==Q_FAILED"
+		nextReplies="Dlg_npc_001336" />
+
+	<Reply
+		name="Dlg_npc_001336"
+		text="O, Dios mio! (Боже мой!) Куда же она пропала?"
+		role="NPC"
+		nextReplies="Dlg_pl_001337" />
+
+	<Reply
+		name="Dlg_pl_001337"
+		text="Кто знает..."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001338" />
+
+	<Reply
+		name="Dlg_npc_001338"
+		text="Что ж, спасибо и на том. Держите, мне это больше не понадобиться."
+		role="NPC"
+		nextReplies="Dlg_pl_001339" />
+
+	<Reply
+		name="Dlg_pl_001339"
+		text="Вы уж простите, я реально не смог ее найти."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(500); CompleteQuest('r7m1_ComeToGato_Quest'); TActivate('trAfterIerihon2'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001145"
@@ -2284,12 +2147,32 @@
 		name="Dlg_npc_001156"
 		text="О, Dios mio! (Боже мой!) Что же она наделала?"
 		role="NPC"
-		nextReplies="Dlg_pl_001157" />
+		nextReplies="Dlg_pl_001157 Dlg_pl_001340" />
+
+	<Reply
+		name="Dlg_pl_001340"
+		text="Мне и самому не ведомо, но как я слышал, ее муж что-то задолжал банде, из-за чего Китти была похищена бандой."
+		role="PLAYER"
+		scriptCondition="QuestStatus('r7m1_FindKitty_Quest')==Q_TAKEN and QuestStatus('r7m1_SaveKitty_Quest')==Q_FAILED"
+		nextReplies="Dlg_npc_001341" />
+
+	<Reply
+		name="Dlg_npc_001341"
+		text="Что ж, спасибо и на том. Держите, мне это больше не понадобится."
+		role="NPC"
+		nextReplies="Dlg_pl_001342" />
+
+	<Reply
+		name="Dlg_pl_001342"
+		text="Вы уж простите, я реально не мог ничего сделать."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(500); CompleteQuest('r7m1_ComeToGato_Quest'); TakeQuest('sin_BackToLeo_Quest'); TActivate('trAfterIerihon2'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_001157"
 		text="Бизнес пошел не по плану, в итоге ее муж в долгах, а Китти в плену. "
 		role="PLAYER"
+		scriptCondition="QuestStatus('r7m1_FindKitty_Quest')==Q_TAKEN and QuestStatus('r7m1_SaveKitty_Quest')==Q_FAILED and (QuestStatus('sin_WarforPort_Quest')==Q_COMPLETED or QuestStatus('sin_WarForHouse_Quest')==Q_COMPLETED)"
 		nextReplies="Dlg_npc_001158" />
 
 	<Reply
@@ -2302,7 +2185,7 @@
 		name="Dlg_pl_001159"
 		text="Вы уж простите, я реально не мог ничего сделать."
 		role="PLAYER"
-		scriptResult="AddPlayerMoney(500); TakeQuest('sin_BackToLeo_Quest'); TActivate('trAfterIerihon2'); EndConversation()" />
+		scriptResult="AddPlayerMoney(500); CompleteQuest('r7m1_ComeToGato_Quest'); TakeQuest('sin_BackToLeo_Quest'); TActivate('trAfterIerihon2'); EndConversation()" />
 <!--Root/r7m1/Бандит-->
 	<Reply
 		name="VinoBandit_DLG"
@@ -5057,6 +4940,31 @@
 		text="Понял, сейчас приеду."
 		role="PLAYER"
 		scriptResult="TakeQuest('sin_DocDocuments_Quest'); TActivate('sinLookMed'); EndConversation()" />
+
+	<Reply
+		name="Doc3_SQ_DLG"
+		text="Вы вернулись! Кейс с вами?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_BackDocFDoc_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001308" />
+
+	<Reply
+		name="Dlg_pl_001308"
+		text="Да, вот он."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001312" />
+
+	<Reply
+		name="Dlg_npc_001312"
+		text="О, спасибо вам, теперь работа медика пойдет быстрее. Держите вознаграждение."
+		role="NPC"
+		nextReplies="Dlg_pl_001314" />
+
+	<Reply
+		name="Dlg_pl_001314"
+		text="Благодарю, удачи вам, док."
+		role="PLAYER"
+		scriptResult="AddPlayerMoney(1500); CompleteQuest('sin_BackDocFDoc_Quest'); EndConversation()" />
 <!--Root/Sin/Опциональные/Документы Доктора/Житель 1-->
 	<Reply
 		name="VillagerSanRaf_SQ_DLG"
@@ -5108,7 +5016,7 @@
 		scriptResult="CompleteQuest('sin_AskThiefDoc_Quest'); EndConversation()" />
 <!--Root/Sin/Опциональные/Документы Доктора/Житель 2-->
 	<Reply
-		name="Dlg_npc_001314"
+		name="VillagerCatHou_SQ_DLG"
 		text="Что-то нужно?"
 		role="NPC"
 		scriptCondition="QuestStatus('sin_FindThiefDoc_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
@@ -5145,15 +5053,72 @@
 		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 <!--Root/Sin/Опциональные/Документы Доктора/Вор-->
 	<Reply
-		name="Dlg_npc_001298"
+		name="ThiefDoc_SQ_DLG"
 		text="..."
 		role="NPC"
+		scriptCondition="QuestStatus('sin_FindThiefDoc_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_001303" />
 
 	<Reply
 		name="Dlg_pl_001303"
 		text="(Кажется, это он, описание по крайней мере подоходящее.) Эй, ты! Это ты тут у нас любитель руки притянуть к тому, что не закреплено?"
-		role="PLAYER" />
+		role="PLAYER"
+		nextReplies="Dlg_npc_001304" />
+
+	<Reply
+		name="Dlg_npc_001304"
+		text="Ты о чем, amigo?"
+		role="NPC"
+		nextReplies="Dlg_pl_001305" />
+
+	<Reply
+		name="Dlg_pl_001305"
+		text="Я о чемоданчике из поликлинники доктора."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001306" />
+
+	<Reply
+		name="Dlg_npc_001306"
+		text="Не понимаю, о чем ты."
+		role="NPC"
+		nextReplies="Dlg_pl_001307" />
+
+	<Reply
+		name="Dlg_pl_001307"
+		text="(Притворяется дурачком, умно.) Ничего, сейчас поймешь, через боль!"
+		role="PLAYER"
+		scriptResult="TActivate('trSpawnThiefDoc'); CompleteQuest('sin_FindThiefDoc_Quest'); LeaveTown()" />
+
+	<Reply
+		name="ThiefDoc2_SQ_DLG"
+		text="Стой-стой-стой, не убивай! Вот он, лежит. Забирай, если хочешь."
+		role="NPC"
+		scriptCondition="QuestStatus('sin_PunchThief_Quest')==Q_TAKEN"
+		nextReplies="Dlg_pl_001309" />
+
+	<Reply
+		name="Dlg_pl_001309"
+		text="Вот так бы сразу, и не пришлось бы пули тратить, они ведь не казенные. А теперь пошел отсюда, пока я тебя под машиной не похоронил."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001310" />
+
+	<Reply
+		name="Dlg_npc_001310"
+		text="Все, ухожу, ухожу."
+		role="NPC"
+		nextReplies="Dlg_pl_001311 Dlg_pl_001313" />
+
+	<Reply
+		name="Dlg_pl_001313"
+		text="Так, теперь надо отвезти чемоданчик доктору. "
+		role="PLAYER"
+		scriptResult="CompleteQuest('sin_PunchThief_Quest'); EndConversation()" />
+
+	<Reply
+		name="Dlg_pl_001311"
+		text="Так, теперь надо отвезти чемоданчик доктору. Хотя, гляну-ка я одним глазком внутрь."
+		role="PLAYER"
+		scriptResult="TActivate('sinAfterPunThief'); EndConversation() " />
 <!--Root/Sin/Сюжетные/Джо-->
 	<Reply
 		name="Joe1_DLG"
@@ -5429,7 +5394,7 @@
 		name="Dlg_pl_001002"
 		text="Мне интересно, как караванщики будут торговаться с Котами, прослежу ка я за ними."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); CompleteQuest('sin_ComeBackJoe2_Quest'); FailQuest('sin_ComeToCats_Quest'); TakeQuest('sin_Caravan_Quest'); TDeactivate('sinKittyinTrap'); TActivate('trCaravan'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeBackJoe_Quest'); CompleteQuest('sin_ComeBackJoe2_Quest'); FailQuest('sin_ComeToCats_Quest'); FailQuest('sin_ComeToDogs2_Quest'); TakeQuest('sin_Caravan_Quest'); TDeactivate('sinKittyinTrap'); TActivate('trCaravan'); EndConversation()" />
 
 	<Reply
 		name="Joe5_DLG"
@@ -5541,6 +5506,31 @@
 		text="Понятно. Ладно, я поехал. Удачи тебе в продаже спиртного."
 		role="PLAYER"
 		scriptResult="CompleteQuest('sin_FinalJoe_Quest'); TakeQuest('r7m1_ComeToGato_Quest'); EndConversation()" />
+
+	<Reply
+		name="Joe8_DLG"
+		text="Что на этот раз?"
+		role="NPC"
+		scriptCondition="QuestStatus('sin_Husband_Quest')==Q_TAKEN and GetCurNpc():GetSpokenCount() == 0"
+		nextReplies="Dlg_pl_001327" />
+
+	<Reply
+		name="Dlg_pl_001327"
+		text="Ты не знаешь, где проживает муж Китти?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001328" />
+
+	<Reply
+		name="Dlg_npc_001328"
+		text="Он в Зпадном Иерихоне живет. А тебе он зачем?"
+		role="NPC"
+		nextReplies="Dlg_pl_001329" />
+
+	<Reply
+		name="Dlg_pl_001329"
+		text="Я планирую освободить Китти. И мне понадобится ее муженек. Спасибо за информацию."
+		role="PLAYER"
+		scriptResult="GetCurNpc():SetSpokenCount( 1 ); EndConversation()" />
 <!--Root/Sin/Сюжетные/Гарфилд-->
 	<Reply
 		name="Garfield1_DLG"
@@ -5651,7 +5641,7 @@
 		name="Dlg_pl_001010"
 		text="Понял, не подведу."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_BackToCats1_Quest'); TActivate('trChangeLogoCat'); FailQuest('sin_LeaveSin_Quest'); FailQuest('sin_ComeToDogs3_Quest'); TakeQuest('sin_BeatDealWI_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_BackToCats1_Quest'); TActivate('trChangeLogoCat'); FailQuest('sin_LeaveSin_Quest'); FailQuest('sin_ComeToDogs2_Quest'); FailQuest('sin_ComeToDogs3_Quest'); TakeQuest('sin_BeatDealWI_Quest'); EndConversation()" />
 
 	<Reply
 		name="Dlg_pl_000585"
@@ -5667,13 +5657,13 @@
 
 	<Reply
 		name="Dlg_pl_000587"
-		text="Я понял, что мне ловить тут нечего. Да и мне не хочется напрягать псов своим присутствием. Вот, держи, я потратил примерно 10 долларов. Не люблю получать деньги, не заработав их."
+		text="Я понял, что мне ловить тут нечего. Да и мне не хочется напрягать псов своим присутствием."
 		role="PLAYER"
 		nextReplies="Dlg_npc_000588" />
 
 	<Reply
 		name="Dlg_npc_000588"
-		text="Надо же, честна твоя душа, незнакомец. Вот бы у всех наемников такая же честность была. "
+		text="Что же, в таком случае, желаю удачи, незнакомец."
 		role="NPC"
 		nextReplies="Dlg_pl_000589 Dlg_pl_000992" />
 
@@ -6386,7 +6376,7 @@
 		name="Dlg_pl_000581"
 		text="Вот и ладненько."
 		role="PLAYER"
-		scriptResult="CompleteQuest('sin_ComeToGrave_Quest'); FailQuest('sin_ComeToDogs2_Quest'); TakeQuest('sin_BackToCats_Quest'); FailQuest('sin_LeaveSin_Quest'); EndConversation()" />
+		scriptResult="CompleteQuest('sin_ComeToGrave_Quest'); FailQuest('sin_ComeToDogs2_Quest'); TakeQuest('sin_BackToCats_Quest'); AddQuestItem('diaryofvagrant_caravan'); FailQuest('sin_LeaveSin_Quest'); EndConversation()" />
 
 	<Reply
 		name="Graveman2_DLG"
@@ -7045,7 +7035,7 @@
 
 	<Reply
 		name="Dlg_pl_000609"
-		text="Неважно. Важно лишь то, что я здесь, чтобы тебя вытащить отсюда."
+		text="Неважно. Важно лишь то, что я здесь, чтобы тебя и твоего мужа вытащить отсюда."
 		role="PLAYER"
 		nextReplies="Dlg_npc_001283" />
 
@@ -7303,20 +7293,44 @@
 <!--Root/Sin/Сюжетные/Муж Джес-->
 	<Reply
 		name="Jess1_DLG"
-		text="Боже, что ты натворил? Китти теперь под стражей хорошо вооруженных бойцов. Что с ней теперь будет?"
+		text="Чего тебе?"
 		role="NPC"
 		scriptCondition="QuestStatus('sin_Husband_Quest')==Q_TAKEN"
 		nextReplies="Dlg_pl_000625" />
 
 	<Reply
 		name="Dlg_pl_000625"
-		text="Не боись, будем освобождать под моим руководством. Есть у меня идея."
+		text="Ты муж Китти?"
 		role="PLAYER"
 		nextReplies="Dlg_npc_000626" />
 
 	<Reply
 		name="Dlg_npc_000626"
-		text="И какая же?"
+		text="А тебе что с того?"
+		role="NPC"
+		nextReplies="Dlg_pl_001330" />
+
+	<Reply
+		name="Dlg_pl_001330"
+		text="Так да или нет?"
+		role="PLAYER"
+		nextReplies="Dlg_npc_001331" />
+
+	<Reply
+		name="Dlg_npc_001331"
+		text="Да, я ее муж."
+		role="NPC"
+		nextReplies="Dlg_pl_001332" />
+
+	<Reply
+		name="Dlg_pl_001332"
+		text="Отлично, значить пойдешь со мной освобождать Китти из плена."
+		role="PLAYER"
+		nextReplies="Dlg_npc_001333" />
+
+	<Reply
+		name="Dlg_npc_001333"
+		text="И каким образом?"
 		role="NPC"
 		nextReplies="Dlg_pl_000627" />
 

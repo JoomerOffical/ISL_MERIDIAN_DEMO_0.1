@@ -219,19 +219,19 @@
 	<Section
 		name="CAMERA">
 		<Key
-			name="X">1076.685</Key>
+			name="X">1167.193</Key>
 
 		<Key
-			name="Y">921.288</Key>
+			name="Y">655.200</Key>
 
 		<Key
-			name="Z">771.594</Key>
+			name="Z">2350.391</Key>
 
 		<Key
-			name="A">48.594</Key>
+			name="A">51.024</Key>
 
 		<Key
-			name="B">-0.078</Key>
+			name="B">-0.401</Key>
 
 		<Key
 			name="G">0.000</Key>
@@ -249,7 +249,7 @@
 	<Section
 		name="ILLUMINATION">
 		<Key
-			name="MODEL_AMBIENT">205 124 110</Key>
+			name="MODEL_AMBIENT">22 121 206</Key>
 
 		<Key
 			name="MODEL_DIFFUSE">0 0 0</Key>

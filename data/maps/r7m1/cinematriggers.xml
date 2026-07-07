@@ -218,9 +218,7 @@
 
 			TakeQuest("r7m1_LampToMayak_Quest")
 			AddQuestItem("quest_letter_lamp")
-
 			AddQuestItem("diaryofvagrant_start")
-			AddQuestItem("collectionbook1")
 
 			getObj("Mayak"):SetNodeAction(AT_MOVE1)
 
@@ -500,6 +498,58 @@
 			AddItemsToPlayerRepository( "oil", 1 )		
 
 			SetCameraBehindPlayerVehicle()
+		</script>
+	</trigger>
+
+<!--Спустя какое-то время у Лео-->
+	<trigger Name="cinLeoTime" active="0">
+	<event	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			Fly("LeoTime_cam0", CINEMATIC_NO_AIM, 0, 5, 1, 1 )
+			StartCinematic()
+
+			TActivate( "cinLeoTime_FadeIn" )
+			TActivate( "cinLeoTime_End" )
+		</script>
+	</trigger>
+
+	<trigger Name="cinLeoTime_FadeIn" active="0">
+		<event eventid="GE_CINEMATIC_ENTER_FADE_IN" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+			
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+
+			AddCinematicMessage(530, 0.25)
+
+		</script>
+	</trigger>
+
+	<trigger Name="cinLeoTime_End" active="0">
+	<event eventid="GE_END_CINEMATIC" ObjName="Player1" />
+	<event eventid="GE_SKIP_CINEMATIC" ObjName="Player1" />
+		<script>
+			trigger:Deactivate()
+
+			local vehPlayer = GetPlayerVehicle()
+			if vehPlayer then
+				vehPlayer:SetCustomControlEnabled( true )
+				vehPlayer:SetCustomLinearVelocity( 0 )
+				vehPlayer:SetThrottle( 0 )
+				vehPlayer:SetCustomControlEnabled( false )
+			end
+
+			TDeactivate( "cinLeoTime_FadeIn" )
+
+			StartConversation("MechanicLeonel_NPC")
 		</script>
 	</trigger>
 

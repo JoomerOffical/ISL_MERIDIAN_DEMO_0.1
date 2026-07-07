@@ -45,6 +45,7 @@ $Id: ResourceTypes.xml,v 1.1 2005/12/08 08:58:02 anton Exp $
 			<Type Name="URAL_CHASSIS_MUL" />
 			<Type Name="BELAZ_CHASSIS_MUL" />
 			<Type Name="MIROTVOREC_CHASSIS_MUL" />
+			<Type Name="CUMBINE_CHASSIS" />
 		</Type>
 		
 		<Type Name="CABIN" geomsize="5 5">
@@ -78,6 +79,7 @@ $Id: ResourceTypes.xml,v 1.1 2005/12/08 08:58:02 anton Exp $
 			<Type Name="URAL_CABIN_MUL" />
 			<Type Name="BELAZ_CABIN_MUL" />
 			<Type Name="MIROTVOREC_CABIN_MUL" />
+			<Type Name="CUMBINE_CABIN" />
 		</Type>
 		
 		<Type Name="BASKET" geomsize="5 5">
@@ -94,6 +96,7 @@ $Id: ResourceTypes.xml,v 1.1 2005/12/08 08:58:02 anton Exp $
 			<Type Name="URAL_BASKET_MUL" />
 			<Type Name="BELAZ_BASKET_MUL" />
 			<Type Name="MIROTVOTEC_BASKET_MUL" />
+			<Type Name="CUMBINE_BASKET" />
 		</Type>
 		
 		<Type Name="STATIC_AUTO_GUN_DOT" />
@@ -178,7 +181,7 @@ $Id: ResourceTypes.xml,v 1.1 2005/12/08 08:58:02 anton Exp $
 	</Type>
 
 	<Type Name="QUEST_ITEM" >
-		<Type Name="DIARY_VAGRANT_LAMP" />
+		<Type Name="DIARY_VAGRANT" />
 
 		<Type Name="QUEST_WANTED" />
 		<Type Name="QUEST_DRUGS" />
