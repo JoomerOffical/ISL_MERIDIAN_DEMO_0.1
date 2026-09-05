@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--
+$Id: Caravan.xml,v 1.1 2005/12/08 08:58:03 anton Exp $
+-->
+
+<Prototypes>
+
+	<Prototype
+		Class	=	"WanderersManager"
+		Name	=	"LiveCaravanManager">
+	</Prototype>
+
+
+	<Prototype
+		Class					=	"CaravanTeam"
+		Name					=	"Dyn_CarvanBandits_r7"
+		DecisionMatrix			=	"teammain.lua"
+		TradersVehiclesGeneratorName	=	"Caravan_Car_Generator_r7"
+		GuardVehiclesGeneratorName	=	"Guardian_Car_Generator_r7">
+		<Formation Prototype		=	"wedgeFormation"/>
+	</Prototype>
+
+
+	<Prototype
+		Class					=	"WanderersGenerator"
+		Name					=	"Caravan_Car_Generator_r7"
+		DesiredCount			=	"1">
+		<Vehicles>
+			<Vehicle Prototype	=	"r1m1_CaravanBug01"/>
+			<Vehicle Prototype	=	"r1m1_CaravanBug02"/>
+			<Vehicle Prototype	=	"r1m1_CaravanBug03"/>
+			<Vehicle Prototype	=	"r1m1_CaravanBug04"/>
+		</Vehicles>
+	</Prototype>
+
+	<Prototype
+		Class					=	"WanderersGenerator"
+		Name					=	"Guardian_Car_Generator_r7"
+		DesiredCount			=	"1-2">
+		<Vehicles>
+			<Vehicle Prototype	=	"r1m1_CaravanGuardianSml101"/>
+			<Vehicle Prototype	=	"r1m1_CaravanGuardianSml201"/>
+			<Vehicle Prototype	=	"r2m1_CaravanGuardianScout201"/>
+			<Vehicle Prototype	=	"r2m2_CaravanGuardianScout301"/>
+		</Vehicles>
+	</Prototype>
+</Prototypes>

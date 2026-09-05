@@ -3,8 +3,7 @@
 
 	<Object	
 		Name = "ToR7M2"						
-		FullName = "Дорога в Свободные Земли" />
-	
+		FullName = "Дорога в Свободные Земли" />	
 	<Object	
 		Name = "ToR7M3"						
 		FullName = "Дорога в Вексику" />
@@ -12,19 +11,15 @@
 	<Object
 		Name="MayakCity"
 		FullName="Старый Маяк" />
-
 	<Object
 		Name="MayakCity_enter"
 		FullName="Старый Маяк" />
-
 	<Object
 		Name="MayakCity_House"
 		FullName="Домик Смотрителя" />
-
 	<Object
 		Name="MayakCity_Workshop"
 		FullName="Мастерская" />
-
 	<Object
 		Name="DocVincent_NPC"
 		FullName="Смотритель Винсент " />
@@ -32,55 +27,82 @@
 	<Object
 		Name="MaraMotos"
 		FullName="Марамотос" />
-
+	<Object
+		Name="MaraMotos_Workshop"
+		FullName="Мастерская" />
 	<Object
 		Name="MaraMotos_enter"
 		FullName="Марамотос" />
-
 	<Object
 		Name="MaraMotos_Shop"
 		FullName="Магазин" />
-
 	<Object
 		Name="MaraMotos_Bar"
 		FullName="Сельская пивнушка" />
-
 	<Object
 		Name="MaraMotos_Bar_Barman"
 		FullName="Селянин Игназио" />
-
 	<Object
 		Name="DrunkMateo_NPC"
 		FullName="Пьяница Матео" />
-
 	<Object
 		Name="BattleRevol_NPC"
 		FullName="Боец Раволь" />
+
+	<Object
+		Name="FanSerando"
+		FullName="Фан-Серандо" />
+	<Object
+		Name="FanSerando_Workshop"
+		FullName="Мастерская" />
+	<Object
+		Name="FanSerando_enter"
+		FullName="Фан-Серандо" />
+	<Object
+		Name="FanSerando_Shop"
+		FullName="Магазин" />
+	<Object
+		Name="FanSerando_Bar"
+		FullName="Таверна" />
+	<Object
+		Name="FanSerando_Bar_Barman"
+		FullName="Бармен Хорхе" />
+
+	<Object
+		Name="Rynosa"
+		FullName="Райноса" />
+	<Object
+		Name="Rynosa_Workshop"
+		FullName="Мастерская" />
+	<Object
+		Name="Rynosa_enter"
+		FullName="Райноса" />
+	<Object
+		Name="Rynosa_Shop"
+		FullName="Магазин" />
+	<Object
+		Name="Rynosa_Bar"
+		FullName="Промышленная Зона" />
+	<Object
+		Name="Rynosa_Bar_Barman"
+		FullName="Рабочий Кольдо" />
 
 	<Object
 		Name="BanditThiago_NPC"
 		FullName="Бандит Тьяго" />
 
 	<Object
-		Name="MaraMotos_Workshop"
-		FullName="Мастерская" />
-
-	<Object
 		Name="Kristy"
 		FullName="Кристи" />
-
 	<Object
 		Name="Kristy_enter"
 		FullName="Кристи" />
-
 	<Object
 		Name="Kristy_Bar"
 		FullName="Гостинница" />
-
 	<Object
 		Name="Kristy_Bar_Barman"
 		FullName="Смотрительница Цири" />
-
 	<Object
 		Name="MomGato_NPC"
 		FullName="Мама Гато" />
@@ -88,7 +110,6 @@
 	<Object
 		Name="PetrolStationr7m1_1"
 		FullName="Заправка" />
-
 	<Object
 		Name="PetrolStationr7m1_1_enter"
 		FullName="Заправка" />
@@ -96,31 +117,24 @@
 	<Object
 		Name="Monterrey"
 		FullName="Монтерей" />
-
 	<Object
 		Name="Monterrey_enter"
 		FullName="Монтерей" />
-
 	<Object
 		Name="Monterrey_Shop"
 		FullName="Магазин" />
-
 	<Object
 		Name="Monterrey_Bar"
 		FullName="Бар ''Alvarez''" />
-
 	<Object
 		Name="Monterrey_Workshop"
 		FullName="Мастерская" />
-
 	<Object
 		Name="Monterrey_Bar_Barman"
 		FullName="Хозяйка Альварез" />
-
 	<Object
 		Name="SellerTadeo_NPC"
 		FullName="Продавец Тадэо" />
-
 	<Object
 		Name="TreasureNodin_NPC"
 		FullName="Авантюрист Нодин" />
@@ -128,11 +142,9 @@
 	<Object
 		Name="PetrolStationr7m1_2"
 		FullName="Заправка" />
-
 	<Object
 		Name="PetrolStationr7m1_2_Workshop"
 		FullName="Мастерская" />
-
 	<Object
 		Name="PetrolStationr7m1_2_enter"
 		FullName="Заправка" />

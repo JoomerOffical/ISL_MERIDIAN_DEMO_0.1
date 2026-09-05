@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
 <DynamicScene
-	LastId="1080">
+	LastId="1219">
 	<TargetNamesForDestroy
 		Names="DynQEnemy01 DynQEnemy02 DynQEnemy03 DynQEnemy04 DynQEnemy05 DynQEnemy06 DynQEnemy07 DynQEnemy08 DynQEnemy09 DynQEnemy10 DynQEnemy11 DynQEnemy12 DynQEnemy13 DynQEnemy14 DynQEnemy15 DynQEnemy16 DynQEnemy17 DynQEnemy18 DynQEnemy19 DynQEnemy20 DynQEnemy21 DynQEnemy22 DynQEnemy23 DynQEnemy24 DynQEnemy25" />
 
@@ -18,7 +18,7 @@
 			Prototype="Scout01"
 			Pos="3401.975 344.366 284.842"
 			Rot="-0.049 0.206 -0.007 -0.977"
-			Skin="24">
+			Skin="36">
 			<Parts />
 
 			<Repository />
@@ -358,7 +358,7 @@
 		Name="r4_desert_palma_1_dyn155"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="3393.384 255.000 3198.684" />
+		Pos="3341.585 255.000 3173.971" />
 
 	<Object
 		Name="r4_desert_palma_3_dyn173"
@@ -647,22 +647,22 @@
 			Name="MayakCity_defend"
 			Belong="1101"
 			Prototype="location"
-			Pos="3397.995 341.513 327.626"
-			Radius="50.000" />
-
-		<Object
-			Name="MayakCity_deploy"
-			Belong="1101"
-			Prototype="location"
-			Pos="3397.869 341.514 327.482"
-			Radius="50.000" />
+			Pos="3386.293 342.605 296.088"
+			Radius="30.000" />
 
 		<Object
 			Name="MayakCity_enter"
 			Belong="1101"
 			Prototype="location"
-			Pos="3397.995 341.513 327.626"
-			Radius="50.000" />
+			Pos="3386.523 342.598 296.282"
+			Radius="30.000" />
+
+		<Object
+			Name="MayakCity_caravan"
+			Belong="1101"
+			Prototype="location"
+			Pos="3363.293 340.317 371.785"
+			Radius="10.000" />
 
 		<Parts />
 
@@ -728,7 +728,7 @@
 		Name="r4_desert_palma_2_dyn255"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="2993.340 258.659 478.927" />
+		Pos="2993.340 271.552 478.927" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn256"
@@ -1732,10 +1732,10 @@
 		Prototype="r7m1_Village"
 		Pos="2133.250 220.280 2580.011"
 		PointOfViewInInterface="5.000 20.000 5.000"
-		CaravanLocations="Monterrey_enter Kristy_enter"
-		CaravanPaths="Maramotos_Monterrey_DQC Maramotos_Kristy_DQC"
+		CaravanLocations="Monterrey_enter Kristy_enter Rynosa_enter FanSerando_enter"
+		CaravanPaths="Maramotos_Monterrey_DQC Maramotos_Kristy_DQC Maramotos_Rynosa Maramotos_FanSer"
 		TreasureLocations="DynKlad1_loc DynKlad2_loc DynKlad8_loc"
-		ReachLocations="Monterrey Kristy"
+		ReachLocations="Monterrey Kristy Rynosa FanSerando"
 		DestroyLocations="InfectionZone3"
 		IsSellingDrugs="0"
 		IsBuyingDrugs="1">
@@ -1822,6 +1822,13 @@
 			Rot="0.000 -0.996 0.000 0.089"
 			Radius="20.000" />
 
+		<Object
+			Name="MaraMotos_caravan"
+			Belong="1101"
+			Prototype="location"
+			Pos="2199.433 224.102 2650.842"
+			Radius="10.000" />
+
 		<Parts />
 
 		<EntryPath />
@@ -1835,13 +1842,13 @@
 		Prototype="r7m1_Village"
 		Pos="3446.099 255.509 3210.326"
 		PointOfViewInInterface="5.000 20.000 5.000"
-		CaravanLocations="Monterrey_enter MaraMotos_enter"
-		CaravanPaths="Kristy_Monterrey_DQC Kristy_Maramotos_DQC"
+		CaravanLocations="Monterrey_enter MaraMotos_enter Rynosa_enter FanSerando_enter"
+		CaravanPaths="Kristy_Monterrey_DQC Kristy_Maramotos_DQC Kristy_Rynosa Kristy_FanSer"
 		TreasureLocations="DynKlad6_loc DynKlad7_loc DynKlad9_loc"
-		ReachLocations="Monterrey MaraMotos"
+		ReachLocations="Monterrey MaraMotos Rynosa FanSerando"
 		DestroyLocations="InfectionZone3"
 		IsSellingDrugs="0"
-		IsBuyingDrugs="0">
+		IsBuyingDrugs="1">
 		<Object
 			Name="Kristy_Shop"
 			Belong="1101"
@@ -1924,6 +1931,13 @@
 			Pos="3409.224 255.000 3265.104"
 			Rot="0.000 -0.996 0.000 0.089"
 			Radius="30.000" />
+
+		<Object
+			Name="Kristy_caravan"
+			Belong="1101"
+			Prototype="location"
+			Pos="3387.911 255.000 3183.743"
+			Radius="10.000" />
 
 		<Parts />
 
@@ -2121,7 +2135,7 @@
 		Name="r4_desert_palma_2_dyn484"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1132.326 280.621 727.341" />
+		Pos="1132.326 274.391 727.341" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn485"
@@ -2139,7 +2153,7 @@
 		Name="r4_desert_palma_2_dyn487"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1200.791 283.667 1141.822" />
+		Pos="1200.791 283.094 1141.822" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn488"
@@ -2493,7 +2507,7 @@
 		Name="r4_desert_palma_1_dyn547"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1327.949 255.408 645.026" />
+		Pos="1327.949 237.001 645.026" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn548"
@@ -2511,13 +2525,13 @@
 		Name="r4_desert_palma_1_dyn550"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1171.320 280.480 686.839" />
+		Pos="1171.320 277.396 686.839" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn551"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1137.606 279.173 1032.149" />
+		Pos="1097.497 240.333 1050.703" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn553"
@@ -2529,7 +2543,7 @@
 		Name="r4_desert_palma_1_dyn554"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="928.941 299.616 995.733" />
+		Pos="928.941 299.604 995.733" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn555"
@@ -2931,7 +2945,7 @@
 		Name="r4_desert_palma_3_dyn621"
 		Belong="1001"
 		Prototype="r4_desert_palma_3_dyn"
-		Pos="1248.444 262.867 612.860" />
+		Pos="1248.444 262.860 612.860" />
 
 	<Object
 		Name="r4_desert_palma_3_dyn622"
@@ -2943,7 +2957,7 @@
 		Name="r4_desert_palma_3_dyn623"
 		Belong="1001"
 		Prototype="r4_desert_palma_3_dyn"
-		Pos="1095.493 282.090 690.019" />
+		Pos="1095.493 281.682 690.019" />
 
 	<Object
 		Name="r4_desert_palma_3_dyn624"
@@ -3384,10 +3398,10 @@
 		Pos="320.724 331.035 2230.882"
 		Rot="0.000 -1.000 0.000 0.000"
 		PointOfViewInInterface="50.000 50.000 50.000"
-		CaravanLocations="Kristy_enter MaraMotos_enter"
-		CaravanPaths="Monterrey_Kristy_DQC Monterrey_Maramotos_DQC"
+		CaravanLocations="Kristy_enter MaraMotos_enter Rynosa_enter FanSerando_enter"
+		CaravanPaths="Monterrey_Kristy_DQC Monterrey_Maramotos_DQC Monterrey_Rynosa Monterrey_FanSer"
 		TreasureLocations="DynKlad3_loc DynKlad4_loc DynKlad5_loc"
-		ReachLocations="MaraMotos Kristy"
+		ReachLocations="MaraMotos Kristy Rynosa FanSerando"
 		DestroyLocations="InfectionZone1 InfectionZone2"
 		IsSellingDrugs="1"
 		IsBuyingDrugs="0">
@@ -3578,6 +3592,13 @@
 			Pos="324.081 331.053 2262.374"
 			Rot="0.000 -0.996 0.000 0.089"
 			Radius="40.000" />
+
+		<Object
+			Name="Monterrey_caravan"
+			Belong="1101"
+			Prototype="genericLocation"
+			Pos="296.253 331.057 2308.738"
+			Radius="10.000" />
 
 		<Parts />
 
@@ -4213,7 +4234,7 @@
 		Name="r4_desert_palma_2_dyn799"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1046.133 285.789 743.431" />
+		Pos="1046.133 283.420 743.431" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn800"
@@ -4249,25 +4270,25 @@
 		Name="r4_desert_palma_2_dyn805"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1358.636 255.000 716.638" />
+		Pos="1393.683 231.204 706.791" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn806"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1176.239 273.878 918.669" />
+		Pos="1277.474 228.659 944.130" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn807"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1278.897 255.823 819.927" />
+		Pos="1252.252 233.558 787.158" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn808"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1182.208 274.920 1074.077" />
+		Pos="1182.208 252.977 1074.077" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn809"
@@ -4297,19 +4318,19 @@
 		Name="r4_desert_palma_1_dyn813"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1104.678 268.888 790.557" />
+		Pos="1104.678 248.853 790.557" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn814"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1282.730 255.391 866.761" />
+		Pos="1323.763 235.716 877.168" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn815"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1202.200 271.758 749.117" />
+		Pos="1202.200 259.119 749.117" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn816"
@@ -4351,25 +4372,25 @@
 		Name="r4_desert_palma_1_dyn822"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1030.744 278.364 989.713" />
+		Pos="1030.744 244.076 989.713" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn823"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1107.421 269.237 872.932" />
+		Pos="1107.421 237.649 872.932" />
 
 	<Object
 		Name="r4_desert_palma_1_dyn824"
 		Belong="1001"
 		Prototype="r4_desert_palma_1_dyn"
-		Pos="1248.022 258.873 1090.585" />
+		Pos="1248.022 251.484 1090.585" />
 
 	<Object
 		Name="r4_desert_palma_2_dyn825"
 		Belong="1001"
 		Prototype="r4_desert_palma_2_dyn"
-		Pos="1066.462 270.484 916.340" />
+		Pos="1066.462 239.786 916.340" />
 
 	<Object
 		Name="Breakable_Poster2826"
@@ -5206,7 +5227,7 @@
 		Name="DynKlad3_loc"
 		Belong="1100"
 		Prototype="genericLocation"
-		Pos="1065.790 278.878 1017.821"
+		Pos="985.528 281.947 1112.293"
 		Radius="15.000" />
 
 	<Object
@@ -5887,20 +5908,20 @@
 				y="591.263" />
 
 			<Point
-				x="1322.967"
-				y="835.370" />
+				x="1389.230"
+				y="767.470" />
 
 			<Point
-				x="1195.627"
-				y="1037.462" />
+				x="1221.510"
+				y="693.324" />
 
 			<Point
-				x="1040.831"
-				y="1031.073" />
+				x="1023.051"
+				y="834.647" />
 
 			<Point
-				x="906.374"
-				y="1070.975" />
+				x="985.639"
+				y="1122.818" />
 
 			<Point
 				x="772.413"
@@ -6271,18 +6292,6 @@
 				y="1039.882" />
 
 			<Point
-				name="Point35"
-				Paths=""
-				x="1117.947"
-				y="956.830" />
-
-			<Point
-				name="Point93"
-				Paths=""
-				x="1050.208"
-				y="798.840" />
-
-			<Point
 				name="Point76"
 				Paths=""
 				x="897.849"
@@ -6295,34 +6304,10 @@
 				y="936.060" />
 
 			<Point
-				name="Point82"
-				Paths=""
-				x="905.897"
-				y="976.327" />
-
-			<Point
 				name="Point14"
 				Paths=""
 				x="687.626"
 				y="1033.034" />
-
-			<Point
-				name="Point48"
-				Paths=""
-				x="878.462"
-				y="694.777" />
-
-			<Point
-				name="Point92"
-				Paths=""
-				x="986.605"
-				y="903.810" />
-
-			<Point
-				name="Point59"
-				Paths=""
-				x="1144.528"
-				y="840.254" />
 
 			<Point
 				name="Point25"
@@ -6331,16 +6316,10 @@
 				y="683.572" />
 
 			<Point
-				name="Point61"
-				Paths=""
-				x="1067.812"
-				y="595.666" />
-
-			<Point
 				name="Point10"
 				Paths=""
-				x="1121.374"
-				y="744.549" />
+				x="1110.682"
+				y="677.450" />
 
 			<Point
 				name="Point21"
@@ -7029,6 +7008,1001 @@
 		Radius="80.000" />
 
 	<Object
+		Name="Breakable_WoodFence11083"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="713.026 249.392 2923.800"
+		Rot="0.000 -0.788 0.000 0.616" />
+
+	<Object
+		Name="Breakable_WoodFence11084"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="753.269 247.206 2935.593"
+		Rot="0.000 -0.796 0.000 0.605" />
+
+	<Object
+		Name="Breakable_WoodFence11085"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="800.309 248.448 2947.131"
+		Rot="0.000 0.590 0.000 0.808" />
+
+	<Object
+		Name="Breakable_WoodFence11086"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="854.309 248.431 2956.688"
+		Rot="0.000 -0.800 0.000 0.600" />
+
+	<Object
+		Name="Breakable_WoodFence11087"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="857.251 246.399 2946.387"
+		Rot="0.000 -0.796 0.000 0.605" />
+
+	<Object
+		Name="Breakable_WoodFence11088"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="715.715 247.516 2913.423"
+		Rot="-0.024 -0.793 0.031 0.608" />
+
+	<Object
+		Name="Breakable_WoodFence11089"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="803.550 246.765 2936.739"
+		Rot="0.000 0.595 0.000 0.804" />
+
+	<Object
+		Name="Breakable_WoodFence11091"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="754.109 242.484 2871.447"
+		Rot="0.003 0.639 -0.003 0.769" />
+
+	<Object
+		Name="Breakable_WoodFence11092"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="666.580 248.541 2875.993"
+		Rot="0.000 -0.434 0.000 0.901" />
+
+	<Object
+		Name="Breakable_WoodFence21093"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="673.238 249.263 2884.176"
+		Rot="0.000 -0.442 0.000 0.897" />
+
+	<Object
+		Name="Breakable_WoodFence21094"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="710.822 244.243 2860.430"
+		Rot="0.000 -0.646 0.000 0.763" />
+
+	<Object
+		Name="Breakable_WoodFence21095"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="756.147 245.064 2925.092"
+		Rot="0.000 -0.801 0.000 0.598" />
+
+	<Object
+		Name="Breakable_WoodFence21096"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="860.326 245.217 2935.266"
+		Rot="0.000 -0.791 0.000 0.612" />
+
+	<Object
+		Name="Breakable_WoodFence21097"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="807.678 245.920 2924.803"
+		Rot="0.000 0.619 0.000 0.785" />
+
+	<Object
+		Name="Breakable_WoodFence21098"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="759.375 243.337 2914.314"
+		Rot="-0.006 -0.806 -0.009 0.591" />
+
+	<Object
+		Name="Breakable_WoodFence21099"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="719.037 246.044 2902.327"
+		Rot="0.000 -0.805 0.000 0.593" />
+
+	<Object
+		Name="Breakable_WoodFence21100"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="755.162 241.628 2860.637"
+		Rot="0.000 0.677 0.000 0.736" />
+
+	<Object
+		Name="Breakable_WoodFence21101"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="755.033 240.565 2848.565"
+		Rot="0.000 0.656 0.000 0.755" />
+
+	<Object
+		Name="Breakable_WoodFence21102"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="713.698 245.398 2870.927"
+		Rot="0.000 -0.579 0.000 0.815" />
+
+	<Object
+		Name="Breakable_WoodFence21103"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="679.454 249.434 2893.163"
+		Rot="0.000 -0.442 0.000 0.897" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive31104"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive3"
+		Pos="890.794 243.187 2900.745" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive31105"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive3"
+		Pos="892.067 243.007 2898.298" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive31106"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive3"
+		Pos="890.837 243.025 2898.585" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive31107"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive3"
+		Pos="888.125 243.129 2900.311" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive31108"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive3"
+		Pos="889.337 242.848 2896.448" />
+
+	<Object
+		Name="Breakable_america_watch_tower1110"
+		Belong="1001"
+		Prototype="Breakable_america_watch_tower"
+		Pos="897.309 251.139 2972.259" />
+
+	<Object
+		Name="factory_box1116"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="895.427 241.124 2835.388"
+		Rot="0.000 0.326 0.000 0.945" />
+
+	<Object
+		Name="factory_box1117"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="892.696 241.024 2832.687"
+		Rot="0.000 0.983 0.000 0.182" />
+
+	<Object
+		Name="factory_box1118"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="891.385 241.170 2839.084"
+		Rot="0.000 -0.017 0.000 1.000" />
+
+	<Object
+		Name="factory_box1119"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="888.722 241.061 2835.706"
+		Rot="0.000 -0.663 0.000 0.749" />
+
+	<Object
+		Name="poddon1120"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="880.826 242.893 2899.397"
+		Rot="0.000 0.954 0.000 -0.301" />
+
+	<Object
+		Name="poddon1121"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="877.288 242.868 2900.262"
+		Rot="0.000 -0.663 0.000 0.749" />
+
+	<Object
+		Name="poddon1122"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="845.141 248.021 2955.276"
+		Rot="0.000 0.676 0.000 0.737" />
+
+	<Object
+		Name="poddon1123"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="738.903 246.673 2923.525"
+		Rot="0.000 -0.843 0.000 0.537" />
+
+	<Object
+		Name="poddon1124"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="742.216 240.964 2843.626"
+		Rot="0.000 0.087 0.000 0.996" />
+
+	<Object
+		Name="factory_box1125"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="686.081 244.192 2857.693"
+		Rot="0.000 0.105 0.000 0.994" />
+
+	<Object
+		Name="factory_box1126"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="740.186 248.210 2933.563"
+		Rot="0.000 0.725 0.000 0.688" />
+
+	<Object
+		Name="factory_box1127"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="790.475 248.402 2946.303"
+		Rot="0.000 0.174 0.000 0.985" />
+
+	<Object
+		Name="pack_breakable1128"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="725.179 247.063 2916.334"
+		Rot="0.000 0.515 0.000 0.857" />
+
+	<Object
+		Name="pack_breakable1129"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="681.465 247.990 2882.110"
+		Rot="0.000 -0.636 0.000 0.772" />
+
+	<Object
+		Name="pack_breakable1130"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="746.115 242.608 2862.602"
+		Rot="0.000 0.148 0.000 0.989" />
+
+	<Object
+		Name="pack_breakable1131"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="811.051 248.757 2951.233"
+		Rot="0.000 0.649 0.000 0.760" />
+
+	<Object
+		Name="pack_breakable1132"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="887.927 249.293 2956.167"
+		Rot="0.000 -0.462 0.000 0.887" />
+
+	<Object
+		Name="pack_breakable1133"
+		Belong="1001"
+		Prototype="pack_breakable"
+		Pos="867.178 242.449 2900.885"
+		Rot="0.000 0.044 0.000 0.999" />
+
+	<Object
+		Name="agro_tech1_breakable1134"
+		Belong="1001"
+		Prototype="agro_tech1_breakable"
+		Pos="762.310 247.576 2940.418"
+		Rot="0.000 0.853 0.000 0.522" />
+
+	<Object
+		Name="agro_tech1_breakable1135"
+		Belong="1001"
+		Prototype="agro_tech1_breakable"
+		Pos="889.877 240.552 2824.313"
+		Rot="0.000 -0.643 0.000 0.766" />
+
+	<Object
+		Name="Rynosa"
+		Belong="1101"
+		Prototype="r7m1_Village"
+		Pos="799.529 244.533 2902.045"
+		Rot="0.000 0.743 0.000 0.669"
+		PointOfViewInInterface="5.000 20.000 5.000"
+		CaravanLocations="Monterrey_enter MaraMotos_enter Kristy_enter FanSerando_enter"
+		CaravanPaths="Rynosa_Monterrey Rynosa_MaraMotos Rynosa_Kristy Rynosa_FanSerando"
+		TreasureLocations="DynKlad10_loc DynKlad12_loc DynKlad15_loc"
+		ReachLocations="MaraMotos Kristy Monterrey FanSerando"
+		DestroyLocations="InfectionZone1 InfectionZone2"
+		IsSellingDrugs="1"
+		IsBuyingDrugs="0">
+		<Object
+			Name="Rynosa_Shop"
+			Belong="1101"
+			Prototype="shop">
+			<GunsAndGadgets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="firing_rate_guns" />
+
+				<Item
+					PosX="1"
+					PosY="0"
+					Flags="16"
+					Prototype="cooling_system_guns" />
+			</GunsAndGadgets>
+		</Object>
+
+		<Object
+			Name="Rynosa_Bar"
+			Belong="1101"
+			Prototype="bar">
+			<Object
+				Name="Rynosa_Bar_Barman"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				skin="2"
+				cfg="14"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="Rynosa_Workshop"
+			Belong="1101"
+			Prototype="workshop" />
+
+		<Object
+			Name="Rynosa_defend"
+			Belong="1101"
+			Prototype="location"
+			Pos="797.857 244.459 2906.663"
+			Rot="0.000 0.743 0.000 0.669"
+			Radius="50.000"
+			Active="0" />
+
+		<Object
+			Name="Rynosa_deploy"
+			Belong="1101"
+			Prototype="location"
+			Pos="803.827 238.337 2843.104"
+			Rot="0.000 0.743 0.000 0.669"
+			Radius="10.000" />
+
+		<Object
+			Name="Rynosa_enter"
+			Belong="1101"
+			Prototype="location"
+			Pos="797.857 244.459 2906.663"
+			Rot="0.000 0.743 0.000 0.669"
+			Radius="50.000" />
+
+		<Object
+			Name="Rynosa_caravan"
+			Belong="1101"
+			Prototype="location"
+			Pos="735.558 244.918 2905.607"
+			Radius="10.000" />
+
+		<Parts />
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="staticAutoGun031137"
+		Belong="1101"
+		Prototype="staticAutoGun03"
+		Pos="679.696 255.252 2944.083"
+		Rot="0.000 0.964 0.000 -0.267">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun031138"
+		Belong="1101"
+		Prototype="staticAutoGun03"
+		Pos="643.052 254.529 2921.219"
+		Rot="0.000 0.462 0.000 0.887">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun031139"
+		Belong="1101"
+		Prototype="staticAutoGun03"
+		Pos="953.498 254.983 2985.882"
+		Rot="0.000 -0.122 0.000 0.993">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun031140"
+		Belong="1101"
+		Prototype="staticAutoGun03"
+		Pos="914.841 253.061 2985.315"
+		Rot="0.000 0.749 0.000 0.663">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="poddon1143"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="746.208 236.904 2804.914"
+		Rot="0.000 0.906 0.000 -0.423" />
+
+	<Object
+		Name="poddon1144"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="750.674 235.392 2792.435"
+		Rot="0.000 0.866 0.000 0.500" />
+
+	<Object
+		Name="poddon1145"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="742.534 235.699 2791.395"
+		Rot="0.000 0.917 0.000 -0.399" />
+
+	<Object
+		Name="poddon1146"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="756.037 236.421 2804.634"
+		Rot="0.000 -0.113 0.000 0.994" />
+
+	<Object
+		Name="poddon1147"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="747.810 236.224 2798.947"
+		Rot="0.000 -0.026 0.000 1.000" />
+
+	<Object
+		Name="poddon1148"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="732.615 236.951 2797.843"
+		Rot="0.000 0.964 0.000 -0.267" />
+
+	<Object
+		Name="poddon1149"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="740.797 236.696 2799.994"
+		Rot="0.000 0.148 0.000 0.989" />
+
+	<Object
+		Name="poddon1150"
+		Belong="1001"
+		Prototype="poddon"
+		Pos="739.503 237.568 2808.233"
+		Rot="0.000 0.951 0.000 -0.309" />
+
+	<Object
+		Name="Breakable_Barrel11151"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="735.695 237.319 2803.560"
+		Rot="0.000 0.113 0.000 0.994" />
+
+	<Object
+		Name="Breakable_Barrel11152"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="745.506 237.617 2811.836"
+		Rot="0.000 0.326 0.000 0.945" />
+
+	<Object
+		Name="Breakable_Barrel11153"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="752.509 237.085 2809.792"
+		Rot="0.000 0.948 0.000 0.317" />
+
+	<Object
+		Name="Breakable_Barrel11154"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="751.443 236.526 2803.655"
+		Rot="0.000 -0.834 0.000 0.552" />
+
+	<Object
+		Name="Breakable_Barrel11155"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="744.295 236.273 2797.793"
+		Rot="0.000 -0.663 0.000 0.749" />
+
+	<Object
+		Name="Breakable_Barrel11156"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="735.841 236.424 2794.344"
+		Rot="0.000 0.530 0.000 0.848" />
+
+	<Object
+		Name="Breakable_Barrel11157"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="715.237 237.645 2772.862"
+		Rot="0.000 -0.242 0.000 0.970" />
+
+	<Object
+		Name="Breakable_Barrel11158"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="716.027 237.374 2768.755"
+		Rot="0.000 0.968 0.000 0.250" />
+
+	<Object
+		Name="Breakable_Barrel11159"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="717.426 237.209 2770.154"
+		Rot="0.000 0.156 0.000 0.988" />
+
+	<Object
+		Name="Breakable_Barrel11160"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="713.969 237.751 2770.183"
+		Rot="0.000 0.956 0.000 0.292" />
+
+	<Object
+		Name="Breakable_Barrel11161"
+		Belong="1001"
+		Prototype="Breakable_Barrel1"
+		Pos="716.637 237.460 2773.581"
+		Rot="0.000 0.566 0.000 0.824" />
+
+	<Object
+		Name="factory_box1162"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="757.760 235.604 2797.295"
+		Rot="0.000 -0.848 0.000 0.530" />
+
+	<Object
+		Name="factory_box1163"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="735.272 236.219 2791.719"
+		Rot="0.000 0.334 0.000 0.943" />
+
+	<Object
+		Name="factory_box1164"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="730.906 237.963 2807.703"
+		Rot="0.000 0.999 0.000 -0.044" />
+
+	<Object
+		Name="factory_box1165"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="748.070 237.527 2812.173"
+		Rot="0.000 -0.719 0.000 0.695" />
+
+	<Object
+		Name="factory_box1166"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="746.076 235.042 2787.681"
+		Rot="0.000 0.902 0.000 0.431" />
+
+	<Object
+		Name="factory_box1167"
+		Belong="1001"
+		Prototype="factory_box"
+		Pos="740.271 235.378 2787.406"
+		Rot="0.000 0.701 0.000 0.713" />
+
+	<Object
+		Name="staticAutoGun031168"
+		Belong="1101"
+		Prototype="staticAutoGun03"
+		Pos="1363.277 235.641 795.773"
+		Rot="0.000 0.301 0.000 0.954">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="staticAutoGun031169"
+		Belong="1101"
+		Prototype="staticAutoGun03"
+		Pos="1334.520 234.539 781.142"
+		Rot="0.000 0.985 0.000 -0.174">
+		<Parts />
+	</Object>
+
+	<Object
+		Name="Breakable_WoodFence21179"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1187.582 228.640 878.716" />
+
+	<Object
+		Name="Breakable_WoodFence21181"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1165.017 230.492 878.688" />
+
+	<Object
+		Name="Breakable_WoodFence21182"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1153.906 231.642 879.156" />
+
+	<Object
+		Name="Breakable_WoodFence21183"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1142.897 232.878 879.311" />
+
+	<Object
+		Name="Breakable_WoodFence11184"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1176.519 229.354 878.646" />
+
+	<Object
+		Name="Breakable_WoodFence11185"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1130.913 234.299 879.532" />
+
+	<Object
+		Name="Breakable_WoodFence11186"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1119.162 235.752 879.545" />
+
+	<Object
+		Name="Breakable_WoodFence11187"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1132.689 236.903 851.124" />
+
+	<Object
+		Name="Breakable_WoodFence11188"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1143.965 236.126 850.952" />
+
+	<Object
+		Name="Breakable_WoodFence11189"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1164.943 234.224 850.622" />
+
+	<Object
+		Name="Breakable_WoodFence11190"
+		Belong="1001"
+		Prototype="Breakable_WoodFence1"
+		Pos="1187.699 232.043 850.511" />
+
+	<Object
+		Name="Breakable_WoodFence21191"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1121.375 237.704 851.097" />
+
+	<Object
+		Name="Breakable_WoodFence21192"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1154.295 235.244 850.776" />
+
+	<Object
+		Name="Breakable_WoodFence21193"
+		Belong="1001"
+		Prototype="Breakable_WoodFence2"
+		Pos="1176.017 233.107 850.730" />
+
+	<Object
+		Name="Breakable_Poster31194"
+		Belong="1001"
+		Prototype="Breakable_Poster3"
+		Pos="1203.328 228.416 874.525"
+		Rot="0.000 0.174 0.000 0.985" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive21195"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="1174.492 225.264 961.783" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive21196"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="1177.097 225.161 961.460" />
+
+	<Object
+		Name="Breakable_Barrel_Explosive21197"
+		Belong="1001"
+		Prototype="Breakable_Barrel_Explosive2"
+		Pos="1175.846 225.237 962.923" />
+
+	<Object
+		Name="FanSerando"
+		Belong="1101"
+		Prototype="r7m1_Village"
+		Pos="1156.108 228.433 906.956"
+		PointOfViewInInterface="5.000 20.000 5.000"
+		CaravanLocations="Monterrey_enter MaraMotos_enter Kristy_enter Rynosa_enter"
+		CaravanPaths="FanSer_Monterrey FanSer_Maramotos FanSer_Kristy FanSer_Rynosa"
+		TreasureLocations="DynKlad11_loc DynKlad13_loc DynKlad14_loc"
+		ReachLocations="MaraMotos Kristy Monterrey Rynosa"
+		DestroyLocations=""
+		IsSellingDrugs="0"
+		IsBuyingDrugs="1">
+		<Object
+			Name="FanSerando_Shop"
+			Belong="1101"
+			Prototype="shop">
+			<GunsAndGadgets>
+				<Item
+					PosX="0"
+					PosY="0"
+					Flags="16"
+					Prototype="additional_durability" />
+
+				<Item
+					PosX="0"
+					PosY="1"
+					Flags="16"
+					Prototype="cooling_system_guns" />
+			</GunsAndGadgets>
+		</Object>
+
+		<Object
+			Name="FanSerando_Bar"
+			Belong="1101"
+			Prototype="bar">
+			<Object
+				Name="FanSerando_Bar_Barman"
+				Belong="1101"
+				Prototype="NPC"
+				ModelName="r1_man"
+				cfg="76"
+				NpcType="BARMAN"
+				SpokenCount="0" />
+		</Object>
+
+		<Object
+			Name="FanSerando_Workshop"
+			Belong="1101"
+			Prototype="workshop" />
+
+		<Object
+			Name="FanSerando_deploy"
+			Belong="1101"
+			Prototype="location"
+			Pos="1161.574 226.157 996.407"
+			Radius="10.000" />
+
+		<Object
+			Name="FanSerando_enter"
+			Belong="1101"
+			Prototype="location"
+			Pos="1154.569 229.000 901.728"
+			Radius="50.000" />
+
+		<Object
+			Name="FanSerando_caravan"
+			Belong="1101"
+			Prototype="location"
+			Pos="1209.934 229.529 858.670"
+			Radius="10.000" />
+
+		<Parts />
+
+		<EntryPath />
+
+		<ExitPath />
+	</Object>
+
+	<Object
+		Name="DynKlad10_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="791.935 258.160 499.351"
+		Radius="10.000" />
+
+	<Object
+		Name="DynKlad11_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2658.084 255.000 321.687"
+		Radius="10.000" />
+
+	<Object
+		Name="DynKlad12_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2369.209 240.033 2281.656"
+		Radius="10.000" />
+
+	<Object
+		Name="DynKlad13_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="664.654 258.177 3622.423"
+		Radius="10.000" />
+
+	<Object
+		Name="DynKlad14_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="631.323 258.587 3267.480"
+		Radius="10.000" />
+
+	<Object
+		Name="DynKlad15_loc"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="1956.269 255.000 902.564"
+		Radius="10.000" />
+
+	<Object
+		Name="r7m1_CaravanGlobalObject"
+		Belong="1101"
+		Prototype="LiveCaravanManager"
+		TeamCount="1"
+		RebornTimeout="10.000">
+		<PredefinedPaths>
+			<PredefinedPath
+				Name="CaravanPath01" />
+		</PredefinedPaths>
+
+		<Caravans>
+			<Caravan
+				Prototype="Dyn_CarvanBandits_r7"
+				Locations="CaravanPath01" />
+		</Caravans>
+	</Object>
+
+	<Object
+		Name="r7m1_CaravanGlobalObject2"
+		Belong="1101"
+		Prototype="LiveCaravanManager"
+		TeamCount="1"
+		RebornTimeout="15.000">
+		<PredefinedPaths>
+			<PredefinedPath
+				Name="CaravanPath02" />
+		</PredefinedPaths>
+
+		<Caravans>
+			<Caravan
+				Prototype="Dyn_CarvanBandits_r7"
+				Locations="CaravanPath02" />
+		</Caravans>
+	</Object>
+
+	<Object
+		Name="r7m1_CaravanGlobalObject3"
+		Belong="1101"
+		Prototype="LiveCaravanManager"
+		TeamCount="1"
+		RebornTimeout="10.000">
+		<PredefinedPaths>
+			<PredefinedPath
+				Name="CaravanPath03" />
+		</PredefinedPaths>
+
+		<Caravans>
+			<Caravan
+				Prototype="Dyn_CarvanBandits_r7"
+				Locations="CaravanPath03" />
+		</Caravans>
+	</Object>
+
+	<Object
+		Name="r7m1_CaravanGlobalObject4"
+		Belong="1101"
+		Prototype="LiveCaravanManager"
+		TeamCount="1"
+		RebornTimeout="10.000">
+		<PredefinedPaths>
+			<PredefinedPath
+				Name="CaravanPath04" />
+		</PredefinedPaths>
+
+		<Caravans>
+			<Caravan
+				Prototype="Dyn_CarvanBandits_r7"
+				Locations="CaravanPath04" />
+		</Caravans>
+	</Object>
+
+	<Object
 		Belong="1100"
 		Prototype="vehicleRecollection" />
+
+	<Object
+		Name="MaraMotosRandomLive_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2177.282 220.201 2587.172"
+		Radius="1200.000" />
+
+	<Object
+		Name="SpawnVehRand1"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2161.063 217.082 2530.345"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnVehRand2"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2162.321 218.165 2559.472"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnVehRand3"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2162.996 222.320 2619.239"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnVehRand4"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2163.135 224.130 2644.326"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnVehRand5"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2207.559 222.865 2615.190"
+		Radius="10.000" />
+
+	<Object
+		Name="SpawnVehRand6"
+		Belong="1001"
+		Prototype="genericLocation"
+		Pos="2248.775 224.575 2606.726"
+		Radius="10.000" />
+
+	<Object
+		Name="MaraMotosDialog_loc"
+		Belong="1100"
+		Prototype="genericLocation"
+		Pos="2175.967 220.031 2585.282"
+		Radius="90.000" />
 </DynamicScene>

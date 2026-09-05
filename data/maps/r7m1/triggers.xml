@@ -182,7 +182,7 @@
 
 			CompleteQuest("r7m1_KillBandMont_Quest")
 			TActivate("cinRubBnd")
-	</script>
+		</script>
 	</trigger>
 
 <!--Преследуем бандита-->
@@ -231,7 +231,7 @@
 
 			CompleteQuest("r7m1_FindApost_Quest")
 			TActivate("cinAvaBnd")
-	</script>
+		</script>
 	</trigger>
 
 <!--Уничтожаем оставшихся и бандит начинает с нами диалог-->
@@ -246,7 +246,7 @@
 			end
 
 			StartConversation("BanditThiago_NPC")
-	</script>
+		</script>
 	</trigger>
 
 <trigger Name="trAfterIerihon3" active="1">
@@ -259,6 +259,236 @@
 
 	</script>
 </trigger>
+
+<!--Подъезжаем к Марамотос и рандомятся диалоги-->
+	<trigger Name="trMarLive" active="1">
+		<event eventid="GE_OBJECT_ENTERS_LOCATION" ObjName="MaraMotosDialog_loc" />
+		<script>
+			trigger:Deactivate()
+
+			local r = random(2)
+			if r == 1 then
+				TActivate("trR7M1Dialogs")
+			else
+				TActivate("trLiveCooldown")
+			end
+
+		</script>
+	</trigger>
+
+<!--Рандомные Диалоги-->
+	<trigger Name="trR7M1Dialogs" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			local r = random(3)
+			if r == 1 then
+				TActivate("trDialog1_1")
+			elseif r == 2 then
+				TActivate("trDialog2_1")
+			elseif r == 3 then
+				TActivate("trDialog3_1")
+			end
+				
+		</script>
+	</trigger>
+
+<!--Кулдаун диалогов-->
+	<trigger Name="trLiveCooldown" active="0">
+		<event 	timeout="30" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			TActivate("trMarLive")
+		</script>
+	</trigger>
+
+<!--Рандомный Диалог 1-->
+	<trigger Name="trDialog1_1" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddImportantFadingMsg("Вы слышите разговор неподалеку...")
+			AddFadingMsg("Риндо: Я недавно побывал у tia (тети) Гато, она все еще держится, хотя я и вижу, что она обеспокоена.")
+			TActivate("trDialog1_2")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog1_2" active="0">
+		<event 	timeout="7" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Лукас: Ее понять можно, если бы мое дитя уехало непонятно куда, я бы тоже забеспокоился.")
+			TActivate("trDialog1_3")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog1_3" active="0">
+		<event 	timeout="7" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Риндо: Думаешь, ее hija (дочь) могла погибнуть?")
+			TActivate("trDialog1_4")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog1_4" active="0">
+		<event 	timeout="7" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Лукас: Если учесть, что происходит на северо-востоке, я мог бы подозревать о ее смерти. Жалко нет смельчака, кто бы мог отправиться туда.")
+			TActivate("trDialog1_5")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog1_5" active="0">
+		<event 	timeout="10" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Риндо: Да кто осмелится туда отправится? Только безумец бы отправился.")
+			TActivate("trLiveCooldown")
+		</script>
+	</trigger>
+
+<!--Рандомный Диалог 2-->
+	<trigger Name="trDialog2_1" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddImportantFadingMsg("Вы слышите разговор неподалеку...")
+			AddFadingMsg("Бигги: Ты не думаешь, что проишествие со Sarcofago не случайно?")
+			TActivate("trDialog2_2")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog2_2" active="0">
+		<event 	timeout="5" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Тито: Что ты имеешь в виду?")
+			TActivate("trDialog2_3")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog2_3" active="0">
+		<event 	timeout="3" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Бигги: Ну смотри, по заверениям наших bisabuelos (прадедов) Sarcofago был давно отключен, и там ничего не работало.")
+			TActivate("trDialog2_4")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog2_4" active="0">
+		<event 	timeout="8" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Бигги: И вот Sarcofago неожиданно начал проявлять какую-то активность, а потом и вовсе взорвался. Что если его кто-то активировал?")
+			TActivate("trDialog2_5")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog2_5" active="0">
+		<event 	timeout="9" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Тито: Кто знает? Может прадеды что-то не доглядели? Сам понимаешь, постройка-то старая, да и кто проверял?")
+			TActivate("trDialog2_6")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog2_6" active="0">
+		<event 	timeout="8" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Бигги: И все же я думаю, что это не случайность. Не может быть такого, чтобы не рабочий Sarcofago вдруг взял и заработал сам.")
+			TActivate("trLiveCooldown")
+		</script>
+	</trigger>
+
+<!--Рандомный Диалог 3-->
+	<trigger Name="trDialog3_1" active="0">
+		<event 	timeout="0.1" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddImportantFadingMsg("Вы слышите разговор неподалеку...")
+			AddFadingMsg("Ронин: Слышал про chico (паренька), которого прибило к берегу Марамотоса?")
+			TActivate("trDialog3_2")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog3_2" active="0">
+		<event 	timeout="5" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Поло: Да. Слышал, что его Леонель спас и к Винсенту отвез.")
+			TActivate("trDialog3_3")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog3_3" active="0">
+		<event 	timeout="5" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Ронин: Как ты думаешь, откуда его прибило?")
+			TActivate("trDialog3_4")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog3_4" active="0">
+		<event 	timeout="7" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Поло: Кто знает? Может с севера нашего материка.")
+			TActivate("trDialog3_5")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog3_5" active="0">
+		<event 	timeout="5" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Ронин: А может с восточного материка? Я слышал, что на востоке тоже есть земля.")
+			TActivate("trDialog3_6")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog3_6" active="0">
+		<event 	timeout="7" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Поло: Eres estupido? (Ты глупый?) Там, возможно, ничего нет. Да и материк далеко, вроде где-то 4000 км. Не представляю, как он бы выжил.")
+			TActivate("trDialog3_7")
+		</script>
+	</trigger>
+
+	<trigger Name="trDialog3_7" active="0">
+		<event 	timeout="10" eventid="GE_TIME_PERIOD" />
+		<script>
+			trigger:Deactivate()
+
+			AddFadingMsg("Ронин: En principio es logico. (Впринципе логично.) Может мы у него потом и спросим, как встретим.")
+			TActivate("trLiveCooldown")
+		</script>
+	</trigger>
 
 <!--Телепорт в Вексику-->
 	<trigger Name="triggerExitToMap73" active="1">
